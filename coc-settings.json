@@ -1,0 +1,15 @@
+{
+	"python.linting.enabled": true,
+    "python.linting.flake8Enabled": true,
+	"rust-analyzer.enable": true,
+    "rust-analyzer.checkOnSave.overrideCommand": [
+        "./cargo",
+        "check",
+        "--json-output"
+    ],
+    "snippets.ultisnips.enable": true,
+    "snippets.ultisnips.directories": 
+    [
+        "$HOME/AppData/Local/nvim/snippets"
+    ]
+}
