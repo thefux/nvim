@@ -4,7 +4,7 @@
 !_TAG_OUTPUT_FILESEP	slash	/slash or backslash/
 !_TAG_OUTPUT_MODE	u-ctags	/u-ctags or e-ctags/
 !_TAG_PATTERN_LENGTH_LIMIT	96	/0 for no limit/
-!_TAG_PROC_CWD	C:/Users/abdou/AppData/Local/nvim/	//
+!_TAG_PROC_CWD	C:/Users/abdou/AppData/local/nvim/	//
 !_TAG_PROGRAM_AUTHOR	Universal Ctags Team	//
 !_TAG_PROGRAM_NAME	Universal Ctags	/Derived from Exuberant Ctags/
 !_TAG_PROGRAM_URL	https://ctags.io/	/official site/
@@ -817,44 +817,57 @@ $schema	./plugged/vimspector/tests/testdata/cpp/simple/.vimspector.json	/^  "$sc
 <C-L>	./plugged/vimwiki/test/vimrc	/^    nnoremap <silent> <C-L> :nohlsearch<C-R>=has('diff')?'<Bar>diffupdate':''<CR><CR><C-L>$/;"	m
 <C-LeftMouse>	./plugged/vimwiki/ftplugin/vimwiki.vim	/^  nmap <buffer> <C-LeftMouse> <NOP>$/;"	m
 <C-S-F5>	./plugged/vimspector/plugin/vimspector.vim	/^  nmap <C-S-F5>     <Plug>VimspectorRestart$/;"	m
-<C-\\|>	./config/mappings.vim	/^noremap <silent> <C-\\|> <C-w>v$/;"	m
+<C-\\|>	./back_up/mappings.vim	/^noremap <silent> <C-\\|> <C-w>v$/;"	m
 <C-\\|>	./plugin/mappings.vim	/^noremap <silent> <C-\\|> <C-w>v$/;"	m
-<C-down>	./config/mappings.vim	/^noremap <silent> <C-down> :3winc -<CR>$/;"	m
+<C-\\|>	./plugins/mappings.vim	/^noremap <silent> <C-\\|> <C-w>v$/;"	m
+<C-down>	./back_up/mappings.vim	/^noremap <silent> <C-down> :3winc -<CR>$/;"	m
 <C-down>	./plugin/mappings.vim	/^noremap <silent> <C-down> :3winc -<CR>$/;"	m
-<C-f>	./config/mappings.vim	/^nnoremap <C-f> ?$/;"	m
+<C-down>	./plugins/mappings.vim	/^noremap <silent> <C-down> :3winc -<CR>$/;"	m
+<C-f>	./back_up/mappings.vim	/^nnoremap <C-f> ?$/;"	m
 <C-f>	./plugin/mappings.vim	/^nnoremap <C-f> ?$/;"	m
-<C-j>	./config/settings.vim	/^imap <expr> <C-j>   vsnip#expandable()  ? '<Plug>(vsnip-expand)'         : '<C-j>'$/;"	m
-<C-j>	./config/settings.vim	/^smap <expr> <C-j>   vsnip#expandable()  ? '<Plug>(vsnip-expand)'         : '<C-j>'$/;"	m
-<C-j>	./config/snippets.vim	/^imap <C-j> <Plug>(coc-snippets-expand-jump)$/;"	m
-<C-j>	./config/snippets.vim	/^vmap <C-j> <Plug>(coc-snippets-select)$/;"	m
+<C-f>	./plugins/mappings.vim	/^nnoremap <C-f> ?$/;"	m
+<C-j>	./back_up/settings.vim	/^imap <expr> <C-j>   vsnip#expandable()  ? '<Plug>(vsnip-expand)'         : '<C-j>'$/;"	m
+<C-j>	./back_up/settings.vim	/^smap <expr> <C-j>   vsnip#expandable()  ? '<Plug>(vsnip-expand)'         : '<C-j>'$/;"	m
+<C-j>	./back_up/snippets.vim	/^imap <C-j> <Plug>(coc-snippets-expand-jump)$/;"	m
+<C-j>	./back_up/snippets.vim	/^vmap <C-j> <Plug>(coc-snippets-select)$/;"	m
 <C-j>	./plugged/vim-vsnip/.vimrc	/^imap <expr><C-j>   vsnip#available(1)  ? '<Plug>(vsnip-expand-or-jump)' : '<C-j>'$/;"	m
 <C-j>	./plugged/vim-vsnip/.vimrc	/^smap <expr><C-j>   vsnip#available(1)  ? '<Plug>(vsnip-expand-or-jump)' : '<C-j>'$/;"	m
 <C-j>	./plugin/settings.vim	/^imap <expr> <C-j>   vsnip#expandable()  ? '<Plug>(vsnip-expand)'         : '<C-j>'$/;"	m
 <C-j>	./plugin/settings.vim	/^smap <expr> <C-j>   vsnip#expandable()  ? '<Plug>(vsnip-expand)'         : '<C-j>'$/;"	m
-<C-j>	./plugin/snippets.vim	/^imap <C-j> <Plug>(coc-snippets-expand-jump)$/;"	m
-<C-j>	./plugin/snippets.vim	/^vmap <C-j> <Plug>(coc-snippets-select)$/;"	m
-<C-l>	./config/settings.vim	/^imap <expr> <C-l>   vsnip#available(1)  ? '<Plug>(vsnip-expand-or-jump)' : '<C-l>'$/;"	m
-<C-l>	./config/settings.vim	/^smap <expr> <C-l>   vsnip#available(1)  ? '<Plug>(vsnip-expand-or-jump)' : '<C-l>'$/;"	m
-<C-l>	./config/snippets.vim	/^imap <C-l> <Plug>(coc-snippets-expand)$/;"	m
+<C-j>	./plugins/settings.vim	/^imap <expr> <C-j>   vsnip#expandable()  ? '<Plug>(vsnip-expand)'         : '<C-j>'$/;"	m
+<C-j>	./plugins/settings.vim	/^smap <expr> <C-j>   vsnip#expandable()  ? '<Plug>(vsnip-expand)'         : '<C-j>'$/;"	m
+<C-j>	./plugins/snippets.vim	/^imap <expr> <C-j>   vsnip#expandable()  ? '<Plug>(vsnip-expand)'         : '<C-j>'$/;"	m
+<C-j>	./plugins/snippets.vim	/^smap <expr> <C-j>   vsnip#expandable()  ? '<Plug>(vsnip-expand)'         : '<C-j>'$/;"	m
+<C-l>	./back_up/settings.vim	/^imap <expr> <C-l>   vsnip#available(1)  ? '<Plug>(vsnip-expand-or-jump)' : '<C-l>'$/;"	m
+<C-l>	./back_up/settings.vim	/^smap <expr> <C-l>   vsnip#available(1)  ? '<Plug>(vsnip-expand-or-jump)' : '<C-l>'$/;"	m
+<C-l>	./back_up/snippets.vim	/^imap <C-l> <Plug>(coc-snippets-expand)$/;"	m
 <C-l>	./plugin/settings.vim	/^imap <expr> <C-l>   vsnip#available(1)  ? '<Plug>(vsnip-expand-or-jump)' : '<C-l>'$/;"	m
 <C-l>	./plugin/settings.vim	/^smap <expr> <C-l>   vsnip#available(1)  ? '<Plug>(vsnip-expand-or-jump)' : '<C-l>'$/;"	m
-<C-l>	./plugin/snippets.vim	/^imap <C-l> <Plug>(coc-snippets-expand)$/;"	m
-<C-left>	./config/mappings.vim	/^noremap <silent> <C-left> <C-w><$/;"	m
+<C-l>	./plugins/settings.vim	/^imap <expr> <C-l>   vsnip#available(1)  ? '<Plug>(vsnip-expand-or-jump)' : '<C-l>'$/;"	m
+<C-l>	./plugins/settings.vim	/^smap <expr> <C-l>   vsnip#available(1)  ? '<Plug>(vsnip-expand-or-jump)' : '<C-l>'$/;"	m
+<C-l>	./plugins/snippets.vim	/^imap <expr> <C-l>   vsnip#available(1)  ? '<Plug>(vsnip-expand-or-jump)' : '<C-l>'$/;"	m
+<C-l>	./plugins/snippets.vim	/^smap <expr> <C-l>   vsnip#available(1)  ? '<Plug>(vsnip-expand-or-jump)' : '<C-l>'$/;"	m
+<C-left>	./back_up/mappings.vim	/^noremap <silent> <C-left> <C-w><$/;"	m
 <C-left>	./plugin/mappings.vim	/^noremap <silent> <C-left> <C-w><$/;"	m
-<C-n>	./config/mappings.vim	/^nnoremap <silent> <C-n> :NERDTreeToggle<CR>$/;"	m
+<C-left>	./plugins/mappings.vim	/^noremap <silent> <C-left> <C-w><$/;"	m
+<C-n>	./back_up/mappings.vim	/^nnoremap <silent> <C-n> :NERDTreeToggle<CR>$/;"	m
 <C-n>	./plugged/gv.vim/plugin/gv.vim	/^  nmap              <buffer> <C-n> ]]o$/;"	m
 <C-n>	./plugged/gv.vim/plugin/gv.vim	/^  xmap              <buffer> <C-n> ]]ogv$/;"	m
 <C-n>	./plugged/vimwiki/test/vimrc	/^cnoremap <C-n> <Down>$/;"	m
-<C-n>	./plugin/mappings.vim	/^nnoremap <silent> <C-n> :NERDTreeToggle<CR>$/;"	m
+<C-n>	./plugins/mappings.vim	/^nnoremap <expr> <silent> <C-n> g:NERDTree.IsOpen() ? ':NERDTreeToggle<CR>' : ':NERDTreeFind<CR>'$/;"	m
+<C-n>	./plugins/nerdtree.vim	/^nnoremap <expr> <silent> <C-n> g:NERDTree.IsOpen() ? ':NERDTreeToggle<CR>' : ':NERDTreeFind<CR>'$/;"	m
 <C-p>	./plugged/gv.vim/plugin/gv.vim	/^  nmap              <buffer> <C-p> [[o$/;"	m
 <C-p>	./plugged/gv.vim/plugin/gv.vim	/^  xmap              <buffer> <C-p> [[ogv$/;"	m
 <C-p>	./plugged/vimwiki/test/vimrc	/^cnoremap <C-p> <Up>$/;"	m
-<C-right>	./config/mappings.vim	/^noremap <silent> <C-right> <C-w>>$/;"	m
+<C-right>	./back_up/mappings.vim	/^noremap <silent> <C-right> <C-w>>$/;"	m
 <C-right>	./plugin/mappings.vim	/^noremap <silent> <C-right> <C-w>>$/;"	m
-<C-s>	./config/mappings.vim	/^nnoremap <silent> <C-s> :Startify<CR>$/;"	m
-<C-s>	./plugin/mappings.vim	/^nnoremap <silent> <C-s> :Startify<CR>$/;"	m
-<C-up>	./config/mappings.vim	/^noremap <silent> <C-up> :3winc +<CR>$/;"	m
+<C-right>	./plugins/mappings.vim	/^noremap <silent> <C-right> <C-w>>$/;"	m
+<C-s>	./back_up/mappings.vim	/^nnoremap <silent> <C-s> :Startify<CR>$/;"	m
+<C-s>	./plugins/mappings.vim	/^nnoremap <silent> <C-s> :Startify<CR>$/;"	m
+<C-s>	./plugins/startify.vim	/^nnoremap <silent> <C-s> :Startify<CR>$/;"	m
+<C-up>	./back_up/mappings.vim	/^noremap <silent> <C-up> :3winc +<CR>$/;"	m
 <C-up>	./plugin/mappings.vim	/^noremap <silent> <C-up> :3winc +<CR>$/;"	m
+<C-up>	./plugins/mappings.vim	/^noremap <silent> <C-up> :3winc +<CR>$/;"	m
 <CR>	./plugged/vimwiki/ftplugin/vimwiki.vim	/^      inoremap <silent><buffer> <CR> <C-]><Esc>:VimwikiReturn 1 5<CR>$/;"	m
 <CR>	./plugged/vimwiki/ftplugin/vimwiki.vim	/^      inoremap <silent><buffer> <CR> <Esc>:VimwikiReturn 1 5<CR>$/;"	m
 <DEL>	./plugged/ultisnips/autoload/UltiSnips/map_keys.vim	/^    snoremap <silent> <DEL> <c-g>"_c$/;"	m
@@ -864,24 +877,29 @@ $schema	./plugged/vimspector/tests/testdata/cpp/simple/.vimspector.json	/^  "$sc
 <F11>	./plugged/vimspector/plugin/vimspector.vim	/^  nmap <F11>        <Plug>VimspectorStepInto$/;"	m
 <F12>	./plugged/vimspector/plugin/vimspector.vim	/^  nmap <F12>        <Plug>VimspectorStepOut$/;"	m
 <F3>	./plugged/vimspector/plugin/vimspector.vim	/^  nmap <F3>         <Plug>VimspectorStop$/;"	m
-<F4>	./config/mappings.vim	/^nnoremap <silent> <F4> :UndotreeToggle<CR>$/;"	m
+<F4>	./back_up/mappings.vim	/^nnoremap <silent> <F4> :UndotreeToggle<CR>$/;"	m
 <F4>	./plugged/vimspector/plugin/vimspector.vim	/^  nmap <F4>         <Plug>VimspectorRestart$/;"	m
-<F4>	./plugin/mappings.vim	/^nnoremap <silent> <F4> :UndotreeToggle<CR>$/;"	m
+<F4>	./plugins/mappings.vim	/^nnoremap <silent> <F4> :UndotreeToggle<CR>$/;"	m
+<F4>	./plugins/undotree.vim	/^nnoremap <silent> <F4> :UndotreeToggle<CR>$/;"	m
 <F5>	./plugged/vimspector/plugin/vimspector.vim	/^  nmap <F5>         <Plug>VimspectorContinue$/;"	m
-<F6>	./config/mappings.vim	/^map <silent> <F6> :call ReplaceCurrentWord()<CR>$/;"	m
+<F6>	./back_up/mappings.vim	/^map <silent> <F6> :call ReplaceCurrentWord()<CR>$/;"	m
 <F6>	./plugged/vimspector/plugin/vimspector.vim	/^  nmap <F6>         <Plug>VimspectorPause$/;"	m
-<F6>	./plugin/mappings.vim	/^map <silent> <F6> :call ReplaceCurrentWord()<CR>$/;"	m
-<F7>	./config/mappings.vim	/^map <silent> <F7> :<C-U> :Rooter<CR>:call ReplaceCurrentWordAll()<CR> :cd %:p:h<CR>$/;"	m
+<F6>	./plugins/mappings.vim	/^map <silent> <F6> :call ReplaceCurrentWord()<CR>$/;"	m
+<F6>	./plugins/me-make-shit.vim	/^map <silent> <F6> :call ReplaceCurrentWord()<CR>$/;"	m
+<F7>	./back_up/mappings.vim	/^map <silent> <F7> :<C-U> :Rooter<CR>:call ReplaceCurrentWordAll()<CR> :cd %:p:h<CR>$/;"	m
 <F7>	./plugged/vim-anyfold/autoload/anyfold.vim	/^        noremap <script> <buffer> <silent> <F7>$/;"	m
-<F7>	./plugin/mappings.vim	/^map <silent> <F7> :<C-U> :Rooter<CR>:call ReplaceCurrentWordAll()<CR> :cd %:p:h<CR>$/;"	m
-<F8>	./config/mappings.vim	/^nmap <silent> <F8> :TagbarToggle<CR>$/;"	m
+<F7>	./plugins/mappings.vim	/^map <silent> <F7> :<C-U> :Rooter<CR>:call ReplaceCurrentWordAll()<CR> :cd %:p:h<CR>$/;"	m
+<F7>	./plugins/me-make-shit.vim	/^map <silent> <F7> :<C-U> :Rooter<CR>:call ReplaceCurrentWordAll()<CR> :cd %:p:h<CR>$/;"	m
+<F8>	./back_up/mappings.vim	/^nmap <silent> <F8> :TagbarToggle<CR>$/;"	m
 <F8>	./plugged/vim-anyfold/autoload/anyfold.vim	/^        noremap <script> <buffer> <silent> <F8>$/;"	m
 <F8>	./plugged/vimspector/plugin/vimspector.vim	/^  nmap <F8>         <Plug>VimspectorAddFunctionBreakpoint$/;"	m
-<F8>	./plugin/mappings.vim	/^nmap <silent> <F8> :TagbarToggle<CR>$/;"	m
-<F9>	./config/mappings.vim	/^map <silent> <F9> :Rooter<CR> :call SearchAll()<CR> :cd %:p:h<CR>$/;"	m
+<F8>	./plugins/mappings.vim	/^nmap <silent> <F8> :TagbarToggle<CR>$/;"	m
+<F8>	./plugins/tagbar.vim	/^nmap <silent> <F8> :TagbarToggle<CR>$/;"	m
+<F9>	./back_up/mappings.vim	/^map <silent> <F9> :Rooter<CR> :call SearchAll()<CR> :cd %:p:h<CR>$/;"	m
 <F9>	./plugged/vim-anyfold/autoload/anyfold.vim	/^        noremap <script> <buffer> <silent> <F9>$/;"	m
 <F9>	./plugged/vimspector/plugin/vimspector.vim	/^  nmap <F9>         <Plug>VimspectorToggleBreakpoint$/;"	m
-<F9>	./plugin/mappings.vim	/^map <silent> <F9> :Rooter<CR> :call SearchAll()<CR> :cd %:p:h<CR>$/;"	m
+<F9>	./plugins/mappings.vim	/^map <silent> <F9> :Rooter<CR> :call SearchAll()<CR> :cd %:p:h<CR>$/;"	m
+<F9>	./plugins/me-make-shit.vim	/^map <silent> <F9> :Rooter<CR> :call SearchAll()<CR> :cd %:p:h<CR>$/;"	m
 <Leader><F5>	./plugged/vimspector/support/test/java/test_project/java.vim	/^nnoremap <silent> <buffer> <Leader><F5> :call <SID>StartDebugging()<CR>$/;"	m
 <Leader>a	./plugged/ferret/plugin/ferret.vim	/^    nmap <unique> <Leader>a <Plug>(FerretAck)$/;"	m
 <Leader>d	./plugged/vimspector/tests/variables.test.vim	/^  nmap <buffer> <Leader>d <Plug>VimspectorBalloonEval$/;"	m
@@ -1042,61 +1060,79 @@ $schema	./plugged/vimspector/tests/testdata/cpp/simple/.vimspector.json	/^  "$sc
 <S-F5>	./plugged/vimspector/plugin/vimspector.vim	/^  nmap <S-F5>       <Plug>VimspectorStop$/;"	m
 <S-F9>	./plugged/vimspector/plugin/vimspector.vim	/^  nmap <S-F9>       <Plug>VimspectorAddFunctionBreakpoint$/;"	m
 <S-LeftMouse>	./plugged/vimwiki/ftplugin/vimwiki.vim	/^  nmap <buffer> <S-LeftMouse> <NOP>$/;"	m
-<S-Tab>	./config/settings.vim	/^imap <expr> <S-Tab> vsnip#jumpable(-1)  ? '<Plug>(vsnip-jump-prev)'      : '<S-Tab>'$/;"	m
-<S-Tab>	./config/settings.vim	/^smap <expr> <S-Tab> vsnip#jumpable(-1)  ? '<Plug>(vsnip-jump-prev)'      : '<S-Tab>'$/;"	m
+<S-Tab>	./back_up/settings.vim	/^imap <expr> <S-Tab> vsnip#jumpable(-1)  ? '<Plug>(vsnip-jump-prev)'      : '<S-Tab>'$/;"	m
+<S-Tab>	./back_up/settings.vim	/^smap <expr> <S-Tab> vsnip#jumpable(-1)  ? '<Plug>(vsnip-jump-prev)'      : '<S-Tab>'$/;"	m
 <S-Tab>	./plugged/vim-vsnip/.vimrc	/^imap <expr><S-Tab> vsnip#available(-1) ? '<Plug>(vsnip-jump-prev)'      : '<S-Tab>'$/;"	m
 <S-Tab>	./plugged/vim-vsnip/.vimrc	/^smap <expr><S-Tab> vsnip#available(-1) ? '<Plug>(vsnip-jump-prev)'      : '<S-Tab>'$/;"	m
 <S-Tab>	./plugged/vimwiki/ftplugin/vimwiki.vim	/^  inoremap <expr><buffer> <S-Tab> vimwiki#tbl#kbd_shift_tab()$/;"	m
 <S-Tab>	./plugin/settings.vim	/^imap <expr> <S-Tab> vsnip#jumpable(-1)  ? '<Plug>(vsnip-jump-prev)'      : '<S-Tab>'$/;"	m
 <S-Tab>	./plugin/settings.vim	/^smap <expr> <S-Tab> vsnip#jumpable(-1)  ? '<Plug>(vsnip-jump-prev)'      : '<S-Tab>'$/;"	m
+<S-Tab>	./plugins/settings.vim	/^imap <expr> <S-Tab> vsnip#jumpable(-1)  ? '<Plug>(vsnip-jump-prev)'      : '<S-Tab>'$/;"	m
+<S-Tab>	./plugins/settings.vim	/^smap <expr> <S-Tab> vsnip#jumpable(-1)  ? '<Plug>(vsnip-jump-prev)'      : '<S-Tab>'$/;"	m
+<S-Tab>	./plugins/snippets.vim	/^imap <expr> <S-Tab> vsnip#jumpable(-1)  ? '<Plug>(vsnip-jump-prev)'      : '<S-Tab>'$/;"	m
+<S-Tab>	./plugins/snippets.vim	/^smap <expr> <S-Tab> vsnip#jumpable(-1)  ? '<Plug>(vsnip-jump-prev)'      : '<S-Tab>'$/;"	m
 <SID>:	./plugged/vim-fugitive/autoload/fugitive.vim	/^nnoremap <SID>: :<C-U><C-R>=v:count ? v:count : ''<CR>$/;"	m
 <SID>AutoPairsReturn	./plugged/auto-pairs/plugin/auto-pairs.vim	/^inoremap <silent> <SID>AutoPairsReturn <C-R>=AutoPairsReturn()<CR>$/;"	m
-<Tab>	./config/settings.vim	/^imap <expr> <Tab>   vsnip#jumpable(1)   ? '<Plug>(vsnip-jump-next)'      : '<Tab>'$/;"	m
-<Tab>	./config/settings.vim	/^smap <expr> <Tab>   vsnip#jumpable(1)   ? '<Plug>(vsnip-jump-next)'      : '<Tab>'$/;"	m
+<Tab>	./back_up/settings.vim	/^imap <expr> <Tab>   vsnip#jumpable(1)   ? '<Plug>(vsnip-jump-next)'      : '<Tab>'$/;"	m
+<Tab>	./back_up/settings.vim	/^smap <expr> <Tab>   vsnip#jumpable(1)   ? '<Plug>(vsnip-jump-next)'      : '<Tab>'$/;"	m
 <Tab>	./plugged/vim-vsnip/.vimrc	/^imap <expr><Tab>   vsnip#available(1)  ? '<Plug>(vsnip-jump-next)'      : '<Tab>'$/;"	m
 <Tab>	./plugged/vim-vsnip/.vimrc	/^smap <expr><Tab>   vsnip#available(1)  ? '<Plug>(vsnip-jump-next)'      : '<Tab>'$/;"	m
 <Tab>	./plugged/vimwiki/ftplugin/vimwiki.vim	/^  inoremap <expr><buffer> <Tab> vimwiki#tbl#kbd_tab()$/;"	m
 <Tab>	./plugin/settings.vim	/^imap <expr> <Tab>   vsnip#jumpable(1)   ? '<Plug>(vsnip-jump-next)'      : '<Tab>'$/;"	m
 <Tab>	./plugin/settings.vim	/^smap <expr> <Tab>   vsnip#jumpable(1)   ? '<Plug>(vsnip-jump-next)'      : '<Tab>'$/;"	m
+<Tab>	./plugins/settings.vim	/^imap <expr> <Tab>   vsnip#jumpable(1)   ? '<Plug>(vsnip-jump-next)'      : '<Tab>'$/;"	m
+<Tab>	./plugins/settings.vim	/^smap <expr> <Tab>   vsnip#jumpable(1)   ? '<Plug>(vsnip-jump-next)'      : '<Tab>'$/;"	m
+<Tab>	./plugins/snippets.vim	/^imap <expr> <Tab>   vsnip#jumpable(1)   ? '<Plug>(vsnip-jump-next)'      : '<Tab>'$/;"	m
+<Tab>	./plugins/snippets.vim	/^smap <expr> <Tab>   vsnip#jumpable(1)   ? '<Plug>(vsnip-jump-next)'      : '<Tab>'$/;"	m
 <a name=other></a>Other	./plugged/awesome-vim-colorschemes/docs/whatyouhide-vim-gotham.md	/^### <a name=other><\/a>Other$/;"	S	section:Installation
 <a name=other></a>Other	./plugged/vim-gotham/README.md	/^### <a name=other><\/a>Other$/;"	S	section:Installation
 <bs>	./plugged/supertab/plugin/supertab.vim	/^    imap <buffer> <bs> <c-r>=<SID>CompletionReset("\\<lt>bs>")<cr>$/;"	m
-<c-+>	./config/neovide.vim	/^nmap <c-+> :ZoomIn<CR>$/;"	m
-<c-+>	./plugin/neovide.vim	/^nmap <c-+> :ZoomIn<CR>$/;"	m
-<c-->	./config/neovide.vim	/^nmap <c--> :ZoomOut<CR>$/;"	m
-<c-->	./plugin/neovide.vim	/^nmap <c--> :ZoomOut<CR>$/;"	m
-<c-F6>	./config/mappings.vim	/^map <silent> <c-F6> :call RaplceWordInFile()<CR>$/;"	m
-<c-F6>	./plugin/mappings.vim	/^map <silent> <c-F6> :call RaplceWordInFile()<CR>$/;"	m
-<c-F7>	./config/mappings.vim	/^map <silent> <c-F7> :Rooter<CR> :call ReplaceWordAll()<CR>  :cd %:p:h<CR>$/;"	m
-<c-F7>	./plugin/mappings.vim	/^map <silent> <c-F7> :Rooter<CR> :call ReplaceWordAll()<CR>  :cd %:p:h<CR>$/;"	m
-<c-F8>	./config/mappings.vim	/^map <silent> <c-F8> :Rooter<CR> :call UndoLastReplaceCurrentWord()<CR>  :cd %:p:h<CR>$/;"	m
-<c-F8>	./plugin/mappings.vim	/^map <silent> <c-F8> :Rooter<CR> :call UndoLastReplaceCurrentWord()<CR>  :cd %:p:h<CR>$/;"	m
-<c-F9>	./config/mappings.vim	/^map <silent> <c-F9> :Rooter<CR> :call SearchFor()<CR> :cd %:p:h<CR>$/;"	m
-<c-F9>	./plugin/mappings.vim	/^map <silent> <c-F9> :Rooter<CR> :call SearchFor()<CR> :cd %:p:h<CR>$/;"	m
+<c-+>	./back_up/neovide.vim	/^nmap <c-+> :ZoomIn<CR>$/;"	m
+<c-+>	./plugins/neovide.vim	/^nmap <c-+> :ZoomIn<CR>$/;"	m
+<c-->	./back_up/neovide.vim	/^nmap <c--> :ZoomOut<CR>$/;"	m
+<c-->	./plugins/neovide.vim	/^nmap <c--> :ZoomOut<CR>$/;"	m
+<c-F6>	./back_up/mappings.vim	/^map <silent> <c-F6> :call RaplceWordInFile()<CR>$/;"	m
+<c-F6>	./plugins/mappings.vim	/^map <silent> <c-F6> :call RaplceWordInFile()<CR>$/;"	m
+<c-F6>	./plugins/me-make-shit.vim	/^map <silent> <c-F6> :call RaplceWordInFile()<CR>$/;"	m
+<c-F7>	./back_up/mappings.vim	/^map <silent> <c-F7> :Rooter<CR> :call ReplaceWordAll()<CR>  :cd %:p:h<CR>$/;"	m
+<c-F7>	./plugins/mappings.vim	/^map <silent> <c-F7> :Rooter<CR> :call ReplaceWordAll()<CR>  :cd %:p:h<CR>$/;"	m
+<c-F7>	./plugins/me-make-shit.vim	/^map <silent> <c-F7> :Rooter<CR> :call ReplaceWordAll()<CR>  :cd %:p:h<CR>$/;"	m
+<c-F8>	./back_up/mappings.vim	/^map <silent> <c-F8> :Rooter<CR> :call UndoLastReplaceCurrentWord()<CR>  :cd %:p:h<CR>$/;"	m
+<c-F8>	./plugins/mappings.vim	/^map <silent> <c-F8> :Rooter<CR> :call UndoLastReplaceCurrentWord()<CR>  :cd %:p:h<CR>$/;"	m
+<c-F8>	./plugins/me-make-shit.vim	/^map <silent> <c-F8> :Rooter<CR> :call UndoLastReplaceCurrentWord()<CR>  :cd %:p:h<CR>$/;"	m
+<c-F9>	./back_up/mappings.vim	/^map <silent> <c-F9> :Rooter<CR> :call SearchFor()<CR> :cd %:p:h<CR>$/;"	m
+<c-F9>	./plugins/mappings.vim	/^map <silent> <c-F9> :Rooter<CR> :call SearchFor()<CR> :cd %:p:h<CR>$/;"	m
+<c-F9>	./plugins/me-make-shit.vim	/^map <silent> <c-F9> :Rooter<CR> :call SearchFor()<CR> :cd %:p:h<CR>$/;"	m
 <c-\\>	./plugged/vim-tmux-navigator/plugin/tmux_navigator.vim	/^  nnoremap <silent> <c-\\> :TmuxNavigatePrevious<cr>$/;"	m
 <c-]>	./plugged/supertab/plugin/supertab.vim	/^    nmap <silent> <buffer> <c-]> :call <SID>SetCompletionType()<cr>$/;"	m
-<c-a>	./config/mappings.vim	/^nnoremap <c-a> :cn<CR>$/;"	m
+<c-a>	./back_up/mappings.vim	/^nnoremap <c-a> :cn<CR>$/;"	m
 <c-a>	./plugin/mappings.vim	/^nnoremap <c-a> :cn<CR>$/;"	m
-<c-b>	./config/mappings.vim	/^nnoremap <c-b> :cp<CR>$/;"	m
+<c-a>	./plugins/mappings.vim	/^nnoremap <c-a> :cn<CR>$/;"	m
+<c-b>	./back_up/mappings.vim	/^nnoremap <c-b> :cp<CR>$/;"	m
 <c-b>	./plugin/mappings.vim	/^nnoremap <c-b> :cp<CR>$/;"	m
+<c-b>	./plugins/mappings.vim	/^nnoremap <c-b> :cp<CR>$/;"	m
 <c-h>	./plugged/supertab/plugin/supertab.vim	/^    imap <buffer> <c-h> <c-r>=<SID>CompletionReset("\\<lt>c-h>")<cr>$/;"	m
 <c-h>	./plugged/ultisnips/autoload/UltiSnips/map_keys.vim	/^    snoremap <silent> <c-h> <c-g>"_c$/;"	m
 <c-h>	./plugged/vim-tmux-navigator/plugin/tmux_navigator.vim	/^  nnoremap <silent> <c-h> :TmuxNavigateLeft<cr>$/;"	m
 <c-j>	./plugged/vim-tmux-navigator/plugin/tmux_navigator.vim	/^  nnoremap <silent> <c-j> :TmuxNavigateDown<cr>$/;"	m
 <c-k>	./plugged/vim-tmux-navigator/plugin/tmux_navigator.vim	/^  nnoremap <silent> <c-k> :TmuxNavigateUp<cr>$/;"	m
 <c-l>	./plugged/vim-tmux-navigator/plugin/tmux_navigator.vim	/^  nnoremap <silent> <c-l> :TmuxNavigateRight<cr>$/;"	m
-<c-m>	./config/mappings.vim	/^nnoremap <silent> <c-m> :MaximizerToggle<CR>$/;"	m
-<c-m>	./plugin/mappings.vim	/^nnoremap <silent> <c-m> :MaximizerToggle<CR>$/;"	m
-<c-p>	./config/mappings.vim	/^nnoremap <silent> <c-p> :CtrlP<CR>$/;"	m
-<c-p>	./plugin/mappings.vim	/^nnoremap <silent> <c-p> :CtrlP<CR>$/;"	m
-<c-q>	./config/mappings.vim	/^nnoremap <silent> <c-q> :call ToggleQuickfix()<CR>$/;"	m
+<c-m>	./back_up/mappings.vim	/^nnoremap <silent> <c-m> :MaximizerToggle<CR>$/;"	m
+<c-m>	./plugins/mappings.vim	/^nnoremap <silent> <c-m> :MaximizerToggle<CR>$/;"	m
+<c-m>	./plugins/maximizer.vim	/^nnoremap <silent> <c-m> :MaximizerToggle<CR>$/;"	m
+<c-p>	./back_up/mappings.vim	/^nnoremap <silent> <c-p> :CtrlP<CR>$/;"	m
+<c-p>	./plugins/ctrlP.vim	/^nnoremap <silent> <c-p> :CtrlP<CR>$/;"	m
+<c-p>	./plugins/mappings.vim	/^nnoremap <silent> <c-p> :CtrlP<CR>$/;"	m
+<c-q>	./back_up/mappings.vim	/^nnoremap <silent> <c-q> :call ToggleQuickfix()<CR>$/;"	m
 <c-q>	./plugin/mappings.vim	/^nnoremap <silent> <c-q> :call ToggleQuickfix()<CR>$/;"	m
+<c-q>	./plugins/mappings.vim	/^nnoremap <silent> <c-q> :call ToggleQuickfix()<CR>$/;"	m
 <c-r>	./plugged/ultisnips/autoload/UltiSnips/map_keys.vim	/^    snoremap <c-r> <c-g>"_c<c-r>$/;"	m
-<c-t>	./config/grpc.vim	/^nnoremap <silent> <c-t> :call SendDataToTimeTrackService("GetAll")<CR> :b thefux_timetrack<CR>$/;"	m
+<c-t>	./plugins/grpc.vim	/^nnoremap <silent> <c-t> :call SendDataToTimeTrackService("GetAll")<CR> :b thefux_timetrack<CR>$/;"	m
 <c-x>	./plugged/supertab/plugin/supertab.vim	/^  inoremap <silent> <c-x> <c-r>=<SID>ManualCompletionEnter()<cr>$/;"	m
-<c-z>	./config/mappings.vim	/^nnoremap <c-z> <c>$/;"	m
+<c-z>	./back_up/mappings.vim	/^nnoremap <c-z> <c>$/;"	m
 <c-z>	./plugin/mappings.vim	/^nnoremap <c-z> <c>$/;"	m
-<c-z>z	./config/grpc.vim	/^nnoremap <silent> <c-z>z :call UpdateTask()<CR>$/;"	m
+<c-z>	./plugins/mappings.vim	/^nnoremap <c-z> <c>$/;"	m
+<c-z>z	./plugins/grpc.vim	/^nnoremap <silent> <c-z>z :call UpdateTask()<CR>$/;"	m
 <cr>	./autoload/plug.vim	/^      nmap <buffer> <cr> <plug>(plug-preview)$/;"	m
 <cr>	./plugged/gv.vim/plugin/gv.vim	/^  nnoremap <silent> <buffer> <cr> :call <sid>open(0)<cr>$/;"	m
 <cr>	./plugged/gv.vim/plugin/gv.vim	/^  xnoremap <silent> <buffer> <cr> :<c-u>call <sid>open(1)<cr>$/;"	m
@@ -1108,64 +1144,78 @@ $schema	./plugged/vimspector/tests/testdata/cpp/simple/.vimspector.json	/^  "$sc
 <lambda>	./plugged/vimspector/support/test/kotlin/build.gradle.kts	/^dependencies {$/;"	m
 <lambda>	./plugged/vimspector/support/test/kotlin/build.gradle.kts	/^plugins {$/;"	m
 <lambda>	./plugged/vimspector/support/test/kotlin/build.gradle.kts	/^repositories {$/;"	m
-<leader>	./config/which-key.vim	/^nnoremap <silent> <leader> :silent WhichKey '<Space>'<CR>$/;"	m
-<leader>	./config/which-key.vim	/^vnoremap <silent> <leader> :silent <c-u> :silent WhichKeyVisual '<Space>'<CR>$/;"	m
-<leader>	./plugin/which-key.vim	/^nnoremap <silent> <leader> :silent WhichKey '<Space>'<CR>$/;"	m
-<leader>	./plugin/which-key.vim	/^vnoremap <silent> <leader> :silent <c-u> :silent WhichKeyVisual '<Space>'<CR>$/;"	m
+<leader>	./back_up/which-key.vim	/^nnoremap <silent> <leader> :silent WhichKey '<Space>'<CR>$/;"	m
+<leader>	./back_up/which-key.vim	/^vnoremap <silent> <leader> :silent <c-u> :silent WhichKeyVisual '<Space>'<CR>$/;"	m
+<leader>	./plugins/which-key.vim	/^nnoremap <silent> <leader> :silent WhichKey '<Space>'<CR>$/;"	m
+<leader>	./plugins/which-key.vim	/^vnoremap <silent> <leader> :silent <c-u> :silent WhichKeyVisual '<Space>'<CR>$/;"	m
 <leader><F5>	./plugged/vimspector/plugin/vimspector.vim	/^  nmap <leader><F5> <Plug>VimspectorLaunch$/;"	m
 <leader><F8>	./plugged/vimspector/plugin/vimspector.vim	/^  nmap <leader><F8> <Plug>VimspectorRunToCursor$/;"	m
 <leader><F9>	./plugged/vimspector/plugin/vimspector.vim	/^  nmap <leader><F9> <Plug>VimspectorToggleConditionalBreakpoint$/;"	m
-<leader>S	./config/mappings.vim	/^nnoremap <silent> <leader>S :source %<CR>$/;"	m
-<leader>c	./config/mappings.vim	/^map <silent> <leader>c "*y$/;"	m
+<leader>S	./plugin/mappings.vim	/^nnoremap <silent> <leader>S :source %<CR>$/;"	m
+<leader>S	./plugins/mappings.vim	/^nnoremap <silent> <leader>S :source %<CR>$/;"	m
+<leader>c	./back_up/mappings.vim	/^map <silent> <leader>c "*y$/;"	m
 <leader>c	./plugin/mappings.vim	/^map <silent> <leader>c "*y$/;"	m
-<leader>dd	./config/vimspector.vim	/^nmap <leader>dd :call vimspector#Launch()<CR>$/;"	m
-<leader>dd	./plugin/vimspector.vim	/^nmap <leader>dd :call vimspector#Launch()<CR>$/;"	m
-<leader>de	./config/vimspector.vim	/^nmap <leader>de :VimspectorEval$/;"	m
-<leader>de	./plugin/vimspector.vim	/^nmap <leader>de :VimspectorEval$/;"	m
-<leader>do	./config/vimspector.vim	/^nmap <leader>do :VimspectorShowOutput$/;"	m
-<leader>do	./plugin/vimspector.vim	/^nmap <leader>do :VimspectorShowOutput$/;"	m
-<leader>dw	./config/vimspector.vim	/^nmap <leader>dw :VimspectorWatch$/;"	m
-<leader>dw	./plugin/vimspector.vim	/^nmap <leader>dw :VimspectorWatch$/;"	m
-<leader>dx	./config/vimspector.vim	/^nmap <leader>dx :VimspectorReset<CR>$/;"	m
-<leader>dx	./plugin/vimspector.vim	/^nmap <leader>dx :VimspectorReset<CR>$/;"	m
-<leader>fb	./config/telescope.vim	/^nnoremap <leader>fb <cmd>Telescope buffers<cr>$/;"	m
-<leader>fb	./plugin/telescope.vim	/^nnoremap <leader>fb <cmd>Telescope buffers<cr>$/;"	m
-<leader>ff	./config/telescope.vim	/^nnoremap <leader>ff <cmd>Telescope find_files<cr>$/;"	m
-<leader>ff	./plugin/telescope.vim	/^nnoremap <leader>ff <cmd>Telescope find_files<cr>$/;"	m
-<leader>fg	./config/telescope.vim	/^nnoremap <leader>fg <cmd>Telescope live_grep<cr>$/;"	m
-<leader>fg	./plugin/telescope.vim	/^nnoremap <leader>fg <cmd>Telescope live_grep<cr>$/;"	m
-<leader>fh	./config/telescope.vim	/^nnoremap <leader>fh <cmd>Telescope help_tags<cr>$/;"	m
-<leader>fh	./plugin/telescope.vim	/^nnoremap <leader>fh <cmd>Telescope help_tags<cr>$/;"	m
-<leader>gg	./config/lazygit.vim	/^nnoremap <silent> <leader>gg :LazyGit<CR>$/;"	m
-<leader>gg	./plugin/lazygit.vim	/^nnoremap <silent> <leader>gg :LazyGit<CR>$/;"	m
-<leader>gl	./config/mappings.vim	/^nmap <leader>gl :diffget \/\/2<CR>$/;"	m
-<leader>gl	./plugin/mappings.vim	/^nmap <leader>gl :diffget \/\/2<CR>$/;"	m
-<leader>gr	./config/mappings.vim	/^nmap <leader>gr :diffget \/\/3<CR>$/;"	m
-<leader>gr	./plugin/mappings.vim	/^nmap <leader>gr :diffget \/\/3<CR>$/;"	m
-<leader>gs	./config/mappings.vim	/^nmap <leader>gs :G<CR>$/;"	m
-<leader>gs	./plugin/mappings.vim	/^nmap <leader>gs :G<CR>$/;"	m
-<leader>h	./config/settings.vim	/^nnoremap <leader>h :call SetLineHighlight()<CR>$/;"	m
+<leader>c	./plugins/mappings.vim	/^map <silent> <leader>c "*y$/;"	m
+<leader>dd	./back_up/vimspector.vim	/^nmap <leader>dd :call vimspector#Launch()<CR>$/;"	m
+<leader>dd	./plugins/vimspector.vim	/^nmap <leader>dd :call vimspector#Launch()<CR>$/;"	m
+<leader>de	./back_up/vimspector.vim	/^nmap <leader>de :VimspectorEval$/;"	m
+<leader>de	./plugins/vimspector.vim	/^nmap <leader>de :VimspectorEval$/;"	m
+<leader>do	./back_up/vimspector.vim	/^nmap <leader>do :VimspectorShowOutput$/;"	m
+<leader>do	./plugins/vimspector.vim	/^nmap <leader>do :VimspectorShowOutput$/;"	m
+<leader>dw	./back_up/vimspector.vim	/^nmap <leader>dw :VimspectorWatch$/;"	m
+<leader>dw	./plugins/vimspector.vim	/^nmap <leader>dw :VimspectorWatch$/;"	m
+<leader>dx	./back_up/vimspector.vim	/^nmap <leader>dx :VimspectorReset<CR>$/;"	m
+<leader>dx	./plugins/vimspector.vim	/^nmap <leader>dx :VimspectorReset<CR>$/;"	m
+<leader>fb	./back_up/telescope.vim	/^nnoremap <leader>fb <cmd>Telescope buffers<cr>$/;"	m
+<leader>fb	./plugins/telescope.vim	/^nnoremap <leader>fb <cmd>Telescope buffers<cr>$/;"	m
+<leader>ff	./back_up/telescope.vim	/^nnoremap <leader>ff <cmd>Telescope find_files<cr>$/;"	m
+<leader>ff	./plugins/telescope.vim	/^nnoremap <leader>ff <cmd>Telescope find_files<cr>$/;"	m
+<leader>fg	./back_up/telescope.vim	/^nnoremap <leader>fg <cmd>Telescope live_grep<cr>$/;"	m
+<leader>fg	./plugins/telescope.vim	/^nnoremap <leader>fg <cmd>Telescope live_grep<cr>$/;"	m
+<leader>fh	./back_up/telescope.vim	/^nnoremap <leader>fh <cmd>Telescope help_tags<cr>$/;"	m
+<leader>fh	./plugins/telescope.vim	/^nnoremap <leader>fh <cmd>Telescope help_tags<cr>$/;"	m
+<leader>gg	./back_up/lazygit.vim	/^nnoremap <silent> <leader>gg :LazyGit<CR>$/;"	m
+<leader>gg	./plugins/lazygit.vim	/^nnoremap <silent> <leader>gg :LazyGit<CR>$/;"	m
+<leader>gl	./back_up/mappings.vim	/^nmap <leader>gl :diffget \/\/2<CR>$/;"	m
+<leader>gl	./plugins/fugitive_gv.vim	/^nmap <leader>gl :diffget \/\/2<CR>$/;"	m
+<leader>gl	./plugins/mappings.vim	/^nmap <leader>gl :diffget \/\/2<CR>$/;"	m
+<leader>gr	./back_up/mappings.vim	/^nmap <leader>gr :diffget \/\/3<CR>$/;"	m
+<leader>gr	./plugins/fugitive_gv.vim	/^nmap <leader>gr :diffget \/\/3<CR>$/;"	m
+<leader>gr	./plugins/mappings.vim	/^nmap <leader>gr :diffget \/\/3<CR>$/;"	m
+<leader>gs	./back_up/mappings.vim	/^nmap <leader>gs :G<CR>$/;"	m
+<leader>gs	./plugins/fugitive_gv.vim	/^nmap <leader>gs :G<CR>$/;"	m
+<leader>gs	./plugins/mappings.vim	/^nmap <leader>gs :G<CR>$/;"	m
+<leader>h	./back_up/settings.vim	/^nnoremap <leader>h :call SetLineHighlight()<CR>$/;"	m
 <leader>h	./plugin/settings.vim	/^nnoremap <leader>h :call SetLineHighlight()<CR>$/;"	m
-<leader>p	./config/mappings.vim	/^nnoremap <silent> <leader>p "+p $/;"	m
+<leader>h	./plugins/settings.vim	/^nnoremap <leader>h :call SetLineHighlight()<CR>$/;"	m
+<leader>p	./back_up/mappings.vim	/^nnoremap <silent> <leader>p "+p $/;"	m
 <leader>p	./plugin/mappings.vim	/^nnoremap <silent> <leader>p "+p $/;"	m
-<leader>q	./config/mappings.vim	/^nnoremap <silent> <leader>q :q<CR>$/;"	m
+<leader>p	./plugins/mappings.vim	/^nnoremap <silent> <leader>p "+p $/;"	m
+<leader>q	./back_up/mappings.vim	/^nnoremap <silent> <leader>q :q<CR>$/;"	m
 <leader>q	./plugin/mappings.vim	/^nnoremap <silent> <leader>q :q<CR>$/;"	m
-<leader>s	./config/mappings.vim	/^nnoremap <silent> <leader>s :source $MYVIMRC<CR>$/;"	m
+<leader>q	./plugins/mappings.vim	/^nnoremap <silent> <leader>q :q<CR>$/;"	m
+<leader>s	./back_up/mappings.vim	/^nnoremap <silent> <leader>s :source $MYVIMRC<CR>$/;"	m
 <leader>s	./plugin/mappings.vim	/^nnoremap <silent> <leader>s :source $MYVIMRC<CR>$/;"	m
-<leader>tt	./config/mappings.vim	/^nnoremap <leader>tt :terminal<CR>$/;"	m
+<leader>s	./plugins/mappings.vim	/^nnoremap <silent> <leader>s :source $MYVIMRC<CR>$/;"	m
+<leader>tt	./back_up/mappings.vim	/^nnoremap <leader>tt :terminal<CR>$/;"	m
 <leader>tt	./plugin/mappings.vim	/^nnoremap <leader>tt :terminal<CR>$/;"	m
-<leader>tv	./config/mappings.vim	/^nnoremap <leader>tv <C-w>v :terminal<CR>$/;"	m
+<leader>tt	./plugins/mappings.vim	/^nnoremap <leader>tt :terminal<CR>$/;"	m
+<leader>tv	./back_up/mappings.vim	/^nnoremap <leader>tv <C-w>v :terminal<CR>$/;"	m
 <leader>tv	./plugin/mappings.vim	/^nnoremap <leader>tv <C-w>v :terminal<CR>$/;"	m
-<leader>v	./config/mappings.vim	/^nnoremap <silent> <leader>v :split $MYVIMRC<CR>$/;"	m
+<leader>tv	./plugins/mappings.vim	/^nnoremap <leader>tv <C-w>v :terminal<CR>$/;"	m
+<leader>v	./back_up/mappings.vim	/^nnoremap <silent> <leader>v :split $MYVIMRC<CR>$/;"	m
 <leader>v	./plugin/mappings.vim	/^nnoremap <silent> <leader>v :split $MYVIMRC<CR>$/;"	m
-<leader>w	./config/mappings.vim	/^nnoremap <silent> <leader>w :w<CR>$/;"	m
+<leader>v	./plugins/mappings.vim	/^nnoremap <silent> <leader>v :split $MYVIMRC<CR>$/;"	m
+<leader>w	./back_up/mappings.vim	/^nnoremap <silent> <leader>w :w<CR>$/;"	m
 <leader>w	./plugin/mappings.vim	/^nnoremap <silent> <leader>w :w<CR>$/;"	m
-<leader>x	./config/mappings.vim	/^nnoremap <silent> <leader>x :x<CR>$/;"	m
-<leader>x	./config/snippets.vim	/^xmap <leader>x  <Plug>(coc-convert-snippet)"$/;"	m
+<leader>w	./plugins/mappings.vim	/^nnoremap <silent> <leader>w :w<CR>$/;"	m
+<leader>x	./back_up/mappings.vim	/^nnoremap <silent> <leader>x :x<CR>$/;"	m
+<leader>x	./back_up/snippets.vim	/^xmap <leader>x  <Plug>(coc-convert-snippet)"$/;"	m
 <leader>x	./plugin/mappings.vim	/^nnoremap <silent> <leader>x :x<CR>$/;"	m
-<leader>x	./plugin/snippets.vim	/^xmap <leader>x  <Plug>(coc-convert-snippet)"$/;"	m
-<leader>xa	./config/mappings.vim	/^nnoremap <silent> <leader>xa :xall<CR>$/;"	m
+<leader>x	./plugins/mappings.vim	/^nnoremap <silent> <leader>x :x<CR>$/;"	m
+<leader>xa	./back_up/mappings.vim	/^nnoremap <silent> <leader>xa :xall<CR>$/;"	m
 <leader>xa	./plugin/mappings.vim	/^nnoremap <silent> <leader>xa :xall<CR>$/;"	m
+<leader>xa	./plugins/mappings.vim	/^nnoremap <silent> <leader>xa :xall<CR>$/;"	m
 <leader>†	./plugged/vimspector/compiler/vimspector_test.vim	/^  nnoremap <buffer> <leader>† :call <SID>RunTestUnderCursorInVimspector()<CR>$/;"	m
 <plug>(plug-preview)	./autoload/plug.vim	/^    nnoremap <silent> <buffer> <plug>(plug-preview) :silent! call <SID>preview_commit()<cr>$/;"	m
 <plug>(startify-open-buffers)	./plugged/vim-startify/plugin/startify.vim	/^nnoremap <silent><plug>(startify-open-buffers) :<c-u>call startify#open_buffers()<cr>$/;"	m
@@ -1218,8 +1268,8 @@ AddFunctionBreakpoint	./plugged/vimspector/python3/vimspector/breakpoints.py	/^ 
 AddFunctionBreakpoint	./plugged/vimspector/python3/vimspector/debug_session.py	/^  def AddFunctionBreakpoint( self, function, options ):$/;"	m	class:DebugSession
 AddLogFileView	./plugged/vimspector/python3/vimspector/output.py	/^  def AddLogFileView( self, file_name = utils.LOG_FILE ):$/;"	m	class:OutputView
 AddNewSnippetSource	./plugged/ultisnips/test/test_UltiSnipFunc.py	/^class AddNewSnippetSource(_VimTest):$/;"	c
-AddTask	./config/grpc.vim	/^    command! -nargs=0 AddTask :call AddTask()$/;"	c
-AddTask	./config/grpc.vim	/^function! AddTask()$/;"	f
+AddTask	./plugins/grpc.vim	/^    command! -nargs=0 AddTask :call AddTask()$/;"	c
+AddTask	./plugins/grpc.vim	/^function! AddTask()$/;"	f
 AddWatch	./plugged/vimspector/python3/vimspector/debug_session.py	/^  def AddWatch( self, expression ):$/;"	m	class:DebugSession
 AddWatch	./plugged/vimspector/python3/vimspector/variables.py	/^  def AddWatch( self, frame, expression ):$/;"	m	class:VariablesView
 AddedSnippetsSource	./plugged/ultisnips/pythonx/UltiSnips/snippet/source/added.py	/^class AddedSnippetsSource(SnippetSource):$/;"	c
@@ -2174,13 +2224,13 @@ Del	./plugged/nyaovim-tree-view/nyaovim-plugin/js/index.js	/^  Del: 'Delete',$/;
 DeleteCurrentTabStop1_JumpBack	./plugged/ultisnips/test/test_Editing.py	/^class DeleteCurrentTabStop1_JumpBack(_VimTest):$/;"	c
 DeleteCurrentTabStop2_JumpBack	./plugged/ultisnips/test/test_Editing.py	/^class DeleteCurrentTabStop2_JumpBack(_VimTest):$/;"	c
 DeleteCurrentTabStop3_JumpAround	./plugged/ultisnips/test/test_Editing.py	/^class DeleteCurrentTabStop3_JumpAround(_VimTest):$/;"	c
-DeleteFunction	./config/thefuxVimScripting.vim	/^function! DeleteFunction()$/;"	f
-DeleteFunction	./plugin/thefuxVimScripting.vim	/^function! DeleteFunction()$/;"	f
+DeleteFunction	./back_up/thefuxVimScripting.vim	/^function! DeleteFunction()$/;"	f
+DeleteFunction	./plugins/thefuxVimScripting.vim	/^function! DeleteFunction()$/;"	f
 DeleteLastTwoLinesInSnippet	./plugged/ultisnips/test/test_Editing.py	/^class DeleteLastTwoLinesInSnippet(_VimTest):$/;"	c
-DeleteMultipleLines	./config/thefuxVimScripting.vim	/^function! DeleteMultipleLines(key) range$/;"	f
-DeleteMultipleLines	./plugin/thefuxVimScripting.vim	/^function! DeleteMultipleLines(key) range$/;"	f
-DeleteOneLine	./config/thefuxVimScripting.vim	/^function! DeleteOneLine(key) range$/;"	f
-DeleteOneLine	./plugin/thefuxVimScripting.vim	/^function! DeleteOneLine(key) range$/;"	f
+DeleteMultipleLines	./back_up/thefuxVimScripting.vim	/^function! DeleteMultipleLines(key) range$/;"	f
+DeleteMultipleLines	./plugins/thefuxVimScripting.vim	/^function! DeleteMultipleLines(key) range$/;"	f
+DeleteOneLine	./back_up/thefuxVimScripting.vim	/^function! DeleteOneLine(key) range$/;"	f
+DeleteOneLine	./plugins/thefuxVimScripting.vim	/^function! DeleteOneLine(key) range$/;"	f
 DeleteSnippetInsertion0	./plugged/ultisnips/test/test_Editing.py	/^class DeleteSnippetInsertion0(_VimTest):$/;"	c
 DeleteSnippetInsertion1	./plugged/ultisnips/test/test_Editing.py	/^class DeleteSnippetInsertion1(_VimTest):$/;"	c
 DeleteWatch	./plugged/vimspector/python3/vimspector/debug_session.py	/^  def DeleteWatch( self ):$/;"	m	class:DebugSession
@@ -2423,21 +2473,21 @@ Files and locations	./plugged/vimspector/docs/configuration.md	/^## Files and lo
 Filetypes	./plugged/awesome-vim-colorschemes/docs/wadackel-vim-dogrun.md	/^### Filetypes$/;"	S	section:Supported Filetypes & Plugins
 Filing a bug	./plugged/vimwiki/CONTRIBUTING.md	/^# Filing a bug$/;"	c
 FindExecutable	./plugged/vimspector/python3/vimspector/installer.py	/^def FindExecutable( executable: str, paths=None ):$/;"	f
-FindFileUnderCursor	./config/thefuxVimScripting.vim	/^function! FindFileUnderCursor()$/;"	f
-FindFileUnderCursor	./plugin/thefuxVimScripting.vim	/^function! FindFileUnderCursor()$/;"	f
-FindFunctionDefinition	./config/thefuxVimScripting.vim	/^function! FindFunctionDefinition(key) range$/;"	f
-FindFunctionDefinition	./plugin/thefuxVimScripting.vim	/^function! FindFunctionDefinition(key) range$/;"	f
+FindFileUnderCursor	./back_up/thefuxVimScripting.vim	/^function! FindFileUnderCursor()$/;"	f
+FindFileUnderCursor	./plugins/thefuxVimScripting.vim	/^function! FindFileUnderCursor()$/;"	f
+FindFunctionDefinition	./back_up/thefuxVimScripting.vim	/^function! FindFunctionDefinition(key) range$/;"	f
+FindFunctionDefinition	./plugins/thefuxVimScripting.vim	/^function! FindFunctionDefinition(key) range$/;"	f
 FindGadgetForAdapter	./plugged/vimspector/python3/vimspector/installer.py	/^def FindGadgetForAdapter( adapter_name ):$/;"	f
 FindRootDirectory	./plugged/vim-rooter/plugin/rooter.vim	/^function! FindRootDirectory()$/;"	f
-FindRootPath	./config/thefuxVimScripting.vim	/^function! FindRootPath()$/;"	f
-FindRootPath	./plugin/thefuxVimScripting.vim	/^function! FindRootPath()$/;"	f
-FindUsages	./config/thefuxVimScripting.vim	/^function! FindUsages()$/;"	f
-FindUsages	./plugin/thefuxVimScripting.vim	/^function! FindUsages()$/;"	f
+FindRootPath	./back_up/thefuxVimScripting.vim	/^function! FindRootPath()$/;"	f
+FindRootPath	./plugins/thefuxVimScripting.vim	/^function! FindRootPath()$/;"	f
+FindUsages	./back_up/thefuxVimScripting.vim	/^function! FindUsages()$/;"	f
+FindUsages	./plugins/thefuxVimScripting.vim	/^function! FindUsages()$/;"	f
 Finders	./plugged/telescope.nvim/developers.md	/^### Finders$/;"	S	section:Developers""Technical
 FinishTesting	./plugged/vimspector/tests/lib/run_test.vim	/^func FinishTesting()$/;"	f
 First Picker	./plugged/telescope.nvim/developers.md	/^### First Picker$/;"	S	section:Developers""Guide to your first Picker
-FirstPlugin	./plugin/lua_plug.vim	/^    command! FirstPlugin :call FirstPluting(a)$/;"	c
-FirstPluting	./plugin/lua_plug.vim	/^fun! FirstPluting(buf)$/;"	f
+FirstPlugin	./plugins/lua_plug.vim	/^    command! FirstPlugin :call FirstPluting(a)$/;"	c
+FirstPluting	./plugins/lua_plug.vim	/^fun! FirstPluting(buf)$/;"	f
 Flashy	./plugged/vimwiki/test/resources/testmarkdown/index.md	/^## Flashy$/;"	s	chapter:Typefaces
 FloatermFirst	./plugged/vim-floaterm/plugin/floaterm.vim	/^command! -nargs=0           FloatermFirst  call floaterm#first()$/;"	c
 FloatermHide	./plugged/vim-floaterm/plugin/floaterm.vim	/^                          \\ FloatermHide   call floaterm#hide(<bang>0, <count>, <q-args>)$/;"	c
@@ -2505,9 +2555,10 @@ Further troubleshooting	./plugged/awesome-vim-colorschemes/docs/sts10-vim-pink-m
 Future Builder	./plugged/awesome-flutter-snippets/snippets/snippets.json	/^    "Future Builder": {$/;"	o
 Future TODO	./plugged/floating.nvim/doc.md	/^## Future TODO$/;"	s
 Future ideas and examples	./plugged/vim-snippets/README.md	/^Future ideas and examples$/;"	s	chapter:snipMate & UltiSnip Snippets
-G	./config/mappings.vim	/^nnoremap G Gzz$/;"	m
+G	./back_up/mappings.vim	/^nnoremap G Gzz$/;"	m
 G	./plugged/vim-fugitive/plugin/fugitive.vim	/^  command! -bang -nargs=? -range=-1 -complete=customlist,fugitive#Complete G   exe fugitive#Comm/;"	c
 G	./plugin/mappings.vim	/^nnoremap G Gzz$/;"	m
+G	./plugins/mappings.vim	/^nnoremap G Gzz$/;"	m
 GADGETS	./plugged/vimspector/python3/vimspector/gadgets.py	/^GADGETS = {$/;"	v
 GO111MODULE	./plugged/vimspector/support/test/go/hello_world/.vimspector.json	/^        "env": { "GO111MODULE": "off" }$/;"	s	object:configurations.run-exec.configuration.env
 GO111MODULE	./plugged/vimspector/support/test/go/hello_world/.vimspector.json	/^        "env": { "GO111MODULE": "off" }$/;"	s	object:configurations.run.configuration.env
@@ -2552,8 +2603,8 @@ GetOriginalToStringResult	./plugged/plenary.nvim/lua/plenary/profile/memory_prof
 GetOutputBuffers	./plugged/vimspector/python3/vimspector/debug_session.py	/^  def GetOutputBuffers( self ):$/;"	m	class:DebugSession
 GetPATHAsList	./plugged/vimspector/python3/vimspector/installer.py	/^def GetPATHAsList():$/;"	f
 GetPlatform	./plugged/vimspector/python3/vimspector/install.py	/^def GetPlatform():$/;"	f
-GetReport	./config/grpc.vim	/^    command! -nargs=0 GetReport :call GetReport()$/;"	c
-GetReport	./config/grpc.vim	/^function! GetReport()$/;"	f
+GetReport	./plugins/grpc.vim	/^    command! -nargs=0 GetReport :call GetReport()$/;"	c
+GetReport	./plugins/grpc.vim	/^function! GetReport()$/;"	f
 GetRustIndent	./plugged/rust.vim/indent/rust.vim	/^function GetRustIndent(lnum)$/;"	f
 GetSelectedThreadId	./plugged/vimspector/python3/vimspector/stack_trace.py	/^  def GetSelectedThreadId( self ):$/;"	m	class:StackTraceView
 GetUnusedLocalPort	./plugged/vimspector/python3/vimspector/utils.py	/^def GetUnusedLocalPort():$/;"	f
@@ -2605,7 +2656,7 @@ HOST	./plugged/nyaovim-tree-view/nyaovim-plugin/js/index.js	/^  HOST: 0,$/;"	p	c
 HTMLDOMPropertyConfig	./plugged/nyaovim-tree-view/nyaovim-plugin/js/index.js	/^var HTMLDOMPropertyConfig = {$/;"	c	class:AnonymousFunctionfb13386d4d00
 Hacking	./plugged/awesome-vim-colorschemes/docs/lifepillar-vim-solarized8.md	/^## Hacking$/;"	s	chapter:Solarized 8: True Colors
 Hacking Apprentice	./plugged/awesome-vim-colorschemes/docs/romainl-Apprentice.md	/^## Hacking Apprentice$/;"	s	chapter:![Apprentice](http://romainl.github.io/Apprentice/images/logo.png)
-HandleError	./config/grpc.vim	/^    command! -nargs=+ HandleError :call s:HandleError(<f-args>)$/;"	c
+HandleError	./plugins/grpc.vim	/^    command! -nargs=+ HandleError :call s:HandleError(<f-args>)$/;"	c
 Handler	./plugged/vimspector/python3/vimspector/debug_session.py	/^      class Handler( breakpoints.ServerBreakpointHandler ):$/;"	c	function:DebugSession._StartWithConfiguration.start	file:
 Happy Hacking	./plugged/awesome-vim-colorschemes/docs/yorickpeterse-happy_hacking.vim.md	/^# Happy Hacking$/;"	c
 HasUI	./plugged/vimspector/python3/vimspector/debug_session.py	/^  def HasUI( self ):$/;"	m	class:DebugSession
@@ -2685,6 +2736,7 @@ ImpureClass	./plugged/nyaovim-tree-view/nyaovim-plugin/js/index.js	/^  ImpureCla
 In progress	./plugged/awesome-vim-colorschemes/docs/rakr-vim-one.md	/^### In progress$/;"	S	section:List of enhanced language support
 Indent line	./plugged/awesome-vim-colorschemes/docs/ayu-theme-ayu-vim.md	/^# Indent line$/;"	c
 IndentUtil	./plugged/ultisnips/pythonx/UltiSnips/indent_util.py	/^class IndentUtil:$/;"	c
+Indexing	./plugged/cmp-buffer/README.md	/^## Indexing$/;"	s	chapter:cmp-buffer
 Inherited Widget	./plugged/awesome-flutter-snippets/snippets/snippets.json	/^    "Inherited Widget": {$/;"	o
 InitState 	./plugged/awesome-flutter-snippets/snippets/snippets.json	/^    "InitState ": {$/;"	o
 Inlay Hints	./plugged/rust-tools.nvim/README.md	/^### Inlay Hints$/;"	S	section:Configuration + Functionality""Demos
@@ -2842,8 +2894,7 @@ Join Lines	./plugged/rust-tools.nvim/README.md	/^### Join Lines$/;"	S	section:Co
 JumpDirection	./plugged/ultisnips/pythonx/UltiSnips/position.py	/^class JumpDirection(Enum):$/;"	c
 JumpForward_DefSnippet	./plugged/ultisnips/test/test_Editing.py	/^class JumpForward_DefSnippet(_VimTest):$/;"	c
 JumpToWindow	./plugged/vimspector/python3/vimspector/utils.py	/^def JumpToWindow( window ):$/;"	f
-K	./config/lsp.vim	/^nnoremap <silent> K <cmd>lua vim.lsp.buf.hover()<CR>$/;"	m
-K	./plugin/lsp.vim	/^nnoremap <silent> K <cmd>lua vim.lsp.buf.hover()<CR>$/;"	m
+K	./plugins/lsp.vim	/^nnoremap <silent> K <cmd>lua vim.lsp.buf.hover()<CR>$/;"	m
 Key bindings	./plugged/neomux/README.md	/^## Key bindings$/;"	s	chapter:Usage
 Key bindings	./plugged/vimwiki/README.md	/^## Key bindings$/;"	s
 Key bindings:	./plugged/neomux/README.md	/^### Key bindings: $/;"	S	chapter:Customization
@@ -3102,8 +3153,8 @@ MovePosition_DelSecondLine	./plugged/ultisnips/pythonx/UltiSnips/test_position.p
 MovePosition_DelSecondLine1	./plugged/ultisnips/pythonx/UltiSnips/test_position.py	/^class MovePosition_DelSecondLine1(_MPBase, unittest.TestCase):$/;"	c
 MovePosition_InsSameLine1	./plugged/ultisnips/pythonx/UltiSnips/test_position.py	/^class MovePosition_InsSameLine1(_MPBase, unittest.TestCase):$/;"	c
 MovePosition_InsSameLine2	./plugged/ultisnips/pythonx/UltiSnips/test_position.py	/^class MovePosition_InsSameLine2(_MPBase, unittest.TestCase):$/;"	c
-MoveUpAndDown	./config/thefuxVimScripting.vim	/^function! MoveUpAndDown(key) range$/;"	f
-MoveUpAndDown	./plugin/thefuxVimScripting.vim	/^function! MoveUpAndDown(key) range$/;"	f
+MoveUpAndDown	./back_up/thefuxVimScripting.vim	/^function! MoveUpAndDown(key) range$/;"	f
+MoveUpAndDown	./plugins/thefuxVimScripting.vim	/^function! MoveUpAndDown(key) range$/;"	f
 MozPrintableKey	./plugged/nyaovim-tree-view/nyaovim-plugin/js/index.js	/^  MozPrintableKey: 'Unidentified'$/;"	p	class:AnonymousFunctionfb13386dda00.normalizeKey
 MultiLine	./plugged/ultisnips/pythonx/UltiSnips/test_diff.py	/^class MultiLine(_Base, unittest.TestCase):$/;"	c
 MultiLineDefault_BS	./plugged/ultisnips/test/test_Chars.py	/^class MultiLineDefault_BS(_MultiLineDefault):$/;"	c
@@ -3132,9 +3183,10 @@ Multiple_SimpleCaseSelectFirst_ECR	./plugged/ultisnips/test/test_MultipleMatches
 Multiple_SimpleCaseSelectSecond_ECR	./plugged/ultisnips/test/test_MultipleMatches.py	/^class Multiple_SimpleCaseSelectSecond_ECR(_MultipleMatches):$/;"	c
 Multiple_SimpleCaseSelectTooHigh_ESelectLast	./plugged/ultisnips/test/test_MultipleMatches.py	/^class Multiple_SimpleCaseSelectTooHigh_ESelectLast(_MultipleMatches):$/;"	c
 Multiple_SimpleCaseSelectZero_EEscape	./plugged/ultisnips/test/test_MultipleMatches.py	/^class Multiple_SimpleCaseSelectZero_EEscape(_MultipleMatches):$/;"	c
-N	./config/mappings.vim	/^noremap N Nzz$/;"	m
+N	./back_up/mappings.vim	/^noremap N Nzz$/;"	m
 N	./plugged/vim-startify/autoload/startify.vim	/^  nnoremap <buffer><expr> N 'j '[v:searchforward].'N'$/;"	m
 N	./plugin/mappings.vim	/^noremap N Nzz$/;"	m
+N	./plugins/mappings.vim	/^noremap N Nzz$/;"	m
 NERDTree	./plugged/nerdtree/autoload/nerdtree/ui_glue.vim	/^    command! -n=? -complete=dir -bar NERDTree :call g:NERDTreeCreator.CreateTabTree('<args>')$/;"	c
 NERDTree	./plugged/nerdtree/plugin/NERD_tree.vim	/^augroup NERDTree$/;"	a
 NERDTree Change Log	./plugged/nerdtree/CHANGELOG.md	/^# NERDTree Change Log$/;"	c
@@ -3389,6 +3441,7 @@ Pdb	./plugged/ultisnips/pythonx/UltiSnips/remote_pdb.py	/^        class Pdb(pdb.
 PebkacError	./plugged/ultisnips/pythonx/UltiSnips/error.py	/^class PebkacError(RuntimeError):$/;"	c
 PendingRequest	./plugged/vimspector/python3/vimspector/debug_adapter_connection.py	/^class PendingRequest( object ):$/;"	c
 Per Server Setup	./plugged/completion-nvim/README.md	/^### Per Server Setup$/;"	S	section:completion-nvim""Configuration
+Performance on large text files	./plugged/cmp-buffer/README.md	/^### Performance on large text files$/;"	S	section:cmp-buffer""Indexing
 PerlSyntaxFold	./plugged/ultisnips/test/test_Folding.py	/^class PerlSyntaxFold(_VimTest):$/;"	c
 Philosophy	./plugged/awesome-vim-colorschemes/docs/cocopon-iceberg.vim.md	/^# Philosophy$/;"	c
 Picker	./plugged/telescope.nvim/developers.md	/^### Picker$/;"	S	section:Developers""Technical
@@ -3448,8 +3501,8 @@ Previewers	./plugged/telescope.nvim/developers.md	/^### Previewers$/;"	S	section
 Print	./plugged/vimspector/python3/vimspector/installer.py	/^def Print( *args, **kwargs ):$/;"	f
 Print	./plugged/vimspector/python3/vimspector/output.py	/^  def Print( self, category, text: typing.Union[ str, list ] ):$/;"	m	class:OutputView
 PrintDebugInfo	./plugged/vimspector/python3/vimspector/debug_session.py	/^  def PrintDebugInfo( self ):$/;"	m	class:DebugSession
-PrintOutMessage	./config/thefuxVimScripting.vim	/^function! PrintOutMessage()$/;"	f
-PrintOutMessage	./plugin/thefuxVimScripting.vim	/^function! PrintOutMessage()$/;"	f
+PrintOutMessage	./back_up/thefuxVimScripting.vim	/^function! PrintOutMessage()$/;"	f
+PrintOutMessage	./plugins/thefuxVimScripting.vim	/^function! PrintOutMessage()$/;"	f
 PrintToast	./plugged/vimspector/support/test/csharp/Program.cs	/^    void PrintToast( int r ) {$/;"	m	class:csharp.Program	file:
 Program	./plugged/vimspector/support/test/csharp/Program.cs	/^  class Program$/;"	c	namespace:csharp
 Program Output	./plugged/vimspector/README.md	/^## Program Output$/;"	s	chapter:Usage and API
@@ -3473,6 +3526,7 @@ Properties	./plugged/nyaovim-tree-view/nyaovim-plugin/js/index.js	/^  Properties
 Properties	./plugged/nyaovim-tree-view/nyaovim-plugin/js/index.js	/^  Properties: {},$/;"	p	class:AnonymousFunctionfb13386db200.SVGDOMPropertyConfig
 Pros.	./plugged/vim-which-key/README.md	/^## Pros.$/;"	s	chapter:vim-which-key
 Pull Requests	./plugged/vimspector/CONTRIBUTING.md	/^## Pull Requests$/;"	s	chapter:Contributing to Vimspector
+Pull requests (PRs)	./plugged/nvim-lspconfig/CONTRIBUTING.md	/^## Pull requests (PRs)$/;"	s
 PureClass	./plugged/nyaovim-tree-view/nyaovim-plugin/js/index.js	/^  PureClass: 1,$/;"	p	class:AnonymousFunctionfb13386d6000.CompositeTypes
 PureComponent	./plugged/nyaovim-tree-view/nyaovim-plugin/js/index.js	/^  PureComponent: ReactBaseClasses.PureComponent,$/;"	p	class:AnonymousFunctionfb13386dfa00.React
 PureComponent	./plugged/nyaovim-tree-view/nyaovim-plugin/js/index.js	/^  PureComponent: ReactPureComponent$/;"	p	class:module.exports
@@ -3527,16 +3581,17 @@ PythonVisual_NoVisualSelection_Ignore	./plugged/ultisnips/test/test_Interpolatio
 PythonVisual_SelectOneWord	./plugged/ultisnips/test/test_Interpolation.py	/^class PythonVisual_SelectOneWord(_VimTest):$/;"	c
 Python_SnipRvCanBeNonText	./plugged/ultisnips/test/test_Interpolation.py	/^class Python_SnipRvCanBeNonText(_VimTest):$/;"	c
 Q	./plugged/vim-floaterm/test/vimrc	/^nnoremap <silent>       Q         :qa!<CR>$/;"	m
-QFixToggle	./config/mappings.vim	/^augroup QFixToggle$/;"	a
+QFixToggle	./back_up/mappings.vim	/^augroup QFixToggle$/;"	a
 QFixToggle	./plugin/mappings.vim	/^augroup QFixToggle$/;"	a
+QFixToggle	./plugins/mappings.vim	/^augroup QFixToggle$/;"	a
 Qargs	./plugged/ferret/plugin/ferret.vim	/^command! -bar Qargs execute 'args' ferret#private#args('qf')$/;"	c
 Quack	./plugged/ferret/plugin/ferret.vim	/^command! -bang -nargs=1 -complete=customlist,ferret#private#quackcomplete Quack call ferret#priv/;"	c
 Quick Start	./plugged/awesome-vim-colorschemes/docs/arcticicestudio-nord-vim.md	/^### Quick Start$/;"	S	section:Getting Started
 Quick Start	./plugged/nord-vim/README.md	/^### Quick Start$/;"	S	section:Getting Started
 Quick Start	./plugged/ultisnips/README.md	/^Quick Start$/;"	s	chapter:UltiSnips
 Quick Start	./plugged/vimspector/README.md	/^## Quick Start$/;"	s	chapter:Installation
-QuickfixFilenames	./config/settings.vim	/^function! QuickfixFilenames()$/;"	f
-QuickfixFilenames	./plugin/settings.vim	/^function! QuickfixFilenames()$/;"	f
+QuickfixFilenames	./back_up/settings.vim	/^function! QuickfixFilenames()$/;"	f
+QuickfixFilenames	./plugins/me-make-shit.vim	/^function! QuickfixFilenames()$/;"	f
 Quickstart	./plugged/neomux/README.md	/^# Quickstart$/;"	c
 Quickstart	./plugged/nvim-lspconfig/README.md	/^## Quickstart$/;"	s	chapter:LSP overview
 Quickstart	./plugged/tagbar/README.md	/^## Quickstart$/;"	s	chapter:Tagbar: a class outline viewer for Vim
@@ -3550,10 +3605,11 @@ RESET_BATCHED_UPDATES	./plugged/nyaovim-tree-view/nyaovim-plugin/js/index.js	/^v
 ROOT_ATTRIBUTE_NAME	./plugged/nyaovim-tree-view/nyaovim-plugin/js/index.js	/^  ROOT_ATTRIBUTE_NAME: 'data-reactroot',$/;"	p	class:AnonymousFunctionfb13386d4000.DOMProperty
 RUNNING	./plugged/vimspector/python3/vimspector/stack_trace.py	/^  RUNNING = 1$/;"	v	class:Thread
 Random	./plugged/vim-rooter/test/runner.vim	/^function Random(min, max)$/;"	f
-RaplceWordInFile	./config/mappings.vim	/^command! -nargs=0 RaplceWordInFile :call RaplceWordInFile()<CR>$/;"	c
-RaplceWordInFile	./config/settings.vim	/^function! RaplceWordInFile()$/;"	f
-RaplceWordInFile	./plugin/mappings.vim	/^command! -nargs=0 RaplceWordInFile :call RaplceWordInFile()<CR>$/;"	c
-RaplceWordInFile	./plugin/settings.vim	/^function! RaplceWordInFile()$/;"	f
+RaplceWordInFile	./back_up/mappings.vim	/^command! -nargs=0 RaplceWordInFile :call RaplceWordInFile()<CR>$/;"	c
+RaplceWordInFile	./back_up/settings.vim	/^function! RaplceWordInFile()$/;"	f
+RaplceWordInFile	./plugins/mappings.vim	/^command! -nargs=0 RaplceWordInFile :call RaplceWordInFile()<CR>$/;"	c
+RaplceWordInFile	./plugins/me-make-shit.vim	/^command! -nargs=0 RaplceWordInFile :call RaplceWordInFile()<CR>$/;"	c
+RaplceWordInFile	./plugins/me-make-shit.vim	/^function! RaplceWordInFile()$/;"	f
 Raw	./plugged/awesome-vim-colorschemes/docs/Badacadabra-Archery.md	/^### Raw$/;"	S	section:Syntax optimizations
 Raw	./plugged/awesome-vim-colorschemes/docs/Badacadabra-vim-archery.md	/^### Raw$/;"	S	section:Syntax optimizations
 React	./plugged/nyaovim-tree-view/nyaovim-plugin/js/index.js	/^var React = {$/;"	c	class:AnonymousFunctionfb13386dfa00
@@ -3692,22 +3748,25 @@ RemotePDB	./plugged/ultisnips/pythonx/UltiSnips/remote_pdb.py	/^class RemotePDB(
 RemoveBreakpoint	./plugged/vimspector/python3/vimspector/code.py	/^  def RemoveBreakpoint( self, bp ):$/;"	m	class:CodeView
 RemoveIfExists	./plugged/vimspector/python3/vimspector/installer.py	/^def RemoveIfExists( destination ):$/;"	f
 RemoveTrailingWhitespace	./plugged/ultisnips/test/test_Chars.py	/^class RemoveTrailingWhitespace(_VimTest):$/;"	c
-Replace	./config/settings.vim	/^function! Replace(old)$/;"	f
-Replace	./plugin/settings.vim	/^function! Replace(old)$/;"	f
-ReplaceCurrentWord	./config/mappings.vim	/^command! -nargs=0 ReplaceCurrentWord :call ReplaceCurrentWord()<CR>$/;"	c
-ReplaceCurrentWord	./config/settings.vim	/^function! ReplaceCurrentWord()$/;"	f
-ReplaceCurrentWord	./plugin/mappings.vim	/^command! -nargs=0 ReplaceCurrentWord :call ReplaceCurrentWord()<CR>$/;"	c
-ReplaceCurrentWord	./plugin/settings.vim	/^function! ReplaceCurrentWord()$/;"	f
-ReplaceCurrentWordAll	./config/mappings.vim	/^command! -nargs=0 ReplaceCurrentWordAll :call s:doStuf(2)$/;"	c
-ReplaceCurrentWordAll	./config/settings.vim	/^function! ReplaceCurrentWordAll()$/;"	f
-ReplaceCurrentWordAll	./plugin/mappings.vim	/^command! -nargs=0 ReplaceCurrentWordAll :call s:doStuf(2)$/;"	c
-ReplaceCurrentWordAll	./plugin/settings.vim	/^function! ReplaceCurrentWordAll()$/;"	f
-ReplaceForAll	./config/settings.vim	/^function! ReplaceForAll(old, new)$/;"	f
-ReplaceForAll	./plugin/settings.vim	/^function! ReplaceForAll(old, new)$/;"	f
-ReplaceWordAll	./config/mappings.vim	/^command! -nargs=0 ReplaceWordAll :call s:doStuf(4)$/;"	c
-ReplaceWordAll	./config/settings.vim	/^function! ReplaceWordAll()$/;"	f
-ReplaceWordAll	./plugin/mappings.vim	/^command! -nargs=0 ReplaceWordAll :call s:doStuf(4)$/;"	c
-ReplaceWordAll	./plugin/settings.vim	/^function! ReplaceWordAll()$/;"	f
+Replace	./back_up/settings.vim	/^function! Replace(old)$/;"	f
+Replace	./plugins/me-make-shit.vim	/^function! Replace(old)$/;"	f
+ReplaceCurrentWord	./back_up/mappings.vim	/^command! -nargs=0 ReplaceCurrentWord :call ReplaceCurrentWord()<CR>$/;"	c
+ReplaceCurrentWord	./back_up/settings.vim	/^function! ReplaceCurrentWord()$/;"	f
+ReplaceCurrentWord	./plugins/mappings.vim	/^command! -nargs=0 ReplaceCurrentWord :call ReplaceCurrentWord()<CR>$/;"	c
+ReplaceCurrentWord	./plugins/me-make-shit.vim	/^command! -nargs=0 ReplaceCurrentWord :call ReplaceCurrentWord()<CR>$/;"	c
+ReplaceCurrentWord	./plugins/me-make-shit.vim	/^function! ReplaceCurrentWord()$/;"	f
+ReplaceCurrentWordAll	./back_up/mappings.vim	/^command! -nargs=0 ReplaceCurrentWordAll :call s:doStuf(2)$/;"	c
+ReplaceCurrentWordAll	./back_up/settings.vim	/^function! ReplaceCurrentWordAll()$/;"	f
+ReplaceCurrentWordAll	./plugins/mappings.vim	/^command! -nargs=0 ReplaceCurrentWordAll :call s:doStuf(2)$/;"	c
+ReplaceCurrentWordAll	./plugins/me-make-shit.vim	/^command! -nargs=0 ReplaceCurrentWordAll :call s:doStuf(2)$/;"	c
+ReplaceCurrentWordAll	./plugins/me-make-shit.vim	/^function! ReplaceCurrentWordAll()$/;"	f
+ReplaceForAll	./back_up/settings.vim	/^function! ReplaceForAll(old, new)$/;"	f
+ReplaceForAll	./plugins/me-make-shit.vim	/^function! ReplaceForAll(old, new)$/;"	f
+ReplaceWordAll	./back_up/mappings.vim	/^command! -nargs=0 ReplaceWordAll :call s:doStuf(4)$/;"	c
+ReplaceWordAll	./back_up/settings.vim	/^function! ReplaceWordAll()$/;"	f
+ReplaceWordAll	./plugins/mappings.vim	/^command! -nargs=0 ReplaceWordAll :call s:doStuf(4)$/;"	c
+ReplaceWordAll	./plugins/me-make-shit.vim	/^command! -nargs=0 ReplaceWordAll :call s:doStuf(4)$/;"	c
+ReplaceWordAll	./plugins/me-make-shit.vim	/^function! ReplaceWordAll()$/;"	f
 Replacements and variables	./plugged/vimspector/docs/configuration.md	/^### Replacements and variables$/;"	S	section:Concepts
 Replacing Actions	./plugged/telescope.nvim/developers.md	/^### Replacing Actions$/;"	S	section:Developers""Guide to your first Picker
 Reproduce your issue with the minimal vimrc	./plugged/vimspector/CONTRIBUTING.md	/^### Reproduce your issue with the minimal vimrc$/;"	S	section:Contributing to Vimspector""Issues
@@ -3828,14 +3887,15 @@ Screenshots	./plugged/vimwiki/README.md	/^## Screenshots$/;"	s
 Screenshots or it didn’t happen	./plugged/awesome-vim-colorschemes/docs/romainl-flattened.md	/^## Screenshots or it didn’t happen$/;"	s	chapter:Solarized, without the bullshit.
 Screenshots(Optional, GIF is better)	./plugged/vim-floaterm/.github/ISSUE_TEMPLATE/issue-template.md	/^### Screenshots(Optional, GIF is better)$/;"	S
 Scroll	./plugged/nyaovim-tree-view/nyaovim-plugin/js/index.js	/^  Scroll: 'ScrollLock',$/;"	p	class:AnonymousFunctionfb13386dda00.normalizeKey
-SearchAll	./config/mappings.vim	/^command! -nargs=0 SearchAll :call s:doStuf(1)$/;"	c
-SearchAll	./config/settings.vim	/^function! SearchAll()$/;"	f
-SearchAll	./plugin/mappings.vim	/^command! -nargs=0 SearchAll :call s:doStuf(1)$/;"	c
-SearchAll	./plugin/settings.vim	/^function! SearchAll()$/;"	f
-SearchFor	./config/settings.vim	/^function! SearchFor()$/;"	f
-SearchFor	./plugin/settings.vim	/^function! SearchFor()$/;"	f
-SearchWord	./config/settings.vim	/^function! SearchWord(word)$/;"	f
-SearchWord	./plugin/settings.vim	/^function! SearchWord(word)$/;"	f
+SearchAll	./back_up/mappings.vim	/^command! -nargs=0 SearchAll :call s:doStuf(1)$/;"	c
+SearchAll	./back_up/settings.vim	/^function! SearchAll()$/;"	f
+SearchAll	./plugins/mappings.vim	/^command! -nargs=0 SearchAll :call s:doStuf(1)$/;"	c
+SearchAll	./plugins/me-make-shit.vim	/^command! -nargs=0 SearchAll :call s:doStuf(1)$/;"	c
+SearchAll	./plugins/me-make-shit.vim	/^function! SearchAll()$/;"	f
+SearchFor	./back_up/settings.vim	/^function! SearchFor()$/;"	f
+SearchFor	./plugins/me-make-shit.vim	/^function! SearchFor()$/;"	f
+SearchWord	./back_up/settings.vim	/^function! SearchWord(word)$/;"	f
+SearchWord	./plugins/me-make-shit.vim	/^function! SearchWord(word)$/;"	f
 SelectEventPlugin	./plugged/nyaovim-tree-view/nyaovim-plugin/js/index.js	/^var SelectEventPlugin = {$/;"	c	class:AnonymousFunctionfb13386db400
 SelectFromList	./plugged/vimspector/python3/vimspector/utils.py	/^def SelectFromList( prompt, options ):$/;"	f
 SelectModeMappings_BufferLocalMappings_ECR	./plugged/ultisnips/test/test_Selection.py	/^class SelectModeMappings_BufferLocalMappings_ECR(_SelectModeMappings):$/;"	c
@@ -3853,8 +3913,8 @@ Self-Promotion	./plugged/gruvbox/README.md	/^Self-Promotion$/;"	s
 Self-Promotion	./plugged/vim-commentary/README.markdown	/^## Self-Promotion$/;"	s	chapter:commentary.vim
 Self-Promotion	./plugged/vim-fugitive/README.markdown	/^## Self-Promotion$/;"	s	chapter:fugitive.vim
 SendBreakpoints	./plugged/vimspector/python3/vimspector/breakpoints.py	/^  def SendBreakpoints( self, doneHandler = None ):$/;"	m	class:ProjectBreakpoints
-SendDataToTimeTrackService	./config/grpc.vim	/^    command! -nargs=+ SendDataToTimeTrackService :call SendDataToTimeTrackService(<f-args>)$/;"	c
-SendDataToTimeTrackService	./config/grpc.vim	/^function! SendDataToTimeTrackService(...)$/;"	f
+SendDataToTimeTrackService	./plugins/grpc.vim	/^    command! -nargs=+ SendDataToTimeTrackService :call SendDataToTimeTrackService(<f-args>)$/;"	c
+SendDataToTimeTrackService	./plugins/grpc.vim	/^function! SendDataToTimeTrackService(...)$/;"	f
 ServerBreakpointHandler	./plugged/vimspector/python3/vimspector/breakpoints.py	/^class ServerBreakpointHandler( object ):$/;"	c
 Session	./plugged/ferret/test.rb	/^  class Session$/;"	c	module:DSL
 SetBreakpointsHandler	./plugged/vimspector/python3/vimspector/breakpoints.py	/^  def SetBreakpointsHandler( self, handler ):$/;"	m	class:ProjectBreakpoints
@@ -3867,8 +3927,9 @@ SetCurrentThread	./plugged/vimspector/python3/vimspector/debug_session.py	/^  de
 SetCurrentThread	./plugged/vimspector/python3/vimspector/stack_trace.py	/^  def SetCurrentThread( self ):$/;"	m	class:StackTraceView
 SetLineBreakpoint	./plugged/vimspector/python3/vimspector/breakpoints.py	/^  def SetLineBreakpoint( self, file_name, line_num, options, then = None ):$/;"	m	class:ProjectBreakpoints
 SetLineBreakpoint	./plugged/vimspector/python3/vimspector/debug_session.py	/^  def SetLineBreakpoint( self, file_name, line_num, options, then = None ):$/;"	m	class:DebugSession
-SetLineHighlight	./config/settings.vim	/^function! SetLineHighlight()$/;"	f
+SetLineHighlight	./back_up/settings.vim	/^function! SetLineHighlight()$/;"	f
 SetLineHighlight	./plugin/settings.vim	/^function! SetLineHighlight()$/;"	f
+SetLineHighlight	./plugins/settings.vim	/^function! SetLineHighlight()$/;"	f
 SetLucius	./plugged/awesome-vim-colorschemes/colors/lucius.vim	/^function! SetLucius(style, contrast, contrast_bg)$/;"	f
 SetServerCapabilities	./plugged/vimspector/python3/vimspector/breakpoints.py	/^  def SetServerCapabilities( self, server_capabilities ):$/;"	m	class:ProjectBreakpoints
 SetServerCapabilities	./plugged/vimspector/python3/vimspector/variables.py	/^  def SetServerCapabilities( self, capabilities ):$/;"	m	class:VariablesView
@@ -4119,10 +4180,10 @@ Steps to Reproduce the Issue	./plugged/nerdtree/.github/ISSUE_TEMPLATE/bug.md	/^
 Steps to reproduce	./plugged/vim-floaterm/.github/ISSUE_TEMPLATE/issue-template.md	/^### Steps to reproduce$/;"	S
 Stop	./plugged/vimspector/python3/vimspector/debug_session.py	/^  def Stop( self, interactive = False ):$/;"	m	class:DebugSession
 StopVimInTerminal	./plugged/vimspector/tests/lib/plugin/screendump.vim	/^func StopVimInTerminal(buf)$/;"	f
-StoreInFile	./config/grpc.vim	/^    command! -nargs=* StoreInFile :call StoreInFile(<f-args>)$/;"	c
-StoreInFile	./config/grpc.vim	/^function! StoreInFile(...)$/;"	f
-StoreTask	./config/grpc.vim	/^    command! -nargs=+ StoreTask :call StoreTask(<f-args>)$/;"	c
-StoreTask	./config/grpc.vim	/^function! StoreTask(...)$/;"	f
+StoreInFile	./plugins/grpc.vim	/^    command! -nargs=* StoreInFile :call StoreInFile(<f-args>)$/;"	c
+StoreInFile	./plugins/grpc.vim	/^function! StoreInFile(...)$/;"	f
+StoreTask	./plugins/grpc.vim	/^    command! -nargs=+ StoreTask :call StoreTask(<f-args>)$/;"	c
+StoreTask	./plugins/grpc.vim	/^function! StoreTask(...)$/;"	f
 Stream	./plugged/awesome-flutter-snippets/snippets/snippets.json	/^    "Stream": {$/;"	o
 Stream Builder	./plugged/awesome-flutter-snippets/snippets/snippets.json	/^    "Stream Builder": {$/;"	o
 Structural Search Replace	./plugged/rust-tools.nvim/README.md	/^### Structural Search Replace $/;"	S	section:Configuration + Functionality""Demos
@@ -4328,7 +4389,7 @@ Terminal themes	./plugged/awesome-vim-colorschemes/docs/jacoborus-tender.vim.md	
 Terminal vim and 256 colors version	./plugged/awesome-vim-colorschemes/docs/whatyouhide-vim-gotham.md	/^#### Terminal vim and 256 colors version$/;"	t	section:Installation
 Terminal vim and 256 colors version	./plugged/vim-gotham/README.md	/^#### Terminal vim and 256 colors version$/;"	t	section:Installation
 Terminate debuggee	./plugged/vimspector/README.md	/^## Terminate debuggee$/;"	s	chapter:Usage and API
-TerminateTimeTrack	./config/grpc.vim	/^    command! -nargs=0 TerminateTimeTrack :call s:TerminateTimeTrack()$/;"	c
+TerminateTimeTrack	./plugins/grpc.vim	/^    command! -nargs=0 TerminateTimeTrack :call s:TerminateTimeTrack()$/;"	c
 Test	./plugged/awesome-flutter-snippets/snippets/snippets.json	/^    "Test": {$/;"	o
 Test	./plugged/vimspector/support/test/cpp/simple_c_program/test_c.cpp	/^namespace Test$/;"	n	file:
 Test	./plugged/vimspector/tests/testdata/cpp/simple/struct.cpp	/^struct Test$/;"	s	file:
@@ -4553,8 +4614,9 @@ ToUnicode	./plugged/vimspector/python3/vimspector/utils.py	/^def ToUnicode( b ):
 ToggleBreakpoint	./plugged/vimspector/python3/vimspector/breakpoints.py	/^  def ToggleBreakpoint( self, options ):$/;"	m	class:ProjectBreakpoints
 ToggleBreakpoint	./plugged/vimspector/python3/vimspector/debug_session.py	/^  def ToggleBreakpoint( self, options ):$/;"	m	class:DebugSession
 ToggleLog	./plugged/vimspector/python3/vimspector/debug_session.py	/^  def ToggleLog( self ):$/;"	m	class:DebugSession
-ToggleQuickfix	./config/mappings.vim	/^function! ToggleQuickfix()$/;"	f
+ToggleQuickfix	./back_up/mappings.vim	/^function! ToggleQuickfix()$/;"	f
 ToggleQuickfix	./plugin/mappings.vim	/^function! ToggleQuickfix()$/;"	f
+ToggleQuickfix	./plugins/mappings.vim	/^function! ToggleQuickfix()$/;"	f
 Toggling background	./plugged/awesome-vim-colorschemes/docs/rakr-vim-two-firewatch.md	/^## Toggling background$/;"	s	chapter:Vim-Two-Firewatch Colorscheme
 Token	./plugged/ultisnips/pythonx/UltiSnips/snippet/parsing/lexer.py	/^class Token:$/;"	c
 Tomorrow	./plugged/lightline.vim/colorscheme.md	/^### Tomorrow$/;"	S	chapter:Available Colorschemes
@@ -4714,10 +4776,11 @@ UltiSnipsSnippetDefinition	./plugged/ultisnips/pythonx/UltiSnips/snippet/definit
 UltiSnips_AutoTrigger	./plugged/ultisnips/plugin/UltiSnips.vim	/^augroup UltiSnips_AutoTrigger$/;"	a
 UltiSnips_Manager	./plugged/ultisnips/pythonx/UltiSnips/snippet_manager.py	/^UltiSnips_Manager = SnippetManager(  # pylint:disable=invalid-name$/;"	v
 UmlautsBeforeTriggerAndCharsAfter	./plugged/ultisnips/test/test_Chars.py	/^class UmlautsBeforeTriggerAndCharsAfter(_UmlautsBase):$/;"	c
-UndoLastReplaceCurrentWord	./config/mappings.vim	/^command! -nargs=0 UndoLastReplaceCurrentWord :call s:doStuf(3)$/;"	c
-UndoLastReplaceCurrentWord	./config/settings.vim	/^function! UndoLastReplaceCurrentWord()$/;"	f
-UndoLastReplaceCurrentWord	./plugin/mappings.vim	/^command! -nargs=0 UndoLastReplaceCurrentWord :call s:doStuf(3)$/;"	c
-UndoLastReplaceCurrentWord	./plugin/settings.vim	/^function! UndoLastReplaceCurrentWord()$/;"	f
+UndoLastReplaceCurrentWord	./back_up/mappings.vim	/^command! -nargs=0 UndoLastReplaceCurrentWord :call s:doStuf(3)$/;"	c
+UndoLastReplaceCurrentWord	./back_up/settings.vim	/^function! UndoLastReplaceCurrentWord()$/;"	f
+UndoLastReplaceCurrentWord	./plugins/mappings.vim	/^command! -nargs=0 UndoLastReplaceCurrentWord :call s:doStuf(3)$/;"	c
+UndoLastReplaceCurrentWord	./plugins/me-make-shit.vim	/^command! -nargs=0 UndoLastReplaceCurrentWord :call s:doStuf(3)$/;"	c
+UndoLastReplaceCurrentWord	./plugins/me-make-shit.vim	/^function! UndoLastReplaceCurrentWord()$/;"	f
 Undo_ChangesInPlaceholder	./plugged/ultisnips/test/test_Editing.py	/^class Undo_ChangesInPlaceholder(_VimTest):$/;"	c
 Undo_CompletelyUndoSnippet	./plugged/ultisnips/test/test_Editing.py	/^class Undo_CompletelyUndoSnippet(_VimTest):$/;"	c
 Undo_RemoveEditInTabstop	./plugged/ultisnips/test/test_Editing.py	/^class Undo_RemoveEditInTabstop(_VimTest):$/;"	c
@@ -4748,8 +4811,8 @@ Update	./plugged/vimspector/python3/vimspector/variables.py	/^  def Update( self
 UpdateBreakpoint	./plugged/vimspector/python3/vimspector/code.py	/^  def UpdateBreakpoint( self, bp ):$/;"	m	class:CodeView
 UpdateModifiedSnippetWithoutCursorMove1	./plugged/ultisnips/test/test_Editing.py	/^class UpdateModifiedSnippetWithoutCursorMove1(_VimTest):$/;"	c
 UpdateModifiedSnippetWithoutCursorMove2	./plugged/ultisnips/test/test_Editing.py	/^class UpdateModifiedSnippetWithoutCursorMove2(_VimTest):$/;"	c
-UpdateTask	./config/grpc.vim	/^    command! -nargs=0 UpdateTask :call UpdateTask()$/;"	c
-UpdateTask	./config/grpc.vim	/^function! UpdateTask()$/;"	f
+UpdateTask	./plugins/grpc.vim	/^    command! -nargs=0 UpdateTask :call UpdateTask()$/;"	c
+UpdateTask	./plugins/grpc.vim	/^function! UpdateTask()$/;"	f
 UpdateUI	./plugged/vimspector/python3/vimspector/breakpoints.py	/^  def UpdateUI( self, then = None ):$/;"	m	class:ProjectBreakpoints
 Updates	./plugged/awesome-vim-colorschemes/docs/w0ng-vim-hybrid.md	/^## Updates$/;"	s	chapter:hybrid.vim
 Updates	./plugged/nyaovim-tree-view/nyaovim-plugin/js/index.js	/^  Updates: ReactUpdates.injection$/;"	p	class:AnonymousFunctionfb13386d9900.ReactInjection
@@ -5960,7 +6023,7 @@ a	./plugged/ultisnips/pythonx/UltiSnips/test_diff.py	/^    a, b = ["Hello  World
 a	./plugged/ultisnips/pythonx/UltiSnips/test_diff.py	/^    a, b = ["Hello  World"], ["Hello World"]$/;"	v	class:TestGuessing_DeleteOneChar
 a	./plugged/ultisnips/pythonx/UltiSnips/test_diff.py	/^    a: List[str] = []$/;"	v	class:TestGuessing_Noop0	typeref:typename:List[str]
 a	./plugged/vim-cpp-enhanced-highlight/test/color2.cpp	/^    int a = .4;$/;"	v	typeref:typename:int
-a	./plugin/lua_plug.vim	/^    let a = $MYVIMRC$/;"	v
+a	./plugins/lua_plug.vim	/^    let a = $MYVIMRC$/;"	v
 aClass	./plugged/vim-cpp-enhanced-highlight/test/color.cpp	/^Aclass<T> aClass = bClass->getThing();$/;"	v	typeref:typename:Aclass<T>
 aS	./plugged/ultisnips/ftplugin/snippets.vim	/^onoremap <silent><buffer> aS :<C-U>call <SID>UltiSnippetTextObj(0)<CR>$/;"	m
 aS	./plugged/ultisnips/ftplugin/snippets.vim	/^xnoremap <silent><buffer> aS :<C-U>call <SID>UltiSnippetTextObj(0)<CR>$/;"	m
@@ -6068,7 +6131,7 @@ adapters	./plugged/vimspector/support/test/csharp/.vimspector.json	/^  "adapters
 adapters	./plugged/vimspector/support/test/go/hello_world/.vimspector.json	/^  "adapters": {$/;"	o
 adapters	./plugged/vimspector/support/test/python/simple_python/.vimspector.json	/^  "adapters": {$/;"	o
 adapters	./plugged/vimspector/tests/testdata/cpp/simple/.vimspector.json	/^  "adapters": {$/;"	o
-add	./plugged/nvim-lspconfig/lua/lspconfig/util.lua	/^  function manager.add(root_dir, single_file_support)$/;"	f	unknown:manager
+add	./plugged/nvim-lspconfig/lua/lspconfig/util.lua	/^  function manager.add(root_dir, single_file)$/;"	f	unknown:manager
 add	./plugged/plenary.nvim/lua/plenary/async/uv_async.lua	/^local function add(name, argc)$/;"	f
 add	./plugged/plenary.nvim/lua/plenary/async_lib/uv_async.lua	/^local function add(name, argc)$/;"	f
 add	./plugged/plenary.nvim/lua/plenary/operators.lua	/^  add = function(a, b)$/;"	f
@@ -6531,8 +6594,9 @@ blocking	./plugged/plenary.nvim/tests/plenary/async/semaphore_spec.lua	/^    loc
 blockquote	./plugged/nyaovim-tree-view/nyaovim-plugin/js/index.js	/^  blockquote: createDOMFactory('blockquote'),$/;"	p	class:AnonymousFunctionfb13386d10300.ReactDOMFactories
 blockquote	./plugged/vimwiki/autoload/vimwiki/style.css	/^blockquote {$/;"	s
 blockquote	./plugged/vimwiki/autoload/vimwiki/style.css	/^p, pre, blockquote, table, ul, ol, dl {$/;"	s
-bn	./config/mappings.vim	/^nnoremap bn ^$/;"	m
+bn	./back_up/mappings.vim	/^nnoremap bn ^$/;"	m
 bn	./plugin/mappings.vim	/^nnoremap bn ^$/;"	m
+bn	./plugins/mappings.vim	/^nnoremap bn ^$/;"	m
 bnot	./plugged/plenary.nvim/lua/plenary/bit.lua	/^function M.bit.bnot(x)$/;"	f	unknown:M.bit
 bnot	./plugged/plenary.nvim/lua/plenary/bit.lua	/^function M.bnot(a)   return MODM - a end$/;"	f	unknown:M
 body	./plugged/awesome-flutter-snippets/snippets/snippets.json	/^        "body": "import 'package:flutter\/cupertino.dart';",$/;"	s	object:Cupertino Package
@@ -6698,6 +6762,7 @@ buffer_maps	./plugged/ultisnips/test/test_Selection.py	/^    buffer_maps = ("H",
 buffer_number	./plugged/vimspector/python3/vimspector/terminal.py	/^  buffer_number: int = None$/;"	v	class:Terminal	typeref:typename:int
 buffer_option	./plugged/nvim-cmp/lua/cmp/utils/window.lua	/^window.buffer_option = function(self, key, value)$/;"	f	unknown:window
 buffers	./plugged/telescope.nvim/lua/telescope/builtin/internal.lua	/^internal.buffers = function(opts)$/;"	f	unknown:internal
+bufname_valid	./plugged/nvim-lspconfig/lua/lspconfig/util.lua	/^function M.bufname_valid(bufname)$/;"	f	unknown:M
 bufnrs	./plugged/telescope.nvim/lua/telescope/builtin/files.lua	/^    local bufnrs = filter(function(b)$/;"	f
 bufnrs	./plugged/telescope.nvim/lua/telescope/builtin/internal.lua	/^  local bufnrs = filter(function(b)$/;"	f
 bugs	./plugged/awesome-flutter-snippets/package.json	/^    "bugs": {$/;"	o
@@ -6719,8 +6784,7 @@ c	./plugged/nvim-cmp/lua/cmp/config/default.lua	/^        c = function(fallback)
 c	./plugged/ultisnips/pythonx/UltiSnips/text_objects/python_code.py	/^    def c(self):  # pylint:disable=invalid-name$/;"	m	class:SnippetUtil
 c	./plugged/vimspector/tests/testdata/cpp/simple/struct.cpp	/^  char c;$/;"	m	struct:Test	typeref:typename:char	file:
 cOutputer	./plugged/plenary.nvim/lua/plenary/profile/memory_profiler.lua	/^	local cOutputer = function (strContent)$/;"	f
-ca	./config/lsp.vim	/^nnoremap <silent> ca <cmd>lua vim.lsp.buf.code_action()<CR>$/;"	m
-ca	./plugin/lsp.vim	/^nnoremap <silent> ca <cmd>lua vim.lsp.buf.code_action()<CR>$/;"	m
+ca	./plugins/lsp.vim	/^nnoremap <silent> ca <cmd>lua vim.lsp.buf.code_action()<CR>$/;"	m
 calcMode	./plugged/nyaovim-tree-view/nyaovim-plugin/js/index.js	/^  calcMode: 'calcMode',$/;"	p	class:AnonymousFunctionfb13386db200.ATTRS
 calc_left_start	./plugged/plenary.nvim/lua/plenary/window/border.lua	/^local calc_left_start = function(title_pos, title_len, total_width)$/;"	f
 calc_result_length	./plugged/telescope.nvim/lua/telescope/utils.lua	/^local calc_result_length = function(truncate_len)$/;"	f
@@ -6750,6 +6814,7 @@ callback	./plugged/telescope.nvim/lua/telescope/previewers/buffer_previewer.lua	
 callback	./plugged/telescope.nvim/lua/telescope/previewers/buffer_previewer.lua	/^        callback = function(bufnr, content)$/;"	f
 callback_or_next	./plugged/plenary.nvim/lua/plenary/async/async.lua	/^local function callback_or_next(step, thread, callback, ...)$/;"	f
 callback_or_next	./plugged/plenary.nvim/lua/plenary/async_lib/async.lua	/^local function callback_or_next(step, thread, callback, ...)$/;"	f
+callback_wrapper	./plugged/cmp-buffer/lua/cmp_buffer/timer.lua	/^  local function callback_wrapper()$/;"	f
 callbacks[id]	./plugged/nvim-cmp/lua/cmp/vim_source.lua	/^    self.callbacks[id] = function(...)$/;"	f	unknown:self
 callbacks[match_args]	./plugged/plenary.nvim/lua/luassert/stub.lua	/^        callbacks[match_args] = function()$/;"	f
 callbacks[match_args]	./plugged/plenary.nvim/lua/luassert/stub.lua	/^        callbacks[match_args] = function(...)$/;"	f
@@ -6822,6 +6887,7 @@ cb	./plugged/plenary.nvim/lua/plenary/async/util.lua	/^    local cb = function(.
 cb_add	./plugged/telescope.nvim/lua/telescope/pickers.lua	/^  local cb_add = function(score, entry)$/;"	f
 cb_filter	./plugged/telescope.nvim/lua/telescope/pickers.lua	/^  local cb_filter = function(_)$/;"	f
 ccls	./plugged/nvim-lspconfig/doc/server_configurations.md	/^## ccls$/;"	s	chapter:Configurations
+cdv	./plugged/neomux/plugin/bin/funcs.sh	/^cdv() {$/;"	f
 center	./plugged/telescope.nvim/lua/telescope/actions/init.lua	/^function actions.center(_)$/;"	f	unknown:actions
 centered	./plugged/plenary.nvim/lua/plenary/window/float.lua	/^function win_float.centered(options)$/;"	f	unknown:win_float
 centered_with_top_win	./plugged/plenary.nvim/lua/plenary/window/float.lua	/^function win_float.centered_with_top_win(top_text, options)$/;"	f	unknown:win_float
@@ -6952,6 +7018,7 @@ cloneElement	./plugged/nyaovim-tree-view/nyaovim-plugin/js/index.js	/^  cloneEle
 cloneElement	./plugged/nyaovim-tree-view/nyaovim-plugin/js/index.js	/^ReactElement.cloneElement = function (element, config, children) {$/;"	f	function:ReactElement
 clone_plugin	./plugged/ultisnips/test_all.py	/^def clone_plugin(plugin):$/;"	f
 close	./plugged/cmp-buffer/lua/cmp_buffer/buffer.lua	/^function buffer.close(self)$/;"	f	unknown:buffer
+close	./plugged/cmp-buffer/lua/cmp_buffer/timer.lua	/^function timer:close()$/;"	f	unknown:timer
 close	./plugged/nvim-cmp/lua/cmp/config/mapping.lua	/^mapping.close = function()$/;"	f	unknown:mapping
 close	./plugged/nvim-cmp/lua/cmp/init.lua	/^cmp.close = function()$/;"	f	unknown:cmp
 close	./plugged/nvim-cmp/lua/cmp/utils/window.lua	/^window.close = function(self)$/;"	f	unknown:window
@@ -7844,7 +7911,7 @@ diff_in_buffer_length	./plugged/ultisnips/pythonx/UltiSnips/vim_state.py	/^    d
 diffuseConstant	./plugged/nyaovim-tree-view/nyaovim-plugin/js/index.js	/^  diffuseConstant: 'diffuseConstant',$/;"	p	class:AnonymousFunctionfb13386db200.ATTRS
 dircolors	./plugged/awesome-vim-colorschemes/docs/nightsense-snow.md	/^### dircolors$/;"	S	section:shell
 direction	./plugged/nyaovim-tree-view/nyaovim-plugin/js/index.js	/^  direction: 0,$/;"	p	class:AnonymousFunctionfb13386db200.ATTRS
-dirname	./plugged/nvim-lspconfig/lua/lspconfig/util.lua	/^    dirname = function(path)$/;"	f
+dirname	./plugged/nvim-lspconfig/lua/lspconfig/util.lua	/^  local function dirname(path)$/;"	f
 dirname	./plugged/nyaovim-tree-view/nyaovim-plugin/js/index.js	/^exports.dirname = function(path) {$/;"	f	function:exports
 dirname	./plugged/plenary.nvim/lua/plenary/busted.lua	/^local dirname = function(p)$/;"	f
 disable_inlay_hints	./plugged/rust-tools.nvim/lua/rust-tools/inlay_hints.lua	/^function M.disable_inlay_hints()$/;"	f	unknown:M
@@ -7954,8 +8021,9 @@ empty	./plugged/nvim-cmp/lua/cmp/context.lua	/^context.empty = function()$/;"	f	
 empty	./plugged/telescope.nvim/lua/telescope/sorters.lua	/^sorters.empty = function()$/;"	f	unknown:sorters
 emptyAncestorInfo	./plugged/nyaovim-tree-view/nyaovim-plugin/js/index.js	/^  var emptyAncestorInfo = {$/;"	c	class:AnonymousFunctionfb13386df300
 emptyFunction	./plugged/nyaovim-tree-view/nyaovim-plugin/js/index.js	/^var emptyFunction = function emptyFunction() {};$/;"	f	function:AnonymousFunctionfb13386d0d00
-en	./config/mappings.vim	/^nnoremap en \$$/;"	m
+en	./back_up/mappings.vim	/^nnoremap en \$$/;"	m
 en	./plugin/mappings.vim	/^nnoremap en \$$/;"	m
+en	./plugins/mappings.vim	/^nnoremap en \$$/;"	m
 enableBackground	./plugged/nyaovim-tree-view/nyaovim-plugin/js/index.js	/^  enableBackground: 'enable-background',$/;"	p	class:AnonymousFunctionfb13386db200.ATTRS
 enabled	./plugged/nvim-cmp/lua/cmp/config.lua	/^config.enabled = function()$/;"	f	unknown:config
 enabled	./plugged/nvim-cmp/lua/cmp/config/default.lua	/^    enabled = function()$/;"	f
@@ -8933,10 +9001,12 @@ g:UltiSnipsDebugServerEnable	./plugged/ultisnips/plugin/UltiSnips.vim	/^   let g
 g:UltiSnipsEditSplit	./plugged/ultisnips/autoload/UltiSnips/map_keys.vim	/^    let g:UltiSnipsEditSplit = 'normal'$/;"	v
 g:UltiSnipsEditSplit	./plugged/ultisnips/docker/docker_vimrc.vim	/^let g:UltiSnipsEditSplit="vertical"$/;"	v
 g:UltiSnipsEnableSnipMate	./plugged/ultisnips/autoload/UltiSnips/map_keys.vim	/^    let g:UltiSnipsEnableSnipMate = 1$/;"	v
-g:UltiSnipsExpandTrigger	./config/settings.vim	/^let g:UltiSnipsExpandTrigger='<c-j>'$/;"	v
+g:UltiSnipsExpandTrigger	./back_up/settings.vim	/^let g:UltiSnipsExpandTrigger='<c-j>'$/;"	v
 g:UltiSnipsExpandTrigger	./plugged/ultisnips/autoload/UltiSnips/map_keys.vim	/^    let g:UltiSnipsExpandTrigger = "<tab>"$/;"	v
 g:UltiSnipsExpandTrigger	./plugged/ultisnips/docker/docker_vimrc.vim	/^let g:UltiSnipsExpandTrigger="<tab>"$/;"	v
 g:UltiSnipsExpandTrigger	./plugin/settings.vim	/^let g:UltiSnipsExpandTrigger='<c-j>'$/;"	v
+g:UltiSnipsExpandTrigger	./plugins/settings.vim	/^let g:UltiSnipsExpandTrigger='<c-j>'$/;"	v
+g:UltiSnipsExpandTrigger	./plugins/snippets.vim	/^let g:UltiSnipsExpandTrigger='<c-j>'$/;"	v
 g:UltiSnipsJumpBackwardTrigger	./plugged/ultisnips/autoload/UltiSnips/map_keys.vim	/^    let g:UltiSnipsJumpBackwardTrigger = "<c-k>"$/;"	v
 g:UltiSnipsJumpBackwardTrigger	./plugged/ultisnips/docker/docker_vimrc.vim	/^let g:UltiSnipsJumpBackwardTrigger="1"$/;"	v
 g:UltiSnipsJumpForwardTrigger	./plugged/ultisnips/autoload/UltiSnips/map_keys.vim	/^    let g:UltiSnipsJumpForwardTrigger = "<c-j>"$/;"	v
@@ -9736,10 +9806,8 @@ g:challenger_deep_termcolors	./plugged/awesome-vim-colorschemes/colors/challenge
 g:challenger_deep_terminal_italics	./plugged/awesome-vim-colorschemes/colors/challenger_deep.vim	/^  let g:challenger_deep_terminal_italics = 0$/;"	v
 g:clap#themes#dogrun#palette	./plugged/awesome-vim-colorschemes/autoload/clap/themes/dogrun.vim	/^let g:clap#themes#dogrun#palette = s:palette$/;"	v
 g:clap#themes#oceanicnext#palette	./plugged/awesome-vim-colorschemes/autoload/clap/themes/oceanicnext.vim	/^let g:clap#themes#oceanicnext#palette = s:palette$/;"	v
-g:coc_snippet_next	./config/snippets.vim	/^let g:coc_snippet_next = '<c-j>'$/;"	v
-g:coc_snippet_next	./plugin/snippets.vim	/^let g:coc_snippet_next = '<c-j>'$/;"	v
-g:coc_snippet_prev	./config/snippets.vim	/^let g:coc_snippet_prev = '<c-k>'$/;"	v
-g:coc_snippet_prev	./plugin/snippets.vim	/^let g:coc_snippet_prev = '<c-k>'$/;"	v
+g:coc_snippet_next	./back_up/snippets.vim	/^let g:coc_snippet_next = '<c-j>'$/;"	v
+g:coc_snippet_prev	./back_up/snippets.vim	/^let g:coc_snippet_prev = '<c-k>'$/;"	v
 g:colors_name	./plugged/awesome-vim-colorschemes/colors/256_noir.vim	/^let g:colors_name = "256_noir"$/;"	v
 g:colors_name	./plugged/awesome-vim-colorschemes/colors/OceanicNext.vim	/^  let g:colors_name="OceanicNext"$/;"	v
 g:colors_name	./plugged/awesome-vim-colorschemes/colors/OceanicNextLight.vim	/^  let g:colors_name="OceanicNextLight"$/;"	v
@@ -9835,8 +9903,8 @@ g:completion_items_duplicate	./plugged/completion-nvim/plugin/completion.vim	/^ 
 g:completion_items_priority	./plugged/completion-nvim/plugin/completion.vim	/^    let g:completion_items_priority = {}$/;"	v
 g:completion_matching_ignore_case	./plugged/completion-nvim/plugin/completion.vim	/^    let g:completion_matching_ignore_case = &ignorecase$/;"	v
 g:completion_matching_smart_case	./plugged/completion-nvim/plugin/completion.vim	/^    let g:completion_matching_smart_case = &smartcase$/;"	v
-g:completion_matching_strategy_list	./config/lsp.vim	/^let g:completion_matching_strategy_list = ['exact', 'substring', 'fuzzy']$/;"	v
 g:completion_matching_strategy_list	./plugged/completion-nvim/plugin/completion.vim	/^    let g:completion_matching_strategy_list = ['exact']$/;"	v
+g:completion_matching_strategy_list	./plugins/lsp.vim	/^let g:completion_matching_strategy_list = ['exact', 'substring', 'fuzzy']$/;"	v
 g:completion_menu_length	./plugged/completion-nvim/plugin/completion.vim	/^    let g:completion_menu_length = 0$/;"	v
 g:completion_sorting	./plugged/completion-nvim/plugin/completion.vim	/^    let g:completion_sorting = 'alphabet'$/;"	v
 g:completion_timer_cycle	./plugged/completion-nvim/plugin/completion.vim	/^    let g:completion_timer_cycle = 80$/;"	v
@@ -9858,12 +9926,13 @@ g:ctrlp_autoignore_debug	./plugged/ctrlp.vim/autoload/ctrlp/autoignore.vim	/^	le
 g:ctrlp_autoignore_loaded	./plugged/ctrlp.vim/autoload/ctrlp/autoignore.vim	/^let g:ctrlp_autoignore_loaded = 1$/;"	v
 g:ctrlp_autoignore_trace	./plugged/ctrlp.vim/autoload/ctrlp/autoignore.vim	/^	let g:ctrlp_autoignore_trace = 0$/;"	v
 g:ctrlp_builtins	./plugged/ctrlp.vim/autoload/ctrlp.vim	/^let g:ctrlp_builtins = len(g:ctrlp_types)-1$/;"	v
-g:ctrlp_custom_ignore	./config/mappings.vim	/^let g:ctrlp_custom_ignore = {$/;"	v
+g:ctrlp_custom_ignore	./back_up/mappings.vim	/^let g:ctrlp_custom_ignore = {$/;"	v
 g:ctrlp_custom_ignore	./plugged/ctrlp.vim/autoload/ctrlp/autoignore.vim	/^	let g:ctrlp_custom_ignore = {}$/;"	v
 g:ctrlp_custom_ignore	./plugged/ctrlp.vim/autoload/ctrlp/autoignore.vim	/^let g:ctrlp_custom_ignore['func'] = 'ctrlp#autoignore#ignore'$/;"	v
 g:ctrlp_custom_ignore	./plugged/ctrlp.vim/autoload/ctrlp/autoignore.vim	/^let g:ctrlp_custom_ignore['func-close'] = 'ctrlp#autoignore#ignore_close'$/;"	v
 g:ctrlp_custom_ignore	./plugged/ctrlp.vim/autoload/ctrlp/autoignore.vim	/^let g:ctrlp_custom_ignore['func-init'] = 'ctrlp#autoignore#ignore_init'$/;"	v
-g:ctrlp_custom_ignore	./plugin/mappings.vim	/^let g:ctrlp_custom_ignore = {$/;"	v
+g:ctrlp_custom_ignore	./plugins/ctrlP.vim	/^let g:ctrlp_custom_ignore = {$/;"	v
+g:ctrlp_custom_ignore	./plugins/mappings.vim	/^let g:ctrlp_custom_ignore = {$/;"	v
 g:ctrlp_lines	./plugged/ctrlp.vim/autoload/ctrlp.vim	/^		let g:ctrlp_lines = ctrlp#mrufiles#refresh()$/;"	v
 g:ctrlp_lines	./plugged/ctrlp.vim/autoload/ctrlp.vim	/^	let g:ctrlp_lines = []$/;"	v
 g:ctrlp_lines	./plugged/ctrlp.vim/autoload/ctrlp.vim	/^	let g:ctrlp_lines = call(a:rfunc, [tbrem])$/;"	v
@@ -10283,36 +10352,36 @@ g:maximizer_default_mapping_key	./plugged/vim-maximizer/plugin/maximizer.vim	/^ 
 g:maximizer_restore_on_winleave	./plugged/vim-maximizer/plugin/maximizer.vim	/^    let g:maximizer_restore_on_winleave = 0$/;"	v
 g:maximizer_set_default_mapping	./plugged/vim-maximizer/plugin/maximizer.vim	/^    let g:maximizer_set_default_mapping = 1$/;"	v
 g:maximizer_set_mapping_with_bang	./plugged/vim-maximizer/plugin/maximizer.vim	/^    let g:maximizer_set_mapping_with_bang = 0$/;"	v
-g:mkdp_auto_close	./config/markdown.vim	/^let g:mkdp_auto_close = 1$/;"	v
-g:mkdp_auto_close	./plugin/markdown.vim	/^let g:mkdp_auto_close = 1$/;"	v
-g:mkdp_auto_start	./config/markdown.vim	/^let g:mkdp_auto_start = 0$/;"	v
-g:mkdp_auto_start	./plugin/markdown.vim	/^let g:mkdp_auto_start = 0$/;"	v
-g:mkdp_browser	./config/markdown.vim	/^let g:mkdp_browser = 'chrome'$/;"	v
-g:mkdp_browser	./plugin/markdown.vim	/^let g:mkdp_browser = 'chrome'$/;"	v
-g:mkdp_browserfunc	./config/markdown.vim	/^let g:mkdp_browserfunc = ''$/;"	v
-g:mkdp_browserfunc	./plugin/markdown.vim	/^let g:mkdp_browserfunc = ''$/;"	v
-g:mkdp_command_for_global	./config/markdown.vim	/^let g:mkdp_command_for_global = 0$/;"	v
-g:mkdp_command_for_global	./plugin/markdown.vim	/^let g:mkdp_command_for_global = 0$/;"	v
-g:mkdp_echo_preview_url	./config/markdown.vim	/^let g:mkdp_echo_preview_url = 0$/;"	v
-g:mkdp_echo_preview_url	./plugin/markdown.vim	/^let g:mkdp_echo_preview_url = 0$/;"	v
-g:mkdp_filetypes	./config/markdown.vim	/^let g:mkdp_filetypes = ['markdown', 'md', 'vimwiki']$/;"	v
-g:mkdp_filetypes	./plugin/markdown.vim	/^let g:mkdp_filetypes = ['markdown', 'md', 'vimwiki']$/;"	v
-g:mkdp_highlight_css	./config/markdown.vim	/^let g:mkdp_highlight_css = ''$/;"	v
-g:mkdp_highlight_css	./plugin/markdown.vim	/^let g:mkdp_highlight_css = ''$/;"	v
-g:mkdp_markdown_css	./config/markdown.vim	/^let g:mkdp_markdown_css = ''$/;"	v
-g:mkdp_markdown_css	./plugin/markdown.vim	/^let g:mkdp_markdown_css = ''$/;"	v
-g:mkdp_open_ip	./config/markdown.vim	/^let g:mkdp_open_ip = ''$/;"	v
-g:mkdp_open_ip	./plugin/markdown.vim	/^let g:mkdp_open_ip = ''$/;"	v
-g:mkdp_open_to_the_world	./config/markdown.vim	/^let g:mkdp_open_to_the_world = 0$/;"	v
-g:mkdp_open_to_the_world	./plugin/markdown.vim	/^let g:mkdp_open_to_the_world = 0$/;"	v
-g:mkdp_page_title	./config/markdown.vim	/^let g:mkdp_page_title = '「${name}」'$/;"	v
-g:mkdp_page_title	./plugin/markdown.vim	/^let g:mkdp_page_title = '「${name}」'$/;"	v
-g:mkdp_port	./config/markdown.vim	/^let g:mkdp_port = ''$/;"	v
-g:mkdp_port	./plugin/markdown.vim	/^let g:mkdp_port = ''$/;"	v
-g:mkdp_preview_options	./config/markdown.vim	/^let g:mkdp_preview_options = {$/;"	v
-g:mkdp_preview_options	./plugin/markdown.vim	/^let g:mkdp_preview_options = {$/;"	v
-g:mkdp_refresh_slow	./config/markdown.vim	/^let g:mkdp_refresh_slow = 0$/;"	v
-g:mkdp_refresh_slow	./plugin/markdown.vim	/^let g:mkdp_refresh_slow = 0$/;"	v
+g:mkdp_auto_close	./back_up/markdown.vim	/^let g:mkdp_auto_close = 1$/;"	v
+g:mkdp_auto_close	./plugins/markdown.vim	/^let g:mkdp_auto_close = 1$/;"	v
+g:mkdp_auto_start	./back_up/markdown.vim	/^let g:mkdp_auto_start = 0$/;"	v
+g:mkdp_auto_start	./plugins/markdown.vim	/^let g:mkdp_auto_start = 0$/;"	v
+g:mkdp_browser	./back_up/markdown.vim	/^let g:mkdp_browser = 'chrome'$/;"	v
+g:mkdp_browser	./plugins/markdown.vim	/^let g:mkdp_browser = 'chrome'$/;"	v
+g:mkdp_browserfunc	./back_up/markdown.vim	/^let g:mkdp_browserfunc = ''$/;"	v
+g:mkdp_browserfunc	./plugins/markdown.vim	/^let g:mkdp_browserfunc = ''$/;"	v
+g:mkdp_command_for_global	./back_up/markdown.vim	/^let g:mkdp_command_for_global = 0$/;"	v
+g:mkdp_command_for_global	./plugins/markdown.vim	/^let g:mkdp_command_for_global = 0$/;"	v
+g:mkdp_echo_preview_url	./back_up/markdown.vim	/^let g:mkdp_echo_preview_url = 0$/;"	v
+g:mkdp_echo_preview_url	./plugins/markdown.vim	/^let g:mkdp_echo_preview_url = 0$/;"	v
+g:mkdp_filetypes	./back_up/markdown.vim	/^let g:mkdp_filetypes = ['markdown', 'md', 'vimwiki']$/;"	v
+g:mkdp_filetypes	./plugins/markdown.vim	/^let g:mkdp_filetypes = ['markdown', 'md', 'vimwiki']$/;"	v
+g:mkdp_highlight_css	./back_up/markdown.vim	/^let g:mkdp_highlight_css = ''$/;"	v
+g:mkdp_highlight_css	./plugins/markdown.vim	/^let g:mkdp_highlight_css = ''$/;"	v
+g:mkdp_markdown_css	./back_up/markdown.vim	/^let g:mkdp_markdown_css = ''$/;"	v
+g:mkdp_markdown_css	./plugins/markdown.vim	/^let g:mkdp_markdown_css = ''$/;"	v
+g:mkdp_open_ip	./back_up/markdown.vim	/^let g:mkdp_open_ip = ''$/;"	v
+g:mkdp_open_ip	./plugins/markdown.vim	/^let g:mkdp_open_ip = ''$/;"	v
+g:mkdp_open_to_the_world	./back_up/markdown.vim	/^let g:mkdp_open_to_the_world = 0$/;"	v
+g:mkdp_open_to_the_world	./plugins/markdown.vim	/^let g:mkdp_open_to_the_world = 0$/;"	v
+g:mkdp_page_title	./back_up/markdown.vim	/^let g:mkdp_page_title = '「${name}」'$/;"	v
+g:mkdp_page_title	./plugins/markdown.vim	/^let g:mkdp_page_title = '「${name}」'$/;"	v
+g:mkdp_port	./back_up/markdown.vim	/^let g:mkdp_port = ''$/;"	v
+g:mkdp_port	./plugins/markdown.vim	/^let g:mkdp_port = ''$/;"	v
+g:mkdp_preview_options	./back_up/markdown.vim	/^let g:mkdp_preview_options = {$/;"	v
+g:mkdp_preview_options	./plugins/markdown.vim	/^let g:mkdp_preview_options = {$/;"	v
+g:mkdp_refresh_slow	./back_up/markdown.vim	/^let g:mkdp_refresh_slow = 0$/;"	v
+g:mkdp_refresh_slow	./plugins/markdown.vim	/^let g:mkdp_refresh_slow = 0$/;"	v
 g:molokai_original	./plugged/awesome-vim-colorschemes/colors/molokayo.vim	/^let g:molokai_original = 1$/;"	v
 g:molokayo#focus_variant	./plugged/awesome-vim-colorschemes/colors/molokayo.vim	/^    let g:molokayo#focus_variant = 0$/;"	v
 g:molokayo#high_contrast#comments	./plugged/awesome-vim-colorschemes/colors/molokayo.vim	/^    let g:molokayo#high_contrast#comments = 0$/;"	v
@@ -10325,20 +10394,20 @@ g:neoformat_python_enabled	./plugged/neoformat/test/autocomplete_test.vim	/^    
 g:neoformat_python_enabled	./plugged/neoformat/test/autocomplete_test.vim	/^    let g:neoformat_python_enabled = ['autopep8']$/;"	v
 g:neoformat_verbose	./plugged/neoformat/autoload/neoformat/utils.vim	/^        let g:neoformat_verbose = 0$/;"	v
 g:neomux_loaded	./plugged/neomux/plugin/neomux.vim	/^let g:neomux_loaded = 1$/;"	v
-g:neovide_cursor_animation_legth	./config/neovide.vim	/^let g:neovide_cursor_animation_legth=0.13$/;"	v
-g:neovide_cursor_animation_legth	./plugin/neovide.vim	/^let g:neovide_cursor_animation_legth=0.13$/;"	v
-g:neovide_cursor_vfx_mode	./config/neovide.vim	/^let g:neovide_cursor_vfx_mode = "railgun"$/;"	v
-g:neovide_cursor_vfx_mode	./plugin/neovide.vim	/^let g:neovide_cursor_vfx_mode = "railgun"$/;"	v
-g:neovide_cursor_vfx_particle_speed	./config/neovide.vim	/^let g:neovide_cursor_vfx_particle_speed=50.0$/;"	v
-g:neovide_cursor_vfx_particle_speed	./plugin/neovide.vim	/^let g:neovide_cursor_vfx_particle_speed=50.0$/;"	v
-g:neovide_fullscreen	./config/neovide.vim	/^let g:neovide_fullscreen = v:false$/;"	v
-g:neovide_fullscreen	./plugin/neovide.vim	/^let g:neovide_fullscreen = v:false$/;"	v
-g:neovide_refresh_rate	./config/neovide.vim	/^let g:neovide_refresh_rate = 500$/;"	v
-g:neovide_refresh_rate	./plugin/neovide.vim	/^let g:neovide_refresh_rate = 60$/;"	v
-g:neovide_remember_window_size	./config/neovide.vim	/^let g:neovide_remember_window_size = v:true$/;"	v
-g:neovide_remember_window_size	./plugin/neovide.vim	/^let g:neovide_remember_window_size = v:true$/;"	v
-g:neovide_transparency	./config/neovide.vim	/^let g:neovide_transparency=0.8$/;"	v
-g:neovide_transparency	./plugin/neovide.vim	/^let g:neovide_transparency=0.8$/;"	v
+g:neovide_cursor_animation_legth	./back_up/neovide.vim	/^let g:neovide_cursor_animation_legth=0.13$/;"	v
+g:neovide_cursor_animation_legth	./plugins/neovide.vim	/^let g:neovide_cursor_animation_legth=0.13$/;"	v
+g:neovide_cursor_vfx_mode	./back_up/neovide.vim	/^let g:neovide_cursor_vfx_mode = "railgun"$/;"	v
+g:neovide_cursor_vfx_mode	./plugins/neovide.vim	/^let g:neovide_cursor_vfx_mode = "railgun"$/;"	v
+g:neovide_cursor_vfx_particle_speed	./back_up/neovide.vim	/^let g:neovide_cursor_vfx_particle_speed=50.0$/;"	v
+g:neovide_cursor_vfx_particle_speed	./plugins/neovide.vim	/^let g:neovide_cursor_vfx_particle_speed=50.0$/;"	v
+g:neovide_fullscreen	./back_up/neovide.vim	/^let g:neovide_fullscreen = v:false$/;"	v
+g:neovide_fullscreen	./plugins/neovide.vim	/^let g:neovide_fullscreen = v:false$/;"	v
+g:neovide_refresh_rate	./back_up/neovide.vim	/^let g:neovide_refresh_rate = 60$/;"	v
+g:neovide_refresh_rate	./plugins/neovide.vim	/^let g:neovide_refresh_rate = 500$/;"	v
+g:neovide_remember_window_size	./back_up/neovide.vim	/^let g:neovide_remember_window_size = v:true$/;"	v
+g:neovide_remember_window_size	./plugins/neovide.vim	/^let g:neovide_remember_window_size = v:true$/;"	v
+g:neovide_transparency	./back_up/neovide.vim	/^let g:neovide_transparency=0.8$/;"	v
+g:neovide_transparency	./plugins/neovide.vim	/^let g:neovide_transparency=0.8$/;"	v
 g:niji_dark_colours	./plugged/awesome-vim-colorschemes/colors/deus.vim	/^let g:niji_dark_colours = g:rbpt_colorpairs$/;"	v
 g:niji_dark_colours	./plugged/awesome-vim-colorschemes/colors/gruvbox.vim	/^let g:niji_dark_colours = g:rbpt_colorpairs$/;"	v
 g:niji_dark_colours	./plugged/awesome-vim-colorschemes/colors/materialbox.vim	/^let g:niji_dark_colours = g:rbpt_colorpairs$/;"	v
@@ -10380,11 +10449,12 @@ g:purify_inverse	./plugged/awesome-vim-colorschemes/colors/purify.vim	/^  let g:
 g:purify_italic	./plugged/awesome-vim-colorschemes/colors/purify.vim	/^  let g:purify_italic = 1$/;"	v
 g:purify_undercurl	./plugged/awesome-vim-colorschemes/colors/purify.vim	/^  let g:purify_undercurl = 1$/;"	v
 g:purify_underline	./plugged/awesome-vim-colorschemes/colors/purify.vim	/^  let g:purify_underline = 1$/;"	v
-g:python3_host_prog	./config/vimspector.vim	/^let g:python3_host_prog = "python"$/;"	v
-g:python3_host_prog	./plugin/vimspector.vim	/^let g:python3_host_prog = "python"$/;"	v
+g:python3_host_prog	./back_up/vimspector.vim	/^let g:python3_host_prog = "python"$/;"	v
+g:python3_host_prog	./plugins/vimspector.vim	/^let g:python3_host_prog = "python"$/;"	v
 g:qf_disable_statusline	./plugged/lightline.vim/plugin/lightline.vim	/^let g:qf_disable_statusline = 1$/;"	v
-g:qfix_win	./config/mappings.vim	/^        let g:qfix_win = 1$/;"	v
+g:qfix_win	./back_up/mappings.vim	/^        let g:qfix_win = 1$/;"	v
 g:qfix_win	./plugin/mappings.vim	/^        let g:qfix_win = 1$/;"	v
+g:qfix_win	./plugins/mappings.vim	/^        let g:qfix_win = 1$/;"	v
 g:rainbow_conf	./plugged/awesome-vim-colorschemes/colors/deus.vim	/^   let g:rainbow_conf = {}$/;"	v
 g:rainbow_conf	./plugged/awesome-vim-colorschemes/colors/deus.vim	/^   let g:rainbow_conf['ctermfgs'] = g:rainbow_ctermfgs$/;"	v
 g:rainbow_conf	./plugged/awesome-vim-colorschemes/colors/deus.vim	/^   let g:rainbow_conf['guifgs'] = g:rainbow_guifgs$/;"	v
@@ -10419,11 +10489,13 @@ g:rooter_change_directory_for_non_project_files	./plugged/vim-rooter/plugin/root
 g:rooter_change_directory_for_non_project_files	./plugged/vim-rooter/test/test_rooter.vim	/^  let g:rooter_change_directory_for_non_project_files = ''$/;"	v
 g:rooter_change_directory_for_non_project_files	./plugged/vim-rooter/test/test_rooter.vim	/^  let g:rooter_change_directory_for_non_project_files = 'current'$/;"	v
 g:rooter_change_directory_for_non_project_files	./plugged/vim-rooter/test/test_rooter.vim	/^  let g:rooter_change_directory_for_non_project_files = 'home'$/;"	v
-g:rooter_manual_only	./config/settings.vim	/^let g:rooter_manual_only = 1$/;"	v
+g:rooter_manual_only	./back_up/settings.vim	/^let g:rooter_manual_only = 1$/;"	v
 g:rooter_manual_only	./plugged/vim-rooter/plugin/rooter.vim	/^  let g:rooter_manual_only = !g:rooter_manual_only$/;"	v
 g:rooter_manual_only	./plugged/vim-rooter/plugin/rooter.vim	/^  let g:rooter_manual_only = 0$/;"	v
 g:rooter_manual_only	./plugin/settings.vim	/^let g:rooter_manual_only = 1$/;"	v
-g:rooter_patterns	./config/settings.vim	/^let g:rooter_patterns = ['.git']$/;"	v
+g:rooter_manual_only	./plugins/rooter.vim	/^let g:rooter_manual_only = 1$/;"	v
+g:rooter_manual_only	./plugins/settings.vim	/^let g:rooter_manual_only = 1$/;"	v
+g:rooter_patterns	./back_up/settings.vim	/^let g:rooter_patterns = ['.git']$/;"	v
 g:rooter_patterns	./plugged/vim-rooter/plugin/rooter.vim	/^  let g:rooter_patterns = ['.git', '_darcs', '.hg', '.bzr', '.svn', 'Makefile', 'package.json']$/;"	v
 g:rooter_patterns	./plugged/vim-rooter/test/test_rooter.vim	/^  let g:rooter_patterns = ['!^project', '*.txt']$/;"	v
 g:rooter_patterns	./plugged/vim-rooter/test/test_rooter.vim	/^  let g:rooter_patterns = ['!_git']$/;"	v
@@ -10436,13 +10508,17 @@ g:rooter_patterns	./plugged/vim-rooter/test/test_rooter.vim	/^  let g:rooter_pat
 g:rooter_patterns	./plugged/vim-rooter/test/test_rooter.vim	/^  let g:rooter_patterns = ['foo\\ foo\/bar.txt']$/;"	v
 g:rooter_patterns	./plugged/vim-rooter/test/test_rooter.vim	/^  let g:rooter_patterns = ['x?z']$/;"	v
 g:rooter_patterns	./plugin/settings.vim	/^let g:rooter_patterns = ['.git']$/;"	v
+g:rooter_patterns	./plugins/rooter.vim	/^let g:rooter_patterns = ['.git']$/;"	v
+g:rooter_patterns	./plugins/settings.vim	/^let g:rooter_patterns = ['.git']$/;"	v
 g:rooter_resolve_links	./plugged/vim-rooter/plugin/rooter.vim	/^  let g:rooter_resolve_links = 0$/;"	v
 g:rooter_resolve_links	./plugged/vim-rooter/test/test_rooter.vim	/^  let g:rooter_resolve_links = 0$/;"	v
 g:rooter_resolve_links	./plugged/vim-rooter/test/test_rooter.vim	/^  let g:rooter_resolve_links = 1$/;"	v
-g:rooter_silent_chdir	./config/settings.vim	/^let g:rooter_silent_chdir = 1$/;"	v
+g:rooter_silent_chdir	./back_up/settings.vim	/^let g:rooter_silent_chdir = 1$/;"	v
 g:rooter_silent_chdir	./plugged/vim-rooter/plugin/rooter.vim	/^  let g:rooter_silent_chdir = 0$/;"	v
 g:rooter_silent_chdir	./plugged/vim-rooter/test/test_rooter.vim	/^  let g:rooter_silent_chdir = 0$/;"	v
 g:rooter_silent_chdir	./plugin/settings.vim	/^let g:rooter_silent_chdir = 1$/;"	v
+g:rooter_silent_chdir	./plugins/rooter.vim	/^let g:rooter_silent_chdir = 1$/;"	v
+g:rooter_silent_chdir	./plugins/settings.vim	/^let g:rooter_silent_chdir = 1$/;"	v
 g:rooter_targets	./plugged/vim-rooter/plugin/rooter.vim	/^  let g:rooter_targets = '\/,*'$/;"	v
 g:rooter_targets	./plugged/vim-rooter/test/test_rooter.vim	/^  let g:rooter_targets = '*.txt'$/;"	v
 g:rooter_targets	./plugged/vim-rooter/test/test_rooter.vim	/^  let g:rooter_targets = '\/'$/;"	v
@@ -10471,37 +10547,38 @@ g:snips_email	./plugged/vim-snippets/plugin/vimsnippets.vim	/^    let g:snips_em
 g:snips_github	./plugged/vim-snippets/plugin/vimsnippets.vim	/^    let g:snips_github = "https:\/\/github.com\/yourname"$/;"	v
 g:sonokai#tmux	./plugged/awesome-vim-colorschemes/autoload/sonokai.vim	/^let g:sonokai#tmux = executable('tmux') && $TMUX !=# '' ?$/;"	v
 g:sonokai_loaded_file_types	./plugged/awesome-vim-colorschemes/colors/sonokai.vim	/^let g:sonokai_loaded_file_types = []$/;"	v
-g:startify_bookmarks	./config/settings.vim	/^let g:startify_bookmarks = [$/;"	v
-g:startify_bookmarks	./plugin/settings.vim	/^let g:startify_bookmarks = [$/;"	v
+g:startify_bookmarks	./back_up/settings.vim	/^let g:startify_bookmarks = [$/;"	v
+g:startify_bookmarks	./plugins/startify.vim	/^let g:startify_bookmarks = [$/;"	v
 g:startify_change_cmd	./plugged/vim-startify/autoload/startify.vim	/^    let g:startify_change_cmd = 'lcd'$/;"	v
 g:startify_change_cmd	./plugged/vim-startify/autoload/startify.vim	/^  let g:startify_change_cmd = get(g:, 'startify_change_cmd', 'lcd')$/;"	v
-g:startify_custom_header	./config/settings.vim	/^let g:startify_custom_header = [$/;"	v
+g:startify_custom_header	./back_up/settings.vim	/^let g:startify_custom_header = [$/;"	v
 g:startify_custom_header	./plugged/vim-startify/test/vimrc	/^let g:startify_custom_header = []$/;"	v
-g:startify_custom_header	./plugin/settings.vim	/^let g:startify_custom_header = [$/;"	v
+g:startify_custom_header	./plugins/startify.vim	/^let g:startify_custom_header = [$/;"	v
 g:startify_custom_header_quotes	./plugged/vim-startify/autoload/startify/fortune.vim	/^let g:startify_custom_header_quotes = exists('g:startify_custom_header_quotes')$/;"	v
 g:startify_enable_special	./plugged/vim-startify/autoload/startify.vim	/^let g:startify_enable_special = get(g:, 'startify_enable_special', 1)$/;"	v
 g:startify_files_number	./plugged/vim-startify/autoload/startify.vim	/^let g:startify_files_number = get(g:, 'startify_files_number', 10)$/;"	v
 g:startify_fortune_use_unicode	./plugged/vim-startify/autoload/startify/fortune.vim	/^let g:startify_fortune_use_unicode = &encoding == 'utf-8' && get(g:, 'startify_fortune_use_unico/;"	v
 g:startify_header	./plugged/vim-startify/autoload/startify.vim	/^    let g:startify_header += ['']  " add blank line$/;"	v
 g:startify_header	./plugged/vim-startify/autoload/startify.vim	/^  let g:startify_header = exists('g:startify_custom_header')$/;"	v
-g:startify_lists	./config/settings.vim	/^let g:startify_lists = [$/;"	v
-g:startify_lists	./plugin/settings.vim	/^let g:startify_lists = [$/;"	v
+g:startify_lists	./back_up/settings.vim	/^let g:startify_lists = [$/;"	v
+g:startify_lists	./plugins/startify.vim	/^let g:startify_lists = [$/;"	v
 g:startify_locked	./plugged/vim-startify/plugin/startify.vim	/^let g:startify_locked = 0$/;"	v
 g:startify_padding_left	./plugged/vim-startify/autoload/startify.vim	/^let g:startify_padding_left = get(g:, 'startify_padding_left', 3)$/;"	v
 g:startify_relative_path	./plugged/vim-startify/autoload/startify.vim	/^let g:startify_relative_path = get(g:, 'startify_relative_path') ? ':~:.' : ':p:~'$/;"	v
 g:startify_relative_path	./plugged/vim-startify/test/vimrc	/^let g:startify_relative_path = 1$/;"	v
-g:startify_session_autoload	./config/settings.vim	/^let g:startify_session_autoload = 1$/;"	v
-g:startify_session_autoload	./plugin/settings.vim	/^let g:startify_session_autoload = 1$/;"	v
-g:startify_session_dir	./config/settings.vim	/^let g:startify_session_dir = '$HOME\/.config\/nvim\/session'$/;"	v
+g:startify_session_autoload	./back_up/settings.vim	/^let g:startify_session_autoload = 1$/;"	v
+g:startify_session_autoload	./plugins/startify.vim	/^let g:startify_session_autoload = 1$/;"	v
+g:startify_session_dir	./back_up/settings.vim	/^let g:startify_session_dir = '$HOME\/.config\/nvim\/session'$/;"	v
 g:startify_session_dir	./plugged/vim-startify/test/vimrc	/^let g:startify_session_dir = 'session'$/;"	v
-g:startify_session_dir	./plugin/settings.vim	/^let g:startify_session_dir = '$HOME\/.config\/nvim\/session'$/;"	v
+g:startify_session_dir	./plugins/startify.vim	/^let g:startify_session_dir = '$HOME\/.config\/nvim\/session'$/;"	v
 g:startify_skiplist	./plugged/vim-startify/autoload/startify.vim	/^let g:startify_skiplist = extend(get(g:, 'startify_skiplist', []), [$/;"	v
 g:startify_transformations	./plugged/vim-startify/autoload/startify.vim	/^let g:startify_transformations = get(g:, 'startify_transformations', [])$/;"	v
 g:syntastic_extra_filetypes	./plugged/rust.vim/plugin/rust.vim	/^    let g:syntastic_extra_filetypes = ['rust']$/;"	v
 g:syntastic_rust_cargo_fname	./plugged/rust.vim/syntax_checkers/rust/cargo.vim	/^let g:syntastic_rust_cargo_fname = ""$/;"	v
 g:syntastic_rust_checkers	./plugged/rust.vim/plugin/rust.vim	/^    let g:syntastic_rust_checkers = ['cargo']$/;"	v
-g:tagar_ctags_bin	./config/tags.vim	/^let g:tagar_ctags_bin='C:\\\\Users\\\\abdou\\\\ctags58'$/;"	v
+g:tagar_ctags_bin	./back_up/tags.vim	/^let g:tagar_ctags_bin='C:\\\\Users\\\\abdou\\\\ctags58'$/;"	v
 g:tagar_ctags_bin	./plugin/tags.vim	/^let g:tagar_ctags_bin='C:\\\\Users\\\\abdou\\\\ctags58'$/;"	v
+g:tagar_ctags_bin	./plugins/tags.vim	/^let g:tagar_ctags_bin='C:\\\\Users\\\\abdou\\\\ctags58'$/;"	v
 g:tagbar#icon_closed	./plugged/tagbar/autoload/tagbar.vim	/^let g:tagbar#icon_closed = g:tagbar_iconchars[0]$/;"	v
 g:tagbar#icon_open	./plugged/tagbar/autoload/tagbar.vim	/^let g:tagbar#icon_open   = g:tagbar_iconchars[1]$/;"	v
 g:tagbar_autoclose	./plugged/tagbar/autoload/tagbar.vim	/^    let g:tagbar_autoclose = !g:tagbar_autoclose$/;"	v
@@ -11372,15 +11449,15 @@ g:testname	./plugged/vimspector/tests/lib/run_test.vim	/^let g:testname = expand
 g:testpath	./plugged/vimspector/tests/lib/run_test.vim	/^let g:testpath = expand('%:p')$/;"	v
 g:tmux_navigator_disable_when_zoomed	./plugged/vim-tmux-navigator/plugin/tmux_navigator.vim	/^  let g:tmux_navigator_disable_when_zoomed = 0$/;"	v
 g:tmux_navigator_preserve_zoom	./plugged/vim-tmux-navigator/plugin/tmux_navigator.vim	/^  let g:tmux_navigator_preserve_zoom = 0$/;"	v
-g:tmux_navigator_save_on_switch	./config/settings.vim	/^let g:tmux_navigator_save_on_switch = 2$/;"	v
+g:tmux_navigator_save_on_switch	./back_up/settings.vim	/^let g:tmux_navigator_save_on_switch = 2$/;"	v
 g:tmux_navigator_save_on_switch	./plugged/vim-tmux-navigator/plugin/tmux_navigator.vim	/^  let g:tmux_navigator_save_on_switch = 0$/;"	v
-g:tmux_navigator_save_on_switch	./plugin/settings.vim	/^let g:tmux_navigator_save_on_switch = 2$/;"	v
+g:tmux_navigator_save_on_switch	./plugins/tmux-like.vim	/^let g:tmux_navigator_save_on_switch = 2$/;"	v
 g:two_firewatch_italics	./plugged/awesome-vim-colorschemes/colors/two-firewatch.vim	/^  let g:two_firewatch_italics = 0$/;"	v
 g:typescript_ignore_browserwords	./plugged/awesome-vim-colorschemes/colors/purify.vim	/^let g:typescript_ignore_browserwords = 1$/;"	v
-g:undo_command	./config/settings.vim	/^    let g:undo_command = 'argdo ' . '%s\/' . a:new . '\/' . a:old . '\/ge | update'$/;"	v
-g:undo_command	./plugin/settings.vim	/^    let g:undo_command = 'argdo ' . '%s\/' . a:new . '\/' . a:old . '\/ge | update'$/;"	v
-g:undo_command_cdo	./config/settings.vim	/^    let g:undo_command_cdo = 'cdo ' . 's\/' . a:new . '\/' . a:old . '\/ge | update'$/;"	v
-g:undo_command_cdo	./plugin/settings.vim	/^    let g:undo_command_cdo = 'cdo ' . 's\/' . a:new . '\/' . a:old . '\/ge | update'$/;"	v
+g:undo_command	./back_up/settings.vim	/^    let g:undo_command = 'argdo ' . '%s\/' . a:new . '\/' . a:old . '\/ge | update'$/;"	v
+g:undo_command	./plugins/me-make-shit.vim	/^    let g:undo_command = 'argdo ' . '%s\/' . a:new . '\/' . a:old . '\/ge | update'$/;"	v
+g:undo_command_cdo	./back_up/settings.vim	/^    let g:undo_command_cdo = 'cdo ' . 's\/' . a:new . '\/' . a:old . '\/ge | update'$/;"	v
+g:undo_command_cdo	./plugins/me-make-shit.vim	/^    let g:undo_command_cdo = 'cdo ' . 's\/' . a:new . '\/' . a:old . '\/ge | update'$/;"	v
 g:undotree_CursorLine	./plugged/undotree/plugin/undotree.vim	/^    let g:undotree_CursorLine = 1$/;"	v
 g:undotree_DiffAutoOpen	./plugged/undotree/plugin/undotree.vim	/^    let g:undotree_DiffAutoOpen = 1$/;"	v
 g:undotree_DiffCommand	./plugged/undotree/plugin/undotree.vim	/^    let g:undotree_DiffCommand = "diff"$/;"	v
@@ -11412,7 +11489,7 @@ g:vimshell_escape_colors	./plugged/awesome-vim-colorschemes/colors/gruvbox.vim	/
 g:vimshell_escape_colors	./plugged/awesome-vim-colorschemes/colors/materialbox.vim	/^let g:vimshell_escape_colors = [$/;"	v
 g:vimshell_escape_colors	./plugged/gruvbox/colors/gruvbox.vim	/^let g:vimshell_escape_colors = [$/;"	v
 g:vimspector_bottombar_height	./plugged/vimspector/tests/ui.test.vim	/^  let g:vimspector_bottombar_height = 5$/;"	v
-g:vimspector_enable_mappings	./config/vimspector.vim	/^let g:vimspector_enable_mappings = 'VISUAL_STUDIO'$/;"	v
+g:vimspector_enable_mappings	./back_up/vimspector.vim	/^let g:vimspector_enable_mappings = 'VISUAL_STUDIO'$/;"	v
 g:vimspector_enable_mappings	./plugged/vimspector/support/doc/example_vimrc.vim	/^let g:vimspector_enable_mappings = 'HUMAN'$/;"	v
 g:vimspector_enable_mappings	./plugged/vimspector/tests/breakpoints.test.vim	/^  let g:vimspector_enable_mappings = 'HUMAN'$/;"	v
 g:vimspector_enable_mappings	./plugged/vimspector/tests/breakpoints.test.vim	/^  let g:vimspector_enable_mappings = 'VISUAL_STUDIO'$/;"	v
@@ -11426,10 +11503,10 @@ g:vimspector_enable_mappings	./plugged/vimspector/tests/lib/autoload/vimspector/
 g:vimspector_enable_mappings	./plugged/vimspector/tests/manual/image/.vim/vimrc	/^let g:vimspector_enable_mappings='HUMAN'$/;"	v
 g:vimspector_enable_mappings	./plugged/vimspector/tests/mappings.test.vim	/^  let g:vimspector_enable_mappings = 'HUMAN'$/;"	v
 g:vimspector_enable_mappings	./plugged/vimspector/tests/mappings.test.vim	/^  let g:vimspector_enable_mappings = 'VISUAL_STUDIO'$/;"	v
-g:vimspector_enable_mappings	./plugin/vimspector.vim	/^let g:vimspector_enable_mappings = 'VISUAL_STUDIO'$/;"	v
+g:vimspector_enable_mappings	./plugins/vimspector.vim	/^let g:vimspector_enable_mappings = 'VISUAL_STUDIO'$/;"	v
 g:vimspector_home	./plugged/vimspector/plugin/vimspector.vim	/^let g:vimspector_home = expand( '<sfile>:p:h:h' )$/;"	v
-g:vimspector_install_gadgets	./config/vimspector.vim	/^let g:vimspector_install_gadgets = [ "debugpy", "vscode-cpptools", "CodeLLDB" ]$/;"	v
-g:vimspector_install_gadgets	./plugin/vimspector.vim	/^let g:vimspector_install_gadgets = [ "debugpy", "vscode-cpptools", "CodeLLDB" ]$/;"	v
+g:vimspector_install_gadgets	./back_up/vimspector.vim	/^let g:vimspector_install_gadgets = [ "debugpy", "vscode-cpptools", "CodeLLDB" ]$/;"	v
+g:vimspector_install_gadgets	./plugins/vimspector.vim	/^let g:vimspector_install_gadgets = [ "debugpy", "vscode-cpptools", "CodeLLDB" ]$/;"	v
 g:vimspector_resetting	./plugged/vimspector/plugin/vimspector.vim	/^let g:vimspector_resetting = 0$/;"	v
 g:vimspector_session_file_name	./plugged/vimspector/tests/session.test.vim	/^  let g:vimspector_session_file_name = tempname()$/;"	v
 g:vimspector_sign_priority	./plugged/vimspector/tests/breakpoints.test.vim	/^  let g:vimspector_sign_priority = {$/;"	v
@@ -11558,42 +11635,41 @@ g:which_key_floating_relative_win	./plugged/vim-which-key/plugin/which_key.vim	/
 g:which_key_group_dicts	./plugged/vim-which-key/plugin/which_key.vim	/^let g:which_key_group_dicts = get(g:, 'which_key_group_dicts', 'end')$/;"	v
 g:which_key_hspace	./plugged/vim-which-key/plugin/which_key.vim	/^let g:which_key_hspace = get(g:, 'which_key_hspace', 5)$/;"	v
 g:which_key_ignore_invalid_key	./plugged/vim-which-key/plugin/which_key.vim	/^let g:which_key_ignore_invalid_key = get(g:, 'which_key_ignore_invalid_key', 1)$/;"	v
-g:which_key_map	./config/which-key.vim	/^let g:which_key_map =  {}$/;"	v
-g:which_key_map	./config/which-key.vim	/^let g:which_key_map.c = {$/;"	v
-g:which_key_map	./config/which-key.vim	/^let g:which_key_map.f = {$/;"	v
-g:which_key_map	./config/which-key.vim	/^let g:which_key_map.g = {$/;"	v
-g:which_key_map	./config/which-key.vim	/^let g:which_key_map.p = {$/;"	v
-g:which_key_map	./config/which-key.vim	/^let g:which_key_map.s = {$/;"	v
-g:which_key_map	./config/which-key.vim	/^let g:which_key_map['S'] = [ ':Startify'                  , 'start screen'  ]$/;"	v
-g:which_key_map	./config/which-key.vim	/^let g:which_key_map['\/'] = [ '<Plug>NERDCommenterToggle'  , 'comment'  ]$/;"	v
-g:which_key_map	./config/which-key.vim	/^let g:which_key_map['e'] = [ ':CocCommand explorer'       , 'explorer'  ]$/;"	v
-g:which_key_map	./config/which-key.vim	/^let g:which_key_map['f'] = [ ':Files'                     , 'search files'  ]$/;"	v
-g:which_key_map	./plugin/which-key.vim	/^let g:which_key_map =  {}$/;"	v
-g:which_key_map	./plugin/which-key.vim	/^let g:which_key_map.c = {$/;"	v
-g:which_key_map	./plugin/which-key.vim	/^let g:which_key_map.f = {$/;"	v
-g:which_key_map	./plugin/which-key.vim	/^let g:which_key_map.g = {$/;"	v
-g:which_key_map	./plugin/which-key.vim	/^let g:which_key_map.p = {$/;"	v
-g:which_key_map	./plugin/which-key.vim	/^let g:which_key_map.s = {$/;"	v
-g:which_key_map	./plugin/which-key.vim	/^let g:which_key_map['S'] = [ ':Startify'                  , 'start screen'  ]$/;"	v
-g:which_key_map	./plugin/which-key.vim	/^let g:which_key_map['\/'] = [ '<Plug>NERDCommenterToggle'  , 'comment'  ]$/;"	v
-g:which_key_map	./plugin/which-key.vim	/^let g:which_key_map['e'] = [ ':CocCommand explorer'       , 'explorer'  ]$/;"	v
-g:which_key_map	./plugin/which-key.vim	/^let g:which_key_map['f'] = [ ':Files'                     , 'search files'  ]$/;"	v
+g:which_key_map	./back_up/which-key.vim	/^let g:which_key_map =  {}$/;"	v
+g:which_key_map	./back_up/which-key.vim	/^let g:which_key_map.c = {$/;"	v
+g:which_key_map	./back_up/which-key.vim	/^let g:which_key_map.f = {$/;"	v
+g:which_key_map	./back_up/which-key.vim	/^let g:which_key_map.g = {$/;"	v
+g:which_key_map	./back_up/which-key.vim	/^let g:which_key_map.p = {$/;"	v
+g:which_key_map	./back_up/which-key.vim	/^let g:which_key_map.s = {$/;"	v
+g:which_key_map	./back_up/which-key.vim	/^let g:which_key_map['S'] = [ ':Startify'                  , 'start screen'  ]$/;"	v
+g:which_key_map	./back_up/which-key.vim	/^let g:which_key_map['\/'] = [ '<Plug>NERDCommenterToggle'  , 'comment'  ]$/;"	v
+g:which_key_map	./back_up/which-key.vim	/^let g:which_key_map['e'] = [ ':CocCommand explorer'       , 'explorer'  ]$/;"	v
+g:which_key_map	./back_up/which-key.vim	/^let g:which_key_map['f'] = [ ':Files'                     , 'search files'  ]$/;"	v
+g:which_key_map	./plugins/which-key.vim	/^let g:which_key_map =  {}$/;"	v
+g:which_key_map	./plugins/which-key.vim	/^let g:which_key_map.c = {$/;"	v
+g:which_key_map	./plugins/which-key.vim	/^let g:which_key_map.f = {$/;"	v
+g:which_key_map	./plugins/which-key.vim	/^let g:which_key_map.g = {$/;"	v
+g:which_key_map	./plugins/which-key.vim	/^let g:which_key_map.p = {$/;"	v
+g:which_key_map	./plugins/which-key.vim	/^let g:which_key_map.s = {$/;"	v
+g:which_key_map	./plugins/which-key.vim	/^let g:which_key_map['S'] = [ ':Startify'                  , 'start screen'  ]$/;"	v
+g:which_key_map	./plugins/which-key.vim	/^let g:which_key_map['\/'] = [ '<Plug>NERDCommenterToggle'  , 'comment'  ]$/;"	v
+g:which_key_map	./plugins/which-key.vim	/^let g:which_key_map['e'] = [ ':CocCommand explorer'       , 'explorer'  ]$/;"	v
+g:which_key_map	./plugins/which-key.vim	/^let g:which_key_map['f'] = [ ':Files'                     , 'search files'  ]$/;"	v
 g:which_key_max_size	./plugged/vim-which-key/plugin/which_key.vim	/^let g:which_key_max_size = get(g:, 'which_key_max_size', 0)$/;"	v
 g:which_key_origin_winid	./plugged/vim-which-key/autoload/which_key.vim	/^    let g:which_key_origin_winid = win_getid()$/;"	v
 g:which_key_position	./plugged/vim-which-key/plugin/which_key.vim	/^let g:which_key_position = get(g:, 'which_key_position', 'botright')$/;"	v
 g:which_key_run_map_on_popup	./plugged/vim-which-key/plugin/which_key.vim	/^let g:which_key_run_map_on_popup = get(g:, 'which_key_run_map_on_popup', 1)$/;"	v
-g:which_key_sep	./config/which-key.vim	/^let g:which_key_sep = '→'$/;"	v
+g:which_key_sep	./back_up/which-key.vim	/^let g:which_key_sep = '→'$/;"	v
 g:which_key_sep	./plugged/vim-which-key/plugin/which_key.vim	/^let g:which_key_sep = get(g:, 'which_key_sep', '→')$/;"	v
-g:which_key_sep	./plugin/which-key.vim	/^let g:which_key_sep = '→'$/;"	v
+g:which_key_sep	./plugins/which-key.vim	/^let g:which_key_sep = '→'$/;"	v
 g:which_key_sort_horizontal	./plugged/vim-which-key/plugin/which_key.vim	/^let g:which_key_sort_horizontal = get(g:, 'which_key_sort_horizontal', 0)$/;"	v
 g:which_key_timeout	./plugged/vim-which-key/plugin/which_key.vim	/^let g:which_key_timeout = get(g:, 'which_key_timeout', &timeoutlen)$/;"	v
-g:which_key_use_floating_win	./config/which-key.vim	/^let g:which_key_use_floating_win = 0$/;"	v
+g:which_key_use_floating_win	./back_up/which-key.vim	/^let g:which_key_use_floating_win = 0$/;"	v
 g:which_key_use_floating_win	./plugged/vim-which-key/plugin/which_key.vim	/^let g:which_key_use_floating_win = (exists('*nvim_open_win') || exists('*popup_create')) && get(/;"	v
-g:which_key_use_floating_win	./plugin/which-key.vim	/^let g:which_key_use_floating_win = 0$/;"	v
+g:which_key_use_floating_win	./plugins/which-key.vim	/^let g:which_key_use_floating_win = 0$/;"	v
 g:which_key_vertical	./plugged/vim-which-key/plugin/which_key.vim	/^let g:which_key_vertical = get(g:, 'which_key_vertical', 0)$/;"	v
 g:ycm_java_jdtls_extension_path	./plugged/vimspector/support/test/java/test_project/java.vim	/^let g:ycm_java_jdtls_extension_path = [$/;"	v
-gD	./config/lsp.vim	/^nnoremap <silent> gD <cmd>lua vim.lsp.buf.declaration()<CR>$/;"	m
-gD	./plugin/lsp.vim	/^nnoremap <silent> gD <cmd>lua vim.lsp.buf.declaration()<CR>$/;"	m
+gD	./plugins/lsp.vim	/^nnoremap <silent> gD <cmd>lua vim.lsp.buf.declaration()<CR>$/;"	m
 g_trace	./plugged/vimspector/python3/vimspector/vendor/cpuinfo.py	/^g_trace = None$/;"	v
 galleryBanner	./plugged/awesome-flutter-snippets/package.json	/^    "galleryBanner": {$/;"	o
 gap	./plugged/floating.nvim/doc.md	/^### gap$/;"	S	section:Showcase
@@ -11605,8 +11681,7 @@ gc	./plugged/vim-commentary/plugin/commentary.vim	/^  omap gc  <Plug>Commentary$
 gc	./plugged/vim-commentary/plugin/commentary.vim	/^  xmap gc  <Plug>Commentary$/;"	m
 gcc	./plugged/vim-commentary/plugin/commentary.vim	/^  nmap gcc <Plug>CommentaryLine$/;"	m
 gcu	./plugged/vim-commentary/plugin/commentary.vim	/^  nmap gcu <Plug>Commentary<Plug>Commentary$/;"	m
-gd	./config/lsp.vim	/^nnoremap <silent> gd <cmd>lua vim.lsp.buf.definition()<CR>$/;"	m
-gd	./plugin/lsp.vim	/^nnoremap <silent> gd <cmd>lua vim.lsp.buf.definition()<CR>$/;"	m
+gd	./plugins/lsp.vim	/^nnoremap <silent> gd <cmd>lua vim.lsp.buf.definition()<CR>$/;"	m
 gdscript	./plugged/nvim-lspconfig/doc/server_configurations.md	/^## gdscript$/;"	s	chapter:Configurations
 ge	./plugged/plenary.nvim/lua/plenary/operators.lua	/^  ge = function(a, b)$/;"	f
 gen_date	./plugged/plenary.nvim/lua/plenary/scandir.lua	/^local gen_date = (function()$/;"	f
@@ -12028,8 +12103,7 @@ get_workspace_dir	./plugged/nvim-lspconfig/lua/lspconfig/server_configurations/j
 get_workspace_symbols_requester	./plugged/telescope.nvim/lua/telescope/builtin/lsp.lua	/^local function get_workspace_symbols_requester(bufnr, opts)$/;"	f
 geterror	./plugged/plenary.nvim/lua/luassert/assert.lua	/^local function geterror(assertion_message, failure_message, args)$/;"	f
 ghcide	./plugged/nvim-lspconfig/doc/server_configurations.md	/^## ghcide$/;"	s	chapter:Configurations
-gi	./config/lsp.vim	/^nnoremap <silent> gi <cmd>lua vim.lsp.buf.implementation()<CR>$/;"	m
-gi	./plugin/lsp.vim	/^nnoremap <silent> gi <cmd>lua vim.lsp.buf.implementation()<CR>$/;"	m
+gi	./plugins/lsp.vim	/^nnoremap <silent> gi <cmd>lua vim.lsp.buf.implementation()<CR>$/;"	m
 git-blame.nvim	./plugged/git-blame.nvim/README.md	/^# git-blame.nvim$/;"	c
 git_apply_stash	./plugged/telescope.nvim/lua/telescope/actions/init.lua	/^actions.git_apply_stash = function(prompt_bufnr)$/;"	f	unknown:actions
 git_branch_log	./plugged/telescope.nvim/lua/telescope/previewers/buffer_previewer.lua	/^previewers.git_branch_log = defaulter(function(opts)$/;"	f	unknown:previewers
@@ -12078,8 +12152,7 @@ gopls	./plugged/nvim-lspconfig/doc/server_configurations.md	/^## gopls$/;"	s	cha
 gotoLocation"]	./plugged/rust-tools.nvim/lua/rust-tools/commands.lua	/^	vim.lsp.commands["rust-analyzer.gotoLocation"] = function(command)$/;"	f	unknown:vim.lsp.commands["rust-analyzer
 gq	./plugged/gv.vim/plugin/gv.vim	/^  nnoremap <buffer> gq :tabclose<cr>$/;"	m
 gq	./plugged/gv.vim/plugin/gv.vim	/^  nnoremap <silent> <buffer> <nowait> gq :$wincmd w <bar> close<cr>$/;"	m
-gr	./config/lsp.vim	/^nnoremap <silent> gr <cmd>lua vim.lsp.buf.references()<CR>$/;"	m
-gr	./plugin/lsp.vim	/^nnoremap <silent> gr <cmd>lua vim.lsp.buf.references()<CR>$/;"	m
+gr	./plugins/lsp.vim	/^nnoremap <silent> gr <cmd>lua vim.lsp.buf.references()<CR>$/;"	m
 gradientTransform	./plugged/nyaovim-tree-view/nyaovim-plugin/js/index.js	/^  gradientTransform: 'gradientTransform',$/;"	p	class:AnonymousFunctionfb13386db200.ATTRS
 gradientUnits	./plugged/nyaovim-tree-view/nyaovim-plugin/js/index.js	/^  gradientUnits: 'gradientUnits',$/;"	p	class:AnonymousFunctionfb13386db200.ATTRS
 grammarly	./plugged/nvim-lspconfig/doc/server_configurations.md	/^## grammarly$/;"	s	chapter:Configurations
@@ -12463,10 +12536,10 @@ indent	./plugged/nvim-lspconfig/scripts/docgen.lua	/^local function indent(n, s)
 indent	./plugged/plenary.nvim/lua/plenary/busted.lua	/^local indent = function(msg, spaces)$/;"	f
 indent_lines	./plugged/nvim-lspconfig/lua/lspconfig/ui/lspinfo.lua	/^local function indent_lines(lines, offset)$/;"	f
 indent_to_spaces	./plugged/ultisnips/pythonx/UltiSnips/indent_util.py	/^    def indent_to_spaces(self, indent):$/;"	m	class:IndentUtil
-index	./plugged/cmp-buffer/lua/cmp_buffer/buffer.lua	/^function buffer.index(self)$/;"	f	unknown:buffer
 index_line	./plugged/cmp-buffer/lua/cmp_buffer/buffer.lua	/^function buffer.index_line(self, linenr, line)$/;"	f	unknown:buffer
-index_range	./plugged/cmp-buffer/lua/cmp_buffer/buffer.lua	/^function buffer.index_range(self, range_start, range_end)$/;"	f	unknown:buffer
-index_range_async	./plugged/cmp-buffer/lua/cmp_buffer/buffer.lua	/^function buffer.index_range_async(self, range_start, range_end)$/;"	f	unknown:buffer
+index_range	./plugged/cmp-buffer/lua/cmp_buffer/buffer.lua	/^function buffer.index_range(self, range_start, range_end, skip_already_indexed)$/;"	f	unknown:buffer
+indexing_batch_size (type: number)	./plugged/cmp-buffer/README.md	/^### indexing_batch_size (type: number)$/;"	S	section:cmp-buffer""Configuration
+indexing_interval (type: number)	./plugged/cmp-buffer/README.md	/^### indexing_interval (type: number)$/;"	S	section:cmp-buffer""Configuration
 info	./plugged/nvim-cmp/lua/cmp/utils/window.lua	/^window.info = function(self)$/;"	f	unknown:window
 info	./plugged/nvim-cmp/lua/cmp/view/custom_entries_view.lua	/^custom_entries_view.info = function(self)$/;"	f	unknown:custom_entries_view
 info	./plugged/nvim-cmp/lua/cmp/view/native_entries_view.lua	/^native_entries_view.info = function(self)$/;"	f	unknown:native_entries_view
@@ -12647,6 +12720,7 @@ isValidOwner	./plugged/nyaovim-tree-view/nyaovim-plugin/js/index.js	/^function i
 is_absolute	./plugged/nvim-lspconfig/lua/lspconfig/util.lua	/^  local function is_absolute(filename)$/;"	f
 is_absolute	./plugged/plenary.nvim/lua/plenary/path.lua	/^function Path:is_absolute()$/;"	f	unknown:Path
 is_absolute	./plugged/plenary.nvim/lua/plenary/path.lua	/^local is_absolute = function(filename, sep)$/;"	f
+is_active	./plugged/cmp-buffer/lua/cmp_buffer/timer.lua	/^function timer:is_active()$/;"	f	unknown:timer
 is_alnum	./plugged/nvim-cmp/lua/cmp/utils/char.lua	/^char.is_alnum = function(byte)$/;"	f	unknown:char
 is_alpha	./plugged/nvim-cmp/lua/cmp/utils/char.lua	/^char.is_alpha = function(byte)$/;"	f	unknown:char
 is_available	./plugged/cmp-nvim-lsp/lua/cmp_nvim_lsp/source.lua	/^source.is_available = function(self)$/;"	f	unknown:source
@@ -12676,7 +12750,7 @@ is_false	./plugged/plenary.nvim/lua/luassert/matchers/core.lua	/^local function 
 is_file	./plugged/nvim-lspconfig/lua/lspconfig/util.lua	/^  local function is_file(filename)$/;"	f
 is_file	./plugged/plenary.nvim/lua/plenary/path.lua	/^function Path:is_file()$/;"	f	unknown:Path
 is_focused	./plugged/ultisnips/test/vim_interface.py	/^    def is_focused(self, title=None):$/;"	m	class:VimInterfaceWindows
-is_fs_root	./plugged/nvim-lspconfig/lua/lspconfig/util.lua	/^    is_fs_root = function(path)$/;"	f
+is_fs_root	./plugged/nvim-lspconfig/lua/lspconfig/util.lua	/^  local function is_fs_root(path)$/;"	f
 is_function	./plugged/plenary.nvim/lua/luassert/assertions.lua	/^local function is_function(state, arguments, level) return is_type(state, arguments, level, "fun/;"	f
 is_function	./plugged/plenary.nvim/lua/luassert/matchers/core.lua	/^local function is_function(state, arguments, level) return is_type(state, arguments, level, "fun/;"	f
 is_in_array_part	./plugged/plenary.nvim/lua/luassert/formatters/init.lua	/^local function is_in_array_part(key, length)$/;"	f
@@ -13680,9 +13754,10 @@ map_gen	./plugged/plenary.nvim/lua/plenary/iterators.lua	/^local map_gen = funct
 map_gen	./plugged/plenary.nvim/lua/plenary/iterators.lua	/^local map_gen = function(param, state)$/;"	f
 map_list	./plugged/nvim-lspconfig/scripts/docgen.lua	/^local function map_list(t, func)$/;"	f
 map_selections	./plugged/telescope.nvim/lua/telescope/actions/utils.lua	/^function utils.map_selections(prompt_bufnr, f)$/;"	f	unknown:utils
-mapleader	./config/settings.vim	/^let mapleader = ","$/;"	v
+mapleader	./back_up/settings.vim	/^let mapleader = ","$/;"	v
 mapleader	./plugged/vimspector/tests/vimrc	/^let mapleader = ','$/;"	v
 mapleader	./plugin/settings.vim	/^let mapleader = ","$/;"	v
+mapleader	./plugins/settings.vim	/^let mapleader = ","$/;"	v
 maplocalleader	./plugged/vimspector/tests/vimrc	/^let maplocalleader = "\\<Space>"$/;"	v
 maps	./plugged/ultisnips/test/test_Selection.py	/^    maps = ("", "")$/;"	v	class:_SelectModeMappings
 maps	./plugged/ultisnips/test/test_Selection.py	/^    maps = ("H", "x")$/;"	v	class:SelectModeMappings_DisableRemoveBeforeSelecting_ECR
@@ -13852,9 +13927,10 @@ mypy	./plugged/ultisnips/mypy.ini	/^[mypy]$/;"	s
 mypy-unidecode	./plugged/ultisnips/mypy.ini	/^[mypy-unidecode]$/;"	s
 mypy-vim	./plugged/ultisnips/mypy.ini	/^[mypy-vim]$/;"	s
 mypy_path	./plugged/ultisnips/mypy.ini	/^mypy_path=pythonx\/UltiSnips$/;"	k	section:mypy
-n	./config/mappings.vim	/^nnoremap n nzz$/;"	m
+n	./back_up/mappings.vim	/^nnoremap n nzz$/;"	m
 n	./plugged/vim-startify/autoload/startify.vim	/^  nnoremap <buffer><expr> n ' j'[v:searchforward].'n'$/;"	m
 n	./plugin/mappings.vim	/^nnoremap n nzz$/;"	m
+n	./plugins/mappings.vim	/^nnoremap n nzz$/;"	m
 name	./plugged/awesome-flutter-snippets/.vscode/launch.json	/^            "name": "Extension",$/;"	s	object:configurations.0
 name	./plugged/awesome-flutter-snippets/package.json	/^    "name": "awesome-flutter-snippets",$/;"	s
 name	./plugged/gruvbox/package.json	/^  "name": "gruvbox",$/;"	s
@@ -14107,12 +14183,16 @@ neoformat#formatters#scss#stylefmt	./plugged/neoformat/autoload/neoformat/format
 neoformat#formatters#scss#stylelint	./plugged/neoformat/autoload/neoformat/formatters/scss.vim	/^function! neoformat#formatters#scss#stylelint() abort$/;"	f
 neoformat#formatters#sh#enabled	./plugged/neoformat/autoload/neoformat/formatters/sh.vim	/^function! neoformat#formatters#sh#enabled() abort$/;"	f
 neoformat#formatters#sh#shfmt	./plugged/neoformat/autoload/neoformat/formatters/sh.vim	/^function! neoformat#formatters#sh#shfmt() abort$/;"	f
+neoformat#formatters#solidity#enabled	./plugged/neoformat/autoload/neoformat/formatters/solidity.vim	/^function! neoformat#formatters#solidity#enabled() abort$/;"	f
+neoformat#formatters#solidity#prettier	./plugged/neoformat/autoload/neoformat/formatters/solidity.vim	/^function! neoformat#formatters#solidity#prettier() abort$/;"	f
 neoformat#formatters#sql#enabled	./plugged/neoformat/autoload/neoformat/formatters/sql.vim	/^function! neoformat#formatters#sql#enabled() abort$/;"	f
 neoformat#formatters#sql#pg_format	./plugged/neoformat/autoload/neoformat/formatters/sql.vim	/^function! neoformat#formatters#sql#pg_format() abort$/;"	f
 neoformat#formatters#sql#sqlfmt	./plugged/neoformat/autoload/neoformat/formatters/sql.vim	/^function! neoformat#formatters#sql#sqlfmt() abort$/;"	f
 neoformat#formatters#sql#sqlformat	./plugged/neoformat/autoload/neoformat/formatters/sql.vim	/^function! neoformat#formatters#sql#sqlformat() abort$/;"	f
 neoformat#formatters#starlark#buildifier	./plugged/neoformat/autoload/neoformat/formatters/starlark.vim	/^function! neoformat#formatters#starlark#buildifier() abort$/;"	f
 neoformat#formatters#starlark#enabled	./plugged/neoformat/autoload/neoformat/formatters/starlark.vim	/^function! neoformat#formatters#starlark#enabled() abort$/;"	f
+neoformat#formatters#sugarss#enabled	./plugged/neoformat/autoload/neoformat/sugarss.vim	/^function! neoformat#formatters#sugarss#enabled() abort$/;"	f
+neoformat#formatters#sugarss#stylelint	./plugged/neoformat/autoload/neoformat/sugarss.vim	/^function! neoformat#formatters#sugarss#stylelint() abort$/;"	f
 neoformat#formatters#svelte#enabled	./plugged/neoformat/autoload/neoformat/formatters/svelte.vim	/^function! neoformat#formatters#svelte#enabled() abort$/;"	f
 neoformat#formatters#svelte#prettier	./plugged/neoformat/autoload/neoformat/formatters/svelte.vim	/^function! neoformat#formatters#svelte#prettier() abort$/;"	f
 neoformat#formatters#swift#enabled	./plugged/neoformat/autoload/neoformat/formatters/swift.vim	/^function! neoformat#formatters#swift#enabled() abort$/;"	f
@@ -14205,6 +14285,7 @@ nestedFlushStartTime	./plugged/nyaovim-tree-view/nyaovim-plugin/js/index.js	/^  
 netcoredbg-debuglog	./plugged/vimspector/support/test/csharp/.vimspector.json	/^    "netcoredbg-debuglog": {$/;"	o	object:adapters
 new	./plugged/cmp-buffer/lua/cmp_buffer/buffer.lua	/^function buffer.new(bufnr, opts)$/;"	f	unknown:buffer
 new	./plugged/cmp-buffer/lua/cmp_buffer/source.lua	/^source.new = function()$/;"	f	unknown:source
+new	./plugged/cmp-buffer/lua/cmp_buffer/timer.lua	/^function timer.new()$/;"	f	unknown:timer
 new	./plugged/cmp-nvim-lsp/lua/cmp_nvim_lsp/source.lua	/^source.new = function(client)$/;"	f	unknown:source
 new	./plugged/cmp-path/lua/cmp_path/init.lua	/^source.new = function()$/;"	f	unknown:source
 new	./plugged/cmp-vsnip/lua/cmp_vsnip/init.lua	/^source.new = function()$/;"	f	unknown:source
@@ -14773,7 +14854,7 @@ plenary.scandir	./plugged/plenary.nvim/README.md	/^### plenary.scandir$/;"	S	sec
 plenary.strings	./plugged/plenary.nvim/README.md	/^### plenary.strings$/;"	S	section:plenary.nvim""Modules
 plenary.test_harness	./plugged/plenary.nvim/README.md	/^### plenary.test_harness$/;"	S	section:plenary.nvim""Modules
 plenary.window	./plugged/plenary.nvim/README.md	/^### plenary.window$/;"	S	section:plenary.nvim""Modules
-plug	./plugin/lua_plug.vim	/^augroup plug$/;"	a
+plug	./plugins/lua_plug.vim	/^augroup plug$/;"	a
 plug#	./autoload/plug.vim	/^function! plug#(repo, ...)$/;"	f
 plug#begin	./autoload/plug.vim	/^function! plug#begin(...)$/;"	f
 plug#end	./autoload/plug.vim	/^function! plug#end()$/;"	f
@@ -15215,6 +15296,7 @@ reload_workspace	./plugged/rust-tools.nvim/lua/rust-tools/workspace_refresh.lua	
 reloader	./plugged/telescope.nvim/lua/telescope/WIP.lua	/^WIP.reloader = function(opts)$/;"	f	unknown:WIP
 reloader	./plugged/telescope.nvim/lua/telescope/builtin/internal.lua	/^internal.reloader = function(opts)$/;"	f	unknown:internal
 relpath	./plugged/vimspector/python3/vimspector/debug_session.py	/^    def relpath( p, relative_to ):$/;"	f	member:DebugSession.Start	file:
+remark_ls	./plugged/nvim-lspconfig/doc/server_configurations.md	/^## remark_ls$/;"	s	chapter:Configurations
 remember_buffer	./plugged/ultisnips/pythonx/UltiSnips/vim_state.py	/^    def remember_buffer(self, to):$/;"	m	class:VimState
 remember_position	./plugged/ultisnips/pythonx/UltiSnips/vim_state.py	/^    def remember_position(self):$/;"	m	class:VimState
 remember_unnamed_register	./plugged/ultisnips/pythonx/UltiSnips/vim_state.py	/^    def remember_unnamed_register(self, text_to_expect):$/;"	m	class:VimState
@@ -15637,7 +15719,7 @@ s	./plugged/plenary.nvim/lua/luassert/stub.lua	/^  local s = spy.on(object, key)
 s	./plugged/vim-startify/autoload/startify.vim	/^  nnoremap <buffer><nowait><silent> s             :call startify#set_mark('S')<cr>$/;"	m
 s:AcceptSelection	./plugged/ctrlp.vim/autoload/ctrlp.vim	/^fu! s:AcceptSelection(action)$/;"	f
 s:ActualIndents	./plugged/vim-anyfold/autoload/anyfold.vim	/^function! s:ActualIndents(line_start, line_end) abort$/;"	f
-s:Add	./config/grpc.vim	/^let s:Add = "Add"$/;"	v
+s:Add	./plugins/grpc.vim	/^let s:Add = "Add"$/;"	v
 s:AddCterm	./plugged/awesome-vim-colorschemes/colors/lucius.vim	/^function! s:AddCterm(name)$/;"	f
 s:AddGroundValues	./plugged/awesome-vim-colorschemes/colors/gotham.vim	/^function! s:AddGroundValues(accumulator, ground, color)$/;"	f
 s:AddGroundValues	./plugged/awesome-vim-colorschemes/colors/gotham256.vim	/^function! s:AddGroundValues(accumulator, ground, color)$/;"	f
@@ -15800,7 +15882,7 @@ s:ConfigLengthSort	./plugged/vim-fugitive/autoload/fugitive.vim	/^function! s:Co
 s:ConfigTimestamps	./plugged/vim-fugitive/autoload/fugitive.vim	/^function! s:ConfigTimestamps(dir, dict) abort$/;"	f
 s:ConfirmCallback	./plugged/vimspector/autoload/vimspector/internal/popup.vim	/^function! s:ConfirmCallback( confirm_id, id, result ) abort$/;"	f
 s:ConfirmKeyFilter	./plugged/vimspector/autoload/vimspector/internal/popup.vim	/^function! s:ConfirmKeyFilter( keys, id, key ) abort$/;"	f
-s:Connect	./config/grpc.vim	/^function! s:Connect()$/;"	f
+s:Connect	./plugins/grpc.vim	/^function! s:Connect()$/;"	f
 s:ConsiderLine	./plugged/vim-anyfold/autoload/anyfold.vim	/^function! s:ConsiderLine(lnum) abort$/;"	f
 s:ContainingCommit	./plugged/vim-fugitive/autoload/fugitive.vim	/^function! s:ContainingCommit() abort$/;"	f
 s:ContextCompletion	./plugged/supertab/plugin/supertab.vim	/^function! s:ContextCompletion() " {{{$/;"	f
@@ -15857,7 +15939,7 @@ s:Do	./plugged/vim-fugitive/autoload/fugitive.vim	/^function! s:Do(action, visua
 s:Do	./plugged/vim-vsnip/autoload/vital/_vsnip/VS/Vim/Buffer.vim	/^let s:Do = { -> {} }$/;"	v
 s:DoAutocmd	./plugged/vim-fugitive/autoload/fugitive.vim	/^function! s:DoAutocmd(...) abort$/;"	f
 s:DoAutocmdChanged	./plugged/vim-fugitive/autoload/fugitive.vim	/^function! s:DoAutocmdChanged(dir) abort$/;"	f
-s:DoCommandConfigruation	./config/grpc.vim	/^function! s:DoCommandConfigruation()$/;"	f
+s:DoCommandConfigruation	./plugins/grpc.vim	/^function! s:DoCommandConfigruation()$/;"	f
 s:DoStagePushHeader	./plugged/vim-fugitive/autoload/fugitive.vim	/^function! s:DoStagePushHeader(value) abort$/;"	f
 s:DoStageUnpushed	./plugged/vim-fugitive/autoload/fugitive.vim	/^function! s:DoStageUnpushed(record) abort$/;"	f
 s:DoStageUnpushedHeading	./plugged/vim-fugitive/autoload/fugitive.vim	/^function! s:DoStageUnpushedHeading(heading) abort$/;"	f
@@ -15929,12 +16011,12 @@ s:FormatRebase	./plugged/vim-fugitive/autoload/fugitive.vim	/^function! s:Format
 s:GF	./plugged/vim-fugitive/autoload/fugitive.vim	/^function! s:GF(mode) abort$/;"	f
 s:Generate	./plugged/vim-fugitive/autoload/fugitive.vim	/^function! s:Generate(object, ...) abort$/;"	f
 s:GenerateBorder	./plugged/vimspector/autoload/vimspector/internal/balloon.vim	/^function! s:GenerateBorder( width, height ) abort$/;"	f
-s:GetAll	./config/grpc.vim	/^let s:GetAll = "GetAll"$/;"	v
+s:GetAll	./plugins/grpc.vim	/^let s:GetAll = "GetAll"$/;"	v
 s:GetCurrentFunction	./plugged/vimspector/compiler/vimspector_test.vim	/^function! s:GetCurrentFunction()$/;"	f
 s:GetFileWinnr	./plugged/tagbar/autoload/tagbar.vim	/^function! s:GetFileWinnr(fileinfo) abort$/;"	f
 s:GetIndentFold	./plugged/vim-anyfold/autoload/anyfold.vim	/^function! s:GetIndentFold(lnum) abort$/;"	f
 s:GetNearbyTag	./plugged/tagbar/autoload/tagbar.vim	/^function! s:GetNearbyTag(request, forcecurrent, ...) abort$/;"	f
-s:GetReport	./config/grpc.vim	/^let s:GetReport = "GetReport"$/;"	v
+s:GetReport	./plugins/grpc.vim	/^let s:GetReport = "GetReport"$/;"	v
 s:GetSplashConfig	./plugged/vimspector/autoload/vimspector/internal/neopopup.vim	/^function! s:GetSplashConfig( message ) abort$/;"	f
 s:GetSupportedFiletypes	./plugged/tagbar/autoload/tagbar.vim	/^function! s:GetSupportedFiletypes() abort$/;"	f
 s:GetTagInfo	./plugged/tagbar/autoload/tagbar.vim	/^function! s:GetTagInfo(linenr, ignorepseudo) abort$/;"	f
@@ -15961,7 +16043,7 @@ s:HL	./plugged/awesome-vim-colorschemes/colors/materialbox.vim	/^function! s:HL(
 s:HL	./plugged/gruvbox/colors/gruvbox.vim	/^function! s:HL(group, fg, ...)$/;"	f
 s:HandleBufDelete	./plugged/tagbar/autoload/tagbar.vim	/^function! s:HandleBufDelete(bufname, bufnr) abort$/;"	f
 s:HandleBufWrite	./plugged/tagbar/autoload/tagbar.vim	/^function! s:HandleBufWrite(fname) abort$/;"	f
-s:HandleError	./config/grpc.vim	/^function! s:HandleError(source, errorMassage)$/;"	f
+s:HandleError	./plugins/grpc.vim	/^function! s:HandleError(source, errorMassage)$/;"	f
 s:HandleOnlyWindow	./plugged/tagbar/autoload/tagbar.vim	/^function! s:HandleOnlyWindow() abort$/;"	f
 s:HasOpenFileWindows	./plugged/tagbar/autoload/tagbar.vim	/^function! s:HasOpenFileWindows() abort$/;"	f
 s:HasOpt	./plugged/vim-fugitive/autoload/fugitive.vim	/^function! s:HasOpt(args, ...) abort$/;"	f
@@ -16304,7 +16386,7 @@ s:Notifier.GetListenersMap	./plugged/nerdtree/lib/nerdtree/notifier.vim	/^functi
 s:Notifier.NotifyListeners	./plugged/nerdtree/lib/nerdtree/notifier.vim	/^function! s:Notifier.NotifyListeners(event, path, nerdtree, params)$/;"	f
 s:NotifySearch	./plugged/ctrlp.vim/autoload/ctrlp.vim	/^fu! s:NotifySearch()$/;"	f
 s:NullError	./plugged/vim-fugitive/autoload/fugitive.vim	/^function! s:NullError(cmd) abort$/;"	f
-s:OnError	./config/grpc.vim	/^function! s:OnError(id, data, event)$/;"	f
+s:OnError	./plugins/grpc.vim	/^function! s:OnError(id, data, event)$/;"	f
 s:Open	./plugged/ctrlp.vim/autoload/ctrlp.vim	/^fu! s:Open()$/;"	f
 s:OpenFold	./plugged/tagbar/autoload/tagbar.vim	/^function! s:OpenFold() abort$/;"	f
 s:OpenMulti	./plugged/ctrlp.vim/autoload/ctrlp.vim	/^fu! s:OpenMulti(...)$/;"	f
@@ -16497,8 +16579,8 @@ s:RemoteDefault	./plugged/vim-fugitive/autoload/fugitive.vim	/^function! s:Remot
 s:RemoteParseArgs	./plugged/vim-fugitive/autoload/fugitive.vim	/^function! s:RemoteParseArgs(args) abort$/;"	f
 s:RemoteResolve	./plugged/vim-fugitive/autoload/fugitive.vim	/^function! s:RemoteResolve(url, flags) abort$/;"	f
 s:RemoteUrlCallback	./plugged/vim-fugitive/autoload/fugitive.vim	/^function! s:RemoteUrlCallback(remote, callback) abort$/;"	f
-s:Remove	./config/grpc.vim	/^let s:Remove = "Remove"$/;"	v
 s:Remove	./plugged/vim-fugitive/autoload/fugitive.vim	/^function! s:Remove(after, force) abort$/;"	f
+s:Remove	./plugins/grpc.vim	/^let s:Remove = "Remove"$/;"	v
 s:Render	./plugged/ctrlp.vim/autoload/ctrlp.vim	/^fu! s:Render(lines, pat)$/;"	f
 s:RenderContent	./plugged/tagbar/autoload/tagbar.vim	/^function! s:RenderContent(...) abort$/;"	f
 s:RenderKeepView	./plugged/tagbar/autoload/tagbar.vim	/^function! s:RenderKeepView(...) abort$/;"	f
@@ -16628,8 +16710,8 @@ s:State.setPaused	./plugged/tagbar/autoload/tagbar/state.vim	/^function! s:State
 s:StatusCfile	./plugged/vim-fugitive/autoload/fugitive.vim	/^function! s:StatusCfile(...) abort$/;"	f
 s:StatusCommand	./plugged/vim-fugitive/autoload/fugitive.vim	/^function! s:StatusCommand(line1, line2, range, count, bang, mods, reg, arg, args, ...) abort$/;"	f
 s:StdoutToFile	./plugged/vim-fugitive/autoload/fugitive.vim	/^function! s:StdoutToFile(out, cmd, ...) abort$/;"	f
-s:StoreInFile	./config/grpc.vim	/^let s:StoreInFile = "StoreInFile"$/;"	v
-s:StoreTask	./config/grpc.vim	/^let s:StoreTask = "StoreTask"$/;"	v
+s:StoreInFile	./plugins/grpc.vim	/^let s:StoreInFile = "StoreInFile"$/;"	v
+s:StoreTask	./plugins/grpc.vim	/^let s:StoreTask = "StoreTask"$/;"	v
 s:SuperTabHelp	./plugged/supertab/plugin/supertab.vim	/^function! s:SuperTabHelp() " {{{$/;"	f
 s:SystemError	./plugged/vim-fugitive/autoload/fugitive.vim	/^function! s:SystemError(cmd, ...) abort$/;"	f
 s:SystemList	./plugged/vim-fugitive/autoload/fugitive.vim	/^function! s:SystemList(cmd) abort$/;"	f
@@ -16657,8 +16739,8 @@ s:TempReadPost	./plugged/vim-fugitive/autoload/fugitive.vim	/^function! s:TempRe
 s:TempReadPre	./plugged/vim-fugitive/autoload/fugitive.vim	/^function! s:TempReadPre(file) abort$/;"	f
 s:TempScript	./plugged/vim-fugitive/autoload/fugitive.vim	/^function! s:TempScript(...) abort$/;"	f
 s:TempState	./plugged/vim-fugitive/autoload/fugitive.vim	/^function! s:TempState(...) abort$/;"	f
-s:Terminate	./config/grpc.vim	/^let s:Terminate = "terminate"$/;"	v
-s:TerminateTimeTrack	./config/grpc.vim	/^function! s:TerminateTimeTrack()$/;"	f
+s:Terminate	./plugins/grpc.vim	/^let s:Terminate = "terminate"$/;"	v
+s:TerminateTimeTrack	./plugins/grpc.vim	/^function! s:TerminateTimeTrack()$/;"	f
 s:TestFailed	./plugged/vimspector/tests/lib/run_test.vim	/^func s:TestFailed()$/;"	f
 s:Text	./plugged/vim-vsnip/autoload/vsnip/snippet/node.vim	/^let s:Text = vsnip#snippet#node#text#import()$/;"	v
 s:Text	./plugged/vim-vsnip/autoload/vsnip/snippet/node/text.vim	/^let s:Text = {}$/;"	v
@@ -16667,7 +16749,7 @@ s:Text.text	./plugged/vim-vsnip/autoload/vsnip/snippet/node/text.vim	/^function!
 s:Text.to_string	./plugged/vim-vsnip/autoload/vsnip/snippet/node/text.vim	/^function! s:Text.to_string() abort$/;"	f
 s:TextEdit	./plugged/vim-vsnip/autoload/vsnip.vim	/^let s:TextEdit = vital#vsnip#import('VS.LSP.TextEdit')$/;"	v
 s:TextEdit	./plugged/vim-vsnip/autoload/vsnip/session.vim	/^let s:TextEdit = vital#vsnip#import('VS.LSP.TextEdit')$/;"	v
-s:TimeTrack	./config/grpc.vim	/^let s:TimeTrack = "timetrack"$/;"	v
+s:TimeTrack	./plugins/grpc.vim	/^let s:TimeTrack = "timetrack"$/;"	v
 s:TmuxAwareNavigate	./plugged/vim-tmux-navigator/plugin/tmux_navigator.vim	/^function! s:TmuxAwareNavigate(direction)$/;"	f
 s:TmuxCommand	./plugged/vim-tmux-navigator/plugin/tmux_navigator.vim	/^function! s:TmuxCommand(args)$/;"	f
 s:TmuxNavigatorProcessList	./plugged/vim-tmux-navigator/plugin/tmux_navigator.vim	/^function! s:TmuxNavigatorProcessList()$/;"	f
@@ -16801,8 +16883,8 @@ s:UI.toggleShowHidden	./plugged/nerdtree/lib/nerdtree/ui.vim	/^function! s:UI.to
 s:UI.toggleZoom	./plugged/nerdtree/lib/nerdtree/ui.vim	/^function! s:UI.toggleZoom()$/;"	f
 s:UltiSnippetTextObj	./plugged/ultisnips/ftplugin/snippets.vim	/^fun! s:UltiSnippetTextObj(inner) abort$/;"	f
 s:Uniq	./plugged/vim-fugitive/autoload/fugitive.vim	/^function! s:Uniq(list) abort$/;"	f
-s:Update	./config/grpc.vim	/^let s:Update = "Update"$/;"	v
 s:Update	./plugged/ctrlp.vim/autoload/ctrlp.vim	/^fu! s:Update(str)$/;"	f
+s:Update	./plugins/grpc.vim	/^let s:Update = "Update"$/;"	v
 s:UpdateIndex	./plugged/vim-fugitive/autoload/fugitive.vim	/^function! s:UpdateIndex(dir, info) abort$/;"	f
 s:UpdatePopup	./plugged/vimspector/autoload/vimspector/internal/popup.vim	/^function! s:UpdatePopup( id ) abort$/;"	f
 s:UrlParse	./plugged/vim-fugitive/autoload/fugitive.vim	/^function! s:UrlParse(url) abort$/;"	f
@@ -18690,7 +18772,7 @@ s:dim_0	./plugged/lightline.vim/autoload/lightline/colorscheme/selenized_black.v
 s:dim_0	./plugged/lightline.vim/autoload/lightline/colorscheme/selenized_dark.vim	/^let s:dim_0     = ['#72898f', 7]$/;"	v
 s:dim_0	./plugged/lightline.vim/autoload/lightline/colorscheme/selenized_light.vim	/^let s:dim_0     = ['#909995', 7]$/;"	v
 s:dim_0	./plugged/lightline.vim/autoload/lightline/colorscheme/selenized_white.vim	/^let s:dim_0     = ['#878787', 7]$/;"	v
-s:dir	./config/grpc.vim	/^let s:dir = resolve(expand("<sfile>:p:h") . "\/..")$/;"	v
+s:dir	./plugins/grpc.vim	/^let s:dir = resolve(expand("<sfile>:p:h") . "\/..")$/;"	v
 s:dirArrows	./plugged/nerdtree/syntax/nerdtree.vim	/^    let s:dirArrows = escape(g:NERDTreeDirArrowCollapsible, '~]\\-').escape(g:NERDTreeDirArrowEx/;"	v
 s:dir_for_worktree	./plugged/vim-fugitive/plugin/fugitive.vim	/^let s:dir_for_worktree = {}$/;"	v
 s:dircompl	./plugged/ctrlp.vim/autoload/ctrlp.vim	/^fu! s:dircompl(be, sd)$/;"	f
@@ -18703,8 +18785,8 @@ s:displayHelp	./plugged/nerdtree/autoload/nerdtree/ui_glue.vim	/^function! s:dis
 s:display_by_path	./plugged/vim-startify/autoload/startify.vim	/^function! s:display_by_path(path_prefix, path_format, use_env) abort$/;"	f
 s:do	./autoload/plug.vim	/^function! s:do(pull, force, todo)$/;"	f
 s:do	./plugged/vim-vsnip/autoload/vital/_vsnip/VS/Vim/Buffer.vim	/^function! s:do(bufnr, func) abort$/;"	f
-s:doStuf	./config/settings.vim	/^function! s:doStuf(id)$/;"	f
-s:doStuf	./plugin/settings.vim	/^function! s:doStuf(id)$/;"	f
+s:doStuf	./back_up/settings.vim	/^function! s:doStuf(id)$/;"	f
+s:doStuf	./plugins/me-make-shit.vim	/^function! s:doStuf(id)$/;"	f
 s:do_delayed_update	./plugged/tagbar/autoload/tagbar.vim	/^function! s:do_delayed_update() abort$/;"	f
 s:doautocmd	./autoload/plug.vim	/^function! s:doautocmd(...)$/;"	f
 s:dobufread	./autoload/plug.vim	/^function! s:dobufread(names)$/;"	f
@@ -18808,8 +18890,8 @@ s:exec_silent	./plugged/undotree/autoload/undotree.vim	/^function! s:exec_silent
 s:execextvar	./plugged/ctrlp.vim/autoload/ctrlp.vim	/^fu! s:execextvar(key)$/;"	f
 s:exectags	./plugged/ctrlp.vim/autoload/ctrlp/buffertag.vim	/^fu! s:exectags(cmd)$/;"	f
 s:exectagsonfile	./plugged/ctrlp.vim/autoload/ctrlp/buffertag.vim	/^fu! s:exectagsonfile(fname, ftype)$/;"	f
-s:executable	./config/grpc.vim	/^let s:executable = s:dir . "\/target\/client"$/;"	v
 s:executable	./plugged/vim-fugitive/autoload/fugitive.vim	/^function! s:executable(binary) abort$/;"	f
+s:executable	./plugins/grpc.vim	/^let s:executable = s:dir . "\/target\/client"$/;"	v
 s:executables	./plugged/ferret/autoload/ferret/private.vim	/^let s:executables={$/;"	v
 s:executables	./plugged/vim-fugitive/autoload/fugitive.vim	/^let s:executables = {}$/;"	v
 s:execute	./plugged/vim-which-key/autoload/which_key.vim	/^function! s:execute(cmd) abort$/;"	f
@@ -19215,8 +19297,8 @@ s:get_rows	./plugged/vimwiki/autoload/vimwiki/tbl.vim	/^function! s:get_rows(lnu
 s:get_source_dirs	./plugged/vim-vsnip/autoload/vsnip/source/user_snippet.vim	/^function! s:get_source_dirs(bufnr) abort$/;"	f
 s:get_source_paths	./plugged/vim-vsnip/autoload/vsnip/source/user_snippet.vim	/^function! s:get_source_paths(bufnr) abort$/;"	f
 s:get_version	./plugged/vimwiki/plugin/vimwiki.vim	/^function! s:get_version() abort$/;"	f
-s:get_visual_selection	./config/settings.vim	/^function! s:get_visual_selection()$/;"	f
-s:get_visual_selection	./plugin/settings.vim	/^function! s:get_visual_selection()$/;"	f
+s:get_visual_selection	./back_up/settings.vim	/^function! s:get_visual_selection()$/;"	f
+s:get_visual_selection	./plugins/me-make-shit.vim	/^function! s:get_visual_selection()$/;"	f
 s:get_wiki_buffers	./plugged/vimwiki/autoload/vimwiki/base.vim	/^function! s:get_wiki_buffers() abort$/;"	f
 s:get_wikifile_url	./plugged/vimwiki/autoload/vimwiki/html.vim	/^function! s:get_wikifile_url(wikifile) abort$/;"	f
 s:getbookmarks	./plugged/ctrlp.vim/autoload/ctrlp/bookmarkdir.vim	/^fu! s:getbookmarks()$/;"	f
@@ -19433,8 +19515,8 @@ s:grey_number	./plugged/awesome-vim-colorschemes/colors/PaperColor.vim	/^  fun! 
 s:grey_number	./plugged/awesome-vim-colorschemes/colors/jellybeans.vim	/^  fun! s:grey_number(x)$/;"	f
 s:group_colors	./plugged/awesome-vim-colorschemes/colors/onedark.vim	/^let s:group_colors = {} " Cache of default highlight group settings, for later reference via `on/;"	v
 s:group_links	./plugged/vimwiki/autoload/vimwiki/diary.vim	/^function! s:group_links(links) abort$/;"	f
-s:grpcBufferName	./config/grpc.vim	/^let s:grpcBufferName = 'thefux_timetrack'$/;"	v
-s:grpcId	./config/grpc.vim	/^    let s:grpcId = 0$/;"	v
+s:grpcBufferName	./plugins/grpc.vim	/^let s:grpcBufferName = 'thefux_timetrack'$/;"	v
+s:grpcId	./plugins/grpc.vim	/^    let s:grpcId = 0$/;"	v
 s:gry0	./plugged/awesome-vim-colorschemes/autoload/airline/themes/snow_dark.vim	/^let s:gry0 = [ "#2c2d30", 236 ]$/;"	v
 s:gry0	./plugged/awesome-vim-colorschemes/autoload/airline/themes/snow_light.vim	/^let s:gry0 = [ "#fbffff", 231 ]$/;"	v
 s:gry0	./plugged/awesome-vim-colorschemes/autoload/airline/themes/stellarized_dark.vim	/^let s:gry0 = [ "#222532", 235 ]$/;"	v
@@ -19793,7 +19875,7 @@ s:infer_properties	./autoload/plug.vim	/^function! s:infer_properties(name, repo
 s:info	./plugged/nerdtree-git-plugin/autoload/gitstatus/log.vim	/^let s:info    = 1 | :lockvar s:info$/;"	v
 s:info_from_channel	./plugged/ferret/autoload/ferret/private/async.vim	/^function! s:info_from_channel(channel)$/;"	f
 s:info_from_job	./plugged/ferret/autoload/ferret/private/nvim.vim	/^function! s:info_from_job(job)$/;"	f
-s:init	./config/grpc.vim	/^function! s:init()$/;"	f
+s:init	./plugins/grpc.vim	/^function! s:init()$/;"	f
 s:initCustomOpenArgs	./plugged/nerdtree/autoload/nerdtree/ui_glue.vim	/^function! s:initCustomOpenArgs() abort$/;"	f
 s:initFoldState	./plugged/tagbar/autoload/tagbar/prototypes/basetag.vim	/^function! s:initFoldState(known_files) abort dict$/;"	f
 s:initVariable	./plugged/nerdtree-git-plugin/nerdtree_plugin/git_status.vim	/^function! s:initVariable(var, value) abort$/;"	f
@@ -23451,7 +23533,7 @@ s:tail	./plugged/ctrlp.vim/autoload/ctrlp.vim	/^fu! s:tail()$/;"	f
 s:tail_name	./plugged/vimwiki/autoload/vimwiki/base.vim	/^function! s:tail_name(fname) abort$/;"	f
 s:target	./plugged/vimwiki/syntax/vimwiki.vim	/^let s:target = vimwiki#base#apply_template($/;"	v
 s:target	./plugged/vimwiki/syntax/vimwiki_markdown_custom.vim	/^let s:target = vimwiki#base#apply_template($/;"	v
-s:task_list	./config/grpc.vim	/^let s:task_list = []$/;"	v
+s:task_list	./plugins/grpc.vim	/^let s:task_list = []$/;"	v
 s:teal	./plugged/awesome-vim-colorschemes/colors/pink-moon.vim	/^let s:teal = "6F98B3"$/;"	v
 s:teal	./plugged/awesome-vim-colorschemes/colors/yellow-moon.vim	/^let s:teal = "608DAB"$/;"	v
 s:teal	./plugged/lightline.vim/autoload/lightline/colorscheme/16color.vim	/^let s:teal = [ '#008080', 6 ]$/;"	v
@@ -24070,6 +24152,7 @@ safe_buf_call	./plugged/cmp-buffer/lua/cmp_buffer/buffer.lua	/^function buffer.s
 same	./plugged/plenary.nvim/lua/luassert/assertions.lua	/^local function same(state, arguments, level)$/;"	f
 same	./plugged/plenary.nvim/lua/luassert/matchers/core.lua	/^local function same(state, arguments, level)$/;"	f
 samp	./plugged/nyaovim-tree-view/nyaovim-plugin/js/index.js	/^  samp: createDOMFactory('samp'),$/;"	p	class:AnonymousFunctionfb13386d10300.ReactDOMFactories
+sanitize	./plugged/nvim-lspconfig/lua/lspconfig/util.lua	/^  local function sanitize(path)$/;"	f
 sanitize_results_for_debugging	./plugged/rust-tools.nvim/lua/rust-tools/debuggables.lua	/^local function sanitize_results_for_debugging(result)$/;"	f
 save_adapters	./plugged/vimspector/python3/vimspector/installer.py	/^    def save_adapters():$/;"	f	function:InstallGadget	file:
 save_mark	./plugged/ultisnips/pythonx/UltiSnips/vim_helper.py	/^def save_mark(name):$/;"	f
@@ -24188,8 +24271,9 @@ setAndValidateContentChildDev	./plugged/nyaovim-tree-view/nyaovim-plugin/js/inde
 setAttributeForID	./plugged/nyaovim-tree-view/nyaovim-plugin/js/index.js	/^  setAttributeForID: function (node, id) {$/;"	m	class:AnonymousFunctionfb13386d4100.DOMPropertyOperations
 setAttributeForRoot	./plugged/nyaovim-tree-view/nyaovim-plugin/js/index.js	/^  setAttributeForRoot: function (node) {$/;"	m	class:AnonymousFunctionfb13386d4100.DOMPropertyOperations
 setChildrenForInstrumentation	./plugged/nyaovim-tree-view/nyaovim-plugin/js/index.js	/^  setChildrenForInstrumentation = function (children) {$/;"	f	function:AnonymousFunctionfb13386da100
-setColor	./config/settings.vim	/^    augroup setColor$/;"	a
+setColor	./back_up/settings.vim	/^    augroup setColor$/;"	a
 setColor	./plugin/settings.vim	/^    augroup setColor$/;"	a
+setColor	./plugins/settings.vim	/^    augroup setColor$/;"	a
 setEnabled	./plugged/nyaovim-tree-view/nyaovim-plugin/js/index.js	/^  setEnabled: function (enabled) {$/;"	m	class:AnonymousFunctionfb13386d9400.ReactEventListener
 setHandleTopLevel	./plugged/nyaovim-tree-view/nyaovim-plugin/js/index.js	/^  setHandleTopLevel: function (handleTopLevel) {$/;"	m	class:AnonymousFunctionfb13386d9400.ReactEventListener
 setIEOffsets	./plugged/nyaovim-tree-view/nyaovim-plugin/js/index.js	/^function setIEOffsets(node, offsets) {$/;"	f	function:AnonymousFunctionfb13386d8000
@@ -24915,6 +24999,7 @@ stab	./plugged/supertab/plugin/supertab.vim	/^      let stab = substitute(stab, 
 stab	./plugged/supertab/plugin/supertab.vim	/^    let stab = maparg('<s-tab>', 'i')$/;"	v
 standardReleaser	./plugged/nyaovim-tree-view/nyaovim-plugin/js/index.js	/^var standardReleaser = function (instance) {$/;"	f	function:AnonymousFunctionfb13386d5200
 standardReleaser	./plugged/nyaovim-tree-view/nyaovim-plugin/js/index.js	/^var standardReleaser = function (instance) {$/;"	f	function:AnonymousFunctionfb13386df900
+start	./plugged/cmp-buffer/lua/cmp_buffer/timer.lua	/^function timer:start(timeout_ms, repeat_ms, callback)$/;"	f	unknown:timer
 start	./plugged/nyaovim-tree-view/nyaovim-plugin/js/index.js	/^          start: -range.moveStart('character', -input.value.length),$/;"	p	class:AnonymousFunctionfb13386d9a00.ReactInputSelection.getSelection.selection
 start	./plugged/nyaovim-tree-view/nyaovim-plugin/js/index.js	/^        start: input.selectionStart,$/;"	p	class:AnonymousFunctionfb13386d9a00.ReactInputSelection.getSelection.selection
 start	./plugged/nyaovim-tree-view/test/package.json	/^    "start": "electron $(npm prefix)",$/;"	s	object:scripts
@@ -24931,6 +25016,7 @@ startOffset	./plugged/nyaovim-tree-view/nyaovim-plugin/js/index.js	/^  startOffs
 startTime	./plugged/nyaovim-tree-view/nyaovim-plugin/js/index.js	/^    startTime: currentTimerStartTime,$/;"	p	class:AnonymousFunctionfb13386d8a00.pauseCurrentLifeCycleTimer.currentTimer
 startWatchingForChangeEventIE8	./plugged/nyaovim-tree-view/nyaovim-plugin/js/index.js	/^function startWatchingForChangeEventIE8(target, targetInst) {$/;"	f	function:AnonymousFunctionfb13386d3a00
 startWatchingForValueChange	./plugged/nyaovim-tree-view/nyaovim-plugin/js/index.js	/^function startWatchingForValueChange(target, targetInst) {$/;"	f	function:AnonymousFunctionfb13386d3a00
+start_indexing_timer	./plugged/cmp-buffer/lua/cmp_buffer/buffer.lua	/^function buffer.start_indexing_timer(self)$/;"	f	unknown:buffer
 start_job	./plugged/git-blame.nvim/lua/gitblame/utils.lua	/^function M.start_job(cmd, opts)$/;"	f	unknown:M
 start_read	./plugged/nvim-lint/lua/lint.lua	/^local function start_read(stream, stdout, stderr, bufnr, parser, ns)$/;"	f
 start_server	./plugged/ultisnips/pythonx/UltiSnips/remote_pdb.py	/^    def start_server(self):$/;"	m	class:RemotePDB
@@ -25003,6 +25089,7 @@ steps	./plugged/ultisnips/pythonx/UltiSnips/test_position.py	/^    steps = (((0,
 steps	./plugged/ultisnips/pythonx/UltiSnips/test_position.py	/^    steps = (((0, 3), (0, 3), (0, 12)),)$/;"	v	class:MovePosition_InsSameLine2
 steps	./plugged/ultisnips/pythonx/UltiSnips/test_position.py	/^    steps = (((0, 4), (0, -3), (0, 3)), ((0, 8), (0, -1), (0, 3)))$/;"	v	class:MovePosition_DelSameLine1
 stitchTiles	./plugged/nyaovim-tree-view/nyaovim-plugin/js/index.js	/^  stitchTiles: 'stitchTiles',$/;"	p	class:AnonymousFunctionfb13386db200.ATTRS
+stop	./plugged/cmp-buffer/lua/cmp_buffer/timer.lua	/^function timer:stop()$/;"	f	unknown:timer
 stop	./plugged/nvim-cmp/lua/cmp/utils/async.lua	/^    stop = function()$/;"	f
 stop	./plugged/nyaovim-tree-view/nyaovim-plugin/js/index.js	/^  stop: createDOMFactory('stop'),$/;"	p	class:AnonymousFunctionfb13386d10300.ReactDOMFactories
 stop	./plugged/plenary.nvim/lua/plenary/profile/lua_profiler.lua	/^function module.stop()$/;"	f	unknown:module
@@ -25785,11 +25872,12 @@ variables	./plugged/vimspector/tests/testdata/cpp/simple/.vimspector.json	/^    
 variables-list	./plugged/vimspector/docs/schema/vimspector.schema.json	/^    "variables-list": {$/;"	o	object:definitions
 variables-mapping	./plugged/vimspector/docs/schema/vimspector.schema.json	/^    "variables-mapping": {$/;"	o	object:definitions
 vbcopy	./plugged/neomux/plugin/bin/funcs.sh	/^vbcopy() {$/;"	f
-vbpaste	./plugged/neomux/plugin/bin/funcs.sh	/^vbpaste () {$/;"	f
-vcd	./plugged/neomux/plugin/bin/funcs.sh	/^vcd () {$/;"	f
+vbpaste	./plugged/neomux/plugin/bin/funcs.sh	/^vbpaste() {$/;"	f
+vcd	./plugged/neomux/plugin/bin/funcs.sh	/^vcd() {$/;"	f
 vdmj	./plugged/nvim-lspconfig/doc/server_configurations.md	/^## vdmj$/;"	s	chapter:Configurations
 vectorEffect	./plugged/nyaovim-tree-view/nyaovim-plugin/js/index.js	/^  vectorEffect: 'vector-effect',$/;"	p	class:AnonymousFunctionfb13386db200.ATTRS
 vendorPrefixes	./plugged/nyaovim-tree-view/nyaovim-plugin/js/index.js	/^var vendorPrefixes = {$/;"	c	class:AnonymousFunctionfb13386de100
+verible	./plugged/nvim-lspconfig/doc/server_configurations.md	/^## verible$/;"	s	chapter:Configurations
 verify_install	./plugged/nvim-cmp/utils/install_stylua.sh	/^function verify_install() {$/;"	f
 version	./plugged/awesome-flutter-snippets/.vscode/launch.json	/^	"version": "0.2.0",$/;"	s
 version	./plugged/awesome-flutter-snippets/package.json	/^    "version": "3.0.2",$/;"	s
@@ -26936,11 +27024,13 @@ zk	./plugged/nvim-lspconfig/doc/server_configurations.md	/^## zk$/;"	s	chapter:C
 zls	./plugged/nvim-lspconfig/doc/server_configurations.md	/^## zls$/;"	s	chapter:Configurations
 zoom	./plugged/nyaovim-tree-view/nyaovim-plugin/js/index.js	/^  zoom: true,$/;"	p	class:AnonymousFunctionfb13386d3400.isUnitlessNumber
 zoomAndPan	./plugged/nyaovim-tree-view/nyaovim-plugin/js/index.js	/^  zoomAndPan: 'zoomAndPan'$/;"	p	class:AnonymousFunctionfb13386db200.ATTRS
-{	./config/mappings.vim	/^nnoremap { {zz$/;"	m
+{	./back_up/mappings.vim	/^nnoremap { {zz$/;"	m
 {	./plugin/mappings.vim	/^nnoremap { {zz$/;"	m
+{	./plugins/mappings.vim	/^nnoremap { {zz$/;"	m
 {__index	./plugged/completion-nvim/lua/completion/source/path.lua	/^}, {__index = function()$/;"	f
-}	./config/mappings.vim	/^nnoremap } }zz$/;"	m
+}	./back_up/mappings.vim	/^nnoremap } }zz$/;"	m
 }	./plugin/mappings.vim	/^nnoremap } }zz$/;"	m
+}	./plugins/mappings.vim	/^nnoremap } }zz$/;"	m
 ~	./plugged/plenary.nvim/lua/plenary/async/async.lua	/^  if type(func) ~= "function" then$/;"	f
 ~	./plugged/plenary.nvim/lua/plenary/async_lib/async.lua	/^  if type(func) ~= "function" then$/;"	f
 ~	./plugged/telescope.nvim/lua/telescope/builtin/files.lua	/^  if opts.additional_args ~= nil and type(opts.additional_args) == "function" then$/;"	f

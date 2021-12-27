@@ -1,19 +1,28 @@
 call plug#begin('$HOME/AppData/Local/nvim/plugged')
-" Debugger Plugins
-Plug 'puremourning/vimspector'
 
-" screen resizing
-Plug 'szw/vim-maximizer'
-
+" " Debugger Plugins
+" Plug 'puremourning/vimspector'
 
 Plug 'rust-lang/rust.vim'
 
+Plug 'christoomey/vim-tmux-navigator'
+Plug 'airblade/vim-rooter'
+
+Plug 'ctrlpvim/ctrlp.vim'
+Plug 'preservim/tagbar'
+
+Plug 'preservim/nerdtree'
+Plug 'Xuyuanp/nerdtree-git-plugin'
+
+Plug 'szw/vim-maximizer'
+
+Plug 'mbbill/undotree'
+
+Plug 'mhinz/vim-startify'
+
 " save last position
 Plug 'tweekmonster/gofmt.vim'
-
-
-" <F4> last changes on file
-Plug 'mbbill/undotree'
+Plug 'gennaro-tedesco/nvim-peekup'
 
 " scheme
 Plug 'gruvbox-community/gruvbox'
@@ -36,13 +45,6 @@ Plug 'vimwiki/vimwiki'
 
 Plug 'ervandew/supertab'
 
-" search dir
-Plug 'ctrlpvim/ctrlp.vim'
-Plug 'preservim/nerdtree'
-Plug 'Xuyuanp/nerdtree-git-plugin'
-
-" code outlines
-Plug 'preservim/tagbar'
 
 Plug 'nikvdp/neomux'
 
@@ -60,14 +62,9 @@ Plug 'tpope/vim-fugitive'
 Plug 'junegunn/gv.vim'
 
 " code snippets
-Plug 'SirVer/ultisnips'
-Plug 'honza/vim-snippets'
+" Plug 'SirVer/ultisnips'
+" Plug 'honza/vim-snippets'
 
-" tmux navigator
-Plug 'christoomey/vim-tmux-navigator'
-
-" startup view, save workspace, etc...
-Plug 'mhinz/vim-startify'
 
 " comment code or whatever
 Plug 'tpope/vim-commentary'
@@ -83,7 +80,6 @@ Plug 'pseewald/vim-anyfold'
 " Plug 'neoclide/coc.nvim', {'branch': 'master', 'do': 'yarn install --frozen-lockfile'}
 
 Plug 'wincent/ferret'
-Plug 'airblade/vim-rooter'
 
 " Plug 'C:\Users\abdou\AppData\Local\nvim\Plugins\vim-timetrack'
 
@@ -105,23 +101,24 @@ Plug 'neovim/nvim-lspconfig'
  Plug 'hrsh7th/cmp-path'
  Plug 'hrsh7th/cmp-buffer'
  
-"  " See hrsh7th's other plugins for more completion sources!
+" See hrsh7th's other plugins for more completion sources!
  
-"" To enable more of the features of rust-analyzer, such as inlay hints and more!
+" To enable more of the features of rust-analyzer, such as inlay hints and more!
  Plug 'simrat39/rust-tools.nvim'
 
 " Snippet engine
 Plug 'hrsh7th/vim-vsnip'
- Plug 'Neevash/awesome-flutter-snippets'
+Plug 'Neevash/awesome-flutter-snippets'
  
 " Fuzzy finder
 " Optional
+" Plug 'nvim-lua/completion-nvim'
 Plug 'nvim-lua/popup.nvim'
 Plug 'nvim-lua/plenary.nvim'
 " Plug 'nvim-telescope/telescope.nvim'
 
 " Color scheme used in the GIFs!
-Plug 'arcticicestudio/nord-vim'
+" Plug 'arcticicestudio/nord-vim'
 
 " zoom In/Out
 Plug 'drzel/vim-gui-zoom'
@@ -131,6 +128,13 @@ Plug 'ludovicchabant/vim-gutentags'
 
 " linter
 Plug 'mfussenegger/nvim-lint'
+
+
+" tree
+" Plug 'rhysd/nyaovim-tree-view'
+
+" floating windows
+" Plug 'fhill2/floating.nvim' broken
 
 call plug#end()
 
