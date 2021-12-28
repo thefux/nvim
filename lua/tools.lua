@@ -1,5 +1,4 @@
 local api = vim.api
-local fn = vim.fn
 
 
 local function resize()
@@ -36,7 +35,7 @@ local function create_fwin(buffer)
     -- will jump right away to the new window
     local enter = true
     local win = api.nvim_open_win(buf, enter, opts)
-    print(win)
+
     -- vim.win_execute(win, 'highlight CustomFloatingWindow ctermbg=11 guibg=yellow ctermfg=10 guifg=green')
     -- vim.win_execute(vim.win_getid(win), 'syntax enable')
     api.nvim_win_set_option(win, 'relativenumber', true)

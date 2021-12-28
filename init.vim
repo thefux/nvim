@@ -16,10 +16,19 @@ source $HOME/AppData/local/nvim/plugins/maximizer.vim
 source $HOME/AppData/local/nvim/plugins/peekup.vim
 source $HOME/AppData/local/nvim/plugins/which-key.vim
 source $HOME/AppData/local/nvim/plugins/lazygit.vim
-source $HOME/AppData/local/nvim/plugins/lua_plug.vim
 source $HOME/AppData/local/nvim/plugins/neovide.vim
 source $HOME/AppData/local/nvim/plugins/tags.vim
 source $HOME/AppData/local/nvim/plugins/lsp.vim
+source $HOME/AppData/local/nvim/plugins/lua_plug.vim
+source $HOME/AppData/local/nvim/plugins/grpc.vim
+
+
+" this step is required to setup lua scripts
+lua require("setup-lua")
+
+
+" source $HOME/AppData/local/nvim/plugins/completion.vim
+
 " source $HOME/AppData/local/nvim/plugins/setup_lsp.vim
 " source $HOME/AppData/local/nvim/Plugins/vim-timetrack/plugin/vim-timetrack.vim
 " source $HOME/AppData/local/nvim/config/vimspector.vim

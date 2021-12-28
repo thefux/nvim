@@ -1,4 +1,3 @@
-lua << EOF
 local opts = {
     cmd = { "pyright-langserver", "--stdio" },
     filetypes = { "python" },
@@ -18,6 +17,3 @@ local opts = {
 }
 
 require'lspconfig'.pyright.setup{}
-EOF
-" pythonPath = "C:\\Users\\abdou\\OneDrive\\Master\\Semester_3\\deepLearning\\exercises\\thefux8\\Scripts\\python.exe",
-" venvPath = "C:\\Users\\abdou\\OneDrive\\Master\\Semester_3\\deepLearning\\exercises\\thefux8"
