@@ -5,6 +5,7 @@ call plug#begin('$HOME/AppData/Local/nvim/plugged')
 
 Plug 'rust-lang/rust.vim'
 
+
 Plug 'christoomey/vim-tmux-navigator'
 Plug 'airblade/vim-rooter'
 
@@ -35,15 +36,13 @@ Plug 'octol/vim-cpp-enhanced-highlight'
 " prettier
 Plug 'sbdchd/neoformat'
 
-" nvim v0.4.3
 Plug 'kdheepak/lazygit.nvim', { 'branch': 'nvim-v0.4.3' }
 Plug 'kdheepak/lazygit.nvim'
 
 
-" vimwiki
 Plug 'vimwiki/vimwiki'
 
-Plug 'ervandew/supertab'
+" Plug 'ervandew/supertab'
 
 
 Plug 'nikvdp/neomux'
@@ -83,7 +82,7 @@ Plug 'wincent/ferret'
 
 " Plug 'C:\Users\abdou\AppData\Local\nvim\Plugins\vim-timetrack'
 
-" Plug 'github/copilot.vim'
+Plug 'github/copilot.vim'
 Plug 'f-person/git-blame.nvim'
 
 Plug 'neovim/nvim-lspconfig'
@@ -112,7 +111,7 @@ Plug 'Neevash/awesome-flutter-snippets'
 " Plug 'nvim-lua/completion-nvim'
 Plug 'nvim-lua/popup.nvim'
 Plug 'nvim-lua/plenary.nvim'
-" Plug 'nvim-telescope/telescope.nvim'
+Plug 'nvim-telescope/telescope.nvim'
 
 " Color scheme used in the GIFs!
 " Plug 'arcticicestudio/nord-vim'
@@ -125,13 +124,19 @@ Plug 'ludovicchabant/vim-gutentags'
 
 " linter
 Plug 'mfussenegger/nvim-lint'
+Plug 'mfussenegger/nvim-dap'
 
+" Plug 'nvim-treesitter/nvim-treesitter', { 'do': ':TSUpdate' }
 
 " tree
 " Plug 'rhysd/nyaovim-tree-view'
 
-" floating windows
-" Plug 'fhill2/floating.nvim' broken
+Plug 'glepnir/galaxyline.nvim' , {'branch': 'main'}
+
+" If you want to display icons, then use one of these plugins:
+Plug 'kyazdani42/nvim-web-devicons' " lua
+
+" Plug 'SmiteshP/nvim-gps'
 
 call plug#end()
 

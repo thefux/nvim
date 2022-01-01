@@ -45,8 +45,8 @@ set nobackup        " not backup or swap files
 " set backupdir=.
 " set guicursor=
 
-set scrolloff=8
-set sidescrolloff=8
+set scrolloff=2
+set sidescrolloff=4
 
 set pastetoggle=<F2>
 set nohlsearch

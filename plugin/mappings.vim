@@ -1,5 +1,5 @@
-" terminal [[
-nnoremap <leader>tt :terminal<CR>
+" terminal[[
+nnoremap <leader>tt :terminal<CR> powershell<CR>
 nnoremap <leader>tv <C-w>v :terminal<CR>
 "]]
 

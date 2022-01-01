@@ -26,6 +26,8 @@ source $HOME/AppData/local/nvim/plugins/grpc.vim
 " this step is required to setup lua scripts
 lua require("setup-lua")
 
+source $HOME/AppData/local/nvim/plugins/debug.vim
+
 
 " source $HOME/AppData/local/nvim/plugins/completion.vim
 
