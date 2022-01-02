@@ -20,6 +20,7 @@ dap.configurations.python = {
         -- return "C://Users//abdou//.conda//envs//grpc//python"
         return 'C:\\Users\\abdou\\OneDrive\\Master\\Semester_3\\deepLearning\\exercises\\thefux8\\Scripts\\python'
     end;
+    runInTerminal = false;
 
     -- Options below are for debugpy, see https://github.com/microsoft/debugpy/wiki/Debug-configuration-settings for supported options
     -- program = "${file}"; -- This configuration will launch the current file if used.

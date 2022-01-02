@@ -101,6 +101,7 @@ Plug 'neovim/nvim-lspconfig'
  
 " To enable more of the features of rust-analyzer, such as inlay hints and more!
  Plug 'simrat39/rust-tools.nvim'
+ Plug 'saecki/crates.nvim', {'tag': 'v0.1.0'}
 
 " Snippet engine
 Plug 'hrsh7th/vim-vsnip'

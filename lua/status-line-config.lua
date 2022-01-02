@@ -1,13 +1,3 @@
-require'nvim-web-devicons'.setup {
- -- your personnal icons can go here (to override)
- -- you can specify color or cterm_color instead of specifying both of them
- -- DevIcon will be appended to `name`
- -- globally enable default icons (default to false)
- -- will get overriden by `get_icons` option
- default = true;
-}
-
-require'nvim-web-devicons'.get_icons()
 -- local diagnostic = require('galaxyline.provider_diagnostic')
 -- local vcs = require('galaxyline.provider_vcs')
 -- local fileinfo = require('galaxyline.provider_fileinfo')
@@ -16,23 +6,6 @@ require'nvim-web-devicons'.get_icons()
 -- local buffer = require('galaxyline.provider_buffer')
 -- local whitespace = require('galaxyline.provider_whitespace')
 -- local lspclient = require('galaxyline.provider_lsp')
-
-
--- require('galaxyline').section.left[1]= {
---   FileSize = {
---     provider = 'FileSize',
---     condition = function()
---       if vim.fn.empty(vim.fn.expand('%:t')) ~= 1 then
---         return true
---       end
---       return false
---       end,
---     icon = '',
---     highlight = {colors.green,colors.purple},
---     separator = '',
---     separator_highlight = {colors.purple,colors.darkblue},
---   }
--- }
 
 
 local gl = require('galaxyline')
@@ -57,7 +30,7 @@ gl.short_line_list = {
 
 VistaPlugin = extension.vista_nearest
 
-local ProgFileTypes = {'lua', 'python', 'typescript', 'typescriptreact', 'react', 'javascript', 'javascriptreact', 'rust', 'go', 'html'}
+local ProgFileTypes = {'lua', 'python', 'typescript', 'typescriptreact', 'react', 'javascript', 'javascriptreact', 'rust', 'go', 'html', 'cpp', 'c'}
 
 -- for checking value in table
 local function has_value (tab, val)
@@ -86,9 +59,7 @@ local function get_color_bg()
 end
 
 -- then change in colors line_bg = get_color_bg
-
 local colors = {
-
     bg = "#282c34",
     line_bg = "#353644",
     fg = '#8FBCBB',
@@ -171,18 +142,18 @@ function get_diagnostic_info()
   return ''
 end
 
-local function get_current_func()
-  local has_func, func_name = pcall(vim.api.nvim_buf_get_var,0,'coc_current_function')
-  if not has_func then return end
-      return func_name
-  end
+-- local function get_current_func()
+--   local has_func, func_name = pcall(vim.api.nvim_buf_get_var,0,'coc_current_function')
+--   if not has_func then return end
+--       return func_name
+--   end
 
-function get_function_info()
-  if vim.fn.exists('*coc#rpc#start_server') == 1 then
-    return get_current_func()
-    end
-  return ''
-end
+-- function get_function_info()
+--   if vim.fn.exists('*coc#rpc#start_server') == 1 then
+--     return get_current_func()
+--     end
+--   return ''
+-- end
 
 local function trailing_whitespace()
     local trail = vim.fn.search("\\s$", "nw")
@@ -193,31 +164,10 @@ local function trailing_whitespace()
     end
 end
 
--- current_func_status with treesitter
--- local function get_current_func_from_treesitter()
---   local opts = {
---     indicator_size = 100,
---     type_patterns = {'class', 'function', 'method', },
---     transform_fn = function(line) return line:gsub('%s*[%[%(%{]*%s*$', '') end,
---     separator = '  ',
---   }
---   local status = vim.fn['nvim_treesitter#statusline'](opts)
---   if not status or status == '' then
---       return ''
---   end
---       return status
---   end
-
--- local function get_current_context()
---   if vim.fn.exists('nvim_treesitter#statusline') == 1 then
---     return get_current_func_from_treesitter()
---     end
---   return ''
--- end
 
 CocStatus = get_diagnostic_info
 DebugInfo = get_debug_status
-CocFunc = get_current_func
+-- CocFunc = get_current_func
 -- TreesitterContext = get_current_func_from_treesitter
 TrailingWhiteSpace = trailing_whitespace
 
@@ -250,10 +200,11 @@ end
 
 gls.left[1] = {
   FirstElement = {
-    provider = function() return ' ' end,
-    highlight = {colors.blue,colors.line_bg}
+    provider = function() return '   ' end,
+    highlight = {colors.orange, colors.line_bg},
   },
 }
+
 gls.left[2] = {
   ViMode = {
     provider = function()
@@ -293,7 +244,7 @@ gls.left[2] = {
       }
       local vim_mode = vim.fn.mode()
       vim.api.nvim_command('hi GalaxyViMode guifg='..mode_color[vim_mode])
-      return alias[vim_mode] .. '   '
+      return alias[vim_mode] .. '   '
     end,
     highlight = {colors.red,colors.line_bg,'bold'},
   },
@@ -412,17 +363,9 @@ gls.left[15] = {
 }
 
 
--- gls.left[16] = {
---   CocFunc = {
---     provider = CocFunc,
---     icon = ' ',
---     highlight = {colors.yellow,colors.bg},
---   }
--- }
-
 -- gls.left[17] = {
 --   TreesitterContext = {
---     provider = TreesitterContext,
+--     provider = 'TreesitterContext',
 --     condition = has_file_prog_filetype,
 --     icon = '  λ ',
 --     highlight = {colors.yellow,colors.bg},
@@ -450,15 +393,16 @@ gls.right[1]= {
     highlight = {colors.fg,colors.line_bg,'bold'},
   }
 }
+
 gls.right[2] = {
   Debug = {
     provider = DebugInfo,
     separator = ' ',
     separator_highlight = {colors.blue,colors.line_bg},
-    separator_highlight = {colors.bg,colors.line_bg},
     highlight = {colors.red,colors.line_bg,'bold'},
   }
 }
+
 gls.right[4] = {
   LineInfo = {
     provider = 'LineColumn',
@@ -480,15 +424,6 @@ gls.right[5] = {
 --   ScrollBar = {
 --     provider = 'ScrollBar',
 --     highlight = {colors.blue,colors.purple},
---   }
--- }
---
--- gls.right[3] = {
---   Vista = {
---     provider = VistaPlugin,
---     separator = ' ',
---     separator_highlight = {colors.bg,colors.line_bg},
---     highlight = {colors.fg,colors.line_bg,'bold'},
 --   }
 -- }
 

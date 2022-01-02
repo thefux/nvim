@@ -14,7 +14,7 @@ local function resize()
 end
 
 
-local function create_fwin(buffer)
+local function create_fwin()
     local buf = api.nvim_create_buf(false, true)
     if buf == 0 then
         print('could not create buffer')
@@ -38,11 +38,11 @@ local function create_fwin(buffer)
 
     -- vim.win_execute(win, 'highlight CustomFloatingWindow ctermbg=11 guibg=yellow ctermfg=10 guifg=green')
     -- vim.win_execute(vim.win_getid(win), 'syntax enable')
-    api.nvim_win_set_option(win, 'relativenumber', true)
+    -- api.nvim_win_set_option(win, 'relativenumber', true)
     -- api.nvim_win_set_option(win, 'winhl', 'Normal:CustomFloatingWindow')
     -- api.nvim_win_set_option(win, 'winhl', 'Normal:ErrorFloating')
 
-    vim.cmd(string.format("e %s", buffer))
+    return win
 end
 
 

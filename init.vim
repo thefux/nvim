@@ -21,6 +21,7 @@ source $HOME/AppData/local/nvim/plugins/tags.vim
 source $HOME/AppData/local/nvim/plugins/lsp.vim
 source $HOME/AppData/local/nvim/plugins/lua_plug.vim
 source $HOME/AppData/local/nvim/plugins/grpc.vim
+source $HOME/AppData/local/nvim/plugins/my-plugin.vim
 
 
 " this step is required to setup lua scripts

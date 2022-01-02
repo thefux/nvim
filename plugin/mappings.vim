@@ -1,6 +1,15 @@
 " terminal[[
-nnoremap <leader>tt :terminal<CR> powershell<CR>
-nnoremap <leader>tv <C-w>v :terminal<CR>
+func! Terminal()
+    if has('win32')
+        nnoremap <leader>tt :terminal<CR> pwsh<CR>
+        nnoremap <leader>tv <C-w>v :terminal<CR> pwsh<CR>
+    else
+        nnoremap <leader>tt :terminal<CR>
+        nnoremap <leader>tv <C-w>v :terminal<CR>
+    endif
+endfunc
+
+" call Terminal()
 "]]
 
 " navigation"[[

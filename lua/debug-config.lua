@@ -12,6 +12,9 @@ vim.api.nvim_set_keymap('n', '<leader>I', '<Cmd>lua require"dap.ui.widgets".cent
 vim.api.nvim_set_keymap('n', '<leader>K', '<Cmd>lua require"dap.ui.widgets".hover()<CR>', opts)
 
 
+local dap = require"dap"
+dap.defaults.fallback.terminal_win_cmd = '50vsplit new'
+
 local widgets = require('dap.ui.widgets')
 
 local widgets_opts = {}
