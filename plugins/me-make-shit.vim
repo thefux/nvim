@@ -194,7 +194,7 @@ command! -nargs=0 UndoLastReplaceCurrentWord :call s:doStuf(3)
 command! -nargs=0 ReplaceWordAll :call s:doStuf(4)
 
 " map <silent> <F9> :Rooter<CR> :call SearchAll()<CR> :cd %:p:h<CR>
-map <silent> <F9> :Rooter<CR> :call SearchAll()<CR> :cd %:p:h<CR>
+map <silent> <leader>S :Rooter<CR> :call SearchAll()<CR> :cd %:p:h<CR>
 map <silent> <c-F9> :Rooter<CR> :call SearchFor()<CR> :cd %:p:h<CR>
 map <silent> <F7> :<C-U> :Rooter<CR>:call ReplaceCurrentWordAll()<CR> :cd %:p:h<CR>
 map <silent> <c-F8> :Rooter<CR> :call UndoLastReplaceCurrentWord()<CR>  :cd %:p:h<CR>

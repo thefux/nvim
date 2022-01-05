@@ -9,9 +9,9 @@ dap.adapters.python =
 }
 
 
-dap.configurations.python = {
+dap.configurations.python =
+{
   {
-    -- The first three options are required by nvim-dap
     type = 'python';
     request = 'launch';
     name = "Launch file";

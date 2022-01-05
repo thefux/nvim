@@ -34,7 +34,7 @@ set list
 set listchars=tab:>-,extends:>,trail:*
 
 set hlsearch        " highlight search
-set noincsearch       " show search matches
+set incsearch       " show search matches
 
 set title           " change title
 

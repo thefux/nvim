@@ -1,8 +1,5 @@
 call plug#begin('$HOME/AppData/Local/nvim/plugged')
 
-" " Debugger Plugins
-" Plug 'puremourning/vimspector'
-
 Plug 'rust-lang/rust.vim'
 
 
@@ -44,7 +41,6 @@ Plug 'vimwiki/vimwiki'
 
 " Plug 'ervandew/supertab'
 
-
 Plug 'nikvdp/neomux'
 
 " vim register overview and more
@@ -57,8 +53,11 @@ Plug 'jiangmiao/auto-pairs'
 Plug 'blackcauldron7/surround.nvim'
 
 " git client, commit navigator and more
+Plug 'lewis6991/gitsigns.nvim'
 Plug 'tpope/vim-fugitive'
 Plug 'junegunn/gv.vim'
+Plug 'f-person/git-blame.nvim'
+Plug 'itchyny/vim-gitbranch'
 
 " code snippets
 " Plug 'SirVer/ultisnips'
@@ -74,18 +73,12 @@ Plug 'liuchengxu/vim-which-key'
 " folding
 Plug 'pseewald/vim-anyfold'
 
-" coc
-" Plug 'neoclide/coc.nvim', {'branch': 'release'}
-" Plug 'neoclide/coc.nvim', {'branch': 'master', 'do': 'yarn install --frozen-lockfile'}
-
 Plug 'wincent/ferret'
 
-" Plug 'C:\Users\abdou\AppData\Local\nvim\Plugins\vim-timetrack'
-
 Plug 'github/copilot.vim'
-Plug 'f-person/git-blame.nvim'
 
 Plug 'neovim/nvim-lspconfig'
+Plug 'williamboman/nvim-lsp-installer'
 
 " Completion framework
  Plug 'hrsh7th/nvim-cmp'
@@ -127,7 +120,7 @@ Plug 'ludovicchabant/vim-gutentags'
 Plug 'mfussenegger/nvim-lint'
 Plug 'mfussenegger/nvim-dap'
 
-" Plug 'nvim-treesitter/nvim-treesitter', { 'do': ':TSUpdate' }
+Plug 'nvim-treesitter/nvim-treesitter'
 
 " tree
 " Plug 'rhysd/nyaovim-tree-view'
@@ -135,7 +128,9 @@ Plug 'mfussenegger/nvim-dap'
 Plug 'glepnir/galaxyline.nvim' , {'branch': 'main'}
 
 " If you want to display icons, then use one of these plugins:
-Plug 'kyazdani42/nvim-web-devicons' " lua
+Plug 'kyazdani42/nvim-web-devicons'
+Plug 'akinsho/bufferline.nvim'
+Plug 'kyazdani42/nvim-tree.lua'
 
 " Plug 'SmiteshP/nvim-gps'
 

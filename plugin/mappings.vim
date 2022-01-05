@@ -8,8 +8,10 @@ func! Terminal()
         nnoremap <leader>tv <C-w>v :terminal<CR>
     endif
 endfunc
+"]]
 
-" call Terminal()
+" escape terminal insert mode [[
+tnoremap <Esc> <C-\><C-n>
 "]]
 
 " navigation"[[
@@ -19,6 +21,7 @@ nnoremap <silent> <leader>q :q<CR>
 nnoremap <silent> <leader>w :w<CR>
 nnoremap <silent> <leader>x :x<CR>
 nnoremap <silent> <leader>xa :xall<CR>
+nnoremap <silent> <leader>bq :bd!<CR>
 "]]
 
 " search [[
@@ -58,10 +61,6 @@ noremap N Nzz
 nnoremap <silent> <leader>v :split $MYVIMRC<CR>
 nnoremap <silent> <leader>s :source $MYVIMRC<CR>
 nnoremap <silent> <leader>S :source %<CR>
-"]]
-
-" escape terminal insert mode [[
-tnoremap <Esc> <C-\><C-n>
 "]]
 
 " resize windows splits [[

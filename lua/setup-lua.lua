@@ -1,14 +1,18 @@
 local all = {
-    'completion',
     'lsp-lua',
     'lsp-rust',
     'lsp-python',
     'lsp-config',
+    'completion',
     'debug-python',
     'debug-config',
     'debug-rust',
     'status-line-config',
     'terminal-config',
+    'git-config',
+    'tree-config',
+    -- 'bufferline-config', out for now because it's not working as i like
+    -- 'treesitter-config',
 }
 
 
