@@ -201,3 +201,4 @@ map <silent> <c-F8> :Rooter<CR> :call UndoLastReplaceCurrentWord()<CR>  :cd %:p:
 map <silent> <c-F7> :Rooter<CR> :call ReplaceWordAll()<CR>  :cd %:p:h<CR>
 "]]
 
+

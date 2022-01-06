@@ -4,7 +4,6 @@ source $HOME/AppData/local/nvim/plugin/mappings.vim
 
 source $HOME/AppData/local/nvim/plugins/tmux-like.vim
 source $HOME/AppData/local/nvim/plugins/startify.vim
-source $HOME/AppData/local/nvim/plugins/me-make-shit.vim
 source $HOME/AppData/local/nvim/plugins/rooter.vim
 source $HOME/AppData/local/nvim/plugins/snippets.vim
 source $HOME/AppData/local/nvim/plugins/ctrlP.vim
@@ -33,6 +32,7 @@ augroup end
 " make sure the base plugin is loaded first
 source $HOME/AppData/local/nvim/plugins/my-plugin/base.vim
 source $HOME/AppData/local/nvim/plugins/my-plugin/timetrack.vim
+source $HOME/AppData/local/nvim/plugins/my-plugin/me-make-shit.vim
 
 call TheFuxInit()   " rust proccess (ugly !!!!)
 

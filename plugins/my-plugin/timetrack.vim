@@ -86,9 +86,9 @@ function! StoreInFile(...)
     call setbufvar(g:timetrackBuffer, "&readonly", "0")
     call setbufvar(g:timetrackBuffer, "&modifiable", "1")
 
-    let count = 0
+    let count = len(tasks)
     " hack to decrease cleanup the buffer
-    call nvim_buf_set_lines(g:timetrackBuffer, count, line('$'), 0, [])
+    call nvim_buf_set_lines(g:timetrackBuffer, 1, count, 0, [])
 
     for task in tasks
         let task_info = split(task, ',')
@@ -160,7 +160,7 @@ function! UpdateTask()
 
     call inputsave()
     let l:input = inputlist(['follwing command are possible: ',
-                \ '1) start', 
+                \ '1) start',
                 \ '2) pause',
                 \ '3) done',
                 \ '4) remove',

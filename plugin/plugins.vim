@@ -139,5 +139,9 @@ Plug 'kyazdani42/nvim-tree.lua'
 Plug 'windwp/nvim-spectre'
 Plug 'blackcauldron7/surround.nvim'
 
+" use later
+Plug 'skywind3000/asyncrun.vim'
+Plug 'skywind3000/asynctasks.vim'
+
 call plug#end()
 

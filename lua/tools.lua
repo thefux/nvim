@@ -13,26 +13,27 @@ local function resize()
     return height,  width, col, row
 end
 
+
 local function open_buffer(buf)
     local height, width, col, row = resize()
+    height, width, col, row = height - 5, width - 20, col, row
 
-    local topleft, topright, botleft, botright = '╭', '╮', '╰', '╯'
     local top, bot, left, right = '─', '─', '│', '│'
+    local topleft, topright, botleft, botright = '╭', '╮', '╰', '╯'
 
-    -- TODO
-    -- local border_lines = { topleft .. string.rep('─', width) .. topright }
-    -- for a in ipairs(border_lines) do
-    --     print(a)
-    -- end
-    -- local middle_line = '│' .. string.rep(' ', width) .. '│'
-    -- for _ = 1, height do
-    --   table.insert(border_lines, middle_line)
-    -- end
-    -- table.insert(border_lines, botleft .. string.rep('─', width) .. botright)
+    local border_lines = { topleft .. string.rep(top, width - 2) .. topright }
+    local middle_line = left .. string.rep(' ', width - 2) .. right
+    for _ = 1, height do
+      table.insert(border_lines, middle_line)
+    end
+    table.insert(border_lines, botleft .. string.rep(bot, width - 2) .. botright)
 
-    -- vim.fn.setbufvar(buf, "&modifiable", "1")
-    -- vim.api.nvim_buf_set_lines(buf, 0, -1, true, border_lines)
-    -- vim.fn.setbufvar(buf, "&modifiable", "0")
+    vim.fn.setbufvar(buf, "&modifiable", "1")
+    vim.fn.setbufvar(buf, "&readonly", "0")
+    vim.api.nvim_buf_set_lines(buf, 0, -1, true, border_lines)
+    vim.fn.setbufvar(buf, "&readonly", "1")
+    vim.fn.setbufvar(buf, "&modifiable", "0")
+
     local opts = {
         relative = "editor",
         style = "minimal",
@@ -46,7 +47,7 @@ local function open_buffer(buf)
     -- will jump right away to the new window
     local enter = true
     local win = api.nvim_open_win(buf, enter, opts)
-
+    return win
 end
 
 local function create_fwin()
