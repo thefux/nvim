@@ -82,16 +82,16 @@ Plug 'williamboman/nvim-lsp-installer'
 
 " Completion framework
  Plug 'hrsh7th/nvim-cmp'
- 
+
  " LSP completion source for nvim-cmp
  Plug 'hrsh7th/cmp-nvim-lsp'
- 
+
  " Other usefull completion sources
  Plug 'hrsh7th/cmp-path'
  Plug 'hrsh7th/cmp-buffer'
- 
+
 " See hrsh7th's other plugins for more completion sources!
- 
+
 " To enable more of the features of rust-analyzer, such as inlay hints and more!
  Plug 'simrat39/rust-tools.nvim'
  Plug 'saecki/crates.nvim', {'tag': 'v0.1.0'}
@@ -99,7 +99,7 @@ Plug 'williamboman/nvim-lsp-installer'
 " Snippet engine
 Plug 'hrsh7th/vim-vsnip'
 Plug 'Neevash/awesome-flutter-snippets'
- 
+
 " Fuzzy finder
 " Optional
 " Plug 'nvim-lua/completion-nvim'
@@ -119,8 +119,8 @@ Plug 'ludovicchabant/vim-gutentags'
 " linter
 Plug 'mfussenegger/nvim-lint'
 Plug 'mfussenegger/nvim-dap'
-
-Plug 'nvim-treesitter/nvim-treesitter'
+Plug 'nvim-lua/lsp-status.nvim'
+Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 
 " tree
 " Plug 'rhysd/nyaovim-tree-view'
@@ -133,6 +133,11 @@ Plug 'akinsho/bufferline.nvim'
 Plug 'kyazdani42/nvim-tree.lua'
 
 " Plug 'SmiteshP/nvim-gps'
+
+" Plug 'neoclide/coc.nvim', {'do': { -> coc#util#install()}}
+
+Plug 'windwp/nvim-spectre'
+Plug 'blackcauldron7/surround.nvim'
 
 call plug#end()
 

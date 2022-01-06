@@ -11,8 +11,10 @@ local all = {
     'terminal-config',
     'git-config',
     'tree-config',
+    'spectre-config',
+    'surround-config',
     -- 'bufferline-config', out for now because it's not working as i like
-    -- 'treesitter-config',
+    'treesitter-config',
 }
 
 
