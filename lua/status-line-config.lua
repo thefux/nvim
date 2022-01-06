@@ -129,6 +129,10 @@ local function branch_name()
     if tonumber(name) ~= nil then
         return 'HEAD detached at ' .. name
     end
+
+    if name == 'main' then
+        return 'stop working in main'
+    end
     return name
 end
 
