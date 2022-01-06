@@ -19,19 +19,20 @@ local function open_buffer(buf)
     local topleft, topright, botleft, botright = '╭', '╮', '╰', '╯'
     local top, bot, left, right = '─', '─', '│', '│'
 
-    local border_lines = { topleft .. string.rep('─', width) .. topright }
-    for a in ipairs(border_lines) do
-        print(a)
-    end
-    local middle_line = '│' .. string.rep(' ', width) .. '│'
-    for _ = 1, height do
-      table.insert(border_lines, middle_line)
-    end
-    table.insert(border_lines, botleft .. string.rep('─', width) .. botright)
+    -- TODO
+    -- local border_lines = { topleft .. string.rep('─', width) .. topright }
+    -- for a in ipairs(border_lines) do
+    --     print(a)
+    -- end
+    -- local middle_line = '│' .. string.rep(' ', width) .. '│'
+    -- for _ = 1, height do
+    --   table.insert(border_lines, middle_line)
+    -- end
+    -- table.insert(border_lines, botleft .. string.rep('─', width) .. botright)
 
-    vim.fn.setbufvar(buf, "&modifiable", "1")
-    vim.api.nvim_buf_set_lines(buf, 0, -1, true, border_lines)
-    vim.fn.setbufvar(buf, "&modifiable", "0")
+    -- vim.fn.setbufvar(buf, "&modifiable", "1")
+    -- vim.api.nvim_buf_set_lines(buf, 0, -1, true, border_lines)
+    -- vim.fn.setbufvar(buf, "&modifiable", "0")
     local opts = {
         relative = "editor",
         style = "minimal",
