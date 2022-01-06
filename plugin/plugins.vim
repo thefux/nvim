@@ -1,5 +1,4 @@
 call plug#begin('$HOME/AppData/Local/nvim/plugged')
-
 Plug 'rust-lang/rust.vim'
 
 
@@ -121,6 +120,7 @@ Plug 'mfussenegger/nvim-lint'
 Plug 'mfussenegger/nvim-dap'
 Plug 'nvim-lua/lsp-status.nvim'
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
+Plug 'nvim-treesitter/playground'
 
 " tree
 " Plug 'rhysd/nyaovim-tree-view'

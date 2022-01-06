@@ -80,6 +80,9 @@ map <silent> <leader>c "*y
 nnoremap <c-z> <c>
 "]]
 
+" copy in visual mode [[
+xnoremap <silent> p pgvy
+" ]]
 
 " Folding commands.
 " zf#j create a fold from the cursor down # lines.
