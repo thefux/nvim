@@ -150,16 +150,25 @@ local function timetrack()
         return '    '
     end
 
+    local count = 0
     local lines = vim.api.nvim_buf_get_lines(vim.api.nvim_eval('timetrackBuffer'), 0, 10, false)
     for _, v in pairs(lines) do
         for str in v:gmatch('%S+') do
             if str == time_trach_status.inprogress then
-                return '  神'
+                count = count + 1
             end
         end
     end
 
-    return '  精'
+    if count == 1 then
+        return '  神 '
+    elseif count > 1 then
+        return'   '
+    else
+        return '  精'
+    end
+
+
 end
 
 
