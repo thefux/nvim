@@ -86,9 +86,9 @@ function! StoreInFile(...)
     call setbufvar(g:timetrackBuffer, "&readonly", "0")
     call setbufvar(g:timetrackBuffer, "&modifiable", "1")
 
-    let count = len(tasks)
+    let count = 0
     " hack to decrease cleanup the buffer
-    call nvim_buf_set_lines(g:timetrackBuffer, 1, count, 0, [])
+    call nvim_buf_set_lines(g:timetrackBuffer, count, line('$'), 0, [])
 
     for task in tasks
         let task_info = split(task, ',')
@@ -101,6 +101,7 @@ function! StoreInFile(...)
         " let l:task_line = taskname . ' ' . time . '(min) ' . state
         call add(all, l:task_line)
         call nvim_buf_set_lines(g:timetrackBuffer, count, count+1, 0, [l:task_line])
+        " call nvim_buf_set_lines(g:timetrackBuffer, count, line('$'), 0, [l:task_line])
         let count += 1
     endfor
 
@@ -191,7 +192,7 @@ endfunction
 
 
 call s:DoCommandConfigruation()
-" nnoremap <silent> <c-t> :call SendDataToTimeTrackService("GetAll")<CR> :b thefux_timetrack<CR>
-nnoremap <silent> <c-t> :call SendDataToTimeTrackService("GetAll")<CR> :lua require('tools').open_buffer(vim.g.timetrackBuffer)<CR>
+nnoremap <silent> <c-t> :call SendDataToTimeTrackService("GetAll")<CR> :b thefux_timetrack<CR>
+" nnoremap <silent> <c-t> :call SendDataToTimeTrackService("GetAll")<CR> :lua require('tools').open_buffer(vim.g.timetrackBuffer)<CR>
 nnoremap <silent> <c-z>z :call UpdateTask()<CR>
 

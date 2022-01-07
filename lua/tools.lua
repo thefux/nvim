@@ -78,7 +78,17 @@ local function create_fwin()
     -- api.nvim_win_set_option(win, 'winhl', 'Normal:CustomFloatingWindow')
     -- api.nvim_win_set_option(win, 'winhl', 'Normal:ErrorFloating')
 
-    return win
+    return win, buf
+end
+
+
+local function create_augroup(autocmds, name)
+    vim.cmd('augroup ' .. name)
+    vim.cmd('autocmd!')
+    for _, autocmd in ipairs(autocmds) do
+        vim.cmd('autocmd ' .. table.concat(autocmd, ' '))
+    end
+    vim.cmd('augroup END')
 end
 
 
@@ -87,4 +97,5 @@ return
     create_fwin = create_fwin,
     on_resize = resize,
     open_buffer = open_buffer,
+    create_augroup = create_augroup,
 }

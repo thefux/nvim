@@ -68,7 +68,7 @@ set showmode
 set foldmethod=manual
 
 set ruler       " show the cursor position all the time
-set spell
+set nospell
 
 hi clear SpellBad
 hi SpellBad cterm=underline

@@ -85,8 +85,7 @@ endfunction
 function! ReplaceForAll(old, new)
     " store file names
     execute 'args ' . QuickfixFilenames()
-    " apply change desired
-    "
+    " apply change
     execute 'argdo ' . '%s/' . a:old . '/' . a:new . '/ge | update'
     execute 'cdo ' . 's/' . a:old . '/' . a:new . '/ge | update'
 
