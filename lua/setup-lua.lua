@@ -16,7 +16,8 @@ local all = {
     'my-plugin/search-and-replace',
     -- 'bufferline-config', out for now because it's not working as i like
     'treesitter-config',
-    'general-settings/settings'
+    'general-settings/settings',
+    'outline-config',
 }
 
 

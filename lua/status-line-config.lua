@@ -31,20 +31,20 @@ gl.short_line_list = {
 }
 
 
-local ProgFileTypes = {
-    'lua',
-    'python',
-    'typescript',
-    'typescriptreact',
-    'react',
-    'javascript',
-    'javascriptreact',
-    'rust',
-    'go',
-    'html',
-    'cpp',
-    'c'
-}
+-- local ProgFileTypes = {
+--     'lua',
+--     'python',
+--     'typescript',
+--     'typescriptreact',
+--     'react',
+--     'javascript',
+--     'javascriptreact',
+--     'rust',
+--     'go',
+--     'html',
+--     'cpp',
+--     'c'
+-- }
 
 
 local colors = {
@@ -93,9 +93,9 @@ end
 
 
 local function lsp_status(status)
-    shorter_stat = ''
+    local shorter_stat = ''
     for match in string.gmatch(status, "[^%s]+")  do
-        err_warn = string.find(match, "^[WE]%d+", 0)
+        local err_warn = string.find(match, "^[WE]%d+", 0)
         if not err_warn then
             shorter_stat = shorter_stat .. ' ' .. match
         end
@@ -133,6 +133,7 @@ local function branch_name()
     if name == 'main' then
         return 'stop working in main'
     end
+
     return name
 end
 
@@ -172,12 +173,12 @@ local function timetrack()
 end
 
 
-
 TimeTrack = timetrack
 BranchName = branch_name
 DebugInfo = get_debug_status
 -- TreesitterContext = get_current_func_from_treesitter
 TrailingWhiteSpace = trailing_whitespace
+
 
 local function has_file_type()
     local f_type = vim.bo.filetype

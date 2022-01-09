@@ -22,10 +22,10 @@ def set_root_directory()::
         for r, d, f in os.walk(os.getcwd()):
             if '.git' in d:
                 need_to_search = False
-                
+
         if need_to_search:
             os.chdir("../.")
-        
+
         count += 1
 
     newpath = os.getcwd()

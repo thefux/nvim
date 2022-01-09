@@ -92,6 +92,7 @@ Plug 'williamboman/nvim-lsp-installer'
 " See hrsh7th's other plugins for more completion sources!
 
 " To enable more of the features of rust-analyzer, such as inlay hints and more!
+ Plug 'simrat39/symbols-outline.nvim'
  Plug 'simrat39/rust-tools.nvim'
  Plug 'saecki/crates.nvim', {'tag': 'v0.1.0'}
 
@@ -111,9 +112,6 @@ Plug 'nvim-telescope/telescope.nvim'
 
 " zoom In/Out
 Plug 'drzel/vim-gui-zoom'
-
-" tag support
-Plug 'ludovicchabant/vim-gutentags'
 
 " linter
 Plug 'mfussenegger/nvim-lint'

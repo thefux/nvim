@@ -2,6 +2,7 @@ if !exists("g:thefuxid")
     echoerr 'timetrack: no g:thefuxid, make sure you stated the process'
 endif
 
+
 if exists("g:timetrackBuffer")
     unlet g:timetrackBuffer
 endif

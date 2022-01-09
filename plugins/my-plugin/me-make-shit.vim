@@ -27,7 +27,7 @@ endfunction
 
 function! RaplceWordInFile()
     call inputsave()
-    let l:old = input('type word to replace: ')
+    let l:old = input('type word to replace (in file): ')
     if len(l:old) == 0
         return
     endif
@@ -187,17 +187,17 @@ command! -nargs=0 RaplceWordInFile :call RaplceWordInFile()<CR>
 map <silent> <F6> :call ReplaceCurrentWord()<CR>
 map <silent> <c-F6> :call RaplceWordInFile()<CR>
 
-command! -nargs=0 SearchAll :call s:doStuf(1)
-command! -nargs=0 ReplaceCurrentWordAll :call s:doStuf(2)
-command! -nargs=0 UndoLastReplaceCurrentWord :call s:doStuf(3)
-command! -nargs=0 ReplaceWordAll :call s:doStuf(4)
+" command! -nargs=0 SearchAll :call s:doStuf(1)
+" command! -nargs=0 ReplaceCurrentWordAll :call s:doStuf(2)
+" command! -nargs=0 UndoLastReplaceCurrentWord :call s:doStuf(3)
+" command! -nargs=0 ReplaceWordAll :call s:doStuf(4)
 
 " map <silent> <F9> :Rooter<CR> :call SearchAll()<CR> :cd %:p:h<CR>
-map <silent> <leader>S :Rooter<CR> :call SearchAll()<CR> :cd %:p:h<CR>
-map <silent> <c-F9> :Rooter<CR> :call SearchFor()<CR> :cd %:p:h<CR>
-map <silent> <F7> :<C-U> :Rooter<CR>:call ReplaceCurrentWordAll()<CR> :cd %:p:h<CR>
-map <silent> <c-F8> :Rooter<CR> :call UndoLastReplaceCurrentWord()<CR>  :cd %:p:h<CR>
-map <silent> <c-F7> :Rooter<CR> :call ReplaceWordAll()<CR>  :cd %:p:h<CR>
+" map <silent> <leader>S :Rooter<CR> :call SearchAll()<CR> :cd %:p:h<CR>
+" map <silent> <c-F9> :Rooter<CR> :call SearchFor()<CR> :cd %:p:h<CR>
+" map <silent> <F7> :<C-U> :Rooter<CR>:call ReplaceCurrentWordAll()<CR> :cd %:p:h<CR>
+" map <silent> <c-F8> :Rooter<CR> :call UndoLastReplaceCurrentWord()<CR>  :cd %:p:h<CR>
+" map <silent> <c-F7> :Rooter<CR> :call ReplaceWordAll()<CR>  :cd %:p:h<CR>
 "]]
 
 

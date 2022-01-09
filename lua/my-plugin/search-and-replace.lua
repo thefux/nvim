@@ -3,17 +3,29 @@
 --      * open in a fwindow or swindow
 --      * filter by file type
 
+vim.g.search_options = {
+    grepprg = 'rg -n',
+    excludes = {'.git', 'node_modules', 'site_packages', 'tags', 'tags~', 'tagz~'},
+}
+
+
 local function find_word(opts)
     -- TODO: this dependency is not ideal ??
     local root_dir = vim.api.nvim_eval('FindRootDirectory()')
 
-    opts = {
-        word = opts['word'] or vim.fn.expand('<cword>') or vim.fn.input('Enter word: ')
-    }
-
     -- TODO: opts can contain some search options
-    vim.opt.grepprg = 'rg -n'
-    vim.fn.execute('grep ' .. opts.word .. ' ' .. root_dir)
+    local grepprg = vim.g.search_options.grepprg or 'rg -n'
+    vim.opt.grepprg = grepprg
+
+    local options = ''
+
+    if vim.g.search_options.excludes then
+        local all = table.concat(vim.g.search_options.excludes, ',')
+        options = options .. '-g!{' .. all .. '}'
+    end
+
+    local command = 'grep! ' .. opts.word .. ' ' .. options .. ' ' .. root_dir
+    vim.fn.execute(command)
 
     if #vim.fn.getqflist() == 0 then
         print('No word was found')
@@ -31,13 +43,15 @@ end
 -- replace will only work after searching one time
 local function replace_word(opts)
     opts = {
-        word = opts['word'] and opts['word'] or vim.fn.input('Replace word: '),
+        word = opts.word,
         replacement = vim.fn.input('Replacement: '),
     }
 
     if opts.word == '' or opts.replacement == '' then
         return
     end
+
+    find_word(opts)
 
     vim.fn.execute('cdo %s/' .. opts['word'] .. '/' .. opts['replacement'] .. '/ge | update')
     vim.g['undo_replace_command'] = 'cdo ' .. '%s/' .. opts['replacement'] .. '/' .. opts['word'] .. '/ge | update'
@@ -65,8 +79,12 @@ end
 
 
 -- TODO: refine to support options
-vim.api.nvim_set_keymap('n', '<leader>H', '<Cmd>lua require"my-plugin/search-and-replace".replace_word({})<CR>', {})
-vim.api.nvim_set_keymap('n', '<leader>F', '<Cmd>lua require"my-plugin/search-and-replace".find_word({})<CR>', {})
+vim.api.nvim_set_keymap('n', '<F7>', '<Cmd>lua require"my-plugin/search-and-replace".find_word({word = vim.fn.expand("<cword>")})<CR>', {})
+vim.api.nvim_set_keymap('n', '<c-F7>', '<Cmd>lua require"my-plugin/search-and-replace".find_word({word = vim.fn.input("Enter word: ")})<CR>', {})
+
+vim.api.nvim_set_keymap('n', '<leader>H', '<Cmd>lua require"my-plugin/search-and-replace".replace_word({word = vim.fn.expand("<cword>")})<CR>', {})
+vim.api.nvim_set_keymap('n', '<leader>HH', '<Cmd>lua require"my-plugin/search-and-replace".replace_word({word = vim.fn.input("Enter word: ")})<CR>', {})
+
 vim.api.nvim_set_keymap('n', '<leader>U', '<Cmd>lua require"my-plugin/search-and-replace".reverse_replace_action()<CR>', {})
 
 

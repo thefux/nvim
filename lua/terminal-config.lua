@@ -8,6 +8,11 @@ local function setup_terminal()
     end
 end
 
+vim.api.nvim_set_keymap('t', '<C-h>', '<C-\\><C-n><C-h>', {})
+vim.api.nvim_set_keymap('t', '<C-j>', '<C-\\><C-n><C-j>', {})
+vim.api.nvim_set_keymap('t', '<C-k>', '<C-\\><C-n>C-k>', {})
+-- vim.api.nvim_set_keymap('t', '<C-l>', '<C-\\><C-n>C-l>', {})
+
 setup_terminal()
 
 local tools = require('tools')

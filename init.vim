@@ -7,7 +7,6 @@ source $HOME/AppData/local/nvim/plugins/startify.vim
 source $HOME/AppData/local/nvim/plugins/rooter.vim
 source $HOME/AppData/local/nvim/plugins/snippets.vim
 source $HOME/AppData/local/nvim/plugins/ctrlP.vim
-source $HOME/AppData/local/nvim/plugins/tagbar.vim
 source $HOME/AppData/local/nvim/plugins/nerdtree.vim
 source $HOME/AppData/local/nvim/plugins/undotree.vim
 source $HOME/AppData/local/nvim/plugins/rooter.vim

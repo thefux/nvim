@@ -1,15 +1,3 @@
-" terminal[[
-func! Terminal()
-    if has('win32')
-        nnoremap <leader>tt :terminal<CR> pwsh<CR>
-        nnoremap <leader>tv <C-w>v :terminal<CR> pwsh<CR>
-    else
-        nnoremap <leader>tt :terminal<CR>
-        nnoremap <leader>tv <C-w>v :terminal<CR>
-    endif
-endfunc
-"]]
-
 " escape terminal insert mode [[
 tnoremap <Esc> <C-\><C-n>
 "]]
