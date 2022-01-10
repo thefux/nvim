@@ -49,7 +49,7 @@ function! s:TerminaTethefux()
     " call rpcnotify(s:thefuxid, s:terminate)
 endfunction
 
-command! Terminatethefux :call s:terminatethefux()
+command! Terminatethefux :call s:TerminaTethefux()
 
 
 function! s:onerror(id, data, event)
