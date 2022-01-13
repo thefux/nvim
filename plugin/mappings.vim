@@ -1,7 +1,3 @@
-" escape terminal insert mode [[
-tnoremap <Esc> <C-\><C-n>
-"]]
-
 " navigation"[[
 nnoremap bn ^
 nnoremap en $

@@ -10,7 +10,7 @@ local all = {
     'status-line-config',
     'terminal-config',
     'git-config',
-    'tree-config',
+    -- 'tree-config',
     'spectre-config',
     'surround-config',
     'my-plugin/search-and-replace',
@@ -18,6 +18,7 @@ local all = {
     'treesitter-config',
     'general-settings/settings',
     'outline-config',
+    'telescope-config',
 }
 
 

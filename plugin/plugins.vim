@@ -32,7 +32,8 @@ Plug 'octol/vim-cpp-enhanced-highlight'
 " prettier
 Plug 'sbdchd/neoformat'
 
-Plug 'kdheepak/lazygit.nvim', { 'branch': 'nvim-v0.4.3' }
+" Plug 'akinsho/toggleterm.nvim'
+" Plug 'kdheepak/lazygit.nvim', { 'branch': 'nvim-v0.4.3' }
 Plug 'kdheepak/lazygit.nvim'
 
 
