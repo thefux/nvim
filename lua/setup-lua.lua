@@ -34,16 +34,3 @@ end
 for _, value in ipairs(all) do
     require(value)
 end
-
--- require("lsp-lua")
--- require("lsp-rust")
--- require("lsp-python")
--- require("completion")
--- require("lsp-config")
-
--- require("debug-config")
--- require("debug-python")
--- require("debug-rust")
--- require("status-line-config")
--- require("terminal-config")
-
