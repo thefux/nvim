@@ -22,10 +22,6 @@ source $HOME/AppData/local/nvim/plugins/grpc.vim
 
 source $HOME/AppData/local/nvim/plugins/tree.vim
 
-augroup coc-cpp-config
-    autocmd!
-    " autocmd! BufEnter *.cpp, *.h :source $HOME/AppData/local/nvim/plugins/coc-cpp-config.vim
-augroup end
 
 " my plugins
 " make sure the base plugin is loaded first
