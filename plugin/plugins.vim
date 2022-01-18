@@ -8,8 +8,8 @@ Plug 'airblade/vim-rooter'
 Plug 'ctrlpvim/ctrlp.vim'
 " Plug 'preservim/tagbar'
 
-Plug 'preservim/nerdtree'
-Plug 'Xuyuanp/nerdtree-git-plugin'
+" Plug 'preservim/nerdtree'
+" Plug 'Xuyuanp/nerdtree-git-plugin'
 
 Plug 'szw/vim-maximizer'
 
