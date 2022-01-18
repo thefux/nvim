@@ -5,7 +5,7 @@ Plug 'rust-lang/rust.vim'
 Plug 'christoomey/vim-tmux-navigator'
 Plug 'airblade/vim-rooter'
 
-Plug 'ctrlpvim/ctrlp.vim'
+" Plug 'ctrlpvim/ctrlp.vim'
 " Plug 'preservim/tagbar'
 
 " Plug 'preservim/nerdtree'
@@ -141,6 +141,8 @@ Plug 'blackcauldron7/surround.nvim'
 " use later
 Plug 'skywind3000/asyncrun.vim'
 Plug 'skywind3000/asynctasks.vim'
+
+Plug 'dhruvmanila/telescope-bookmarks.nvim'
 
 call plug#end()
 

@@ -6,7 +6,6 @@ source $HOME/AppData/local/nvim/plugins/tmux-like.vim
 source $HOME/AppData/local/nvim/plugins/startify.vim
 source $HOME/AppData/local/nvim/plugins/rooter.vim
 source $HOME/AppData/local/nvim/plugins/snippets.vim
-source $HOME/AppData/local/nvim/plugins/ctrlP.vim
 source $HOME/AppData/local/nvim/plugins/undotree.vim
 source $HOME/AppData/local/nvim/plugins/rooter.vim
 source $HOME/AppData/local/nvim/plugins/maximizer.vim
@@ -21,7 +20,7 @@ source $HOME/AppData/local/nvim/plugins/grpc.vim
 
 source $HOME/AppData/local/nvim/plugins/tree.vim
 " source $HOME/AppData/local/nvim/plugins/nerdtree.vim
-
+" source $HOME/AppData/local/nvim/plugins/ctrlP.vim
 
 " my plugins
 " make sure the base plugin is loaded first
