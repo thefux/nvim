@@ -8,11 +8,7 @@ local function find_files()
     local root_path = vim.fn.eval('FindRootDirectory()')
     local _, e = current_path:find(root_path, 0, 0)
     local diff_path = string.sub(current_path, e + 1)
-
     local _, count = string.gsub(diff_path, "\\", "")
-    -- -- print(diff, count)
-    -- vim.fn.input(count)
-
     telescope.find_files({
         cwd = string.rep('../', count),
     })
