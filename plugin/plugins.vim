@@ -5,7 +5,7 @@ Plug 'rust-lang/rust.vim'
 Plug 'christoomey/vim-tmux-navigator'
 Plug 'airblade/vim-rooter'
 
-" Plug 'ctrlpvim/ctrlp.vim'
+Plug 'ctrlpvim/ctrlp.vim'
 " Plug 'preservim/tagbar'
 
 " Plug 'preservim/nerdtree'

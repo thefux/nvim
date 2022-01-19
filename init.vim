@@ -16,11 +16,12 @@ source $HOME/AppData/local/nvim/plugins/neovide.vim
 source $HOME/AppData/local/nvim/plugins/tags.vim
 source $HOME/AppData/local/nvim/plugins/lsp.vim
 source $HOME/AppData/local/nvim/plugins/lua_plug.vim
+source $HOME/AppData/local/nvim/plugins/ctrlP.vim
+
 source $HOME/AppData/local/nvim/plugins/grpc.vim
 
 source $HOME/AppData/local/nvim/plugins/tree.vim
 " source $HOME/AppData/local/nvim/plugins/nerdtree.vim
-" source $HOME/AppData/local/nvim/plugins/ctrlP.vim
 
 " my plugins
 " make sure the base plugin is loaded first
