@@ -144,5 +144,11 @@ Plug 'skywind3000/asynctasks.vim'
 
 Plug 'dhruvmanila/telescope-bookmarks.nvim'
 
+
+Plug 'sidebar-nvim/sidebar.nvim'
+Plug 'elihunter173/dirbuf.nvim'
+
+Plug 'ThePrimeagen/git-worktree.nvim'
+
 call plug#end()
 

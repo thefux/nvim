@@ -10,7 +10,7 @@ require'nvim-tree'.setup {
   hijack_cursor       = false,
   update_cwd          = true,
   update_to_buf_dir   = {
-    enable = true,
+    enable = false,
     auto_open = true,
   },
   diagnostics = {
@@ -23,7 +23,7 @@ require'nvim-tree'.setup {
     }
   },
   update_focused_file = {
-    enable      = true,
+    enable      = false,
     update_cwd  = true,
     ignore_list = {}
   },

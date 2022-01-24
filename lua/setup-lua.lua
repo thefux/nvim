@@ -14,11 +14,13 @@ local all = {
     'spectre-config',
     'surround-config',
     'my-plugin/search-and-replace',
-    -- 'bufferline-config', out for now because it's not working as i like
     'treesitter-config',
     'general-settings/settings',
     'outline-config',
     'telescope-config',
+    'worktree-config',
+    -- 'bufferline-config', out for now because it's not working as i like
+    -- 'sidebar-config',
 }
 
 
