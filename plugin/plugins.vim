@@ -33,8 +33,7 @@ Plug 'octol/vim-cpp-enhanced-highlight'
 Plug 'sbdchd/neoformat'
 
 " Plug 'akinsho/toggleterm.nvim'
-" Plug 'kdheepak/lazygit.nvim', { 'branch': 'nvim-v0.4.3' }
-Plug 'kdheepak/lazygit.nvim'
+Plug 'thefux/lazygit.nvim'        " Plug 'kdheepak/lazygit.nvim'
 
 
 Plug 'vimwiki/vimwiki'
@@ -148,7 +147,7 @@ Plug 'dhruvmanila/telescope-bookmarks.nvim'
 Plug 'sidebar-nvim/sidebar.nvim'
 Plug 'elihunter173/dirbuf.nvim'
 
-Plug 'ThePrimeagen/git-worktree.nvim'
+Plug 'thefux/git-worktree.nvim'   " Plug 'ThePrimeagen/git-worktree.nvim'
 
 call plug#end()
 
