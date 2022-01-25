@@ -2,6 +2,7 @@ local all = {
     'lsp-lua',
     'lsp-rust',
     'lsp-python',
+    'lsp-cpp',
     'lsp-config',
     'completion',
     'debug-python',
