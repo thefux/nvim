@@ -21,6 +21,7 @@ source $HOME/AppData/local/nvim/plugins/ctrlP.vim
 source $HOME/AppData/local/nvim/plugins/grpc.vim
 
 source $HOME/AppData/local/nvim/plugins/tree.vim
+source $HOME/AppData/local/nvim/plugins/ale.vim
 " source $HOME/AppData/local/nvim/plugins/nerdtree.vim
 
 " my plugins

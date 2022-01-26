@@ -2,7 +2,6 @@ local all = {
     'lsp-lua',
     'lsp-rust',
     'lsp-python',
-    'lsp-cpp',
     'lsp-config',
     'completion',
     'debug-python',
@@ -20,6 +19,8 @@ local all = {
     'outline-config',
     'telescope-config',
     'worktree-config',
+    -- 'lsp-cpp',
+    -- 'treesitter-config',
     -- 'bufferline-config', out for now because it's not working as i like
     -- 'sidebar-config',
 }

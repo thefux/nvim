@@ -149,5 +149,6 @@ Plug 'elihunter173/dirbuf.nvim'
 
 Plug 'thefux/git-worktree.nvim'   " Plug 'ThePrimeagen/git-worktree.nvim'
 
+Plug 'dense-analysis/ale'
 call plug#end()
 
