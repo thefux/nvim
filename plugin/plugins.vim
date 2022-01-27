@@ -58,13 +58,16 @@ Plug 'junegunn/gv.vim'
 Plug 'f-person/git-blame.nvim'
 Plug 'itchyny/vim-gitbranch'
 
+Plug 'thefux/git-worktree.nvim'   " Plug 'ThePrimeagen/git-worktree.nvim'
+
 " code snippets
 " Plug 'SirVer/ultisnips'
 " Plug 'honza/vim-snippets'
 
 
 " comment code or whatever
-Plug 'tpope/vim-commentary'
+" Plug 'tpope/vim-commentary'
+Plug 'b3nj5m1n/kommentary'
 
 " list key bindings
 Plug 'liuchengxu/vim-which-key'
@@ -146,8 +149,6 @@ Plug 'dhruvmanila/telescope-bookmarks.nvim'
 
 Plug 'sidebar-nvim/sidebar.nvim'
 Plug 'elihunter173/dirbuf.nvim'
-
-Plug 'thefux/git-worktree.nvim'   " Plug 'ThePrimeagen/git-worktree.nvim'
 
 Plug 'dense-analysis/ale'
 call plug#end()

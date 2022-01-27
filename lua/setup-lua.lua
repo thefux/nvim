@@ -19,6 +19,7 @@ local all = {
     'outline-config',
     'telescope-config',
     'worktree-config',
+    'commentary-config'
     -- 'lsp-cpp',
     -- 'treesitter-config',
     -- 'bufferline-config', out for now because it's not working as i like
