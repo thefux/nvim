@@ -56,7 +56,7 @@ noremap <silent> <C-\|> <C-w>v
 "]]
 
 " copy and paste from clipboard [[
-nnoremap <silent> <leader>p "+p 
+nnoremap <silent> <leader>p "+p
 map <silent> <leader>c "*y
 "]]
 
@@ -83,22 +83,22 @@ xnoremap <silent> p pgvy
 " [z move to start of open fold.
 " ]z move to end of open fold.
 " @ Source: www.linux.com/lean/vim-tips-folding-fun@
- 
- 
- 
+
+
+
 " Relative number modus.
 " [#]j: go to the #(line number) forward
 " [#]k: go to the #(line number) backward
- 
- 
- 
+
+
+
 " move vim page up and down.
 " <c-b>   -   move back one full screen
 " <c-f>   -   move forward one full screen
 " <c-d>   -   move forward 1/2 screen
 " <c-u>   -   move back 1/2 screen
- 
- 
+
+
 " move in the screen
 " zz - move current line to the middle of the screen
 " zt - move current line to the top of the screen
