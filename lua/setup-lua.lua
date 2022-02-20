@@ -19,12 +19,15 @@ local all = {
     'outline-config',
     'telescope-config',
     'worktree-config',
-    'commentary-config'
+    'commentary-config',
     -- 'lsp-cpp',
     -- 'treesitter-config',
     -- 'bufferline-config', out for now because it's not working as i like
     -- 'sidebar-config',
 }
+
+require('telescope').load_extension('lazygit_telescope')
+vim.api.nvim_set_keymap('n', '<leader>lg', '<Cmd>lua require("telescope").extensions.lazygit_telescope.lazygit()<CR>', {})
 
 
 -- TODO: put in a function and automate loading a reloading

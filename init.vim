@@ -21,8 +21,9 @@ source $HOME/AppData/local/nvim/plugins/ctrlP.vim
 source $HOME/AppData/local/nvim/plugins/grpc.vim
 
 source $HOME/AppData/local/nvim/plugins/tree.vim
-source $HOME/AppData/local/nvim/plugins/ale.vim
 " source $HOME/AppData/local/nvim/plugins/nerdtree.vim
+"
+source $HOME/AppData/local/nvim/plugins/my-plugin/thefuxVimScripting.vim
 
 " my plugins
 " make sure the base plugin is loaded first

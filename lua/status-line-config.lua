@@ -76,8 +76,13 @@ local function file_readonly(readonly_icon)
 end
 -- get current file name
 local function get_current_file_name()
+    local root_dir = vim.fn.fnamemodify(vim.fn.getcwd(), ':t')
     local file = vim.fn.expand('%:t:r')
-    -- local file = vim.fn.expand('%:f')
+
+    if (vim.bo.filetype == 'rust') then
+        file = root_dir .. '/' .. file
+    end
+
     if vim.fn.empty(file) == 1 then return '' end
     if string.len(file_readonly(readonly_icon)) ~= 0 then
         return file .. file_readonly(readonly_icon)

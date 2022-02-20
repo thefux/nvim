@@ -1,24 +1,21 @@
 call plug#begin('$HOME/AppData/Local/nvim/plugged')
-Plug 'rust-lang/rust.vim'
 
+Plug 'rust-lang/rust.vim'
 
 Plug 'christoomey/vim-tmux-navigator'
 Plug 'airblade/vim-rooter'
-
 Plug 'ctrlpvim/ctrlp.vim'
-" Plug 'preservim/tagbar'
 
+" Plug 'preservim/tagbar'
 " Plug 'preservim/nerdtree'
 " Plug 'Xuyuanp/nerdtree-git-plugin'
 
 Plug 'szw/vim-maximizer'
-
 Plug 'mbbill/undotree'
-
 Plug 'mhinz/vim-startify'
 
 " save last position
-Plug 'tweekmonster/gofmt.vim'
+" Plug 'tweekmonster/gofmt.vim'
 Plug 'gennaro-tedesco/nvim-peekup'
 
 " scheme
@@ -39,14 +36,13 @@ Plug 'thefux/lazygit.nvim'        " Plug 'kdheepak/lazygit.nvim'
 Plug 'vimwiki/vimwiki'
 
 " Plug 'ervandew/supertab'
-
 Plug 'nikvdp/neomux'
 
 " vim register overview and more
 Plug 'gennaro-tedesco/nvim-peekup'
 
 " status line scheme
-Plug 'itchyny/lightline.vim'
+" Plug 'itchyny/lightline.vim'
 
 Plug 'jiangmiao/auto-pairs'
 Plug 'blackcauldron7/surround.nvim'
@@ -150,6 +146,6 @@ Plug 'dhruvmanila/telescope-bookmarks.nvim'
 Plug 'sidebar-nvim/sidebar.nvim'
 Plug 'elihunter173/dirbuf.nvim'
 
-Plug 'dense-analysis/ale'
+" Plug 'dense-analysis/ale'
 call plug#end()
 

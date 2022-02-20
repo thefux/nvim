@@ -1,2 +1,2 @@
-nnoremap <silent> <leader>gg :LazyGit<CR>
+" nnoremap <silent> <leader>gg :LazyGit<CR>
 

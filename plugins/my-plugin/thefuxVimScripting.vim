@@ -9,7 +9,7 @@ def set_root_directory()::
 
     path = "."
     oldDirectory = os.getcwd()
-    
+
     need_to_search = True
 
     count = 0
@@ -59,7 +59,7 @@ def find_usage_py():
 
 def get_needed_keyword():
     return
-    
+
 end
 endfunction
 
@@ -101,11 +101,9 @@ def open_file(files):
           vim.command(":tabe " + files[range])
       except vim.error:
           print("command could no be executed")
-            
   else:
       vim.command(":tabe " + files[0])
-    
-    
+
 def find_file_path():
   files = []
   search_for = vim.eval("currentword")
@@ -157,7 +155,7 @@ class Message:
     def print_cpp_out_message(self):
         self.message_form = ('std::cout << "" << ' + vim.eval('currentword') + ' << std::endl;')
         self.cursor_pos = self.message_form.find('"') + 1
-        
+
 
     def print_python_out_message(self):
         self.message_form =  ("print('{}'.format(" + vim.eval('currentword') + "))")
@@ -166,7 +164,7 @@ class Message:
 
     def adjust_out_message(self):
         if len(self.message_form) == 0 or self.cursor_pos == None:
-            print("form not supported") 
+            print("form not supported")
             return
 
         form_length = len(self.message_form) + self.last_cursor_line_postion[1]
@@ -321,7 +319,7 @@ def find_pattern(eof, start_point, pattern, look_up):
                 found = False
                 break
 
-    return start_point 
+    return start_point
 
 
 def delete_python_function():
@@ -371,5 +369,9 @@ def find_function_python_file():
 end
 endfunction
 
-" TODO: comment multiple line at once
-"       delete hole function, move or copy
+
+augroup thefuxscript
+    autocmd!
+    command! -nargs=+ DeleteMultipleLines :call SendDataToTimeTrackService(<f-args>)
+augroup end
+

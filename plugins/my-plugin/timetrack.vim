@@ -30,7 +30,7 @@ if !exists("g:timetrackBuffer")
 
     call setbufvar(g:timetrackBuffer, "&filetype", "ThefuxTimetrack")
     call setbufvar(g:timetrackBuffer, "&buftype", "nofile")
-    call setbufvar(g:timetrackBuffer, "&buflisted", "1")
+    call setbufvar(g:timetrackBuffer, "&buflisted", "0")
     call setbufvar(g:timetrackBuffer, "&readonly", "1")
     call setbufvar(g:timetrackBuffer, "&modifiable", "0")
 
