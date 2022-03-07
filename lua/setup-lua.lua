@@ -26,8 +26,8 @@ local all = {
     -- 'sidebar-config',
 }
 
-require('telescope').load_extension('lazygit_telescope')
-vim.api.nvim_set_keymap('n', '<leader>lg', '<Cmd>lua require("telescope").extensions.lazygit_telescope.lazygit()<CR>', {})
+require('telescope').load_extension('lazygit')
+vim.api.nvim_set_keymap('n', '<leader>lg', '<Cmd>lua require("telescope").extensions.lazygit.lazygit()<CR>', {})
 
 
 -- TODO: put in a function and automate loading a reloading

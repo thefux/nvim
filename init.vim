@@ -39,6 +39,10 @@ lua require("setup-lua")
 
 source $HOME/AppData/local/nvim/plugins/debug.vim
 
+augroup LaygitBuffEnter
+    autocmd!
+    autocmd BufEnter * :lua require('lazygit.utils').project_root_dir()
+augroup end
 
 " TODO: move this to somewhere else
 augroup Terminal
