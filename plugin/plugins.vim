@@ -1,5 +1,6 @@
 call plug#begin('$HOME/AppData/Local/nvim/plugged')
 
+Plug 'brooth/far.vim'
 Plug 'rust-lang/rust.vim'
 
 Plug 'christoomey/vim-tmux-navigator'

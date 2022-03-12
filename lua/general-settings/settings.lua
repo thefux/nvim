@@ -13,7 +13,6 @@ vim.api.nvim_create_autocmd(
     {
         group = group,
         callback = function()
-            -- vim.api.nvim_command('"cd " .. vim.fn.getcwd()')
             vim.api.nvim_set_keymap('n', '<leader>ff', ':Telescope find_files<cr>', {noremap = true, silent = true})
             vim.api.nvim_set_keymap('n', '<leader>fg', ':Telescope live_grep<cr>', {noremap = true, silent = true})
             vim.api.nvim_set_keymap('n', '<leader>fb', ':Telescope buffers<cr>', {noremap = true, silent = true})
@@ -25,5 +24,26 @@ vim.api.nvim_create_autocmd(
             vim.g.tmux_navigator_save_on_switch = 2
         end,
     }
+)
+
+vim.api.nvim_create_autocmd(
+    'BufEnter',
+    {
+        group = group,
+        callback = function()
+            vim.api.nvim_command(":lua require('lazygit.utils').project_root_dir()")
+        end
+        }
+)
+
+
+vim.api.nvim_create_autocmd(
+    'TermOpen',
+    {
+        group = group,
+        callback = function()
+            vim.api.nvim_command("setlocal nospell nonumber norelativenumber")
+        end
+        }
 )
 

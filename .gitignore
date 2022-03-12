@@ -1,6 +1,4 @@
-ftplugin
 plug-config
-plugged
 snippets
 coc-setting.json
 tags.lock
@@ -9,3 +7,5 @@ tags.temp
 target/log
 target/hello.json
 spell
+
+target/tasks.json
