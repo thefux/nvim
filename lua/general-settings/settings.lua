@@ -9,12 +9,20 @@ vim.api.nvim_create_autocmd(
 )
 
 vim.api.nvim_create_autocmd(
-    'BufEnter',
+    'VimEnter',
     {
         group = group,
         callback = function()
-            vim.api.nvim_command('"cd " .. vim.fn.getcwd()')
+            -- vim.api.nvim_command('"cd " .. vim.fn.getcwd()')
             vim.api.nvim_set_keymap('n', '<leader>ff', ':Telescope find_files<cr>', {noremap = true, silent = true})
+            vim.api.nvim_set_keymap('n', '<leader>fg', ':Telescope live_grep<cr>', {noremap = true, silent = true})
+            vim.api.nvim_set_keymap('n', '<leader>fb', ':Telescope buffers<cr>', {noremap = true, silent = true})
+            vim.api.nvim_set_keymap('n', '<leader>fh', ':Telescope help_tags<cr>', {noremap = true, silent = true})
+            vim.api.nvim_set_keymap('n', '<c-m>', ':MaximizerToggle<cr>', {noremap = true, silent = true})
+            vim.api.nvim_set_keymap('n', '<c-->', ':ZoomIn<cr>', {noremap = true, silent = true})
+            vim.api.nvim_set_keymap('n', '<c-+>', ':ZoomOut<cr>', {noremap = true, silent = true})
+            vim.api.nvim_set_keymap('n', '<F4>', ':UndotreeToogle<cr>', {noremap = true, silent = true})
+            vim.g.tmux_navigator_save_on_switch = 2
         end,
     }
 )
