@@ -1,4 +1,4 @@
-" ultisnips config 
+" ultisnips config
 let g:UltiSnipsExpandTrigger='<c-j>'
 " shortcut to go to next position
 " let g:UltiSnipsJumpForwardTrigger='<c-j>'
@@ -28,4 +28,4 @@ smap <expr> <S-Tab> vsnip#jumpable(-1)  ? '<Plug>(vsnip-jump-prev)'      : '<S-T
 " let g:vsnip_filetypes = {}
 " let g:vsnip_filetypes.rust = ['rust']
 " let g:vsnip_filetypes.rust = ['rust']
-" 
+"

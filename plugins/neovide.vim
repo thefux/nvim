@@ -1,4 +1,4 @@
-let g:neovide_refresh_rate = 500
+let g:neovide_refresh_rate = 50
 let g:neovide_transparency=0.8
 let g:neovide_fullscreen = v:false
 let g:neovide_remember_window_size = v:true

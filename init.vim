@@ -22,9 +22,7 @@ source $HOME/AppData/local/nvim/plugins/grpc.vim
 
 source $HOME/AppData/local/nvim/plugins/tree.vim
 " source $HOME/AppData/local/nvim/plugins/nerdtree.vim
-"
-source $HOME/AppData/local/nvim/plugins/my-plugin/thefuxVimScripting.vim
-
+" source $HOME/AppData/local/nvim/plugins/my-plugin/thefuxVimScripting.vim
 " my plugins
 " make sure the base plugin is loaded first
 source $HOME/AppData/local/nvim/plugins/my-plugin/base.vim

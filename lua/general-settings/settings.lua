@@ -1,13 +1,21 @@
-require'tools'.create_augroup(
+local group = vim.api.nvim_create_augroup('Spell', {clear = true})
+vim.api.nvim_create_autocmd(
+    'BufEnter',
     {
-        {'BufEnter', '*.md', 'setlocal spell'}
-    }, 'Spell'
+        pattern = '*.md',
+        command = ':setlocal spell',
+        group = group,
+    }
 )
 
-
-require'tools'.create_augroup(
+vim.api.nvim_create_autocmd(
+    'BufEnter',
     {
-        {'BufEnter', '*', ':lua vim.cmd("cd " .. vim.fn.getcwd(0))'}
-    }, 'Spell'
+        group = group,
+        callback = function()
+            vim.api.nvim_command('"cd " .. vim.fn.getcwd()')
+            vim.api.nvim_set_keymap('n', '<leader>ff', ':Telescope find_files<cr>', {noremap = true, silent = true})
+        end,
+    }
 )
 

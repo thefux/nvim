@@ -1,6 +1,6 @@
 func! OpenScopes()
 lua << EOF
-require'debug-config'.debug_scopes()
+    require'debug-config'.debug_scopes()
 EOF
 endfunction
 
