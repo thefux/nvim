@@ -113,9 +113,10 @@ colorscheme onedark
 highlight Normal guibg=dark
 "]]
 
+" TODO: fix this
 " stay same line after living the Editor "[[
 " au BufWinLeave *.* mkview
-au BufWinEnter *.* silent loadview
+" au BufWinEnter *.* silent loadview
 "]]
 
 " tab Makefile"[[
