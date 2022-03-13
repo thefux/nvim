@@ -6,7 +6,6 @@ source $HOME/AppData/local/nvim/plugins/startify.vim
 source $HOME/AppData/local/nvim/plugins/peekup.vim
 source $HOME/AppData/local/nvim/plugins/which-key.vim
 source $HOME/AppData/local/nvim/plugins/neovide.vim
-source $HOME/AppData/local/nvim/plugins/ctrlP.vim
 source $HOME/AppData/local/nvim/plugins/grpc.vim
 source $HOME/AppData/local/nvim/plugins/tree.vim
 

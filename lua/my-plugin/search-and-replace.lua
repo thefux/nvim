@@ -1,3 +1,5 @@
+local get_root = require'utils.utils'.get_root
+
 -- TODO:
 --  * Add support for different options for search and replace
 --      * open in a fwindow or swindow
@@ -10,9 +12,6 @@ vim.g.search_options = {
 
 
 local function find_word(opts)
-    -- TODO: this dependency is not ideal ??
-    local root_dir = vim.api.nvim_eval('FindRootDirectory()')
-
     -- TODO: opts can contain some search options
     local grepprg = vim.g.search_options.grepprg or 'rg -n'
     vim.opt.grepprg = grepprg
@@ -24,7 +23,7 @@ local function find_word(opts)
         options = options .. '-g!{' .. all .. '}'
     end
 
-    local command = 'grep! ' .. opts.word .. ' ' .. options .. ' ' .. root_dir
+    local command = 'grep! ' .. opts.word .. ' ' .. options .. ' ' .. get_root()
     vim.fn.execute(command)
 
     if #vim.fn.getqflist() == 0 then
