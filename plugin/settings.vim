@@ -91,20 +91,19 @@ if &t_Co > 2 || has("gui_running")
     augroup setColor
         autocmd!
         color desert
-        set nocursorline
+        set nocursorline nocursorcolumn
     augroup END
 endif
 
 function! SetLineHighlight()
     if &cursorline == 0
-        set cursorline
+        set cursorline cursorcolumn
     else
-        set nocursorline
+        set nocursorline nocursorcolumn
     endif
 
     hi CursorLine cterm=NONE ctermbg=darkred ctermfg=white guibg=green
     hi CursorColumn cterm=NONE ctermbg=darkred ctermfg=white guibg=green
-    set cursorline cursorcolumn
 endfunction
 nnoremap <leader>h :call SetLineHighlight()<CR>
 "]]
@@ -115,7 +114,7 @@ highlight Normal guibg=dark
 "]]
 
 " stay same line after living the Editor "[[
-au BufWinLeave *.* mkview
+" au BufWinLeave *.* mkview
 au BufWinEnter *.* silent loadview
 "]]
 
