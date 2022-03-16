@@ -7,8 +7,6 @@ else
 end
 
 vim.api.nvim_set_keymap('t', '<Esc>', '<C-\\><C-n>', {})
-
-
 vim.api.nvim_set_keymap('t', '<C-h>', '<C-\\><C-n><C-h>', {})
 vim.api.nvim_set_keymap('t', '<C-j>', '<C-\\><C-n><C-j>', {})
 vim.api.nvim_set_keymap('t', '<C-k>', '<C-\\><C-n>C-k>', {})
