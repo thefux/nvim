@@ -16,7 +16,7 @@ source $HOME/AppData/local/nvim/plugins/my-plugin/base.vim
 source $HOME/AppData/local/nvim/plugins/my-plugin/timetrack.vim
 source $HOME/AppData/local/nvim/plugins/my-plugin/me-make-shit.vim
 
-call TheFuxInit()   " rust proccess (ugly !!!!)
+call TheFuxInit()   " rust plugin (ugly !!!!)
 
 " this step is required to setup lua scripts
 lua require("setup-lua")

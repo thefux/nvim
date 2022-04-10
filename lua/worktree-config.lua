@@ -18,7 +18,8 @@ end
 
 local group = vim.api.nvim_create_augroup('git-worktree', {clear = true})
 
-vim.api.nvim_create_autocmd('BufEnter',
+vim.api.nvim_create_autocmd(
+    'BufEnter',
     {
         group = group,
         callback = function ()

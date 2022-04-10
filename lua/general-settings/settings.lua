@@ -1,4 +1,5 @@
 local group = vim.api.nvim_create_augroup('Spell', {clear = true})
+
 vim.api.nvim_create_autocmd(
     'BufEnter',
     {
@@ -43,7 +44,7 @@ vim.api.nvim_create_autocmd(
             --       different languages
             vim.api.nvim_command("setlocal wildignore+=*.dll,*.rlib,*.rmeta,*.lib,*.exp,*.timestamp,*.bin,target\\*")
         end
-        }
+    }
 )
 
 
@@ -54,6 +55,17 @@ vim.api.nvim_create_autocmd(
         callback = function()
             vim.api.nvim_command("setlocal nospell nonumber norelativenumber")
         end
-        }
+    }
 )
 
+
+-- to heavy
+-- vim.api.nvim_create_autocmd(
+--     'CursorMoved',
+--     {
+--         group = group,
+--         callback = function()
+--             vim.rpcnotify(0, 'all', {'test'})
+--         end
+--     }
+-- )
