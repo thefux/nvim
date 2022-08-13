@@ -10,7 +10,7 @@ Plug 'szw/vim-maximizer'
 Plug 'mbbill/undotree'
 Plug 'mhinz/vim-startify'
 
-Plug 'dense-analysis/ale'
+" Plug 'dense-analysis/ale'
 
 " scheme
 Plug 'rafi/awesome-vim-colorschemes'
@@ -44,14 +44,19 @@ Plug 'liuchengxu/vim-which-key' ", { 'on': ['WhichKey', 'WhichKey!'] }
 
 Plug 'github/copilot.vim'
 
+Plug 'williamboman/mason.nvim'
+Plug 'williamboman/mason-lspconfig.nvim'
 Plug 'neovim/nvim-lspconfig'
-Plug 'williamboman/nvim-lsp-installer'
+
+" Plug 'williamboman/nvim-lsp-installer'
 
 " Completion framework
  Plug 'hrsh7th/nvim-cmp'
 
  " LSP completion source for nvim-cmp
  Plug 'hrsh7th/cmp-nvim-lsp'
+
+Plug 'onsails/lspkind.nvim'
 
  " Other usefull completion sources
  Plug 'hrsh7th/cmp-path'
@@ -95,6 +100,7 @@ Plug 'windwp/nvim-spectre'
 Plug 'sidebar-nvim/sidebar.nvim'
 Plug 'elihunter173/dirbuf.nvim'
 
+Plug 'Canop/nvim-bacon'
 
 " Plug 'ervandew/supertab'
 " status line scheme

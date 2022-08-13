@@ -1,4 +1,6 @@
 local cmp = require'cmp'
+local lspkind = require('lspkind')
+
 
 cmp.setup({
     -- completion = {
@@ -20,16 +22,28 @@ cmp.setup({
             c = cmp.mapping.close(),
         }),
         ['<CR>'] = cmp.mapping.confirm({ select = true }), -- Accept currently selected item. Set `select` to `false` to only confirm explicitly selected items.
+        ['<C-p>'] = cmp.mapping.select_prev_item(),
+        ['<C-n>'] = cmp.mapping.select_next_item(),
     },
     experimental = {
         ghost_test = true
     },
-    sources = cmp.config.sources({
+    -- formatting = {
+    --     format = lspkind.cmp_format {
+    --         with_text = true,
+    --         menu = {
+    --             buffer   = "[buf]",
+    --             nvim_lsp = "[LSP]",
+    --             path     = "[path]",
+    --         },
+    --     },
+    -- },
+    sources = {
+        -- { name = 'path' },
+        { name = 'buffer'},
         { name = 'nvim_lsp' },
         { name = 'vsnip' },
-    }, {
-        { name = 'buffer' },
-    })
+    }
 })
 
 -- Use buffer source for `/` (if you enabled `native_menu`, this won't work anymore).

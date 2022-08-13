@@ -1,11 +1,19 @@
 " navigation"[[
 nnoremap bn ^
 nnoremap en $
-nnoremap <silent> <leader>q :q<CR>
-nnoremap <silent> <leader>w :w<CR>
-nnoremap <silent> <leader>x :x<CR>
-nnoremap <silent> <leader>xa :xall<CR>
-nnoremap <silent> <leader>bq :bd!<CR>
+if exists("g:vscode")
+    nnoremap <silent> ,q :q<CR>
+    nnoremap <silent> ,w :w<CR>
+    nnoremap <silent> ,x :x<CR>
+    nnoremap <silent> ,xa :xall<CR>
+    nnoremap <silent> ,bq :bd!<CR>
+else
+    nnoremap <silent> <leader>q :q<CR>
+    nnoremap <silent> <leader>w :w<CR>
+    nnoremap <silent> <leader>x :x<CR>
+    nnoremap <silent> <leader>xa :xall<CR>
+    nnoremap <silent> <leader>bq :bd!<CR>
+endif
 "]]
 
 " search [[

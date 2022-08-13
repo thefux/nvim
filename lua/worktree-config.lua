@@ -18,30 +18,30 @@ end
 
 local group = vim.api.nvim_create_augroup('git-worktree', {clear = true})
 
-vim.api.nvim_create_autocmd(
-    'BufEnter',
-    {
-        group = group,
-        callback = function ()
-            vim.api.nvim_add_user_command("SwitchWorktree",
-                function ()
-                    switch_worktree(worktree.switch_worktree)
-                end,
-                {nargs = 0}
-            )
+-- vim.api.nvim_create_autocmd(
+--     'BufEnter',
+--     {
+--         group = group,
+--         callback = function ()
+--             vim.api.nvim_add_user_command("SwitchWorktree",
+--                 function ()
+--                     switch_worktree(worktree.switch_worktree)
+--                 end,
+--                 {nargs = 0}
+--             )
 
-            vim.api.nvim_add_user_command("DeleteWorktree",
-                function ()
-                    switch_worktree(worktree.delete_worktree)
-                end,
-                {nargs = 0}
-            )
+--             vim.api.nvim_add_user_command("DeleteWorktree",
+--                 function ()
+--                     switch_worktree(worktree.delete_worktree)
+--                 end,
+--                 {nargs = 0}
+--             )
 
-            -- broken
-            -- vim.cmd( "command! CreateWorktree " .. ':lua require"git-worktree".create_worktree(vim.fn.input("Worktree: "))')
-        end
-    }
-)
+--             -- broken
+--             -- vim.cmd( "command! CreateWorktree " .. ':lua require"git-worktree".create_worktree(vim.fn.input("Worktree: "))')
+--         end
+--     }
+-- )
 
 
 return

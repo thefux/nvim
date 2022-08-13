@@ -1,5 +1,6 @@
 local runtime_path = vim.split(package.path, ';')
 
+
 require'lspconfig'.sumneko_lua.setup {
     settings = {
         Lua = {

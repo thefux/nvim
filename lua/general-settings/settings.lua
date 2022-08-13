@@ -14,11 +14,8 @@ vim.api.nvim_create_autocmd(
     {
         group = group,
         callback = function()
-            vim.api.nvim_set_keymap('n', '<c-m>', ':MaximizerToggle<cr>', {noremap = true, silent = true})
-            vim.api.nvim_set_keymap('n', '<c-->', ':ZoomIn<cr>', {noremap = true, silent = true})
-            vim.api.nvim_set_keymap('n', '<c-+>', ':ZoomOut<cr>', {noremap = true, silent = true})
+            vim.api.nvim_set_keymap('n', '<cr>', ':MaximizerToggle<cr>', {noremap = true, silent = true})
             vim.api.nvim_set_keymap('n', '<F4>', ':UndotreeToogle<cr>', {noremap = true, silent = true})
-            vim.api.nvim_set_keymap('n', '<c-p>', ':CtrlP<cr>', {noremap = true, silent = true})
             vim.api.nvim_set_keymap('n', '<leader>gs', ':G<cr>', {noremap = true, silent = true})
             vim.api.nvim_set_keymap('n', '<leader>gr', ':diffget //3<cr>', {noremap = true, silent = true})
             vim.api.nvim_set_keymap('n', '<leader>gl', ':diffget //2<cr>', {noremap = true, silent = true})
