@@ -1,9 +1,9 @@
 local configs = require('nvim-treesitter.configs')
 configs.setup{
-    ensure_installed = 'all',
+    ensure_installed = { "cpp", "lua", "rust", "python" },
     highlight = {
         enable = true,
-        disable = {'rust', 'vim'},
+        -- disable = {'rust', 'vim'},
     },
     incremental_selection = {
         enable = true,

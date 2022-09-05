@@ -10,8 +10,6 @@ Plug 'szw/vim-maximizer'
 Plug 'mbbill/undotree'
 Plug 'mhinz/vim-startify'
 
-" Plug 'dense-analysis/ale'
-
 " scheme
 Plug 'rafi/awesome-vim-colorschemes'
 
@@ -147,6 +145,8 @@ Plug 'terryma/vim-multiple-cursors'
 " use later
 " Plug 'skywind3000/asyncrun.vim'
 " Plug 'skywind3000/asynctasks.vim'
+
+" Plug 'dense-analysis/ale'
 
 call plug#end()
 
