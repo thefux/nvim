@@ -108,6 +108,8 @@ Plug 'Canop/nvim-bacon'
 
 Plug 'terryma/vim-multiple-cursors'
 
+Plug 'folke/trouble.nvim'
+
 
 " Plug 'ervandew/supertab'
 " status line scheme

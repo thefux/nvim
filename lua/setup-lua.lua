@@ -26,6 +26,7 @@ local all = {
     'multi-cursors',
     'treesitter-config',
     'aerial-config',
+    'bufferline-config',
     'trouble-config'
     -- 'lsp-cpp',
     -- 'treesitter-config',
