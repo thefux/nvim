@@ -82,6 +82,7 @@ Plug 'drzel/vim-gui-zoom'
 
 " linter
 Plug 'mfussenegger/nvim-lint'
+Plug 'mfussenegger/nvim-lint'
 Plug 'mfussenegger/nvim-dap'
 
 Plug 'nvim-lua/lsp-status.nvim'
@@ -96,6 +97,9 @@ Plug 'glepnir/galaxyline.nvim' , {'branch': 'main'}
 Plug 'kyazdani42/nvim-web-devicons'
 Plug 'kyazdani42/nvim-tree.lua'
 Plug 'windwp/nvim-spectre'
+
+" buffer line
+Plug 'akinsho/bufferline.nvim', { 'tag': 'v2.*' }
 
 Plug 'sidebar-nvim/sidebar.nvim'
 Plug 'elihunter173/dirbuf.nvim'

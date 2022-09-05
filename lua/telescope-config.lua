@@ -11,6 +11,6 @@ vim.api.nvim_set_keymap('n', '<leader>ff', '',
 })
 
 
-vim.api.nvim_set_keymap('n', '<leader>fg', ':Telescope live_grep<cr>', {noremap = true, silent = true})
-vim.api.nvim_set_keymap('n', '<leader>fb', ':Telescope buffers<cr>', {noremap = true, silent = true})
-vim.api.nvim_set_keymap('n', '<leader>fh', ':Telescope help_tags<cr>', {noremap = true, silent = true})
+vim.keymap.set('n', '<leader>fg', ':Telescope live_grep<cr>', {noremap = true, silent = true})
+vim.keymap.set('n', '<leader>fb', ':Telescope buffers<cr>', {noremap = true, silent = true})
+vim.keymap.set('n', '<leader>fh', ':Telescope help_tags<cr>', {noremap = true, silent = true})
