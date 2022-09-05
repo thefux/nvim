@@ -42,7 +42,7 @@ Plug 'b3nj5m1n/kommentary'
 " list key bindings
 Plug 'liuchengxu/vim-which-key' ", { 'on': ['WhichKey', 'WhichKey!'] }
 
-Plug 'github/copilot.vim'
+" Plug 'github/copilot.vim'
 
 Plug 'williamboman/mason.nvim'
 Plug 'williamboman/mason-lspconfig.nvim'
@@ -87,8 +87,10 @@ Plug 'mfussenegger/nvim-lint'
 Plug 'mfussenegger/nvim-dap'
 
 Plug 'nvim-lua/lsp-status.nvim'
-Plug 'nvim-treesitter/nvim-treesitter' ", {'do': ':TSUpdate'}
-" Plug 'nvim-treesitter/playground'
+
+Plug 'nvim-treesitter/nvim-treesitter' , {'do': ':TSUpdate'}
+Plug 'nvim-treesitter/playground'
+Plug 'stevearc/aerial.nvim'
 
 Plug 'glepnir/galaxyline.nvim' , {'branch': 'main'}
 
@@ -101,6 +103,9 @@ Plug 'sidebar-nvim/sidebar.nvim'
 Plug 'elihunter173/dirbuf.nvim'
 
 Plug 'Canop/nvim-bacon'
+
+Plug 'terryma/vim-multiple-cursors'
+
 
 " Plug 'ervandew/supertab'
 " status line scheme

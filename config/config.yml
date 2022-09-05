@@ -14,11 +14,11 @@ gui:
     inactiveBorderColor:
       - green
     optionsTextColor:
-      - white
+      - blue
     selectedLineBgColor:
-      - black
+      - green
     selectedRangeBgColor:
-      - default
+      - blue
     cherryPickedCommitBgColor:
       - blue
     cherryPickedCommitFgColor:
@@ -58,10 +58,10 @@ git:
   allBranchesLogCmd: 'git log --graph --all --color=always --abbrev-commit --decorate --date=relative  --pretty=medium'
   overrideGpg: false # prevents lazygit from spawning a separate process when using GPG
   disableForcePushing: false
-  parseEmoji: true
+  parseEmoji: false
   diffContextSize: 3 # how many lines of context are shown around a change in diffs
 os:
-  editCommand: 'vim' # see 'Configuring File Editing' section
+  editCommand: '' # see 'Configuring File Editing' section
   editCommandTemplate: '{{editor}} {{filename}}'
   openCommand: ''
 refresher:
@@ -201,24 +201,3 @@ keybinding:
     init: 'i'
     update: 'u'
     bulkMenu: 'b'
-customCommands:
-  - key: 'F'
-    command: 'git rm --cached {{.SelectedFile.Name}}'  # remove file that should not be tracked with git
-    context: 'files'
-  - key: 'O'
-    prompts:
-      - type: 'input'
-        title: 'revert ignore staged file'
-        initialValue: 'git update-index --no-skip-worktree '
-    command: 'git log'
-    context: 'files'
-  - key: 'o'
-    command: 'git update-index --skip-worktree {{.SelectedFile.Name}}'
-    context: 'files'
-  # - key: 'u'
-  #   command: 'git update-index --assume-unchanged {{file}}'  # remove file that should not be tracked with git
-  #   context: 'files'
-  - key: 'C'
-    command: "git commit"
-    context: 'global'
-    subprocess: true

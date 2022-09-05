@@ -23,7 +23,9 @@ local all = {
     'commentary-config',
     'mason-config',
     'bacon-config',
-    -- 'treesitter-config',
+    'multi-cursors',
+    'treesitter-config',
+    'aerial-config',
     -- 'lsp-cpp',
     -- 'treesitter-config',
     -- 'bufferline-config', out for now because it's not working as i like
