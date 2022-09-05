@@ -88,7 +88,7 @@ Plug 'nvim-lua/lsp-status.nvim'
 
 Plug 'nvim-treesitter/nvim-treesitter' , {'do': ':TSUpdate'}
 Plug 'nvim-treesitter/playground'
-Plug 'stevearc/aerial.nvim'
+Plug 'stevearc/aerial.nvim'  " TODO: configuration missing
 
 Plug 'glepnir/galaxyline.nvim' , {'branch': 'main'}
 
