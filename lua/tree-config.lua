@@ -11,10 +11,10 @@ require'nvim-tree'.setup {
   update_cwd          = true,
   update_to_buf_dir   = {
     enable = false,
-    auto_open = true,
+    -- auto_open = true,
   },
   diagnostics = {
-    enable = false,
+    enable = true,
     icons = {
       hint = "",
       info = "",

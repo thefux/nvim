@@ -27,7 +27,8 @@ local all = {
     'treesitter-config',
     'aerial-config',
     'bufferline-config',
-    'trouble-config'
+    'trouble-config',
+    'goto-preview-config',
     -- 'lsp-cpp',
     -- 'treesitter-config',
     -- 'bufferline-config', out for now because it's not working as i like

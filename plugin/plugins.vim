@@ -104,12 +104,16 @@ Plug 'akinsho/bufferline.nvim', { 'tag': 'v2.*' }
 Plug 'sidebar-nvim/sidebar.nvim'
 Plug 'elihunter173/dirbuf.nvim'
 
-Plug 'Canop/nvim-bacon'
-
+" mutil cursor support
 Plug 'terryma/vim-multiple-cursors'
 
+" show all lsp infos (warning, error, etc.)
 Plug 'folke/trouble.nvim'
 
+" code formatter
+Plug 'mhartington/formatter.nvim'
+
+Plug 'rmagatti/goto-preview'
 
 " Plug 'ervandew/supertab'
 " status line scheme

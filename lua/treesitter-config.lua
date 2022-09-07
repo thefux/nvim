@@ -1,5 +1,4 @@
-local configs = require('nvim-treesitter.configs')
-configs.setup{
+require('nvim-treesitter.configs').setup{
     ensure_installed = { "cpp", "lua", "rust", "python" },
     highlight = {
         enable = true,
