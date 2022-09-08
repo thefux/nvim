@@ -115,6 +115,8 @@ Plug 'mhartington/formatter.nvim'
 
 Plug 'rmagatti/goto-preview'
 
+Plug 'sonarom/buffer_manager.nvim'
+
 " Plug 'ervandew/supertab'
 " status line scheme
 " Plug 'itchyny/lightline.vim'

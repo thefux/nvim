@@ -29,6 +29,7 @@ local all = {
     'bufferline-config',
     'trouble-config',
     'goto-preview-config',
+    'buffer-manager-config'
     -- 'lsp-cpp',
     -- 'treesitter-config',
     -- 'bufferline-config', out for now because it's not working as i like
