@@ -1,13 +1,8 @@
 local all = {
-    'lsp-lua',
-    'lsp-rust',
-    'lsp-python',
-    'lsp-typescript',
     'lsp-config',
     'debug-python',
     'debug-config',
     'debug-rust',
-    'completion',
     'status-line-config',
     'terminal-config',
     'git-config',
@@ -30,8 +25,6 @@ local all = {
     'trouble-config',
     'goto-preview-config',
     'buffer-manager-config'
-    -- 'lsp-cpp',
-    -- 'treesitter-config',
     -- 'bufferline-config', out for now because it's not working as i like
     -- 'sidebar-config',
 }

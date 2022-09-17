@@ -14,7 +14,10 @@ Plug 'mhinz/vim-startify'
 Plug 'rafi/awesome-vim-colorschemes'
 
 Plug 'octol/vim-cpp-enhanced-highlight'
-Plug 'thefux/lazygit.nvim'
+
+" Plug 'thefux/lazygit.nvim'
+" Using a non-default branch
+Plug 'thefux/lazygit.nvim', { 'branch': 'bug/60-fix-lazygit-telescope-extension' }
 
 Plug 'vimwiki/vimwiki'
 
@@ -70,6 +73,9 @@ Plug 'onsails/lspkind.nvim'
 " Snippet engine
 Plug 'hrsh7th/vim-vsnip'
 Plug 'Neevash/awesome-flutter-snippets'
+
+Plug 'L3MON4D3/LuaSnip'
+Plug 'saadparwaiz1/cmp_luasnip'
 
 " Fuzzy finder
 " Optional

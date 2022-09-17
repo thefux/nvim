@@ -1,58 +1,195 @@
-local nvim_lsp = require('lspconfig')
+vim.api.nvim_create_autocmd('User', {
+  pattern = 'LspAttached',
+  desc = 'LSP actions',
+  callback = function()
+    local bufmap = function(mode, lhs, rhs)
+      local opts = {buffer = true}
+      vim.keymap.set(mode, lhs, rhs, opts)
+    end
+
+    bufmap('n', 'gD', '<Cmd>lua vim.lsp.buf.declaration()<CR>', opts)
+    bufmap('n', 'gd', '<Cmd>lua vim.lsp.buf.definition()<CR>', opts)
+    bufmap('n', 'gr', '<Cmd>lua vim.lsp.buf.references()<CR>', opts)
+    bufmap('n', 'go', '<cmd>lua vim.lsp.buf.type_definition()<cr>')
+    bufmap('n', 'gi', '<Cmd>lua vim.lsp.buf.implementation()<CR>', opts)
+    bufmap('n', 'ca', '<Cmd>lua vim.lsp.buf.code_action()<CR>', opts)
+    bufmap('n', 'rn', 'nCmd>lua vim.lsp.buf.rename()<CR>', opts)
+    bufmap('n', 'K', '<Cmd>lua vim.lsp.buf.hover()<CR>', opts)
+    bufmap('n', '<C-k>', '<Cmd>lua vim.lsp.buf.signature_help()<CR>', opts)
+    bufmap('n', 'L', '<Cmd>lua vim.diagnostic.open_float()<CR>', opts)
+    bufmap('n', '<C-P>', '<Cmd>lua vim.lsp.buf.goto_prev()<CR>', opts)
+    bufmap('n', '<C-c>', '<Cmd>lua vim.lsp.buf.goto_next()<CR>', opts)
+    bufmap('n', 'K', '<cmd>lua vim.lsp.buf.hover()<cr>')
+
+  end
+})
 
 
-local opts = { noremap=true, silent=true }
+---
+-- Diagnostics
+---
 
--- Use an on_attach function to only map the following keys
--- after the language server attaches to the current buffer
-local on_attach = function(client, bufnr)
-    require'aerial'.on_attach(client, bufnr)
-    local function buf_set_keymap(...) vim.api.nvim_buf_set_keymap(bufnr, ...) end
-    local function buf_set_option(...) vim.api.nvim_buf_set_option(bufnr, ...) end
-
-    -- Enable completion triggered by <c-x><c-o>
-    buf_set_option('omnifunc', 'v:lua.vim.lsp.omnifunc')
-
-    -- Mappings.
-    buf_set_keymap('n', 'gD', '<Cmd>lua vim.lsp.buf.declaration()<CR>', opts)
-    buf_set_keymap('n', 'gd', '<Cmd>lua vim.lsp.buf.definition()<CR>', opts)
-    buf_set_keymap('n', 'gr', '<Cmd>lua vim.lsp.buf.references()<CR>', opts)
-    buf_set_keymap('n', 'gi', '<Cmd>lua vim.lsp.buf.implementation()<CR>', opts)
-    buf_set_keymap('n', 'ca', '<Cmd>lua vim.lsp.buf.code_action()<CR>', opts)
-    buf_set_keymap('n', 'rn', 'nCmd>lua vim.lsp.buf.renmae()<CR>', opts)
-    buf_set_keymap('n', 'K', '<Cmd>lua vim.lsp.buf.hover()<CR>', opts)
-    buf_set_keymap('n', '<C-k>', '<Cmd>lua vim.lsp.buf.signature_help()<CR>', opts)
-    buf_set_keymap('n', 'L', '<Cmd>lua vim.diagnostic.open_float()<CR>', opts)
-    buf_set_keymap('n', '<C-P>', '<Cmd>lua vim.lsp.buf.goto_prev()<CR>', opts)
-    buf_set_keymap('n', '<C-c>', '<Cmd>lua vim.lsp.buf.goto_next()<CR>', opts)
+local sign = function(opts)
+  vim.fn.sign_define(opts.name, {
+    texthl = opts.name,
+    text = opts.text,
+    numhl = ''
+  })
 end
 
--- Use a loop to conveniently call 'setup' on multiple servers and
--- map buffer local keybindings when the language server attaches
-local servers = { 'pyright', 'rust_analyzer', 'tsserver', 'sumneko_lua' }
-for _, lsp in ipairs(servers) do
-    nvim_lsp[lsp].setup {
-        on_attach = on_attach,
-        flags = {
-            debounce_text_changes = 150,
-        }
-    }
-end
+sign({name = 'DiagnosticSignError', text = '✘'})
+sign({name = 'DiagnosticSignWarn', text = '▲'})
+sign({name = 'DiagnosticSignHint', text = '⚑'})
+sign({name = 'DiagnosticSignInfo', text = ''})
 
+vim.diagnostic.config({
+  virtual_text = true,
+  severity_sort = true,
+  float = {
+    border = 'rounded',
+    source = 'always',
+    header = '',
+    prefix = '',
+  },
+})
 
-local opts = { noremap=true, silent=true }
-vim.keymap.set('n', 'gD', '<Cmd>lua vim.lsp.buf.declaration()<CR>', opts)
-vim.keymap.set('n', 'gd', '<Cmd>lua vim.lsp.buf.definition()<CR>', opts)
-vim.keymap.set('n', 'gr', '<Cmd>lua vim.lsp.buf.references()<CR>', opts)
-vim.keymap.set('n', 'gi', '<Cmd>lua vim.lsp.buf.implementation()<CR>', opts)
-vim.keymap.set('n', 'ca', '<Cmd>lua vim.lsp.buf.code_action()<CR>', opts)
-vim.keymap.set('n', 'rn', 'nCmd>lua vim.lsp.buf.renmae()<CR>', opts)
-vim.keymap.set('n', 'K', '<Cmd>lua vim.lsp.buf.hover()<CR>', opts)
-vim.keymap.set('n', '<C-k>', '<Cmd>lua vim.lsp.buf.signature_help()<CR>', opts)
-vim.keymap.set('n', 'L', '<Cmd>lua vim.diagnostic.open_float()<CR>', opts)
+vim.lsp.handlers['textDocument/hover'] = vim.lsp.with(
+  vim.lsp.handlers.hover,
+  {border = 'rounded'}
+)
 
+vim.lsp.handlers['textDocument/signatureHelp'] = vim.lsp.with(
+  vim.lsp.handlers.signature_help,
+  {border = 'rounded'}
+)
 
-return
-{
-    -- on_attach = on_attach,
+---
+-- LSP config
+---
+
+-- require('mason').setup({})
+-- require('mason-lspconfig').setup({})
+
+local lsp_defaults = {
+  flags = {
+    debounce_text_changes = 150,
+  },
+  capabilities = require('cmp_nvim_lsp').update_capabilities(
+    vim.lsp.protocol.make_client_capabilities()
+  ),
+  on_attach = function(client, bufnr)
+    vim.api.nvim_exec_autocmds('User', {pattern = 'LspAttached'})
+  end
 }
+
+local lspconfig = require('lspconfig')
+
+lspconfig.util.default_config = vim.tbl_deep_extend(
+  'force',
+  lspconfig.util.default_config,
+  lsp_defaults
+)
+
+
+---
+-- LSP servers
+---
+
+lspconfig.tsserver.setup({})
+lspconfig.sumneko_lua.setup({})
+lspconfig.rust_analyzer.setup{}
+lspconfig.pyright.setup({})
+
+
+---
+-- Autocomplete
+---
+
+-- require('luasnip.loaders.from_vscode').lazy_load()
+
+local cmp = require('cmp')
+local luasnip = require('luasnip')
+
+local select_opts = {behavior = cmp.SelectBehavior.Select}
+
+cmp.setup({
+  snippet = {
+    expand = function(args)
+      luasnip.lsp_expand(args.body)
+    end
+  },
+  sources = {
+    {name = 'path'},
+    {name = 'nvim_lsp', keyword_length = 3},
+    {name = 'buffer', keyword_length = 3},
+    {name = 'luasnip', keyword_length = 2},
+  },
+  window = {
+    documentation = cmp.config.window.bordered()
+  },
+  formatting = {
+    fields = {'menu', 'abbr', 'kind'},
+    format = function(entry, item)
+      local menu_icon = {
+        nvim_lsp = 'λ',
+        luasnip = '⋗',
+        buffer = 'Ω',
+        path = '🖫',
+      }
+
+      item.menu = menu_icon[entry.source.name]
+      return item
+    end,
+  },
+  mapping = {
+    ['<Up>'] = cmp.mapping.select_prev_item(select_opts),
+    ['<Down>'] = cmp.mapping.select_next_item(select_opts),
+
+    ['<C-p>'] = cmp.mapping.select_prev_item(select_opts),
+    ['<C-n>'] = cmp.mapping.select_next_item(select_opts),
+
+    ['<C-u>'] = cmp.mapping.scroll_docs(-4),
+    ['<C-f>'] = cmp.mapping.scroll_docs(4),
+
+    ['<C-e>'] = cmp.mapping.abort(),
+    ['<CR>'] = cmp.mapping.confirm({select = true}),
+
+    ['<C-d>'] = cmp.mapping(function(fallback)
+      if luasnip.jumpable(1) then
+        luasnip.jump(1)
+      else
+        fallback()
+      end
+    end, {'i', 's'}),
+
+    --[[ ['<C-b>'] = cmp.mapping(function(fallback)
+      if luasnip.jumpable(-1) then
+        luasnip.jump(-1)
+      else
+        fallback()
+      end
+    end, {'i', 's'}), ]]
+
+
+    ['<Tab>'] = cmp.mapping(function(fallback)
+      local col = vim.fn.col('.') - 1
+
+      if cmp.visible() then
+        cmp.select_next_item(select_opts)
+      elseif col == 0 or vim.fn.getline('.'):sub(col, col):match('%s') then
+        fallback()
+      else
+        cmp.complete()
+      end
+    end, {'i', 's'}),
+
+    ['<S-Tab>'] = cmp.mapping(function(fallback)
+      if cmp.visible() then
+        cmp.select_prev_item(select_opts)
+      else
+        fallback()
+      end
+    end, {'i', 's'}),
+  },
+})
+
