@@ -1,3 +1,11 @@
+require'lsp_signature'.setup{
+    bind = true, -- This is mandatory, otherwise border config won't get registered.
+    handler_opts = {
+      border = "rounded"
+    }
+}
+
+
 vim.api.nvim_create_autocmd('User', {
   pattern = 'LspAttached',
   desc = 'LSP actions',
@@ -161,15 +169,6 @@ cmp.setup({
         fallback()
       end
     end, {'i', 's'}),
-
-    --[[ ['<C-b>'] = cmp.mapping(function(fallback)
-      if luasnip.jumpable(-1) then
-        luasnip.jump(-1)
-      else
-        fallback()
-      end
-    end, {'i', 's'}), ]]
-
 
     ['<Tab>'] = cmp.mapping(function(fallback)
       local col = vim.fn.col('.') - 1

@@ -72,6 +72,7 @@ Plug 'onsails/lspkind.nvim'
 
 " Snippet engine
 Plug 'hrsh7th/vim-vsnip'
+Plug 'hrsh7th/vim-vsnip-integ'
 Plug 'Neevash/awesome-flutter-snippets'
 
 Plug 'L3MON4D3/LuaSnip'
@@ -122,6 +123,8 @@ Plug 'mhartington/formatter.nvim'
 Plug 'rmagatti/goto-preview'
 
 Plug 'sonarom/buffer_manager.nvim'
+
+Plug 'ray-x/lsp_signature.nvim'
 
 " Plug 'ervandew/supertab'
 " status line scheme
