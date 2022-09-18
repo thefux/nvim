@@ -26,8 +26,9 @@ Plug 'nikvdp/neomux'
 " vim register overview and more
 Plug 'gennaro-tedesco/nvim-peekup'
 
-Plug 'jiangmiao/auto-pairs'
+" Plug 'jiangmiao/auto-pairs'
 Plug 'blackcauldron7/surround.nvim'
+Plug 'windwp/nvim-autopairs'
 
 " git client, commit navigator and more
 Plug 'lewis6991/gitsigns.nvim'

@@ -24,7 +24,8 @@ local all = {
     'bufferline-config',
     'trouble-config',
     'goto-preview-config',
-    'buffer-manager-config'
+    'buffer-manager-config',
+    'autopair-config',
     -- 'bufferline-config', out for now because it's not working as i like
     -- 'sidebar-config',
 }
