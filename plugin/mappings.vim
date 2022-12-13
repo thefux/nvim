@@ -1,25 +1,3 @@
-" navigation"[[
-nnoremap bn ^
-nnoremap en $
-if exists("g:vscode")
-    nnoremap <silent> ,q :q<CR>
-    nnoremap <silent> ,w :w<CR>
-    nnoremap <silent> ,x :x<CR>
-    nnoremap <silent> ,xa :xall<CR>
-    nnoremap <silent> ,bq :bd!<CR>
-else
-    nnoremap <silent> <leader>q :q<CR>
-    nnoremap <silent> <leader>w :w<CR>
-    nnoremap <silent> <leader>x :x<CR>
-    nnoremap <silent> <leader>xa :xall<CR>
-    nnoremap <silent> <leader>bq :bd!<CR>
-endif
-"]]
-
-" search [[
-nnoremap <C-f> ?
-"]]
-
 " navigate quickfix [[
 augroup QFixToggle
     autocmd!
@@ -63,18 +41,10 @@ noremap <silent> <C-down> :3winc -<CR>
 noremap <silent> <C-\|> <C-w>v
 "]]
 
-" copy and paste from clipboard [[
-nnoremap <silent> <leader>p "+p
-map <silent> <leader>c "*y
-"]]
-
 " remap <c-z> to not break the editor [[
 nnoremap <c-z> <c>
 "]]
 
-" copy in visual mode [[
-xnoremap <silent> p pgvy
-" ]]
 
 " Folding commands.
 " zf#j create a fold from the cursor down # lines.
@@ -120,12 +90,4 @@ xnoremap <silent> p pgvy
 "
 " add word to vi library, for spellcheck
 " zg
-"
-"
-" command-T shortcuts
-"
-" <CR>  open selected file.
-" <C-CR>, <C-s> open selected file in a new split window.
-" <C-v> open selected file in new vertical split window.
-" <C-t> open selected file in a new tab.
 

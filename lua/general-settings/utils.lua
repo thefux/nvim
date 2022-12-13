@@ -49,7 +49,7 @@ end
 
 return
 {
-    M,
+    M = M,
     get_root = get_root
 }
 

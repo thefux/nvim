@@ -17,7 +17,7 @@ Plug 'octol/vim-cpp-enhanced-highlight'
 
 " Plug 'thefux/lazygit.nvim'
 " Using a non-default branch
-Plug 'thefux/lazygit.nvim', { 'branch': 'bug/60-fix-lazygit-telescope-extension' }
+Plug 'thefux/lazygit.nvim' " , { 'branch': 'bug/60-fix-lazygit-telescope-extension' }
 
 Plug 'vimwiki/vimwiki'
 
@@ -90,13 +90,14 @@ Plug 'drzel/vim-gui-zoom'
 
 " linter
 Plug 'mfussenegger/nvim-lint'
-Plug 'mfussenegger/nvim-lint'
+
+" debug
 Plug 'mfussenegger/nvim-dap'
 
 Plug 'nvim-lua/lsp-status.nvim'
 
-Plug 'nvim-treesitter/nvim-treesitter' , {'do': ':TSUpdate'}
-Plug 'nvim-treesitter/playground'
+" Plug 'nvim-treesitter/nvim-treesitter' , {'do': ':TSUpdate'}
+" Plug 'nvim-treesitter/playground'
 Plug 'stevearc/aerial.nvim'  " TODO: configuration missing
 
 Plug 'glepnir/galaxyline.nvim' , {'branch': 'main'}
@@ -127,11 +128,16 @@ Plug 'sonarom/buffer_manager.nvim'
 
 Plug 'ray-x/lsp_signature.nvim'
 
+Plug 'pantharshit00/vim-prisma'
+
+Plug 'vscode-neovim/vscode-neovim'
+
 " Plug 'ervandew/supertab'
 " status line scheme
 " Plug 'itchyny/lightline.vim'
 " code snippets
 " Plug 'SirVer/ultisnips'
+" Plug 'mlaursen/vim-react-snippets'
 " Plug 'honza/vim-snippets'
 
 " folding

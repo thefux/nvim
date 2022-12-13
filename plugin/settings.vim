@@ -8,7 +8,7 @@ set linebreak
 set shiftwidth=4
 set tabstop=4
 set softtabstop=4
-" set ignorecase " ignore case when searching
+set ignorecase " ignore case when searching
 set inccommand=nosplit
 
 " no sound effectzz
@@ -74,12 +74,12 @@ hi clear SpellBad
 hi SpellBad cterm=underline
 " set spelllang=de_de,en_us
 
-highlight Cursor guifg=white guibg=black
-highlight iCursor guifg=white guibg=steelblue
-set guicursor=n-v-c:block-Cursor
-set guicursor+=i:ver100-iCursor
-set guicursor+=n-v-c:blinkon0
-set guicursor+=i:blinkwait10
+" highlight Cursor guifg=white guibg=black
+" highlight iCursor guifg=white guibg=steelblue
+" set guicursor=n-v-c:block-Cursor
+" set guicursor+=i:ver100-iCursor
+" set guicursor+=n-v-c:blinkon0
+" set guicursor+=i:blinkwait10
 
 set splitbelow
 set splitright
@@ -108,10 +108,6 @@ endfunction
 nnoremap <leader>h :call SetLineHighlight()<CR>
 "]]
 
-" color scheme [[
-colorscheme onedark
-highlight Normal guibg=dark
-"]]
 
 " TODO: fix this
 " stay same line after living the Editor "[[
