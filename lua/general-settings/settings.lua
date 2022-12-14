@@ -84,6 +84,8 @@ opt.bs = {'indent','eol','start'}
 opt.list = true
 opt.listchars = "tab:>-,extends:>,trail:*"
 opt.clipboard:append('unnamedplus')
+
+
 -- hi clear SpellBad
 -- hi SpellBad cterm=underline
 -- " set spelllang=de_de,en_us
@@ -167,8 +169,27 @@ vim.api.nvim_create_autocmd(
 --     }
 -- )
 
--- " color scheme [[
-vim.cmd[[colorscheme onedark]]
-vim.api.nvim_set_hl(0, 'Normal', {guibg='dark'})
--- vim.cmd[[colorscheme tokyonight]]
+
+-- " color config [[
+-- if &t_Co > 2 || has("gui_running")
+--     set t_Co=8
+--     augroup setColor
+--         autocmd!
+--         color desert
+--         set nocursorline nocursorcolumn
+--     augroup END
+-- endif
+
+-- function! SetLineHighlight()
+--     if &cursorline == 0
+--         set cursorline cursorcolumn
+--     else
+--         set nocursorline nocursorcolumn
+--     endif
+
+--     hi CursorLine cterm=NONE ctermbg=darkred ctermfg=white guibg=green
+--     hi CursorColumn cterm=NONE ctermbg=darkred ctermfg=white guibg=green
+-- endfunction
+-- nnoremap <leader>h :call SetLineHighlight()<CR>
 -- "]]
+

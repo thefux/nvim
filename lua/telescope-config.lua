@@ -1,4 +1,4 @@
-local get_root = require'utils.utils'.get_root
+local get_root = require'general-settings.utils'.get_root
 
 local actions = require'telescope.actions'
 local trouble = require'trouble.providers.telescope'

@@ -1,0 +1,39 @@
+let s:path = "."
+if exists("g:vscode")
+    s:path = ""
+endif
+
+lua require("general-settings/plugins")
+
+" source ~/.config/nvim/plugin/settings.vim
+
+
+lua require("general-settings/mappings")
+lua require("general-settings/settings")
+
+if !exists("g:vscode")
+    source ./plugin/mappings.vim
+    source ./plugins/peekup.vim
+    source ./plugins/neovide.vim
+    source ./plugins/startify.vim
+    source ./plugins/which-key.vim
+    source ./plugins/tree.vim
+
+    " color scheme [[
+    colorscheme onedark
+    highlight Normal guibg=dark
+    "]]
+
+    " source $HOME/AppData/local/nvim/plugins/grpc.vim
+    " " make sure the base plugin is loaded first
+    " source $HOME/AppData/local/nvim/plugins/my-plugin/base.vim
+
+    " " before those two
+    " source $HOME/AppData/local/nvim/plugins/my-plugin/timetrack.vim
+    " source $HOME/AppData/local/nvim/plugins/my-plugin/me-make-shit.vim
+
+    " call TheFuxInit()   " rust plugin (ugly !!!!)
+
+    " this step is required to setup lua scripts
+    lua require("setup-lua")
+endif

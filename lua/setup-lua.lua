@@ -18,7 +18,7 @@ local all = {
     'mason-config',
     'bacon-config',
     'multi-cursors',
-    -- 'treesitter-config',
+    'treesitter-config',
     'aerial-config',
     'bufferline-config',
     'trouble-config',
@@ -27,6 +27,9 @@ local all = {
     'autopair-config',
     'startify',
     'peekup',
+    'tokyonight',
+    'colorscheme',
+    -- 'neovide',
     -- 'bufferline-config', out for now because it's not working as i like
     -- 'sidebar-config',
 }

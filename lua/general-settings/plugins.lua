@@ -100,8 +100,8 @@ Plug 'mfussenegger/nvim-dap'
 
 Plug 'nvim-lua/lsp-status.nvim'
 
--- Plug('nvim-treesitter/nvim-treesitter', {['do'] = ':TSUpdate'})
--- Plug('nvim-treesitter/playground')
+Plug('nvim-treesitter/nvim-treesitter', {['do'] = ':TSUpdate'})
+Plug('nvim-treesitter/playground')
 Plug 'stevearc/aerial.nvim' -- " TODO: configuration missing
 
 Plug('glepnir/galaxyline.nvim', {['branch'] = 'main'})
@@ -134,6 +134,8 @@ Plug 'ray-x/lsp_signature.nvim'
 Plug 'pantharshit00/vim-prisma'
 
 Plug 'vscode-neovim/vscode-neovim'
+
+Plug 'christianchiarulli/nvcode-color-schemes.vim'
 
 -- " Plug 'ervandew/supertab'
 -- " status line scheme

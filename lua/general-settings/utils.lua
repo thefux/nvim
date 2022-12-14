@@ -47,9 +47,14 @@ M.xmap =  function(shortcut, command)
   M.map('x', shortcut, command)
 end
 
+local function highlight(name, value)
+    vim.api.nvim_set_hl(0, name, value)
+end
+
 return
 {
     M = M,
-    get_root = get_root
+    get_root = get_root,
+    highlight = highlight,
 }
 

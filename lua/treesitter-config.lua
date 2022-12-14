@@ -1,5 +1,5 @@
 require('nvim-treesitter.configs').setup{
-    ensure_installed = { "cpp", "lua", "rust", "python", "vim" },
+    ensure_installed = { "cpp", "lua", "rust", "python", "vim", "typescript", "c_sharp" },
     highlight = {
         enable = true,
         -- disable = {'rust', 'vim'},
@@ -36,6 +36,6 @@ require('nvim-treesitter.configs').setup{
     }
 }
 
-vim.opt.foldmethod = 'expr'
-vim.opt.foldexpr = 'nvim_treesitter#foldexpr()'
+-- vim.opt.foldmethod = 'expr'
+-- vim.opt.foldexpr = 'nvim_treesitter#foldexpr()'
 
