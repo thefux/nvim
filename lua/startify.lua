@@ -9,8 +9,9 @@ vim.g.startify_lists = {
     { type= 'bookmarks', header= {'   Bookmarks'}       },
 }
 vim.g.startify_bookmarks = {
-  { i = '$HOME/AppData/Local/nvim/init.lua'},
-  { r = '$HOME/AppData/Local/nvim/lua'  },
+  { i = '~/AppData/Local/nvim/init.lua'},
+  { r = '~/AppData/Local/nvim/lua'  },
+  { p = '~/.config/nvim/plugged/'  },
 }
 
 vim.g.startify_session_autoload = true

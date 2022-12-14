@@ -50,3 +50,7 @@ require('gitsigns').setup(
 require('telescope').load_extension('lazygit')
 vim.api.nvim_set_keymap('n', '<leader>lg', '<Cmd>lua require("telescope").extensions.lazygit.lazygit()<CR>', {})
 
+local lazygit_config = vim.fn.resolve(vim.fn.expand("<sfile>:p:h") .. '/config/config.yml')
+vim.g.lazygit_use_custom_config_file_path = 1
+vim.g.lazygit_config_file_path = lazygit_config
+
