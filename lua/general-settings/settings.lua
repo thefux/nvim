@@ -157,8 +157,6 @@ if not vim.g.vscode then
         end
     })
 
-    vim.api.nvim_command("rv ~/.vim/cache/.viminfo")
-
     -- to heavy
     -- vim.api.nvim_create_autocmd(
     --     'CursorMoved',
