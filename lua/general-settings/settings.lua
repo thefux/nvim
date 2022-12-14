@@ -78,9 +78,9 @@ opt.foldmethod = 'manual'
 opt.ruler = true
 opt.spell = false
 
-
 opt.bs = {'indent','eol','start'}
--- opt.viminfo = '20,\"50'
+opt.viminfo = [[!,'100,<50,s10,h]]
+
 opt.list = true
 opt.listchars = "tab:>-,extends:>,trail:*"
 opt.clipboard:append('unnamedplus')
@@ -100,18 +100,19 @@ opt.colorcolumn = {120}
 
 g.mapleader = ","
 
-local group = vim.api.nvim_create_augroup('Spell', {clear = true})
+if not vim.g.vscode then
+    local group = vim.api.nvim_create_augroup('Spell', {clear = true})
 
-vim.api.nvim_create_autocmd(
+    vim.api.nvim_create_autocmd(
     'BufEnter',
     {
         pattern = '*.md',
         command = ':setlocal spell',
         group = group,
     }
-)
+    )
 
-vim.api.nvim_create_autocmd(
+    vim.api.nvim_create_autocmd(
     'VimEnter',
     {
         group = group,
@@ -130,10 +131,10 @@ vim.api.nvim_create_autocmd(
             vim.g.ctrlp_working_path_mode = 'rs'
         end,
     }
-)
+    )
 
 
-vim.api.nvim_create_autocmd(
+    vim.api.nvim_create_autocmd(
     'BufEnter',
     {
         group = group,
@@ -144,52 +145,52 @@ vim.api.nvim_create_autocmd(
             vim.api.nvim_command("setlocal wildignore+=*.dll,*.rlib,*.rmeta,*.lib,*.exp,*.timestamp,*.bin,target\\*")
         end
     }
-)
+    )
 
 
-vim.api.nvim_create_autocmd(
+    vim.api.nvim_create_autocmd(
     'TermOpen',
     {
         group = group,
         callback = function()
             vim.api.nvim_command("setlocal nospell nonumber norelativenumber")
         end
-    }
-)
+    })
+
+    vim.api.nvim_command("rv ~/.vim/cache/.viminfo")
+
+    -- to heavy
+    -- vim.api.nvim_create_autocmd(
+    --     'CursorMoved',
+    --     {
+        --         group = group,
+        --         callback = function()
+            --             vim.rpcnotify(0, 'all', {'test'})
+            --         end
+            --     }
+            -- )
 
 
--- to heavy
--- vim.api.nvim_create_autocmd(
---     'CursorMoved',
---     {
---         group = group,
---         callback = function()
---             vim.rpcnotify(0, 'all', {'test'})
---         end
---     }
--- )
+            -- " color config
+            -- if &t_Co > 2 || has("gui_running")
+            --     set t_Co=8
+            --     augroup setColor
+            --         autocmd!
+            --         color desert
+            --         set nocursorline nocursorcolumn
+            --     augroup END
+            -- endif
 
+            -- function! SetLineHighlight()
+            --     if &cursorline == 0
+            --         set cursorline cursorcolumn
+            --     else
+            --         set nocursorline nocursorcolumn
+            --     endif
 
--- " color config [[
--- if &t_Co > 2 || has("gui_running")
---     set t_Co=8
---     augroup setColor
---         autocmd!
---         color desert
---         set nocursorline nocursorcolumn
---     augroup END
--- endif
-
--- function! SetLineHighlight()
---     if &cursorline == 0
---         set cursorline cursorcolumn
---     else
---         set nocursorline nocursorcolumn
---     endif
-
---     hi CursorLine cterm=NONE ctermbg=darkred ctermfg=white guibg=green
---     hi CursorColumn cterm=NONE ctermbg=darkred ctermfg=white guibg=green
--- endfunction
--- nnoremap <leader>h :call SetLineHighlight()<CR>
--- "]]
-
+            --     hi CursorLine cterm=NONE ctermbg=darkred ctermfg=white guibg=green
+            --     hi CursorColumn cterm=NONE ctermbg=darkred ctermfg=white guibg=green
+            -- endfunction
+            -- nnoremap <leader>h :call SetLineHighlight()<CR>
+            -- "
+end

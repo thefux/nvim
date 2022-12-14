@@ -1,6 +1,6 @@
 local Plug = vim.fn['plug#']
 
-vim.call('plug#begin', '$HOME/AppData/Local/nvim/plugged')
+vim.call('plug#begin', '~/.config/nvim/plugged')
 
 Plug('folke/tokyonight.nvim', {['branch'] = 'main'})
 
@@ -31,7 +31,7 @@ Plug 'nikvdp/neomux'
 Plug 'gennaro-tedesco/nvim-peekup'
 
 -- " Plug 'jiangmiao/auto-pairs'
-Plug 'blackcauldron7/surround.nvim'
+Plug 'kylechui/nvim-surround'
 Plug 'windwp/nvim-autopairs'
 
 -- " git client, commit navigator and more
