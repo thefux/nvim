@@ -3,6 +3,7 @@ snippets
 coc-setting.json
 tags.lock
 tags.temp
+plugged
 
 target/log
 target/hello.json
