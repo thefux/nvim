@@ -3,7 +3,6 @@ local Plug = vim.fn['plug#']
 vim.call('plug#begin', '~/.config/nvim/plugged')
 
 Plug('folke/tokyonight.nvim', {['branch'] = 'main'})
-
 -- Plug 'brooth/far.vim'
 Plug 'rust-lang/rust.vim'
 
@@ -13,6 +12,8 @@ Plug 'christoomey/vim-tmux-navigator'
 Plug 'szw/vim-maximizer'
 Plug 'mbbill/undotree'
 Plug 'mhinz/vim-startify'
+
+Plug "MunifTanjim/nui.nvim"
 
 -- " scheme
 Plug 'rafi/awesome-vim-colorschemes'
@@ -136,6 +137,9 @@ Plug 'pantharshit00/vim-prisma'
 Plug 'vscode-neovim/vscode-neovim'
 
 Plug 'christianchiarulli/nvcode-color-schemes.vim'
+
+-- search and replace
+Plug 'windwp/nvim-spectre'
 
 -- " Plug 'ervandew/supertab'
 -- " status line scheme

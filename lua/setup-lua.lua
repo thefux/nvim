@@ -29,6 +29,7 @@ local all = {
     { vscode = false, name = 'peekup' },
     { vscode = false, name = 'tokyonight' },
     { vscode = false, name = 'colorscheme' },
+    { vscode = false, name = 'spectre_' },
     -- 'neovide',
     -- 'bufferline-config', out for now because it's not working as i like
     -- 'sidebar-config',

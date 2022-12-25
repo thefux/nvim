@@ -15,18 +15,18 @@ vim.api.nvim_create_autocmd('User', {
       vim.keymap.set(mode, lhs, rhs, opts)
     end
 
-    bufmap('n', 'gD', '<Cmd>lua vim.lsp.buf.declaration()<CR>', opts)
-    bufmap('n', 'gd', '<Cmd>lua vim.lsp.buf.definition()<CR>', opts)
-    bufmap('n', 'gr', '<Cmd>lua vim.lsp.buf.references()<CR>', opts)
+    bufmap('n', 'gD', '<Cmd>lua vim.lsp.buf.declaration()<CR>')
+    bufmap('n', 'gd', '<Cmd>lua vim.lsp.buf.definition()<CR>')
+    bufmap('n', 'gr', '<Cmd>lua vim.lsp.buf.references()<CR>')
     bufmap('n', 'go', '<cmd>lua vim.lsp.buf.type_definition()<cr>')
-    bufmap('n', 'gi', '<Cmd>lua vim.lsp.buf.implementation()<CR>', opts)
-    bufmap('n', 'ca', '<Cmd>lua vim.lsp.buf.code_action()<CR>', opts)
-    bufmap('n', 'rn', 'nCmd>lua vim.lsp.buf.rename()<CR>', opts)
-    bufmap('n', 'K', '<Cmd>lua vim.lsp.buf.hover()<CR>', opts)
-    bufmap('n', '<C-k>', '<Cmd>lua vim.lsp.buf.signature_help()<CR>', opts)
-    bufmap('n', 'L', '<Cmd>lua vim.diagnostic.open_float()<CR>', opts)
-    bufmap('n', '<C-P>', '<Cmd>lua vim.lsp.buf.goto_prev()<CR>', opts)
-    bufmap('n', '<C-c>', '<Cmd>lua vim.lsp.buf.goto_next()<CR>', opts)
+    bufmap('n', 'gi', '<Cmd>lua vim.lsp.buf.implementation()<CR>')
+    bufmap('n', 'ca', '<Cmd>lua vim.lsp.buf.code_action()<CR>')
+    bufmap('n', 'rn', 'nCmd>lua vim.lsp.buf.rename()<CR>')
+    bufmap('n', 'K', '<Cmd>lua vim.lsp.buf.hover()<CR>')
+    bufmap('n', '<C-k>', '<Cmd>lua vim.lsp.buf.signature_help()<CR>')
+    bufmap('n', 'L', '<Cmd>lua vim.diagnostic.open_float()<CR>')
+    bufmap('n', '<C-P>', '<Cmd>lua vim.lsp.buf.goto_prev()<CR>')
+    bufmap('n', '<C-c>', '<Cmd>lua vim.lsp.buf.goto_next()<CR>')
     bufmap('n', 'K', '<cmd>lua vim.lsp.buf.hover()<cr>')
 
   end
@@ -128,8 +128,8 @@ cmp.setup({
   },
   sources = {
     {name = 'path'},
-    {name = 'nvim_lsp', keyword_length = 3},
-    {name = 'buffer', keyword_length = 3},
+    {name = 'nvim_lsp'},
+    {name = 'buffer', keyword_length = 2},
     {name = 'luasnip', keyword_length = 2},
   },
   window = {
