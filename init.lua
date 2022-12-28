@@ -6,3 +6,4 @@ require"general-settings/mappings"
 if not vim.g.vscode then
     require"setup-lua"
 end
+
