@@ -107,6 +107,21 @@ lspconfig.tsserver.setup({})
 lspconfig.sumneko_lua.setup({})
 lspconfig.rust_analyzer.setup{}
 lspconfig.pyright.setup({})
+local function cmd()
+    -- or make sure OmniSharp is installed and put in global path
+    if vim.fn.has('win32') then
+        return{'C:/tools/omnisharp-win-x64-net6.0/OmniSharp.exe', '--languageserver'}
+    else
+        return{'OmniSharp', '--languageserver'}
+    end
+end
+
+lspconfig.omnisharp.setup({
+    on_attach = function(_, bufnr)
+        vim.api.nvim_buf_set_option(bufnr, 'omnifunc', 'v:lua.vim.lsp.omnifunc')
+    end,
+    cmd = cmd(),
+})
 
 
 ---
@@ -119,6 +134,7 @@ local cmp = require('cmp')
 local luasnip = require('luasnip')
 
 local select_opts = {behavior = cmp.SelectBehavior.Select}
+local compare = require'cmp.config.compare'
 
 cmp.setup({
   snippet = {
@@ -129,8 +145,23 @@ cmp.setup({
   sources = {
     {name = 'path'},
     {name = 'nvim_lsp'},
+    -- {name = 'cmp_tabnine'},
     {name = 'buffer', keyword_length = 2},
     {name = 'luasnip', keyword_length = 2},
+  },
+  sorting = {
+      prioriry_weight = 2,
+      comparators = {
+          -- require'cmp_tabnine.compare',
+          compare.offset,
+          compare.exact,
+          compare.score,
+          compare.recently_used,
+          compare.kind,
+          compare.sort_text,
+          compare.length,
+          compare.order,
+      },
   },
   window = {
     documentation = cmp.config.window.bordered()

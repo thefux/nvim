@@ -1,9 +1,6 @@
 local all = {
     { vscode = false, name = 'lsp-config' },
-    { vscode = false, name = 'debug-python' },
-    { vscode = false, name = 'debug-config' },
-    { vscode = false, name = 'debug-rust' },
-    { vscode = false, name = 'status-line-config' },
+    -- { vscode = false, name = 'status-line-config' },
     { vscode = false, name = 'terminal-config' },
     { vscode = false, name = 'git-config' },
     { vscode = false, name = 'tree-config' },
@@ -30,6 +27,11 @@ local all = {
     { vscode = false, name = 'tokyonight' },
     { vscode = false, name = 'colorscheme' },
     { vscode = false, name = 'spectre_' },
+    { vscode = false, name = 'hop_' },
+    -- { vscode = false, name = 'tabnine' },
+    -- { vscode = false, name = 'debug-python' },
+    -- { vscode = false, name = 'debug-config' },
+    -- { vscode = false, name = 'debug-rust' },
     -- 'neovide',
     -- 'bufferline-config', out for now because it's not working as i like
     -- 'sidebar-config',

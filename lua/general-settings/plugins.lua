@@ -97,7 +97,7 @@ Plug 'drzel/vim-gui-zoom'
 Plug 'mfussenegger/nvim-lint'
 
 -- " debug
-Plug 'mfussenegger/nvim-dap'
+-- Plug 'mfussenegger/nvim-dap'
 
 Plug 'nvim-lua/lsp-status.nvim'
 
@@ -132,7 +132,7 @@ Plug 'sonarom/buffer_manager.nvim'
 
 Plug 'ray-x/lsp_signature.nvim'
 
-Plug 'pantharshit00/vim-prisma'
+-- Plug 'pantharshit00/vim-prisma'
 
 Plug 'vscode-neovim/vscode-neovim'
 
@@ -140,6 +140,16 @@ Plug 'christianchiarulli/nvcode-color-schemes.vim'
 
 -- search and replace
 Plug 'windwp/nvim-spectre'
+
+Plug 'phaazon/hop.nvim'
+
+Plug 'gbprod/substitue.nvim'
+
+-- if os.getenv('OS') == 'Window_NT'  then
+--     Plug('tzachar/cmp-tabnine', { ['do']= 'powershell ./install.ps1' })
+-- else
+--     Plug('tzachar/cmp-tabnine', { ['do']= './install.sh' })
+-- end
 
 -- " Plug 'ervandew/supertab'
 -- " status line scheme

@@ -14,7 +14,7 @@ local gl = require('galaxyline')
 -- local gps = require('nvim-gps')
 local gls = gl.section
 local extension = require('galaxyline.provider_extensions')
-local dap = require('dap')
+-- local dap = require('dap')
 
 gl.short_line_list = {
     'LuaTree',
@@ -109,13 +109,13 @@ local function lsp_status(status)
 end
 
 
-local function get_debug_status()
+--[[ local function get_debug_status()
     local status = dap.status()
     if not status or status == '' then
         return ''
     end
     return  '  ' .. status
-end
+end ]]
 
 
 local function trailing_whitespace()
@@ -180,7 +180,7 @@ end
 
 TimeTrack = timetrack
 BranchName = branch_name
-DebugInfo = get_debug_status
+-- DebugInfo = get_debug_status
 -- TreesitterContext = get_current_func_from_treesitter
 TrailingWhiteSpace = trailing_whitespace
 
@@ -330,14 +330,14 @@ gls.right[1]= {
     }
 }
 
-gls.right[2] = {
-    Debug = {
-        provider = DebugInfo,
-        separator = ' ',
-        separator_highlight = {colors.blue,colors.line_bg},
-        highlight = {colors.red,colors.line_bg,'bold'},
-    }
-}
+-- gls.right[2] = {
+--     Debug = {
+--         provider = DebugInfo,
+--         separator = ' ',
+--         separator_highlight = {colors.blue,colors.line_bg},
+--         highlight = {colors.red,colors.line_bg,'bold'},
+--     }
+-- }
 
 gls.right[3] = {
     GitBranch = {
