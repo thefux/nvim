@@ -143,7 +143,9 @@ Plug 'windwp/nvim-spectre'
 
 Plug 'phaazon/hop.nvim'
 
-Plug 'gbprod/substitue.nvim'
+Plug 'gbprod/substitute.nvim'
+
+Plug 'mattn/emmet-vim'
 
 -- if os.getenv('OS') == 'Window_NT'  then
 --     Plug('tzachar/cmp-tabnine', { ['do']= 'powershell ./install.ps1' })

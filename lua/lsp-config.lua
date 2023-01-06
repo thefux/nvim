@@ -145,6 +145,7 @@ cmp.setup({
   sources = {
     {name = 'path'},
     {name = 'nvim_lsp'},
+    {name = 'crates'},
     -- {name = 'cmp_tabnine'},
     {name = 'buffer', keyword_length = 2},
     {name = 'luasnip', keyword_length = 2},
