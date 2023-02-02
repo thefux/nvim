@@ -33,17 +33,40 @@ require('telescope').setup {
 }
 
 
+local function setup_function(keymap, function_name)
+    vim.api.nvim_set_keymap('n', keymap, '',
+    {
+        callback = function ()
+            local cmd = string.format(':lua require("telescope.builtin").%s({ cwd = "%s" })', function_name, get_root())
+            vim.api.nvim_command(cmd)
+        end,
+        noremap = true, silent = true
+    })
+end
 
-vim.api.nvim_set_keymap('n', '<leader>ff', '',
-{
-    callback = function ()
-        local cmd = string.format(':lua require("telescope.builtin").find_files({ cwd = "%s" })', get_root())
-        vim.api.nvim_command(cmd)
-    end,
-    noremap = true, silent = true
-})
+setup_function('<leader>ff', 'find_files')
+setup_function('<leader>fg', 'live_grep')
+print(get_root())
+
+-- vim.api.nvim_set_keymap('n', '<leader>ff', '',
+-- {
+--     callback = function ()
+--         local cmd = string.format(':lua require("telescope.builtin").find_files({ cwd = "%s" })', get_root())
+--         vim.api.nvim_command(cmd)
+--     end,
+--     noremap = true, silent = true
+-- })
+
+-- vim.api.nvim_set_keymap('n', '<leader>fg', '',
+-- {
+--     callback = function ()
+--         local cmd = string.format(':lua require("telescope.builtin").live_grep({ cwd = "%s" })', get_root())
+--         vim.api.nvim_command(cmd)
+--     end,
+--     noremap = true, silent = true
+-- })
 
 
-vim.keymap.set('n', '<leader>fg', ':Telescope live_grep<cr>', {noremap = true, silent = true})
+-- vim.keymap.set('n', '<leader>fg', ':Telescope live_grep<cr>', {noremap = true, silent = true})
 vim.keymap.set('n', '<leader>fb', ':Telescope buffers<cr>', {noremap = true, silent = true})
 vim.keymap.set('n', '<leader>fh', ':Telescope help_tags<cr>', {noremap = true, silent = true})
