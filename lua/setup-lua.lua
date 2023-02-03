@@ -30,6 +30,7 @@ local all = {
     { vscode = false, name = 'hop_' },
     { vscode = false, name = 'substitute_' },
     { vscode = false, name = 'rust_creates_' },
+    -- { vscode = false, name = 'compe_' },
     -- { vscode = false, name = 'tabnine' },
     -- { vscode = false, name = 'debug-python' },
     -- { vscode = false, name = 'debug-config' },

@@ -6,6 +6,7 @@ opt.laststatus = 3 -- global statusline
 
 opt.clipboard = "unnamedplus"
 opt.cursorline = true
+opt.completeopt = "menuone,noselect"
 
 -- Indenting
 opt.expandtab = true
@@ -118,7 +119,7 @@ if not vim.g.vscode then
         group = group,
         callback = function()
             vim.api.nvim_set_keymap('n', '<cr>', ':MaximizerToggle<cr>', {noremap = true, silent = true})
-            vim.api.nvim_set_keymap('n', '<F4>', ':UndotreeToogle<cr>', {noremap = true, silent = true})
+            -- vim.api.nvim_set_keymap('n', '<F4>', ':UndotreeToogle<cr>', {noremap = true, silent = true})
             vim.api.nvim_set_keymap('n', '<leader>gs', ':G<cr>', {noremap = true, silent = true})
             vim.api.nvim_set_keymap('n', '<leader>gr', ':diffget //3<cr>', {noremap = true, silent = true})
             vim.api.nvim_set_keymap('n', '<leader>gl', ':diffget //2<cr>', {noremap = true, silent = true})
