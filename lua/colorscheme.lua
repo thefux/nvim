@@ -1,10 +1,10 @@
 local highlight = require"general-settings.utils".highlight
 
-vim.api.nvim_set_hl(0, 'Normal', {bg='black'})
 
-vim.cmd[[colorscheme tokyonight]]
--- vim.cmd[[colorscheme nvcode]]
+-- vim.cmd[[colorscheme tokyonight]]
+vim.cmd[[colorscheme nvcode]]
 
+vim.api.nvim_set_hl(0, 'Normal', {bg='#051133'})
 
 highlight("@function", {italic=true, bold=true, fg="#00BCD4"})
 highlight("@variable", {italic=false, fg="#42A5F5"})
@@ -19,6 +19,7 @@ highlight("@macro", {italic=false, fg="#7E57C2"})
 highlight("@keyword", {italic=false, fg="#7986CB"})
 highlight("@operator", {italic=false, fg="#9575CD"})
 highlight("@punctuation", {italic=false, fg="#A1887F"})
+highlight("@cursor", {italic=false, fg="#A1887F"})
 
 
 -- TODO: use a better configuration as above

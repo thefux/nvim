@@ -86,13 +86,15 @@ opt.list = true
 opt.listchars = "tab:>-,extends:>,trail:*"
 opt.clipboard:append('unnamedplus')
 
+opt.autoread = true
+
 
 -- hi clear SpellBad
 -- hi SpellBad cterm=underline
--- " set spelllang=de_de,en_us
+opt.spelllang={'de_de', 'en_us'}
 -- " highlight Cursor guifg=white guibg=black
 -- " highlight iCursor guifg=white guibg=steelblue
--- " set guicursor=n-v-c:block-Cursor
+opt.guicursor=[[n-v-c:block-Cursor]]
 -- " set guicursor+=i:ver100-iCursor
 -- " set guicursor+=n-v-c:blinkon0
 -- " set guicursor+=i:blinkwait10
@@ -111,6 +113,14 @@ if not vim.g.vscode then
         command = ':setlocal spell',
         group = group,
     }
+    )
+
+    vim.api.nvim_create_autocmd(
+        'CursorHold',
+        {
+            command = ':checktime',
+            group = group,
+        }
     )
 
     vim.api.nvim_create_autocmd(
@@ -157,6 +167,16 @@ if not vim.g.vscode then
             vim.api.nvim_command("setlocal nospell nonumber norelativenumber")
         end
     })
+
+    vim.api.nvim_set_keymap('n', '<leader>=', [[:%s/\s\+$//e<CR>]], {})
+    -- vim.api.nvim_create_autocmd(
+    --     'BufWritePre',
+    --     {
+    --         pattern = '*',
+    --         command = [[:%s/\s\+$//e]],
+    --         group = group,
+    --     }
+    -- )
 
     -- to heavy
     -- vim.api.nvim_create_autocmd(

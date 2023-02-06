@@ -6,10 +6,7 @@ require'lsp_signature'.setup{
 }
 
 
-vim.api.nvim_create_autocmd('User', {
-  pattern = 'LspAttached',
-  desc = 'LSP actions',
-  callback = function()
+local assignment = function ()
     local bufmap = function(mode, lhs, rhs)
       local opts = {buffer = true}
       vim.keymap.set(mode, lhs, rhs, opts)
@@ -28,7 +25,13 @@ vim.api.nvim_create_autocmd('User', {
     bufmap('n', '<C-P>', '<Cmd>lua vim.lsp.buf.goto_prev()<CR>')
     bufmap('n', '<C-c>', '<Cmd>lua vim.lsp.buf.goto_next()<CR>')
     bufmap('n', 'K', '<cmd>lua vim.lsp.buf.hover()<cr>')
+end
 
+vim.api.nvim_create_autocmd('User', {
+  pattern = 'LspAttached',
+  desc = 'LSP actions',
+  callback = function()
+      assignment()
   end
 })
 
@@ -107,18 +110,21 @@ lspconfig.tsserver.setup({})
 lspconfig.sumneko_lua.setup({})
 lspconfig.rust_analyzer.setup{}
 lspconfig.pyright.setup({})
+lspconfig.html.setup({})
+
 local function cmd()
     -- or make sure OmniSharp is installed and put in global path
-    if vim.fn.has('win32') then
-        return{'C:/tools/omnisharp-win-x64-net6.0/OmniSharp.exe', '--languageserver'}
-    else
-        return{'OmniSharp', '--languageserver'}
-    end
+    -- if vim.fn.has('win32') then
+    --     return{'C:/tools/omnisharp-win-x64-net6.0/OmniSharp.exe', '--languageserver'}
+    -- end
+    return{'/Users/rakezab/.cache/omnisharp-vim/omnisharp-roslyn/OmniSharp', '--languageserver'}
+    -- return{'$HOME/omnisharp-osx-amd64-net6.0/OmniSharp', '--languageserver'}
 end
 
 lspconfig.omnisharp.setup({
     on_attach = function(_, bufnr)
         vim.api.nvim_buf_set_option(bufnr, 'omnifunc', 'v:lua.vim.lsp.omnifunc')
+        assignment()
     end,
     cmd = cmd(),
 })

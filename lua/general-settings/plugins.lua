@@ -147,6 +147,8 @@ Plug 'gbprod/substitute.nvim'
 
 Plug 'mattn/emmet-vim'
 
+Plug 'OmniSharp/omnisharp-vim'
+
 -- if os.getenv('OS') == 'Window_NT'  then
 --     Plug('tzachar/cmp-tabnine', { ['do']= 'powershell ./install.ps1' })
 -- else
