@@ -32,6 +32,7 @@ local all = {
     { vscode = false, name = 'rust_creates_' },
     { vscode = false, name = 'omnisharp_' },
     { vscode = false, name = 'neovide' },
+    { vscode = false, name = 'chatgpt_' },
     -- { vscode = false, name = 'compe_' },
     -- { vscode = false, name = 'tabnine' },
     -- { vscode = false, name = 'debug-python' },

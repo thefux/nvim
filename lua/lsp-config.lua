@@ -107,7 +107,7 @@ lspconfig.util.default_config = vim.tbl_deep_extend(
 ---
 
 lspconfig.tsserver.setup({})
-lspconfig.sumneko_lua.setup({})
+lspconfig.lua_ls.setup({})
 lspconfig.rust_analyzer.setup{}
 lspconfig.pyright.setup({})
 lspconfig.html.setup({})
