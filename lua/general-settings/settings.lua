@@ -94,6 +94,8 @@ opt.autoread = true
 opt.spelllang={'de_de', 'en_us'}
 -- " highlight Cursor guifg=white guibg=black
 -- " highlight iCursor guifg=white guibg=steelblue
+vim.api.nvim_set_hl(0, "Cursor", {fg="white", bg="blue"})
+vim.api.nvim_set_hl(0, "iCursor", {fg="white", bg="blue"})
 opt.guicursor=[[n-v-c:block-Cursor]]
 -- " set guicursor+=i:ver100-iCursor
 -- " set guicursor+=n-v-c:blinkon0
@@ -107,12 +109,12 @@ if not vim.g.vscode then
     local group = vim.api.nvim_create_augroup('Spell', {clear = true})
 
     vim.api.nvim_create_autocmd(
-    'BufEnter',
-    {
-        pattern = '*.md',
-        command = ':setlocal spell',
-        group = group,
-    }
+        'VimEnter',
+        {
+            pattern = '*',
+            command = ':setlocal spell',
+            group = group,
+        }
     )
 
     vim.api.nvim_create_autocmd(

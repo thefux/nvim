@@ -6,33 +6,30 @@ require'lsp_signature'.setup{
 }
 
 
-local assignment = function ()
-    local bufmap = function(mode, lhs, rhs)
-      local opts = {buffer = true}
-      vim.keymap.set(mode, lhs, rhs, opts)
-    end
+vim.api.nvim_create_autocmd('LspAttach', {
+  group = vim.api.nvim_create_augroup('UserLspConfig', {}),
+  callback = function(ev)
+    -- Enable completion triggered by <c-x><c-o>
+    vim.bo[ev.buf].omnifunc = 'v:lua.vim.lsp.omnifunc'
 
-    bufmap('n', 'gD', '<Cmd>lua vim.lsp.buf.declaration()<CR>')
-    bufmap('n', 'gd', '<Cmd>lua vim.lsp.buf.definition()<CR>')
-    bufmap('n', 'gr', '<Cmd>lua vim.lsp.buf.references()<CR>')
-    bufmap('n', 'go', '<cmd>lua vim.lsp.buf.type_definition()<cr>')
-    bufmap('n', 'gi', '<Cmd>lua vim.lsp.buf.implementation()<CR>')
-    bufmap('n', 'ca', '<Cmd>lua vim.lsp.buf.code_action()<CR>')
-    bufmap('n', 'rn', 'nCmd>lua vim.lsp.buf.rename()<CR>')
-    bufmap('n', 'K', '<Cmd>lua vim.lsp.buf.hover()<CR>')
-    bufmap('n', '<C-k>', '<Cmd>lua vim.lsp.buf.signature_help()<CR>')
-    bufmap('n', 'L', '<Cmd>lua vim.diagnostic.open_float()<CR>')
-    bufmap('n', '<C-P>', '<Cmd>lua vim.lsp.buf.goto_prev()<CR>')
-    bufmap('n', '<C-c>', '<Cmd>lua vim.lsp.buf.goto_next()<CR>')
-    bufmap('n', 'K', '<cmd>lua vim.lsp.buf.hover()<cr>')
-end
-
-vim.api.nvim_create_autocmd('User', {
-  pattern = 'LspAttached',
-  desc = 'LSP actions',
-  callback = function()
-      assignment()
-  end
+    -- Buffer local mappings.
+    -- See `:help vim.lsp.*` for documentation on any of the below functions
+    local opts = { buffer = ev.buf }
+    vim.keymap.set('n', 'gD', vim.lsp.buf.declaration, opts)
+    vim.keymap.set('n', 'gd', vim.lsp.buf.definition, opts)
+    vim.keymap.set('n', 'gr', vim.lsp.buf.references, opts)
+    vim.keymap.set('n', 'go', vim.lsp.buf.type_definition, opts)
+    vim.keymap.set('n', 'gi', vim.lsp.buf.implementation, opts)
+    vim.keymap.set('n', 'ca', vim.lsp.buf.code_action, opts)
+    vim.keymap.set('n', '<leader>rn', vim.lsp.buf.rename, opts)
+    vim.keymap.set('n', 'K', vim.lsp.buf.hover, opts)
+    vim.keymap.set('n', '<C-k>', vim.lsp.buf.signature_help, opts)
+    vim.keymap.set('n', '<leader>wa', vim.lsp.buf.add_workspace_folder, opts)
+    vim.keymap.set('n', '<leader>wr', vim.lsp.buf.remove_workspace_folder, opts)
+    vim.keymap.set('n', 'L', vim.diagnostic.open_float, opts)
+    vim.keymap.set('n', '<leader>wl', function() print(vim.inspect(vim.lsp.buf.list_workspace_folders())) end, opts)
+    vim.keymap.set('n', '<leader>f', vim.lsp.buf.format , opts)
+  end,
 })
 
 
@@ -107,7 +104,7 @@ lspconfig.util.default_config = vim.tbl_deep_extend(
 ---
 
 lspconfig.tsserver.setup({})
-lspconfig.sumneko_lua.setup({})
+lspconfig.lua_ls.setup({})
 lspconfig.rust_analyzer.setup{}
 lspconfig.pyright.setup({})
 lspconfig.html.setup({})
@@ -122,10 +119,44 @@ local function cmd()
 end
 
 lspconfig.omnisharp.setup({
-    on_attach = function(_, bufnr)
+    on_attach = function(client, bufnr)
+        client.server_capabilities.semanticTokensProvider = nil
         vim.api.nvim_buf_set_option(bufnr, 'omnifunc', 'v:lua.vim.lsp.omnifunc')
-        assignment()
     end,
+    -- settings from .editorconfig.
+    enable_editorconfig_support = false,
+
+    -- If true, MSBuild project system will only load projects for files that
+    -- were opened in the editor. This setting is useful for big C# codebases
+    -- and allows for faster initialization of code navigation features only
+    -- for projects that are relevant to code that is being edited. With this
+    -- setting enabled OmniSharp may load fewer projects and may thus display
+    -- incomplete reference lists for symbols.
+    enable_ms_build_load_projects_on_demand = false,
+
+    -- Enables support for roslyn analyzers, code fixes and rulesets.
+    enable_roslyn_analyzers = false,
+
+    -- Specifies whether 'using' directives should be grouped and sorted during
+    -- document formatting.
+    organize_imports_on_format = false,
+
+    -- Enables support for showing unimported types and unimported extension
+    -- methods in completion lists. When committed, the appropriate using
+    -- directive will be added at the top of the current file. This option can
+    -- have a negative impact on initial completion responsiveness,
+    -- particularly for the first few completion sessions after opening a
+    -- solution.
+    enable_import_completion = true,
+
+    -- Specifies whether to include preview versions of the .NET SDK when
+    -- determining which version to use for project loading.
+    sdk_include_prereleases = false,
+
+    -- Only run analyzers against open files when 'enableRoslynAnalyzers' is
+    -- true
+    analyze_open_documents_only = true,
+
     cmd = cmd(),
 })
 

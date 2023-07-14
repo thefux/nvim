@@ -2,6 +2,9 @@ local Plug = vim.fn['plug#']
 
 vim.call('plug#begin', '~/.config/nvim/plugged')
 
+
+Plug('jackMort/ChatGPT.nvim')
+
 Plug('folke/tokyonight.nvim', {['branch'] = 'main'})
 -- Plug 'brooth/far.vim'
 Plug 'rust-lang/rust.vim'
