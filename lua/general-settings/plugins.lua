@@ -6,17 +6,15 @@ vim.call('plug#begin', '~/.config/nvim/plugged')
 Plug('jackMort/ChatGPT.nvim')
 
 Plug('folke/tokyonight.nvim', {['branch'] = 'main'})
--- Plug 'brooth/far.vim'
 Plug 'rust-lang/rust.vim'
 
 Plug 'christoomey/vim-tmux-navigator'
+-- Plug 'brooth/far.vim'
 -- Plug 'ctrlpvim/ctrlp.vim'
 
 Plug 'szw/vim-maximizer'
 Plug 'mbbill/undotree'
 Plug 'mhinz/vim-startify'
-
-Plug "MunifTanjim/nui.nvim"
 
 -- " scheme
 Plug 'rafi/awesome-vim-colorschemes'
@@ -62,6 +60,7 @@ Plug 'neovim/nvim-lspconfig'
 
 -- " Completion framework
 Plug 'hrsh7th/nvim-cmp'
+Plug 'hrsh7th/nvim-compe'
 
 -- " LSP completion source for nvim-cmp
 Plug 'hrsh7th/cmp-nvim-lsp'
@@ -87,8 +86,8 @@ Plug 'Neevash/awesome-flutter-snippets'
 Plug 'L3MON4D3/LuaSnip'
 Plug 'saadparwaiz1/cmp_luasnip'
 
--- " Fuzzy finder
 -- " Optional
+Plug "MunifTanjim/nui.nvim"
 Plug 'nvim-lua/popup.nvim'
 Plug 'nvim-lua/plenary.nvim'
 Plug 'nvim-telescope/telescope.nvim'
@@ -97,7 +96,7 @@ Plug 'nvim-telescope/telescope.nvim'
 Plug 'drzel/vim-gui-zoom'
 
 -- " linter
-Plug 'mfussenegger/nvim-lint'
+-- Plug 'mfussenegger/nvim-lint'
 
 -- " debug
 -- Plug 'mfussenegger/nvim-dap'
@@ -127,7 +126,7 @@ Plug 'terryma/vim-multiple-cursors'
 Plug 'folke/trouble.nvim'
 
 -- " code formatter
-Plug 'mhartington/formatter.nvim'
+-- Plug 'mhartington/formatter.nvim'
 
 Plug 'rmagatti/goto-preview'
 
@@ -151,6 +150,8 @@ Plug 'gbprod/substitute.nvim'
 Plug 'mattn/emmet-vim'
 
 Plug 'OmniSharp/omnisharp-vim'
+
+Plug 'jackMort/ChatGPT.nvim'
 
 -- if os.getenv('OS') == 'Window_NT'  then
 --     Plug('tzachar/cmp-tabnine', { ['do']= 'powershell ./install.ps1' })
