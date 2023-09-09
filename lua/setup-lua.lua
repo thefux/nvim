@@ -13,10 +13,8 @@ local all = {
     { vscode = false, name = 'worktree-config' },
     { vscode = false, name = 'commentary-config' },
     { vscode = false, name = 'mason-config' },
-    -- { vscode = false, name = 'bacon-config' },
     { vscode = false, name = 'multi-cursors' },
     { vscode = false, name = 'treesitter-config' },
-    { vscode = false, name = 'aerial-config' },
     { vscode = false, name = 'bufferline-config' },
     { vscode = false, name = 'trouble-config' },
     { vscode = false, name = 'goto-preview-config' },
@@ -24,8 +22,8 @@ local all = {
     { vscode = false, name = 'autopair-config' },
     { vscode = false, name = 'startify' },
     { vscode = false, name = 'peekup' },
-    { vscode = false, name = 'tokyonight' },
     { vscode = false, name = 'colorscheme' },
+    { vscode = false, name = 'tokyonight' },
     { vscode = false, name = 'spectre_' },
     { vscode = false, name = 'hop_' },
     { vscode = false, name = 'substitute_' },
@@ -33,6 +31,8 @@ local all = {
     { vscode = false, name = 'omnisharp_' },
     { vscode = false, name = 'neovide' },
     { vscode = false, name = 'chatgpt_' },
+    -- { vscode = false, name = 'bacon-config' },
+    -- { vscode = false, name = 'aerial-config' },
     -- { vscode = false, name = 'compe_' },
     -- { vscode = false, name = 'tabnine' },
     -- { vscode = false, name = 'debug-python' },
@@ -47,8 +47,12 @@ local all = {
 for k in pairs(package.loaded) do
     for _, value in ipairs(all) do
         if k:match(value.name) then
+            if (k.name == nil) then
+                goto continue
+            end
             package.loaded[k.name] = nil
         end
+        ::continue::
     end
 end
 
@@ -59,3 +63,4 @@ for _, value in ipairs(all) do
         require(value.name)
     end
 end
+

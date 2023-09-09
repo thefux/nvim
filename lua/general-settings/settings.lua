@@ -103,6 +103,9 @@ opt.guicursor=[[n-v-c:block-Cursor]]
 opt.colorcolumn = {120}
 -- set shortmess+=c
 
+vim.api.nvim_command(":set binary")
+vim.api.nvim_command(":set noeol")
+
 g.mapleader = ","
 
 if not vim.g.vscode then
