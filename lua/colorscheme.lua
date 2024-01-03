@@ -2,7 +2,7 @@ local highlight = require"general-settings.utils".highlight
 
 
 -- vim.cmd[[colorscheme tokyonight]]
-vim.cmd[[colorscheme nvcode]]
+-- vim.cmd[[colorscheme nvcode]]
 
 vim.api.nvim_set_hl(0, 'Normal', {bg='#051133'})
 

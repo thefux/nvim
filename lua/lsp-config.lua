@@ -108,19 +108,22 @@ lspconfig.lua_ls.setup({})
 lspconfig.rust_analyzer.setup{}
 lspconfig.pyright.setup({})
 lspconfig.html.setup({})
+-- lspconfig.csharp_ls.setup({})
 
 local function cmd()
     -- or make sure OmniSharp is installed and put in global path
     -- if vim.fn.has('win32') then
     --     return{'C:/tools/omnisharp-win-x64-net6.0/OmniSharp.exe', '--languageserver'}
     -- end
-    return{'/Users/rakezab/.cache/omnisharp-vim/omnisharp-roslyn/OmniSharp', '--languageserver'}
-    -- return{'$HOME/omnisharp-osx-amd64-net6.0/OmniSharp', '--languageserver'}
+    return{'$HOME/.cache/omnisharp-vim/omnisharp-roslyn/OmniSharp', '--languageserver'}
 end
 
 lspconfig.omnisharp.setup({
     on_attach = function(client, bufnr)
-        client.server_capabilities.semanticTokensProvider = nil
+        if client.server_capabilities then
+            client.server_capabilities.documentFormattingProvider = false
+            client.server_capabilities.semanticTokensProvider = false  -- turn off semantic tokens
+        end
         vim.api.nvim_buf_set_option(bufnr, 'omnifunc', 'v:lua.vim.lsp.omnifunc')
     end,
     -- settings from .editorconfig.
@@ -139,7 +142,7 @@ lspconfig.omnisharp.setup({
 
     -- Specifies whether 'using' directives should be grouped and sorted during
     -- document formatting.
-    organize_imports_on_format = false,
+    organize_imports_on_format = true,
 
     -- Enables support for showing unimported types and unimported extension
     -- methods in completion lists. When committed, the appropriate using
@@ -155,8 +158,12 @@ lspconfig.omnisharp.setup({
 
     -- Only run analyzers against open files when 'enableRoslynAnalyzers' is
     -- true
-    analyze_open_documents_only = true,
+    analyze_open_documents_only = false,
 
+    enable_package_restore = true,
+    handlers = {
+        ["textDocument/definition"] = require('omnisharp_extended').handler,
+    },
     cmd = cmd(),
 })
 
@@ -165,10 +172,7 @@ lspconfig.omnisharp.setup({
 -- Autocomplete
 ---
 
--- require('luasnip.loaders.from_vscode').lazy_load()
-
 local cmp = require('cmp')
-local luasnip = require('luasnip')
 
 local select_opts = {behavior = cmp.SelectBehavior.Select}
 local compare = require'cmp.config.compare'
@@ -183,7 +187,6 @@ cmp.setup({
     {name = 'path'},
     {name = 'nvim_lsp'},
     {name = 'crates'},
-    -- {name = 'cmp_tabnine'},
     {name = 'buffer', keyword_length = 2},
     {name = 'luasnip', keyword_length = 2},
   },

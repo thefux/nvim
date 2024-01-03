@@ -84,8 +84,11 @@ require("lazy").setup({
             'hrsh7th/nvim-compe',
         }
     },
-
-    'onsails/lspkind.nvim',
+    {
+        "sourcegraph/sg.nvim",
+        dependencies = { "nvim-lua/plenary.nvim" },
+        'onsails/lspkind.nvim',
+    },
 
     -- " See hrsh7th's other plugins for more completion sources!
 
@@ -102,7 +105,6 @@ require("lazy").setup({
     'hrsh7th/vim-vsnip-integ',
     'Neevash/awesome-flutter-snippets',
 
-    'L3MON4D3/LuaSnip',
     'saadparwaiz1/cmp_luasnip',
 
     -- " Optional
@@ -170,18 +172,8 @@ require("lazy").setup({
     'OmniSharp/omnisharp-vim',
 
     'jackMort/ChatGPT.nvim',
-    {
-      "harrisoncramer/gitlab.nvim",
-      dependencies = {
-        "MunifTanjim/nui.nvim",
-        "nvim-lua/plenary.nvim"
-      },
-      build = function () require("gitlab").build() end, -- Builds the Go binary
-      config = function()
-        require("gitlab").setup()
-      end,
-    },
     'rhysd/git-messenger.vim',
+    'Hoffs/omnisharp-extended-lsp.nvim',
 })
 
 require"general-settings/mappings"
