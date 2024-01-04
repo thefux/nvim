@@ -115,7 +115,9 @@ local function cmd()
     -- if vim.fn.has('win32') then
     --     return{'C:/tools/omnisharp-win-x64-net6.0/OmniSharp.exe', '--languageserver'}
     -- end
-    return{'$HOME/.cache/omnisharp-vim/omnisharp-roslyn/OmniSharp', '--languageserver'}
+    return{'/Users/rakezab/.cache/omnisharp-vim/omnisharp-roslyn/OmniSharp', '--languageserver'}
+    -- return {'/opt/homebrew/bin/omnisharp', '--languageserver'}
+    -- return{'$HOME/omnisharp-osx-amd64-net6.0/OmniSharp', '--languageserver'}
 end
 
 lspconfig.omnisharp.setup({

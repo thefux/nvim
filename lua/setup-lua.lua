@@ -32,6 +32,8 @@ local all = {
     { vscode = false, name = 'neovide' },
     { vscode = false, name = 'chatgpt_' },
     { vscode = false, name = 'sourcegraph_' },
+    { vscode = false, name = 'promo_' },
+    { vscode = false, name = 'obsidian_' },
     -- { vscode = false, name = 'bacon-config' },
     -- { vscode = false, name = 'aerial-config' },
     -- { vscode = false, name = 'compe_' },

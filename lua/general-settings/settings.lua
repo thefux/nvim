@@ -105,6 +105,7 @@ opt.colorcolumn = {120}
 
 -- vim.api.nvim_command(":set binary")
 vim.api.nvim_command(":set noeol")
+vim.api.nvim_command(":set nofixendofline")
 
 g.mapleader = ","
 

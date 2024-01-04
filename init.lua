@@ -39,7 +39,7 @@ require("lazy").setup({
     -- " Using a non-default branch
     'thefux/lazygit.nvim',
 
-    'vimwiki/vimwiki',
+    -- 'vimwiki/vimwiki',
 
     'nikvdp/neomux',
 
@@ -173,7 +173,35 @@ require("lazy").setup({
 
     'jackMort/ChatGPT.nvim',
     'rhysd/git-messenger.vim',
+    {
+        'epwalsh/pomo.nvim',
+        version = '*',  -- Recommended, use latest release instead of latest commit
+        lazy = true,
+        cmd = { 'TimerStart', 'TimerRepeat' },
+        dependencies = {
+            'rcarriga/nvim-notify',
+        },
+    },
     'Hoffs/omnisharp-extended-lsp.nvim',
+    {
+        "epwalsh/obsidian.nvim",
+        version = "*",  -- recommended, use latest release instead of latest commit
+        lazy = true,
+        event = {
+            "BufReadPre (PATH)/**.md",
+            "BufNewFile (PATH)/**.md",
+        },
+        ft = "markdown",
+        dependencies = {
+            -- Required.
+            'nvim-lua/plenary.nvim',
+
+            'hrsh7th/nvim-cmp',
+            'nvim-telescope/telescope.nvim',
+            'nvim-treesitter',
+            'epwalsh/pomo.nvim',
+        },
+    }
 })
 
 require"general-settings/mappings"
