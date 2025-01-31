@@ -1,0 +1,56 @@
+-- require("codecompanion").setup({
+--                     display = {
+--                         action_palette = {
+--                             width = 95,
+--                             height = 10,
+--                             prompt = "Prompt ", -- Prompt used for interactive LLM calls
+--                             provider = "default", -- default|telescope|mini_pick
+--                             opts = {
+--                                 show_default_actions = true, -- Show the default actions in the action palette?
+--                                 show_default_prompt_library = true, -- Show the default prompt library in the action palette?
+--                             },
+--                         },
+--                     },
+--                     sources = {
+--                         per_filetype = {
+--                             codecompanion = { "codecompanion" },
+--                         }
+--                     },
+--                     adapters = {
+--                         ollama = function()
+--                             return require("codecompanion.adapters").extend("ollama", {
+--                                 env = {
+--                                     url = "http://100.90.84.147:11434",
+--                                     api_key = "OLLAMA_API_KEY",
+--                                 },
+--                                 headers = {
+--                                     ["Content-Type"] = "application/json",
+--                                     ["Authorization"] = "Bearer ${api_key}",
+--                                 },
+--                                 parameters = {
+--                                     sync = true,
+--                                 },
+--                                 name = "llama3.2", -- Give this adapter a different name to differentiate it from the default ollama adapter
+--                                 schema = {
+--                                     model = {
+--                                         default = "llama3.2:latest",
+--                                     },
+--                                     num_ctx = {
+--                                         default = 16384,
+--                                     },
+--                                     num_predict = {
+--                                         default = -1,
+--                                     },
+--                                 },
+--                             })
+--                         end,
+--                     },
+--                     strategies = {
+--                         chat = {
+--                             adapter = "ollama",
+--                         },
+--                     },
+--                     opts = {
+--                         log_level = "DEBUG",
+--                     },
+-- })

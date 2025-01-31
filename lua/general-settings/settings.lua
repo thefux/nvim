@@ -68,7 +68,7 @@ opt.swapfile = false
 
 opt.scrolloff = 2
 opt.sidescrolloff = 4
-opt.pastetoggle = '<F2>'
+-- opt.pastetoggle = '<F2>'
 opt.completeopt = {'menuone','noinsert','noselect'}
 opt.cmdheight = 1
 opt.hidden = true
@@ -110,6 +110,10 @@ vim.api.nvim_command(":set nofixendofline")
 g.mapleader = ","
 
 if not vim.g.vscode then
+    vim.g.tabby_trigger_mode = 'manual'
+    vim.g.tabby_keybinding_accept = '<Tab>'
+    vim.g.tabby_keybinding_trigger_or_dismiss = '<C-\\>'
+
     local group = vim.api.nvim_create_augroup('Spell', {clear = true})
 
     vim.api.nvim_create_autocmd(
@@ -175,6 +179,18 @@ if not vim.g.vscode then
     })
 
     vim.api.nvim_set_keymap('n', '<leader>=', [[:%s/\s\+$//e<CR>]], {})
+
+    -- Autocmd for .cshtml files
+    vim.api.nvim_create_autocmd(
+      {"BufNewFile", "BufRead"},
+      {pattern = {"*.cshtml"}, command = "set filetype=html.cshtml.razor"}
+    )
+
+    -- Autocmd for .razor files
+    vim.api.nvim_create_autocmd(
+      {"BufNewFile", "BufRead"},
+      {pattern = {"*.razor"}, command = "set filetype=html.cshtml.razor"}
+    )
     -- vim.api.nvim_create_autocmd(
     --     'BufWritePre',
     --     {
@@ -218,7 +234,6 @@ if not vim.g.vscode then
             -- endfunction
             -- nnoremap <leader>h :call SetLineHighlight()<CR>
             -- "
-end
 
 -- makes sure to store last cursor position
 local ignore_buftype = { "quickfix", "nofile", "help" }
@@ -265,3 +280,5 @@ vim.api.nvim_create_autocmd({'BufWinEnter', 'FileType'}, {
   group    = vim.api.nvim_create_augroup('nvim-lastplace', {}),
   callback = run
 })
+
+end

@@ -25,26 +25,27 @@ require("obsidian").setup(
 
     -- Optional, set to true to use the current directory as a vault; otherwise
     -- the first workspace is opened by default.
-    detect_cwd = true,
+    -- detect_cwd = false,
 
     -- Optional, if you keep notes in a specific subdirectory of your vault.
-    notes_subdir = "notes",
+    -- notes_subdir = "notes",
 
     -- Optional, set the log level for obsidian.nvim. This is an integer corresponding to one of the log
     -- levels defined by "vim.log.levels.*".
     log_level = vim.log.levels.INFO,
 
-    daily_notes = {
-        -- Optional, if you keep daily notes in a separate directory.
-        folder = "notes/dailies",
-        -- Optional, if you want to change the date format for the ID of daily notes.
-        date_format = "%Y-%m-%d",
-        -- Optional, if you want to change the date format of the default alias of daily notes.
-        alias_format = "%B %-d, %Y",
-        -- Optional, if you want to automatically insert a template from your template directory like 'daily.md'
-        template = nil
-    },
+    -- daily_notes = {
+    --     -- Optional, if you keep daily notes in a separate directory.
+    --     folder = "notes/dailies",
+    --     -- Optional, if you want to change the date format for the ID of daily notes.
+    --     date_format = "%Y-%m-%d",
+    --     -- Optional, if you want to change the date format of the default alias of daily notes.
+    --     alias_format = "%B %-d, %Y",
+    --     -- Optional, if you want to automatically insert a template from your template directory like 'daily.md'
+    --     template = nil
+    -- },
 
+    new_notes_location = "current_dir",
     -- Optional, completion of wiki links, local markdown links, and tags using nvim-cmp.
     completion = {
         -- Set to false to disable completion.
@@ -56,14 +57,21 @@ require("obsidian").setup(
         -- Where to put new notes created from completion. Valid options are
         --  * "current_dir" - put new notes in same directory as the current buffer.
         --  * "notes_subdir" - put new notes in the default notes subdirectory.
-        new_notes_location = "current_dir",
 
         -- Control how wiki links are completed with these (mutually exclusive) options:
         --
         -- 1. Whether to add the note ID during completion.
         -- E.g. "[[Foo" completes to "[[foo|Foo]]" assuming "foo" is the ID of the note.
         -- Mutually exclusive with 'prepend_note_path' and 'use_path_only'.
-        prepend_note_id = true,
+        wiki_link_func = function(opts)
+            if opts.id == nil then
+                return string.format("[[%s]]", opts.label)
+            elseif opts.label ~= opts.id then
+                return string.format("[[%s|%s]]", opts.id, opts.label)
+            else
+                return string.format("[[%s]]", opts.id)
+            end
+        end,
         -- 2. Whether to add the note path during completion.
         -- E.g. "[[Foo" completes to "[[notes/foo|Foo]]" assuming "notes/foo.md" is the path of the note.
         -- Mutually exclusive with 'prepend_note_id' and 'use_path_only'.
@@ -103,12 +111,12 @@ require("obsidian").setup(
     -- },
 
     -- Optional, customize the backlinks interface.
-    backlinks = {
-        -- The default height of the backlinks pane.
-        height = 10,
-        -- Whether or not to wrap lines.
-        wrap = true,
-    },
+    -- backlinks = {
+    --     -- The default height of the backlinks pane.
+    --     height = 10,
+    --     -- Whether or not to wrap lines.
+    --     wrap = true,
+    -- },
     -- Optional, by default when you use `:ObsidianFollowLink` on a link to an external
     -- URL it will be ignored but you can customize this behavior here.
     follow_url_func = function(url)

@@ -1,17 +1,17 @@
-local module = require"general-settings.utils".M
-local nmap = module.nmap
-local xmap = module.xmap
-
-nmap("bn", "^")
-nmap("en", "$")
-nmap("<C-f>", "?")
-
--- copy and paste from clipboard
-nmap("<leader>p", '"+p')
-nmap("<leader>c", '"*y')
-xmap("p", "pgvy")
-
 if not vim.g.vscode then
+    local module = require"general-settings.utils".M
+    local nmap = module.nmap
+    local xmap = module.xmap
+
+    nmap("bn", "^")
+    nmap("en", "$")
+    nmap("<C-f>", "?")
+
+    -- copy and paste from clipboard
+    nmap("<leader>p", '"+p')
+    nmap("<leader>c", '"*y')
+    xmap("p", "pgvy")
+
     nmap("<leader>q", ":q<CR>")
     nmap("<leader>w", ":w<CR>")
     nmap("<leader>x", ":x<CR>")
@@ -79,12 +79,15 @@ if not vim.g.vscode then
     --  zg
 
 else
-    nmap("<leader>w", "<Cmd>call VSCodeNotify('workbench.action.files.save', {})<CR>")
-    nmap("<leader>q", "<Cmd>call VSCodeNotify('workbench.action.closeActiveEditor', {})<CR>")
-    nmap("<leader>x", "<Cmd>call VSCodeCall('workbench.action.files.save', {})<CR> | <Cmd>call VSCodeCall('workbench.action.closeActiveEditor', {})<CR>")
-    nmap("<leader>xa", "<Cmd>call VSCodeCall('workbench.action.files.saveAll', {})<CR> | <Cmd>call VSCodeCall('workbench.action.closeAllEditors', {})<CR>")
-    nmap("<leader>wa", "<Cmd>call VSCodeNotify('workbench.action.files.saveAll', {})<CR>")
-    nmap("<leader>qa", "<Cmd>call VSCodeNotify('workbench.action.closeAllEditors', {})<CR>")
-    nmap("<C-f>", "<Cmd>call VSCodeNotify('action.find', {})<CR>")
+    local keymap = vim.keymap.set
+    local opts = { noremap = true, silent = true }
+
+    keymap({"n"}, "<leader>w", "<Cmd>call VSCodeNotify('workbench.action.files.save', {})<CR>", opts)
+    keymap({"n"}, "<leader>q", "<Cmd>call VSCodeNotify('workbench.action.closeActiveEditor', {})<CR>", opts)
+    keymap({"n"}, "<leader>x", "<Cmd>call VSCodeCall('workbench.action.files.save', {})<CR> | <Cmd>call VSCodeCall('workbench.action.closeActiveEditor', {})<CR>", opts)
+    keymap({"n"}, "<leader>xa", "<Cmd>call VSCodeCall('workbench.action.files.saveAll', {})<CR> | <Cmd>call VSCodeCall('workbench.action.closeAllEditors', {})<CR>", opts)
+    keymap({"n"}, "<leader>wa", "<Cmd>call VSCodeNotify('workbench.action.files.saveAll', {})<CR>", opts)
+    keymap({"n"}, "<leader>qa", "<Cmd>call VSCodeNotify('workbench.action.closeAllEditors', {})<CR>", opts)
+    keymap({"n"}, "<C-f>", "<Cmd>call VSCodeNotify('action.find', {})<CR>", opts)
 end
 

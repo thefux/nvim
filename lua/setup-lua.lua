@@ -1,6 +1,6 @@
 local all = {
     { vscode = false, name = 'lsp-config' },
-    { vscode = false, name = 'status-line-config' },
+    -- { vscode = false, name = 'status-line-config' },
     { vscode = false, name = 'terminal-config' },
     { vscode = false, name = 'git-config' },
     { vscode = false, name = 'tree-config' },
@@ -10,7 +10,7 @@ local all = {
     { vscode = false, name = 'outline-config' },
     { vscode = false, name = 'telescope-config' },
     { vscode = false, name = 'telescope-bookmark' },
-    { vscode = false, name = 'worktree-config' },
+    { vscome = false, name = 'worktree-config' },
     { vscode = false, name = 'commentary-config' },
     { vscode = false, name = 'mason-config' },
     { vscode = false, name = 'multi-cursors' },
@@ -30,10 +30,13 @@ local all = {
     { vscode = false, name = 'rust_creates_' },
     { vscode = false, name = 'omnisharp_' },
     { vscode = false, name = 'neovide' },
-    { vscode = false, name = 'chatgpt_' },
-    { vscode = false, name = 'sourcegraph_' },
+    -- { vscode = false, name = 'chatgpt_' },
+    -- { vscode = false, name = 'sourcegraph_' },
     { vscode = false, name = 'promo_' },
     { vscode = false, name = 'obsidian_' },
+    { vscode = false, name = 'lualine_' },
+    { vscode = false, name = 'null_ls_' },
+    { vscode = false, name = 'codecompanion' },
     -- { vscode = false, name = 'bacon-config' },
     -- { vscode = false, name = 'aerial-config' },
     -- { vscode = false, name = 'compe_' },
@@ -45,15 +48,13 @@ local all = {
     -- 'sidebar-config',
 }
 
-
--- TODO: put in a function and automate loading a reloading
 for k in pairs(package.loaded) do
     for _, value in ipairs(all) do
         if k:match(value.name) then
-            if (k.name == nil) then
+            if (value.vscode == nil) then
                 goto continue
             end
-            package.loaded[k.name] = nil
+            package.loaded[k] = nil
         end
         ::continue::
     end
@@ -62,8 +63,7 @@ end
 for _, value in ipairs(all) do
     if vim.g.vscode and value.vscode then
         require(value.name)
-    else
+    elseif not vim.g.vscode then
         require(value.name)
     end
 end
-
