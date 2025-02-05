@@ -75,9 +75,6 @@ vim.lsp.handlers['textDocument/signatureHelp'] = vim.lsp.with(
 -- LSP config
 ---
 
--- require('mason').setup({})
--- require('mason-lspconfig').setup({})
-
 local lsp_defaults = {
   flags = {
     debounce_text_changes = 150,
@@ -108,7 +105,9 @@ lspconfig.lua_ls.setup({})
 lspconfig.rust_analyzer.setup{}
 lspconfig.pyright.setup({})
 lspconfig.html.setup({})
--- lspconfig.csharp_ls.setup({})
+lspconfig.csharp_ls.setup({})
+lspconfig.htmx.setup{}
+-- lspconfig.tailwindcss.setup{}
 
 local function cmd()
     -- or make sure OmniSharp is installed and put in global path
@@ -159,20 +158,20 @@ end
 --     analyze_open_documents_only = false,
 -- })
 
-local pid = vim.fn.getpid()
-local omnisharp_bin = "/Users/rakezab/.cache/omnisharp-vim/omnisharp-roslyn/OmniSharp"
+-- local pid = vim.fn.getpid()
+-- local omnisharp_bin = "/Users/rakezab/.cache/omnisharp-vim/omnisharp-roslyn/OmniSharp"
 
-local config = {
-    enable_roslyn_analyzers = true,
-    enable_import_completion = true,
-    analyze_open_documents_only = true,
-    handlers = {
-        ["textDocument/definition"] = require('omnisharp_extended').handler,
-    },
-    cmd = { omnisharp_bin, '--languageserver' , '--hostPID', tostring(pid) },
-}
+-- local config = {
+--     enable_roslyn_analyzers = true,
+--     enable_import_completion = true,
+--     analyze_open_documents_only = true,
+--     handlers = {
+--         ["textDocument/definition"] = require('omnisharp_extended').handler,
+--     },
+--     cmd = { omnisharp_bin, '--languageserver' , '--hostPID', tostring(pid) },
+-- }
 
-require'lspconfig'.omnisharp.setup(config)
+-- require'lspconfig'.omnisharp.setup(config)
 
 ---
 -- Autocomplete
