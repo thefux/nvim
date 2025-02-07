@@ -1,6 +1,6 @@
 local all = {
     { vscode = false, name = 'lsp-config' },
-    { vscode = false, name = 'status-line-config' },
+    -- { vscode = false, name = 'status-line-config' },
     { vscode = false, name = 'terminal-config' },
     { vscode = false, name = 'git-config' },
     { vscode = false, name = 'tree-config' },
@@ -10,13 +10,11 @@ local all = {
     { vscode = false, name = 'outline-config' },
     { vscode = false, name = 'telescope-config' },
     { vscode = false, name = 'telescope-bookmark' },
-    { vscode = false, name = 'worktree-config' },
+    { vscome = false, name = 'worktree-config' },
     { vscode = false, name = 'commentary-config' },
     { vscode = false, name = 'mason-config' },
-    -- { vscode = false, name = 'bacon-config' },
     { vscode = false, name = 'multi-cursors' },
     { vscode = false, name = 'treesitter-config' },
-    { vscode = false, name = 'aerial-config' },
     { vscode = false, name = 'bufferline-config' },
     { vscode = false, name = 'trouble-config' },
     { vscode = false, name = 'goto-preview-config' },
@@ -24,15 +22,26 @@ local all = {
     { vscode = false, name = 'autopair-config' },
     { vscode = false, name = 'startify' },
     { vscode = false, name = 'peekup' },
-    { vscode = false, name = 'tokyonight' },
     { vscode = false, name = 'colorscheme' },
+    { vscode = false, name = 'tokyonight_' },
     { vscode = false, name = 'spectre_' },
     { vscode = false, name = 'hop_' },
     { vscode = false, name = 'substitute_' },
     { vscode = false, name = 'rust_creates_' },
     { vscode = false, name = 'omnisharp_' },
     { vscode = false, name = 'neovide' },
-    { vscode = false, name = 'chatgpt_' },
+    -- { vscode = false, name = 'chatgpt_' },
+    -- { vscode = false, name = 'sourcegraph_' },
+    { vscode = false, name = 'promo_' },
+    { vscode = false, name = 'obsidian_' },
+    { vscode = false, name = 'lualine_' },
+    { vscode = false, name = 'null_ls_' },
+    { vscode = false, name = 'lint_' },
+    { vscode = false, name = 'format_' },
+    -- { vscode = false, name = 'codecompanion' },
+    -- { vscode = false, name = 'aider_' },
+    -- { vscode = false, name = 'bacon-config' },
+    -- { vscode = false, name = 'aerial-config' },
     -- { vscode = false, name = 'compe_' },
     -- { vscode = false, name = 'tabnine' },
     -- { vscode = false, name = 'debug-python' },
@@ -42,20 +51,22 @@ local all = {
     -- 'sidebar-config',
 }
 
-
--- TODO: put in a function and automate loading a reloading
 for k in pairs(package.loaded) do
     for _, value in ipairs(all) do
         if k:match(value.name) then
-            package.loaded[k.name] = nil
+            if (value.vscode == nil) then
+                goto continue
+            end
+            package.loaded[k] = nil
         end
+        ::continue::
     end
 end
 
 for _, value in ipairs(all) do
     if vim.g.vscode and value.vscode then
         require(value.name)
-    else
+    elseif not vim.g.vscode then
         require(value.name)
     end
 end

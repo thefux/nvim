@@ -1,3 +1,4 @@
+if not vim.g.vscode then
 local job = require'plenary.job'
 
 local function get_root()
@@ -57,4 +58,4 @@ return
     get_root = get_root,
     highlight = highlight,
 }
-
+end

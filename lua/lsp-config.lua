@@ -75,9 +75,6 @@ vim.lsp.handlers['textDocument/signatureHelp'] = vim.lsp.with(
 -- LSP config
 ---
 
--- require('mason').setup({})
--- require('mason-lspconfig').setup({})
-
 local lsp_defaults = {
   flags = {
     debounce_text_changes = 150,
@@ -103,11 +100,14 @@ lspconfig.util.default_config = vim.tbl_deep_extend(
 -- LSP servers
 ---
 
-lspconfig.tsserver.setup({})
+lspconfig.ts_ls.setup({})
 lspconfig.lua_ls.setup({})
 lspconfig.rust_analyzer.setup{}
 lspconfig.pyright.setup({})
 lspconfig.html.setup({})
+lspconfig.csharp_ls.setup({})
+lspconfig.htmx.setup{}
+-- lspconfig.tailwindcss.setup{}
 
 local function cmd()
     -- or make sure OmniSharp is installed and put in global path
@@ -115,60 +115,69 @@ local function cmd()
     --     return{'C:/tools/omnisharp-win-x64-net6.0/OmniSharp.exe', '--languageserver'}
     -- end
     return{'/Users/rakezab/.cache/omnisharp-vim/omnisharp-roslyn/OmniSharp', '--languageserver'}
+    -- return {'/opt/homebrew/bin/omnisharp', '--languageserver'}
     -- return{'$HOME/omnisharp-osx-amd64-net6.0/OmniSharp', '--languageserver'}
 end
 
-lspconfig.omnisharp.setup({
-    on_attach = function(client, bufnr)
-        client.server_capabilities.semanticTokensProvider = nil
-        vim.api.nvim_buf_set_option(bufnr, 'omnifunc', 'v:lua.vim.lsp.omnifunc')
-    end,
-    -- settings from .editorconfig.
-    enable_editorconfig_support = false,
+-- lspconfig.omnisharp.setup({
+--     cmd = { "dotnet", "/Users/rakezab/.cache/omnisharp-vim/omnisharp-roslyn/OmniSharp.dll" },
 
-    -- If true, MSBuild project system will only load projects for files that
-    -- were opened in the editor. This setting is useful for big C# codebases
-    -- and allows for faster initialization of code navigation features only
-    -- for projects that are relevant to code that is being edited. With this
-    -- setting enabled OmniSharp may load fewer projects and may thus display
-    -- incomplete reference lists for symbols.
-    enable_ms_build_load_projects_on_demand = false,
+--     -- Enables support for reading code style, naming convention and analyzer
+--     -- settings from .editorconfig.
+--     enable_editorconfig_support = true,
 
-    -- Enables support for roslyn analyzers, code fixes and rulesets.
-    enable_roslyn_analyzers = false,
+--     -- If true, MSBuild project system will only load projects for files that
+--     -- were opened in the editor. This setting is useful for big C# codebases
+--     -- and allows for faster initialization of code navigation features only
+--     -- for projects that are relevant to code that is being edited. With this
+--     -- setting enabled OmniSharp may load fewer projects and may thus display
+--     -- incomplete reference lists for symbols.
+--     enable_ms_build_load_projects_on_demand = false,
 
-    -- Specifies whether 'using' directives should be grouped and sorted during
-    -- document formatting.
-    organize_imports_on_format = false,
+--     -- Enables support for roslyn analyzers, code fixes and rulesets.
+--     enable_roslyn_analyzers = true,
 
-    -- Enables support for showing unimported types and unimported extension
-    -- methods in completion lists. When committed, the appropriate using
-    -- directive will be added at the top of the current file. This option can
-    -- have a negative impact on initial completion responsiveness,
-    -- particularly for the first few completion sessions after opening a
-    -- solution.
-    enable_import_completion = true,
+--     -- Specifies whether 'using' directives should be grouped and sorted during
+--     -- document formatting.
+--     organize_imports_on_format = true,
 
-    -- Specifies whether to include preview versions of the .NET SDK when
-    -- determining which version to use for project loading.
-    sdk_include_prereleases = false,
+--     -- Enables support for showing unimported types and unimported extension
+--     -- methods in completion lists. When committed, the appropriate using
+--     -- directive will be added at the top of the current file. This option can
+--     -- have a negative impact on initial completion responsiveness,
+--     -- particularly for the first few completion sessions after opening a
+--     -- solution.
+--     enable_import_completion = true,
 
-    -- Only run analyzers against open files when 'enableRoslynAnalyzers' is
-    -- true
-    analyze_open_documents_only = true,
+--     -- Specifies whether to include preview versions of the .NET SDK when
+--     -- determining which version to use for project loading.
+--     sdk_include_prereleases = true,
 
-    cmd = cmd(),
-})
+--     -- Only run analyzers against open files when 'enableRoslynAnalyzers' is
+--     -- true
+--     analyze_open_documents_only = false,
+-- })
 
+-- local pid = vim.fn.getpid()
+-- local omnisharp_bin = "/Users/rakezab/.cache/omnisharp-vim/omnisharp-roslyn/OmniSharp"
+
+-- local config = {
+--     enable_roslyn_analyzers = true,
+--     enable_import_completion = true,
+--     analyze_open_documents_only = true,
+--     handlers = {
+--         ["textDocument/definition"] = require('omnisharp_extended').handler,
+--     },
+--     cmd = { omnisharp_bin, '--languageserver' , '--hostPID', tostring(pid) },
+-- }
+
+-- require'lspconfig'.omnisharp.setup(config)
 
 ---
 -- Autocomplete
 ---
 
--- require('luasnip.loaders.from_vscode').lazy_load()
-
 local cmp = require('cmp')
-local luasnip = require('luasnip')
 
 local select_opts = {behavior = cmp.SelectBehavior.Select}
 local compare = require'cmp.config.compare'
@@ -176,14 +185,13 @@ local compare = require'cmp.config.compare'
 cmp.setup({
   snippet = {
     expand = function(args)
-      luasnip.lsp_expand(args.body)
+      require'luasnip'.lsp_expand(args.body)
     end
   },
   sources = {
     {name = 'path'},
     {name = 'nvim_lsp'},
     {name = 'crates'},
-    -- {name = 'cmp_tabnine'},
     {name = 'buffer', keyword_length = 2},
     {name = 'luasnip', keyword_length = 2},
   },
