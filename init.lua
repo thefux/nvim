@@ -87,6 +87,10 @@ require("lazy").setup({
                 "hrsh7th/nvim-compe",
             },
         },
+        {
+            "mfussenegger/nvim-lint",
+            event = { "BufReadPre", "BufNewFile" },
+        },
         -- {
         --     "sourcegraph/sg.nvim",
         --     dependencies = { "nvim-lua/plenary.nvim" },
@@ -534,7 +538,11 @@ require("lazy").setup({
             -- or if using mini.icons/mini.nvim
             -- dependencies = { "echasnovski/mini.icons" },
             opts = {}
-        }
+        },
+        {
+            "stevearc/conform.nvim",
+            event = { "BufReadPre", "BufNewFile" },
+        },
     },
     install = { colorscheme = { "habamax" } },
     -- automatically check for plugin updates
