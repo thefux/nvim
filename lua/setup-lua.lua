@@ -38,6 +38,7 @@ local all = {
     { vscode = false, name = 'null_ls_' },
     { vscode = false, name = 'lint_' },
     { vscode = false, name = 'format_' },
+    { vscode = false, name = 'tuiterminal_' },
     -- { vscode = false, name = 'codecompanion' },
     -- { vscode = false, name = 'aider_' },
     -- { vscode = false, name = 'bacon-config' },

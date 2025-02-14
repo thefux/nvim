@@ -5,7 +5,7 @@ if not (vim.uv or vim.loop).fs_stat(lazypath) then
     if vim.v.shell_error ~= 0 then
         vim.api.nvim_echo({
             { "Failed to clone lazy.nvim:\n", "ErrorMsg" },
-            { out, "WarningMsg" },
+            { out,                            "WarningMsg" },
             { "\nPress any key to exit..." },
         }, true, {})
         vim.fn.getchar()
@@ -265,15 +265,15 @@ require("lazy").setup({
                 "AiderHealth",
             },
             keys = {
-                { "<leader>ao", "<cmd>AiderTerminalToggle<cr>", desc = "Open Aider" },
-                { "<leader>as", "<cmd>AiderTerminalSend<cr>", desc = "Send to Aider", mode = { "n", "v" } },
-                { "<leader>ac", "<cmd>AiderQuickSendCommand<cr>", desc = "Send Command To Aider" },
-                { "<leader>ab", "<cmd>AiderQuickSendBuffer<cr>", desc = "Send Buffer To Aider" },
-                { "<leader>a+", "<cmd>AiderQuickAddFile<cr>", desc = "Add File to Aider" },
-                { "<leader>a-", "<cmd>AiderQuickDropFile<cr>", desc = "Drop File from Aider" },
+                { "<leader>ao", "<cmd>AiderTerminalToggle<cr>",    desc = "Open Aider" },
+                { "<leader>as", "<cmd>AiderTerminalSend<cr>",      desc = "Send to Aider",               mode = { "n", "v" } },
+                { "<leader>ac", "<cmd>AiderQuickSendCommand<cr>",  desc = "Send Command To Aider" },
+                { "<leader>ab", "<cmd>AiderQuickSendBuffer<cr>",   desc = "Send Buffer To Aider" },
+                { "<leader>a+", "<cmd>AiderQuickAddFile<cr>",      desc = "Add File to Aider" },
+                { "<leader>a-", "<cmd>AiderQuickDropFile<cr>",     desc = "Drop File from Aider" },
                 { "<leader>ar", "<cmd>AiderQuickReadOnlyFile<cr>", desc = "Add File as Read-Only" },
                 -- Example nvim-tree.lua integration if needed
-                { "<leader>a+", "<cmd>AiderTreeAddFile<cr>", desc = "Add File from Tree to Aider", ft = "NvimTree" },
+                { "<leader>a+", "<cmd>AiderTreeAddFile<cr>",       desc = "Add File from Tree to Aider", ft = "NvimTree" },
                 {
                     "<leader>a-",
                     "<cmd>AiderTreeDropFile<cr>",
@@ -415,9 +415,9 @@ require("lazy").setup({
                     local home_dir = vim.fn.expand("~")
                     if require("easy-dotnet.extensions").isWindows() then
                         local secret_path = home_dir
-                        .. "\\AppData\\Roaming\\Microsoft\\UserSecrets\\"
-                        .. secret_guid
-                        .. "\\secrets.json"
+                            .. "\\AppData\\Roaming\\Microsoft\\UserSecrets\\"
+                            .. secret_guid
+                            .. "\\secrets.json"
                         path = secret_path
                     else
                         local secret_path = home_dir .. "/.microsoft/usersecrets/" .. secret_guid .. "/secrets.json"
@@ -523,10 +523,12 @@ require("lazy").setup({
                 "MunifTanjim/nui.nvim",
                 "nvim-lua/plenary.nvim",
                 "sindrets/diffview.nvim",
-                "stevearc/dressing.nvim", -- Recommended but not required. Better UI for pickers.
+                "stevearc/dressing.nvim",      -- Recommended but not required. Better UI for pickers.
                 "nvim-tree/nvim-web-devicons", -- Recommended but not required. Icons in discussion tree.
             },
-            build = function () require("gitlab.server").build(true) end, -- Builds the Go binary
+            build = function()
+                require("gitlab.server").build(true)
+            end, -- Builds the Go binary
             config = function()
                 require("gitlab").setup()
             end,
@@ -537,12 +539,19 @@ require("lazy").setup({
             dependencies = { "nvim-tree/nvim-web-devicons" },
             -- or if using mini.icons/mini.nvim
             -- dependencies = { "echasnovski/mini.icons" },
-            opts = {}
+            opts = {},
         },
         {
             "stevearc/conform.nvim",
             event = { "BufReadPre", "BufNewFile" },
         },
+        {
+            dir = "~/nvim-plugin/tui_terminal.nvim",
+        },
+        { 'glacambre/firenvim', build = ":call firenvim#install(0)" }
+    },
+    log = {
+        level = "debug",
     },
     install = { colorscheme = { "habamax" } },
     -- automatically check for plugin updates
