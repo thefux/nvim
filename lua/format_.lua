@@ -1,6 +1,7 @@
 local conform = require("conform")
 conform.setup({
     formatters_by_ft = {
+        sql = {},
         javascript = { "prettier" },
         typescript = { "prettier" },
         javascriptreact = { "prettier" },
@@ -19,8 +20,8 @@ conform.setup({
         cs = { "csharpier" },
     },
     format_on_save = {
-        lsp_fallback = true,
-        async = false,
+        lsp_fallback = false,
+        async = true,
         timeout_ms = 1000,
     },
     csharpier = {

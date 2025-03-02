@@ -2,11 +2,17 @@ require("tui_terminal").setup({
     width = 0.9,
     height = 0.9,
     tools = {
-        { name = "glim",    cmd = "glim",    vim_navigation = true },
-        { name = "htop",    cmd = "htop",    vim_navigation = false },
-        { name = "lazygit", cmd = "lazygit", vim_navigation = false },
-        { name = "nu",      cmd = "nu",      vim_navigation = false, quit_key = false, detach = true },
-        { name = "posting", cmd = "posting", vim_navigation = false, detach = true },
+        { name = "yazi",     cmd = "yazi",     vim_navigation = true,  detach = true,    quit_key = true },
+        { name = "atac",     cmd = "atac",     vim_navigation = true,  detach = true,    quit_key = true },
+        { name = "rainfrog", cmd = "rainfrog", vim_navigation = true,  detach = true,    quit_key = true },
+        { name = "serie",    cmd = "serie",    vim_navigation = true,  detach = true,    quit_key = true },
+        { name = "joutnal",  cmd = "tjournal", vim_navigation = true,  detach = true,    quit_key = true },
+        { name = "term",     cmd = "zsh",      vim_navigation = false, detach = true,    quit_key = false },
+        { name = "glim",     cmd = "glim",     vim_navigation = true },
+        { name = "htop",     cmd = "htop",     vim_navigation = false },
+        { name = "lazygit",  cmd = "lazygit",  vim_navigation = false },
+        { name = "nu",       cmd = "nu",       vim_navigation = false, quit_key = false, detach = true },
+        { name = "posting",  cmd = "posting",  vim_navigation = false, detach = true },
         {
             name = "goose",
             cmd = "goose",
@@ -65,3 +71,7 @@ require("tui_terminal").setup({
 })
 
 require("telescope").load_extension("tui_terminal")
+
+
+vim.api.nvim_set_keymap('n', '<leader>to', ':Telescope tui_terminal tools<CR>', { noremap = true, silent = true })
+vim.api.nvim_set_keymap('n', '<leader>tp', ':Telescope tui_terminal detached<CR>', { noremap = true, silent = true })
